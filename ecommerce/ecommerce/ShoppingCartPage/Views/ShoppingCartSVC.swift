@@ -11,8 +11,8 @@ struct ShoppingCartSVC: View {
     var modelData = ModelData()
     
     var body: some View {
-        
         VStack {
+            NavigationBar()
             HStack {
                 Text("CART \(modelData.products.count)")
                     .font(.title2)
