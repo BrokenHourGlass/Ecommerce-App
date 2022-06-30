@@ -34,7 +34,7 @@ struct ShoppingCartSVC: View {
                             Text(product.name)
                                 .fontWeight(.bold)
                                 .foregroundColor(.black)
-                            Text("$ \(product.name)")
+                            Text("$ \(product.price)")
                         }
                     }
                 }
