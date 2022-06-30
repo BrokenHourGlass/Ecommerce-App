@@ -12,13 +12,13 @@ struct AddRemoveItem: View {
         VStack {
             HStack {
                 Button {
-                    
+                   print("removed item")
                 } label: {
                     Image(systemName: "minus")
                 }
                 Text("2")
                 Button {
-                    
+                   print("added item")
                 } label: {
                     Image(systemName: "plus")
                 }
