@@ -15,12 +15,10 @@ struct ShoppingCartSVC: View {
             NavigationBar()
             HStack {
                 Text("CART \(modelData.products.count)")
-                    .font(.title2)
                 Spacer()
                 Button("Remove All") {
                     
                 }
-                .font(.title2)
             }
             .padding([.leading, .trailing], 27)
             .padding([.top, .bottom], 15)
@@ -45,18 +43,15 @@ struct ShoppingCartSVC: View {
                 HStack {
                     Spacer()
                     Text("TOTAL")
-                        .font(.title2)
                         .fontWeight(.light)
                         .lineLimit(1)
                     Text("$ \(getTotal(products: modelData.products))")
-                        .font(.title2)
                 }
                 HStack {
                     Spacer()
                     Button("CHECKOUT") {
                         
                     }
-                    .font(.title2)
                 }
             }
             .padding([.leading, .top, .trailing, .bottom], 27)

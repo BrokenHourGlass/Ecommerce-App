@@ -11,7 +11,7 @@ struct NavigationBar: View {
     var body: some View {
         HStack {
             Button {
-                
+               print("remove")
             } label: {
                 Image(systemName: "line.3.horizontal")
             }
@@ -20,7 +20,7 @@ struct NavigationBar: View {
                 .foregroundColor(.white)
             Spacer()
             Button {
-                
+               print("add")
             } label: {
                 Image(systemName: "cart")
             }
