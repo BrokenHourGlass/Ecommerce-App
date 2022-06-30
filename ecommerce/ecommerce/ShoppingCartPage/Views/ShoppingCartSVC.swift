@@ -34,8 +34,10 @@ struct ShoppingCartSVC: View {
                             Text(product.name)
                                 .fontWeight(.bold)
                                 .foregroundColor(.black)
+                                .lineLimit(1)
                             Text("$ \(product.price)")
                         }
+                        AddRemoveItem()
                     }
                 }
             }
@@ -45,6 +47,7 @@ struct ShoppingCartSVC: View {
                     Text("TOTAL")
                         .font(.title2)
                         .fontWeight(.light)
+                        .lineLimit(1)
                     Text("$ \(getTotal(products: modelData.products))")
                         .font(.title2)
                 }
