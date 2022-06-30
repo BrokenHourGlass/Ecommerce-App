@@ -33,6 +33,16 @@ struct CheckoutSummary: View {
                         }
                     }
                     CheckoutDetails()
+                    Button(action: {
+                        print("Order Placed!")
+                    }) {
+                       Text("CONTINUE & PAY")
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .border(Color.red)
+                    }
+                    .foregroundColor(Color.white)
+                    .background(Color.red)
                 }
             }
         }

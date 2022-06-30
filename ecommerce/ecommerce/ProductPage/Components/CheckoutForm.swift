@@ -39,6 +39,7 @@ struct CheckoutForm: View {
                     
                     CheckoutSummary()
                         .padding([.top], 30)
+                    
                 }
                 
             }
