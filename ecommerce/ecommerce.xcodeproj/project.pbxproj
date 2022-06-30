@@ -14,6 +14,8 @@
 		847F7F6E286A4C30006E87AB /* ecommerce.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 847F7F6C286A4C30006E87AB /* ecommerce.xcdatamodeld */; };
 		847F7F70286A4C31006E87AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847F7F6F286A4C31006E87AB /* Assets.xcassets */; };
 		847F7F73286A4C31006E87AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847F7F71286A4C31006E87AB /* LaunchScreen.storyboard */; };
+		847F7F7B286A4E3C006E87AB /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F7F7A286A4E3C006E87AB /* HomePage.swift */; };
+		847F7F7D286A4F0E006E87AB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847F7F7C286A4F0E006E87AB /* Home.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		847F7F6F286A4C31006E87AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		847F7F72286A4C31006E87AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		847F7F74286A4C31006E87AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		847F7F7A286A4E3C006E87AB /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		847F7F7C286A4F0E006E87AB /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +65,23 @@
 				847F7F63286A4C30006E87AB /* AppDelegate.swift */,
 				847F7F65286A4C30006E87AB /* SceneDelegate.swift */,
 				847F7F67286A4C30006E87AB /* ViewController.swift */,
-				847F7F69286A4C30006E87AB /* Main.storyboard */,
+				847F7F7E286A4F14006E87AB /* Storyboards */,
+				847F7F7A286A4E3C006E87AB /* HomePage.swift */,
 				847F7F6F286A4C31006E87AB /* Assets.xcassets */,
 				847F7F71286A4C31006E87AB /* LaunchScreen.storyboard */,
 				847F7F74286A4C31006E87AB /* Info.plist */,
 				847F7F6C286A4C30006E87AB /* ecommerce.xcdatamodeld */,
 			);
 			path = ecommerce;
+			sourceTree = "<group>";
+		};
+		847F7F7E286A4F14006E87AB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				847F7F7C286A4F0E006E87AB /* Home.storyboard */,
+				847F7F69286A4C30006E87AB /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +145,7 @@
 				847F7F73286A4C31006E87AB /* LaunchScreen.storyboard in Resources */,
 				847F7F70286A4C31006E87AB /* Assets.xcassets in Resources */,
 				847F7F6B286A4C30006E87AB /* Main.storyboard in Resources */,
+				847F7F7D286A4F0E006E87AB /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847F7F7B286A4E3C006E87AB /* HomePage.swift in Sources */,
 				847F7F68286A4C30006E87AB /* ViewController.swift in Sources */,
 				847F7F64286A4C30006E87AB /* AppDelegate.swift in Sources */,
 				847F7F6E286A4C30006E87AB /* ecommerce.xcdatamodeld in Sources */,
@@ -295,9 +311,11 @@
 				INFOPLIST_FILE = ecommerce/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,9 +340,11 @@
 				INFOPLIST_FILE = ecommerce/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
