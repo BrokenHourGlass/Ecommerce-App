@@ -36,6 +36,9 @@ struct CheckoutForm: View {
                     CheckoutField(title: "ZIP Code", placeholder: "10001")
                     CheckoutField(title: "City", placeholder: "New York")
                     CheckoutField(title: "Country", placeholder: "United States")
+                    
+                    CheckoutSummary()
+                        .padding([.top], 30)
                 }
                 
             }

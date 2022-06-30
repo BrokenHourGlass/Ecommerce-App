@@ -12,7 +12,6 @@ struct CheckoutSVC: View {
         VStack {
             NavigationBar()
             CheckoutForm()
-            Spacer()
         }
     }
 }
