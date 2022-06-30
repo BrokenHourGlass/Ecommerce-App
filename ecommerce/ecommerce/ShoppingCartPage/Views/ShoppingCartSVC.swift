@@ -10,17 +10,11 @@ import SwiftUI
 struct ShoppingCartSVC: View {
     var modelData = ModelData()
     
-    var filteredProducts: [Product] {
-        modelData.products.filter { product in
-            true
-        }
-    }
-    
     var body: some View {
         
         VStack {
             HStack {
-                Text("CART \(filteredProducts.count)")
+                Text("CART \(modelData.products.count)")
                     .font(.title2)
                 Spacer()
                 Button("Remove All") {
@@ -31,7 +25,7 @@ struct ShoppingCartSVC: View {
             .padding([.leading, .trailing], 27)
             .padding([.top, .bottom], 15)
             List {
-                ForEach(filteredProducts) { product in
+                ForEach(modelData.products) { product in
                     HStack(spacing: 15) {
                         product.img
                             .resizable()
@@ -51,7 +45,7 @@ struct ShoppingCartSVC: View {
                     Text("TOTAL")
                         .font(.title2)
                         .fontWeight(.light)
-                    Text("$ \(9999)")
+                    Text("$ \(getTotal(products: modelData.products))")
                         .font(.title2)
                 }
                 HStack {
