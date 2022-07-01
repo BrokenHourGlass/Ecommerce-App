@@ -8,10 +8,29 @@
 import SwiftUI
 
 struct ProductSVC: View {
+    var product = ModelData().products[0]
+    let columns: [GridItem] = [GridItem(.flexible())]
+    
     var body: some View {
         VStack {
             NavigationBar()
-            
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 30) {
+                    ProductImage(product: product)
+                        .padding([.leading, .trailing], 27)
+                    ProductDetails(product: product)
+                        .padding([.leading, .trailing], 27)
+                    ProductQuantity()
+                        .padding([.leading, .trailing], 27)
+                    ProductFeatures(product: product)
+                        .padding([.leading, .trailing], 27)
+                    ProductContents(product: product)
+                        .padding([.leading, .trailing], 27)
+                    ProductPreview(product: product)
+                        .padding([.leading, .trailing], 27)
+                    FooterHelper()
+                }
+            }
         }
     }
 }
