@@ -17,4 +17,23 @@ struct Product: Identifiable {
     var category: String
     var price: Int
     var img: Image
+    var contents: [Item]
+    var previews: [Preview]
 }
+
+struct Item {
+    var quantity: Int
+    var item: String
+    
+    init(quantity: Int, item: String) {
+        self.quantity = quantity
+        self.item = item
+    }
+    
+}
+
+struct Preview {
+    var img: Image
+}
+
+
