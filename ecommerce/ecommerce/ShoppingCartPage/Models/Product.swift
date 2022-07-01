@@ -20,6 +20,7 @@ struct Product: Identifiable {
     var productIMG: Image
     var contents: [Item]
     var previews: [Preview]
+    var recommended: [Recommended]
     var new: Bool
 }
 
@@ -30,6 +31,12 @@ struct Item {
 
 struct Preview {
     var img: Image
+}
+
+struct Recommended {
+    var name: String
+    var img: Preview
+    
 }
 
 
