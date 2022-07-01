@@ -20,7 +20,7 @@ struct ProductSVC: View {
                     ProductDetails(product: product)
                     ProductQuantity()
                     ProductFeatures(product: product)
-                    ProductContents()
+                    ProductContents(product: product)
                     ProductPreview()
                     Spacer()
                 }
