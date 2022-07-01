@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProductSVC: View {
-    var product = ModelData().products[0]
+    var product = products[0]
     let columns: [GridItem] = [GridItem(.flexible())]
     
     var body: some View {

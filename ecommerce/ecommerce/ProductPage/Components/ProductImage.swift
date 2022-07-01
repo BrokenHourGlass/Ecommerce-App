@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ProductImage: View {
-    var product: Product
+    var product: NewProduct
     
     var body: some View {
-        product.productIMG
+        Image(product.productIMG)
             .resizable()
             .scaledToFill()
             .frame(height: 400)
@@ -22,6 +22,6 @@ struct ProductImage: View {
 
 struct ProductImage_Previews: PreviewProvider {
     static var previews: some View {
-        ProductImage(product: ModelData().products[0])
+        ProductImage(product: products[0])
     }
 }
