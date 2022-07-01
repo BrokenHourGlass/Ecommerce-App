@@ -35,7 +35,7 @@ struct NewPreview: Decodable {
 
 struct NewRecommended: Decodable {
     var name: String
-    var img: NewPreview
+    var img: String
 }
 
 
