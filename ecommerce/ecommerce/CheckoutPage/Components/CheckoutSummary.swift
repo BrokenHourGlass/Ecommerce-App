@@ -19,7 +19,7 @@ struct CheckoutSummary: View {
                 LazyVGrid(columns: columns) {
                     ForEach(0..<modelData.products.count) { index in
                         HStack {
-                            modelData.products[index].img
+                            modelData.products[index].cartIMG
                                 .resizable()
                                 .frame(width: 100, height: 100)
                             VStack(alignment: .leading, spacing: 5) {

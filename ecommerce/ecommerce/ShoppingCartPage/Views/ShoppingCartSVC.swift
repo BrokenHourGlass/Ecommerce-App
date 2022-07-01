@@ -28,7 +28,7 @@ struct ShoppingCartSVC: View {
                 LazyVGrid(columns: gridItemLayout) {
                     ForEach(0..<modelData.products.count) { index in
                         HStack(spacing: 15) {
-                            modelData.products[index].img
+                            modelData.products[index].cartIMG
                                 .resizable()
                                 .frame(width: 100, height: 100)
                             VStack(alignment: .leading, spacing: 5) {

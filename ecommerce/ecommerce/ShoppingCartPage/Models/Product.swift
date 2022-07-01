@@ -16,20 +16,16 @@ struct Product: Identifiable {
     var features: String
     var category: String
     var price: Int
-    var img: Image
+    var cartIMG: Image
+    var productIMG: Image
     var contents: [Item]
     var previews: [Preview]
+    var new: Bool
 }
 
 struct Item {
     var quantity: Int
     var item: String
-    
-    init(quantity: Int, item: String) {
-        self.quantity = quantity
-        self.item = item
-    }
-    
 }
 
 struct Preview {
