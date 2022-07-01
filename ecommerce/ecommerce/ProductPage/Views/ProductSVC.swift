@@ -16,6 +16,7 @@ struct ProductSVC: View {
             ProductImage(product: product)
             VStack {
                 ProductDetails(product: product)
+                ProductQuantity()
                 ProductFeatures()
                 ProductContents()
                 ProductPreview()
