@@ -14,11 +14,15 @@ struct ProductSVC: View {
         VStack {
             NavigationBar()
             ProductImage(product: product)
-            ProductDetails()
-            ProductFeatures()
-            ProductContents()
-            ProductPreview()
-            Spacer()
+            VStack {
+                ProductDetails(product: product)
+                ProductFeatures()
+                ProductContents()
+                ProductPreview()
+                Spacer()
+            }
+            .padding([.leading, .trailing], 27)
+            
         }
     }
 }
