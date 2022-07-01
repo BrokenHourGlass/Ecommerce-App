@@ -30,6 +30,7 @@ struct ProductSVC: View {
                         .padding([.leading, .trailing], 27)
                     RecommendedHelper(product: product)
                     ChooseCategory()
+                    About()
                     FooterHelper()
                 }
             }
