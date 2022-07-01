@@ -8,10 +8,17 @@
 import SwiftUI
 
 struct ProductSVC: View {
+    var product = ModelData().products[0]
+    
     var body: some View {
         VStack {
             NavigationBar()
-            
+            ProductImage(product: product)
+            ProductDetails()
+            ProductFeatures()
+            ProductContents()
+            ProductPreview()
+            Spacer()
         }
     }
 }
