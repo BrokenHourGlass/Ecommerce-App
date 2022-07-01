@@ -9,18 +9,21 @@ import SwiftUI
 
 struct ProductSVC: View {
     var product = ModelData().products[0]
+    let columns: [GridItem] = [GridItem(.flexible())]
     
     var body: some View {
         VStack {
             NavigationBar()
-            ProductImage(product: product)
-            VStack {
-                ProductDetails(product: product)
-                ProductQuantity()
-                ProductFeatures()
-                ProductContents()
-                ProductPreview()
-                Spacer()
+            ScrollView {
+                LazyVGrid(columns: columns) {
+                    ProductImage(product: product)
+                    ProductDetails(product: product)
+                    ProductQuantity()
+                    ProductFeatures(product: product)
+                    ProductContents()
+                    ProductPreview()
+                    Spacer()
+                }
             }
             .padding([.leading, .trailing], 27)
             
