@@ -19,6 +19,7 @@
 		847F7FA5286E2DA5006E87AB /* Design Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F7FA4286E2DA5006E87AB /* Design Elements.swift */; };
 		847F7FA7286E53EA006E87AB /* detailsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F7FA6286E53EA006E87AB /* detailsUI.swift */; };
 		847F7FA9286F41EE006E87AB /* CompanyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F7FA8286F41EE006E87AB /* CompanyInfo.swift */; };
+		84C43507286F96300024D8EC /* ProductDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C43506286F96300024D8EC /* ProductDB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		847F7FA4286E2DA5006E87AB /* Design Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Design Elements.swift"; sourceTree = "<group>"; };
 		847F7FA6286E53EA006E87AB /* detailsUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailsUI.swift; sourceTree = "<group>"; };
 		847F7FA8286F41EE006E87AB /* CompanyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfo.swift; sourceTree = "<group>"; };
+		84C43506286F96300024D8EC /* ProductDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				847F7F67286A4C30006E87AB /* ViewController.swift */,
 				847F7F7E286A4F14006E87AB /* Storyboards */,
 				847F7F7A286A4E3C006E87AB /* HomePage.swift */,
+				84C43506286F96300024D8EC /* ProductDB.swift */,
 				847F7FA8286F41EE006E87AB /* CompanyInfo.swift */,
 				847F7FA6286E53EA006E87AB /* detailsUI.swift */,
 				847F7FA4286E2DA5006E87AB /* Design Elements.swift */,
@@ -169,6 +172,7 @@
 				847F7F68286A4C30006E87AB /* ViewController.swift in Sources */,
 				847F7FA7286E53EA006E87AB /* detailsUI.swift in Sources */,
 				847F7F64286A4C30006E87AB /* AppDelegate.swift in Sources */,
+				84C43507286F96300024D8EC /* ProductDB.swift in Sources */,
 				847F7FA5286E2DA5006E87AB /* Design Elements.swift in Sources */,
 				847F7F6E286A4C30006E87AB /* ecommerce.xcdatamodeld in Sources */,
 				847F7F66286A4C30006E87AB /* SceneDelegate.swift in Sources */,
