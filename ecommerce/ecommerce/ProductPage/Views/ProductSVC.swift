@@ -15,13 +15,13 @@ struct ProductSVC: View {
         VStack {
             NavigationBar()
             ScrollView {
-                LazyVGrid(columns: columns) {
+                LazyVGrid(columns: columns, spacing: 30) {
                     ProductImage(product: product)
                     ProductDetails(product: product)
                     ProductQuantity()
                     ProductFeatures(product: product)
                     ProductContents(product: product)
-                    ProductPreview()
+                    ProductPreview(product: product)
                     Spacer()
                 }
             }

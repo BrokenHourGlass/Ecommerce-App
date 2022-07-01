@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct ProductPreview: View {
+    var product: Product
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 10) {
+            PreviewHelper(img: product.previews[0].img)
+            PreviewHelper(img: product.previews[1].img)
+            PreviewHelper(img: product.previews[2].img)
+        }
     }
 }
 
 struct ProductPreview_Previews: PreviewProvider {
     static var previews: some View {
-        ProductPreview()
+        ProductPreview(product: ModelData().products[0])
     }
 }
