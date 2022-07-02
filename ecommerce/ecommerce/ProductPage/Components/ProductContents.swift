@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProductContents: View {
-    var product: Product
+    var product: NewProduct
     let columns: [GridItem] = [GridItem(.flexible())]
     
     var body: some View {
@@ -29,6 +29,6 @@ struct ProductContents: View {
 
 struct ProductContents_Previews: PreviewProvider {
     static var previews: some View {
-        ProductContents(product: ModelData().products[0])
+        ProductContents(product: products[0])
     }
 }

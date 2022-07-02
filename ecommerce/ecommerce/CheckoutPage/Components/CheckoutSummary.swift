@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CheckoutSummary: View {
-    var modelData = ModelData()
+    var modelData = products
     
     private var columns = [GridItem(.flexible())]
     
@@ -17,32 +17,23 @@ struct CheckoutSummary: View {
             Text("SUMMARY")
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    ForEach(0..<modelData.products.count) { index in
+                    ForEach(0..<modelData.count) { index in
                         HStack {
-                            modelData.products[index].cartIMG
+                            Image(modelData[index].cartIMG)
                                 .resizable()
                                 .frame(width: 100, height: 100)
                             VStack(alignment: .leading, spacing: 5) {
-                                Text(modelData.products[index].name)
+                                Text(modelData[index].name)
                                     .fontWeight(.bold)
                                     .foregroundColor(.black)
                                     .lineLimit(1)
-                                Text("$ \(modelData.products[index].price)")
+                                Text("$ \(modelData[index].price)")
                             }
                             Spacer()
                         }
                     }
                     CheckoutDetails()
-                    Button(action: {
-                        print("Order Placed!")
-                    }) {
-                       Text("CONTINUE & PAY")
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .border(Color.red)
-                    }
-                    .foregroundColor(Color.white)
-                    .background(Color.red)
+                    ButtonA(title: "CONTINUE & PAY")
                 }
             }
         }

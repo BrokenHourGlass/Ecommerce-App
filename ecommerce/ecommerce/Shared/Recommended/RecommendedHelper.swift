@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RecommendedHelper: View {
-    var product: Product
+    var product: NewProduct
     
     var body: some View {
         VStack(spacing: 30) {
@@ -26,6 +26,6 @@ struct RecommendedHelper: View {
 
 struct RecommendedHelper_Previews: PreviewProvider {
     static var previews: some View {
-        RecommendedHelper(product: ModelData().products[0])
+        RecommendedHelper(product: products[0])
     }
 }

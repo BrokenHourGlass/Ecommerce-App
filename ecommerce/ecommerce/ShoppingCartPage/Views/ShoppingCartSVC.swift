@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ShoppingCartSVC: View {
-    var modelData = ModelData()
+//    var modelData = ModelData()
+    var modelData = products
     
     private var gridItemLayout = [GridItem(.flexible())]
     
@@ -16,7 +17,7 @@ struct ShoppingCartSVC: View {
         VStack {
             NavigationBar()
             HStack {
-                Text("CART \(modelData.products.count)")
+                Text("CART \(modelData.count)")
                 Spacer()
                 Button("Remove All") {
                     
@@ -26,18 +27,20 @@ struct ShoppingCartSVC: View {
             .padding([.top, .bottom], 15)
             ScrollView(.vertical) {
                 LazyVGrid(columns: gridItemLayout) {
-                    ForEach(0..<modelData.products.count) { index in
+                    ForEach(0..<modelData.count) { index in
                         HStack(spacing: 15) {
-                            modelData.products[index].cartIMG
+                            Image(modelData[index].cartIMG)
                                 .resizable()
                                 .frame(width: 100, height: 100)
+                            Spacer()
                             VStack(alignment: .leading, spacing: 5) {
-                                Text(modelData.products[index].name)
+                                Text(modelData[index].name)
                                     .fontWeight(.bold)
                                     .foregroundColor(.black)
                                     .lineLimit(1)
-                                Text("$ \(modelData.products[index].price)")
+                                Text("$ \(modelData[index].price)")
                             }
+                            Spacer()
                             AddRemoveItem()
                         }
                     }
@@ -50,7 +53,7 @@ struct ShoppingCartSVC: View {
                     Text("TOTAL")
                         .fontWeight(.light)
                         .lineLimit(1)
-                    Text("$ \(getTotal(products: modelData.products))")
+                    Text("$ \(getTotal(products: modelData))")
                 }
                 HStack {
                     Spacer()
