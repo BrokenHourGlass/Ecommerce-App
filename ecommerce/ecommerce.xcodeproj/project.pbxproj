@@ -19,7 +19,6 @@
 		AEAE2750286D3A7B005009BB /* welcome-1.png in Resources */ = {isa = PBXBuildFile; fileRef = AEAE274F286D3A7B005009BB /* welcome-1.png */; };
 		AEAE2752286D3B4E005009BB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE2751286D3B4E005009BB /* RegisterViewController.swift */; };
 		AEAE2754286D3B58005009BB /* ModelLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE2753286D3B58005009BB /* ModelLogin.swift */; };
-		AEAE2758286E2CCE005009BB /* Untitled-2.png in Resources */ = {isa = PBXBuildFile; fileRef = AEAE2757286E2CCE005009BB /* Untitled-2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +36,6 @@
 		AEAE274F286D3A7B005009BB /* welcome-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "welcome-1.png"; sourceTree = "<group>"; };
 		AEAE2751286D3B4E005009BB /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AEAE2753286D3B58005009BB /* ModelLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelLogin.swift; sourceTree = "<group>"; };
-		AEAE2757286E2CCE005009BB /* Untitled-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Untitled-2.png"; path = "../../../Untitled-2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +76,6 @@
 				847F7F69286A4C30006E87AB /* Main.storyboard */,
 				AEAE274D286D3A6D005009BB /* login.storyboard */,
 				AE8E9153286FA2630030E78C /* AccountViewController.swift */,
-				AEAE2757286E2CCE005009BB /* Untitled-2.png */,
 				847F7F6F286A4C31006E87AB /* Assets.xcassets */,
 				AEAE274F286D3A7B005009BB /* welcome-1.png */,
 				847F7F71286A4C31006E87AB /* LaunchScreen.storyboard */,
@@ -151,7 +148,6 @@
 				AEAE2750286D3A7B005009BB /* welcome-1.png in Resources */,
 				AEAE274E286D3A6D005009BB /* login.storyboard in Resources */,
 				847F7F6B286A4C30006E87AB /* Main.storyboard in Resources */,
-				AEAE2758286E2CCE005009BB /* Untitled-2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
