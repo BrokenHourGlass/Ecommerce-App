@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ProductItemView: View {
+    
+   // let headset: HeadPHones
+    
+    
+    
     var body: some View {
         
     
@@ -16,23 +21,23 @@ struct ProductItemView: View {
         VStack(alignment: .leading, spacing: 6, content: {
             //photo
             ZStack{
-                Image("headphone")
-                    .resizable()
-                    .scaledToFit()
-                    .padding(10)
+                //Image(headset.image)
+                    //.resizable()
+//                    .scaledToFit()
+//                    .padding(10)
             }// zstack
             .background(Color(red: 10, green: 10, blue: 10))
             .cornerRadius(12)
             
             //name
-            Text("beats")
-                .fontWeight(.semibold)
-                .foregroundColor(.gray)
-            
+            //Text(headset.name)
+//                .fontWeight(.semibold)
+//                .foregroundColor(.gray)
+//
             //price
-            Text("$400")
-                .fontWeight(.semibold)
-                .foregroundColor(.gray)
+           // Text("$\(headset.formattedPrice)")
+//                .fontWeight(.semibold)
+//                .foregroundColor(.gray)
         })
         
     }

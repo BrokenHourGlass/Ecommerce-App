@@ -20,6 +20,15 @@
 		F7A906A1286DCC860079AAF0 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A906A0286DCC860079AAF0 /* TitleView.swift */; };
 		F7A906A4286DCE1F0079AAF0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A906A3286DCE1F0079AAF0 /* Constant.swift */; };
 		F7A906A6286E06580079AAF0 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A906A5286E06580079AAF0 /* CollectionView.swift */; };
+		F7A906BD286E85EB0079AAF0 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = F7A906BC286E85EB0079AAF0 /* data.json */; };
+		F7A906BF286EA66C0079AAF0 /* HeadPhonesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A906BE286EA66C0079AAF0 /* HeadPhonesModel.swift */; };
+		F7A906C2286EB5CF0079AAF0 /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A906C1286EB5CF0079AAF0 /* CodableBundleExtension.swift */; };
+		F7A906C6286EC0AF0079AAF0 /* CellphoneCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A906C5286EC0AF0079AAF0 /* CellphoneCollection.swift */; };
+		F7A906C8286EC0C70079AAF0 /* LaptTopCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A906C7286EC0C70079AAF0 /* LaptTopCollection.swift */; };
+		F7A906CA286EC0D40079AAF0 /* GameCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A906C9286EC0D40079AAF0 /* GameCollections.swift */; };
+		F7A906CC286EC0FC0079AAF0 /* MonitorCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A906CB286EC0FC0079AAF0 /* MonitorCollections.swift */; };
+		F7A906CE286EC1180079AAF0 /* KeyboardCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A906CD286EC1180079AAF0 /* KeyboardCollections.swift */; };
+		F7A906D0286EC1300079AAF0 /* HeadSetCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A906CF286EC1300079AAF0 /* HeadSetCollections.swift */; };
 		F7DD1927286B9A1700127CD4 /* CatalogUIStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7DD1926286B9A1700127CD4 /* CatalogUIStoryboard.storyboard */; };
 		F7DD1929286B9A5500127CD4 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DD1928286B9A5500127CD4 /* CatalogViewController.swift */; };
 		F7DD192B286B9A7A00127CD4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DD192A286B9A7A00127CD4 /* ContentView.swift */; };
@@ -41,6 +50,15 @@
 		F7A906A0286DCC860079AAF0 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		F7A906A3286DCE1F0079AAF0 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		F7A906A5286E06580079AAF0 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		F7A906BC286E85EB0079AAF0 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		F7A906BE286EA66C0079AAF0 /* HeadPhonesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadPhonesModel.swift; sourceTree = "<group>"; };
+		F7A906C1286EB5CF0079AAF0 /* CodableBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBundleExtension.swift; sourceTree = "<group>"; };
+		F7A906C5286EC0AF0079AAF0 /* CellphoneCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellphoneCollection.swift; sourceTree = "<group>"; };
+		F7A906C7286EC0C70079AAF0 /* LaptTopCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaptTopCollection.swift; sourceTree = "<group>"; };
+		F7A906C9286EC0D40079AAF0 /* GameCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollections.swift; sourceTree = "<group>"; };
+		F7A906CB286EC0FC0079AAF0 /* MonitorCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorCollections.swift; sourceTree = "<group>"; };
+		F7A906CD286EC1180079AAF0 /* KeyboardCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCollections.swift; sourceTree = "<group>"; };
+		F7A906CF286EC1300079AAF0 /* HeadSetCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadSetCollections.swift; sourceTree = "<group>"; };
 		F7DD1926286B9A1700127CD4 /* CatalogUIStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CatalogUIStoryboard.storyboard; sourceTree = "<group>"; };
 		F7DD1928286B9A5500127CD4 /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
 		F7DD192A286B9A7A00127CD4 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +94,7 @@
 		847F7F62286A4C30006E87AB /* ecommerce */ = {
 			isa = PBXGroup;
 			children = (
+				F7A906B9286E844C0079AAF0 /* New Group */,
 				F7A906A2286DCE0E0079AAF0 /* Utility */,
 				F7A90697286DC6B10079AAF0 /* View */,
 				F7A90695286DC66A0079AAF0 /* Model */,
@@ -98,6 +117,7 @@
 		F7A90694286DC6600079AAF0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				F7A906BC286E85EB0079AAF0 /* data.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -105,6 +125,7 @@
 		F7A90695286DC66A0079AAF0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F7A906BE286EA66C0079AAF0 /* HeadPhonesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,6 +154,12 @@
 				F7A9069E286DCA320079AAF0 /* ProductItemView.swift */,
 				F7A906A0286DCC860079AAF0 /* TitleView.swift */,
 				F7A906A5286E06580079AAF0 /* CollectionView.swift */,
+				F7A906C5286EC0AF0079AAF0 /* CellphoneCollection.swift */,
+				F7A906C7286EC0C70079AAF0 /* LaptTopCollection.swift */,
+				F7A906C9286EC0D40079AAF0 /* GameCollections.swift */,
+				F7A906CB286EC0FC0079AAF0 /* MonitorCollections.swift */,
+				F7A906CD286EC1180079AAF0 /* KeyboardCollections.swift */,
+				F7A906CF286EC1300079AAF0 /* HeadSetCollections.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -143,6 +170,14 @@
 				F7A906A3286DCE1F0079AAF0 /* Constant.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		F7A906B9286E844C0079AAF0 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				F7A906C1286EB5CF0079AAF0 /* CodableBundleExtension.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +241,7 @@
 				847F7F73286A4C31006E87AB /* LaunchScreen.storyboard in Resources */,
 				847F7F70286A4C31006E87AB /* Assets.xcassets in Resources */,
 				847F7F6B286A4C30006E87AB /* Main.storyboard in Resources */,
+				F7A906BD286E85EB0079AAF0 /* data.json in Resources */,
 				F7DD1927286B9A1700127CD4 /* CatalogUIStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,8 +253,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7A906D0286EC1300079AAF0 /* HeadSetCollections.swift in Sources */,
 				F7A9069F286DCA320079AAF0 /* ProductItemView.swift in Sources */,
+				F7A906CA286EC0D40079AAF0 /* GameCollections.swift in Sources */,
 				F7DD1929286B9A5500127CD4 /* CatalogViewController.swift in Sources */,
+				F7A906C8286EC0C70079AAF0 /* LaptTopCollection.swift in Sources */,
 				847F7F68286A4C30006E87AB /* ViewController.swift in Sources */,
 				F7DD192B286B9A7A00127CD4 /* ContentView.swift in Sources */,
 				847F7F64286A4C30006E87AB /* AppDelegate.swift in Sources */,
@@ -226,9 +265,14 @@
 				F7A906A6286E06580079AAF0 /* CollectionView.swift in Sources */,
 				F7A9069D286DC7790079AAF0 /* LogoView.swift in Sources */,
 				F7A9069B286DC6F40079AAF0 /* NavigationBarView.swift in Sources */,
+				F7A906C6286EC0AF0079AAF0 /* CellphoneCollection.swift in Sources */,
+				F7A906CC286EC0FC0079AAF0 /* MonitorCollections.swift in Sources */,
 				F7A906A4286DCE1F0079AAF0 /* Constant.swift in Sources */,
 				847F7F66286A4C30006E87AB /* SceneDelegate.swift in Sources */,
+				F7A906BF286EA66C0079AAF0 /* HeadPhonesModel.swift in Sources */,
+				F7A906C2286EB5CF0079AAF0 /* CodableBundleExtension.swift in Sources */,
 				F7A906A1286DCC860079AAF0 /* TitleView.swift in Sources */,
+				F7A906CE286EC1180079AAF0 /* KeyboardCollections.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
