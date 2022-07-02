@@ -11,17 +11,17 @@ import SwiftUI
 struct NewProduct: Decodable, Identifiable {
     var id: Int
     var name: String
-    var description: String
-    var featured: Bool
-    var features: String
     var category: String
+    var new: Bool
     var price: Int
+    var featured: Bool
     var cartIMG: String
     var productIMG: String
+    var description: String
+    var features: String
     var contents: [NewItem]
     var previews: [NewPreview]
     var recommended: [NewRecommended]
-    var new: Bool
 }
 
 struct NewItem: Decodable {
