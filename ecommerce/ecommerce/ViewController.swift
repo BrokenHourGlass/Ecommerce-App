@@ -56,7 +56,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var ViewTap: UIView!
     
     //func
-    
 
     //sign in errors in red text below textfield
     @IBOutlet weak var userDNE: UILabel!

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bpo-OU-XcI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -21,7 +21,112 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="101"/>
+            <point key="canvasLocation" x="132" y="96"/>
+        </scene>
+        <!--Shopping CartVC-->
+        <scene sceneID="rHJ-HD-JvF">
+            <objects>
+                <viewController id="oEZ-VJ-RE3" customClass="ShoppingCartVC" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3SF-eU-Nx1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Orf-JL-kN3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ugv-jy-OX0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Orf-JL-kN3" firstAttribute="leading" secondItem="Ugv-jy-OX0" secondAttribute="leading" id="2z6-Zu-H8k"/>
+                            <constraint firstItem="Ugv-jy-OX0" firstAttribute="bottom" secondItem="Orf-JL-kN3" secondAttribute="bottom" id="Pb5-8h-MVM"/>
+                            <constraint firstItem="Orf-JL-kN3" firstAttribute="top" secondItem="Ugv-jy-OX0" secondAttribute="top" id="cOM-yg-u3R"/>
+                            <constraint firstItem="Ugv-jy-OX0" firstAttribute="trailing" secondItem="Orf-JL-kN3" secondAttribute="trailing" id="mw1-Tk-0az"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="Orf-JL-kN3" id="smT-tt-Tge"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ebn-Jo-ttj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1155" y="96"/>
+        </scene>
+        <!--Main Page-->
+        <scene sceneID="SyF-fk-S1y">
+            <objects>
+                <viewController id="Bpo-OU-XcI" customClass="MainPage" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VLV-kd-YdT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ZhS-j1-vlz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yfh-wT-OL8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1154" y="863"/>
+        </scene>
+        <!--CheckoutVC-->
+        <scene sceneID="iBO-Aa-KJP">
+            <objects>
+                <viewController id="X9W-3A-YKk" customClass="CheckoutVC" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kAc-nL-1SQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Hz-Oe-VRv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5M2-5V-6cG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5M2-5V-6cG" firstAttribute="bottom" secondItem="2Hz-Oe-VRv" secondAttribute="bottom" id="4kV-NL-PsG"/>
+                            <constraint firstItem="2Hz-Oe-VRv" firstAttribute="leading" secondItem="5M2-5V-6cG" secondAttribute="leading" id="GAY-kO-DhI"/>
+                            <constraint firstItem="5M2-5V-6cG" firstAttribute="trailing" secondItem="2Hz-Oe-VRv" secondAttribute="trailing" id="Gca-Ig-wgU"/>
+                            <constraint firstItem="2Hz-Oe-VRv" firstAttribute="top" secondItem="5M2-5V-6cG" secondAttribute="top" id="bUD-gA-9wP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="2Hz-Oe-VRv" id="hlx-61-p4j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W3b-oz-mDd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2152" y="96"/>
+        </scene>
+        <!--ProductVC-->
+        <scene sceneID="lOP-5W-0CI">
+            <objects>
+                <viewController id="4Cg-a3-U6b" customClass="ProductVC" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wq8-f4-EHT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UmT-KR-Xgq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QGI-TR-lQ8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QGI-TR-lQ8" firstAttribute="bottom" secondItem="UmT-KR-Xgq" secondAttribute="bottom" id="1u7-Fq-wwF"/>
+                            <constraint firstItem="UmT-KR-Xgq" firstAttribute="top" secondItem="QGI-TR-lQ8" secondAttribute="top" id="49L-nN-gdA"/>
+                            <constraint firstItem="UmT-KR-Xgq" firstAttribute="leading" secondItem="QGI-TR-lQ8" secondAttribute="leading" id="W0Q-dW-2lA"/>
+                            <constraint firstItem="QGI-TR-lQ8" firstAttribute="trailing" secondItem="UmT-KR-Xgq" secondAttribute="trailing" id="gYF-00-llk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="UmT-KR-Xgq" id="663-F6-0jv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cMS-Y3-g10" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3172" y="96"/>
         </scene>
     </scenes>
     <resources>
