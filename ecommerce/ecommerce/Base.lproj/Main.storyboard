@@ -33,9 +33,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="oEZ-VJ-RE3" kind="relationship" relationship="viewControllers" id="hS8-3M-vkH"/>
-                        <segue destination="X9W-3A-YKk" kind="relationship" relationship="viewControllers" id="T2F-q4-FeR"/>
-                        <segue destination="4Cg-a3-U6b" kind="relationship" relationship="viewControllers" id="ZcV-ym-LMm"/>
+                        <segue destination="Bpo-OU-XcI" kind="relationship" relationship="viewControllers" id="I6h-82-4HA"/>
+                        <segue destination="oEZ-VJ-RE3" kind="relationship" relationship="viewControllers" id="igl-gG-uAV"/>
+                        <segue destination="X9W-3A-YKk" kind="relationship" relationship="viewControllers" id="ngc-4h-D4G"/>
+                        <segue destination="4Cg-a3-U6b" kind="relationship" relationship="viewControllers" id="69u-j7-7yk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EDw-va-cqf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -73,7 +74,7 @@
             </objects>
             <point key="canvasLocation" x="1155" y="96"/>
         </scene>
-        <!--Main Page-->
+        <!--Item-->
         <scene sceneID="SyF-fk-S1y">
             <objects>
                 <viewController id="Bpo-OU-XcI" customClass="MainPage" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
@@ -83,6 +84,7 @@
                         <viewLayoutGuide key="safeArea" id="ZhS-j1-vlz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="dDV-22-WYR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yfh-wT-OL8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
