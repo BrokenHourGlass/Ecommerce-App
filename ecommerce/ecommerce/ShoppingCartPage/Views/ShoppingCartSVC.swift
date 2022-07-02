@@ -32,6 +32,7 @@ struct ShoppingCartSVC: View {
                             Image(modelData[index].cartIMG)
                                 .resizable()
                                 .frame(width: 100, height: 100)
+                            Spacer()
                             VStack(alignment: .leading, spacing: 5) {
                                 Text(modelData[index].name)
                                     .fontWeight(.bold)
@@ -39,6 +40,7 @@ struct ShoppingCartSVC: View {
                                     .lineLimit(1)
                                 Text("$ \(modelData[index].price)")
                             }
+                            Spacer()
                             AddRemoveItem()
                         }
                     }
