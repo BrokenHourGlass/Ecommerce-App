@@ -45,6 +45,14 @@ struct TemporarySVC: View {
                 }
                 .tag(3)
             
+            HomePage()
+                .tabItem {
+                    Image(systemName: "person.crop.circle.fill")
+                    Text("Home")
+                }
+                .tag(4)
+            
+            
         } //TabView
     }
 }
