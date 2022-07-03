@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct PreviewHelper: View {
-    var img: Image
+    var img: String
     
     var body: some View {
-        img
+        Image(img)
             .resizable()
             .scaledToFill()
             .clipped()
@@ -22,6 +22,6 @@ struct PreviewHelper: View {
 
 struct PreviewHelper_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewHelper(img: ModelData().products[0].previews[0].img)
+        PreviewHelper(img: products[0].previews[0].img)
     }
 }

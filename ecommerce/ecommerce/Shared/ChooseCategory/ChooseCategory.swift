@@ -14,9 +14,9 @@ struct ChooseCategory: View {
                 .font(.title2)
                 .bold()
                 .padding([.bottom], 15)
-            ChooseCategoryHelper(category: "HEADPHONES", img: Image("shared/image-xx99-mark-one-headphones"))
-            ChooseCategoryHelper(category: "SPEAKERS", img: Image("shared/image-zx9-speaker"))
-            ChooseCategoryHelper(category: "EARPHONES", img: Image("product-yx1-earphones/image-category-page-preview"))
+            ChooseCategoryHelper(category: "HEADPHONES", img: "shared/image-xx99-mark-one-headphones")
+            ChooseCategoryHelper(category: "SPEAKERS", img: "shared/image-zx9-speaker")
+            ChooseCategoryHelper(category: "EARPHONES", img: "product-yx1-earphones/image-category-page-preview")
         }
         .frame(width: 200)
         .padding([.top], 30)

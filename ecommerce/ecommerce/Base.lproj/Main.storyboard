@@ -37,6 +37,7 @@
                         <segue destination="oEZ-VJ-RE3" kind="relationship" relationship="viewControllers" id="igl-gG-uAV"/>
                         <segue destination="X9W-3A-YKk" kind="relationship" relationship="viewControllers" id="ngc-4h-D4G"/>
                         <segue destination="4Cg-a3-U6b" kind="relationship" relationship="viewControllers" id="69u-j7-7yk"/>
+                        <segue destination="9Gk-r8-EwL" kind="relationship" relationship="viewControllers" id="DW5-Ch-Pci"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EDw-va-cqf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -89,6 +90,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yfh-wT-OL8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1154" y="863"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="RKB-Ov-pBu">
+            <objects>
+                <viewController id="9Gk-r8-EwL" customClass="CatalogPage" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MQ0-iJ-KWr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zD1-fY-jUh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="loG-Ij-dJB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SM7-BT-9Au" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1154" y="1651"/>
         </scene>
         <!--Item-->
         <scene sceneID="iBO-Aa-KJP">
