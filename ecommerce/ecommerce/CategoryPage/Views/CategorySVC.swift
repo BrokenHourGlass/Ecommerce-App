@@ -16,7 +16,7 @@ struct CategorySVC: View {
         VStack {
             NavigationBar()
             ScrollView {
-                LazyVGrid(columns: columns) {
+                LazyVGrid(columns: columns, spacing: 20) {
                     CategoryHero()
                     CategoryFeatured()
                     CategoryResults()

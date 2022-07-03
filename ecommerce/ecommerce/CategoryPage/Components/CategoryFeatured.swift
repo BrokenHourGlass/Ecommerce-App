@@ -16,6 +16,7 @@ struct CategoryFeatured: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("FEATURED")
+                .font(.title2)
                 .bold()
             ScrollView(.horizontal) {
                 LazyHGrid(rows: rows) {
@@ -38,8 +39,8 @@ struct CategoryFeatured: View {
                     }
                 }
             }
-            
         }
+        .padding([.leading], 17)
         
     }
 }

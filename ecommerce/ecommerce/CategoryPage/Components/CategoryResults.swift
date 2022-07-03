@@ -10,8 +10,22 @@ import SwiftUI
 struct CategoryResults: View {
     var modelData = products
     
+    let columns: [GridItem] = [GridItem(.flexible())]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            Text("RESULTS")
+                .font(.title2)
+                .bold()
+            ScrollView {
+                LazyVGrid(columns: columns) {
+                    ForEach(modelData, id: \.id) { product in
+                        CategoryItemHelper(product: product)
+                    }
+                }
+            }
+        }
+        .padding([.leading, .trailing], 17)
     }
 }
 
