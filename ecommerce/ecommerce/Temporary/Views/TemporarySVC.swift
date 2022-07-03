@@ -45,10 +45,10 @@ struct TemporarySVC: View {
                 }
                 .tag(3)
             
-            HomePage()
+            CategorySVC()
                 .tabItem {
                     Image(systemName: "person.crop.circle.fill")
-                    Text("Home")
+                    Text("Category")
                 }
                 .tag(4)
             

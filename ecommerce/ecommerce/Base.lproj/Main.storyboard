@@ -117,6 +117,36 @@
             </objects>
             <point key="canvasLocation" x="1154" y="1651"/>
         </scene>
+        <!--CategoryVC-->
+        <scene sceneID="zhQ-Ha-opA">
+            <objects>
+                <viewController id="6fR-xF-7TN" customClass="CategoryVC" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4y8-XY-hNJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KM9-Yd-pwk">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dTF-xl-p7x"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KM9-Yd-pwk" firstAttribute="trailing" secondItem="dTF-xl-p7x" secondAttribute="trailing" id="BxZ-DV-1zm"/>
+                            <constraint firstItem="KM9-Yd-pwk" firstAttribute="top" secondItem="dTF-xl-p7x" secondAttribute="top" id="M8L-vW-gHe"/>
+                            <constraint firstItem="KM9-Yd-pwk" firstAttribute="leading" secondItem="dTF-xl-p7x" secondAttribute="leading" id="au9-xx-qgd"/>
+                            <constraint firstItem="dTF-xl-p7x" firstAttribute="bottom" secondItem="KM9-Yd-pwk" secondAttribute="bottom" id="yWf-o4-efr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="KM9-Yd-pwk" id="akd-BN-kim"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M5Q-Um-MBY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2151" y="1651"/>
+        </scene>
         <!--Item-->
         <scene sceneID="iBO-Aa-KJP">
             <objects>
@@ -1047,6 +1077,9 @@
             <point key="canvasLocation" x="3367" y="2755"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="A0c-I2-spe"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Untitled-2.png" width="808" height="200"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="64"/>
