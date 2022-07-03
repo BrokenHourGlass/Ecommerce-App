@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct CategoryFeatured: View {
+    var modelData = products
+    
+    let rows: [GridItem] = [GridItem(.fixed(100))]
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(.horizontal) {
+            LazyHGrid(rows: rows) {
+                ForEach(modelData, id: \.id) { product in
+                    Image(product.productIMG)
+                        .resizable()
+                        .frame(maxWidth: 100, maxHeight: 100)
+                        .scaledToFill()
+                        .clipped()
+                        .listRowInsets(EdgeInsets())
+                }
+                
+            }
+            
+        }
     }
 }
 
