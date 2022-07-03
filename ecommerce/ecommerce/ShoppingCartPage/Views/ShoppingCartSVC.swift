@@ -10,6 +10,7 @@ import SwiftUI
 struct ShoppingCartSVC: View {
 //    var modelData = ModelData()
     var modelData = products
+    @StateObject var cartManager = CartManager()
     
     private var gridItemLayout = [GridItem(.flexible())]
     
@@ -17,7 +18,7 @@ struct ShoppingCartSVC: View {
         VStack {
             NavigationBar()
             HStack {
-                Text("CART \(modelData.count)")
+                Text("CART \(cartManager.items.count)")
                 Spacer()
                 Button("Remove All") {
                     
@@ -27,21 +28,22 @@ struct ShoppingCartSVC: View {
             .padding([.top, .bottom], 15)
             ScrollView(.vertical) {
                 LazyVGrid(columns: gridItemLayout) {
-                    ForEach(0..<modelData.count) { index in
+                    ForEach(0..<cartManager.items.count) { index in
                         HStack(spacing: 15) {
                             Image(modelData[index].cartIMG)
                                 .resizable()
                                 .frame(width: 100, height: 100)
                             Spacer()
                             VStack(alignment: .leading, spacing: 5) {
-                                Text(modelData[index].name)
+                                Text(cartManager.items[index].name)
                                     .fontWeight(.bold)
                                     .foregroundColor(.black)
                                     .lineLimit(1)
-                                Text("$ \(modelData[index].price)")
+                                Text("$ \(cartManager.items[index].price)")
                             }
                             Spacer()
-                            AddRemoveItem()
+                            AddRemoveItem(product: cartManager.items[index])
+                                .environmentObject(cartManager)
                         }
                     }
                 }
@@ -53,7 +55,7 @@ struct ShoppingCartSVC: View {
                     Text("TOTAL")
                         .fontWeight(.light)
                         .lineLimit(1)
-                    Text("$ \(getTotal(products: modelData))")
+                    Text("$ \(getTotal(products: cartManager.items))")
                 }
                 HStack {
                     Spacer()
