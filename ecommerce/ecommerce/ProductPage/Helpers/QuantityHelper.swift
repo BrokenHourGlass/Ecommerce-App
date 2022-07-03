@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct QuantityHelper: View {
+    @EnvironmentObject var cartManager: CartManager
+    
+    var product: NewProduct
+    
     var body: some View {
         HStack {
             Button {
-                
+                cartManager.remoteFromCart(product: product)
             } label: {
                 Image(systemName: "minus")
             }
@@ -19,7 +23,7 @@ struct QuantityHelper: View {
             Text("1")
                 .bold()
             Button {
-                
+                cartManager.addToCart(product: product)
             } label: {
                 Image(systemName: "plus")
             }
@@ -30,6 +34,7 @@ struct QuantityHelper: View {
 
 struct QuantityHelper_Previews: PreviewProvider {
     static var previews: some View {
-        QuantityHelper()
+        QuantityHelper(product: products[0])
+            .environmentObject(CartManager())
     }
 }

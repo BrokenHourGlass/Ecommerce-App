@@ -14,19 +14,11 @@ class CartManager: ObservableObject {
     func addToCart(product: NewProduct) {
         items.append(product)
         total += product.price
-        display()
     }
     
     func remoteFromCart(product: NewProduct) {
         items = items.filter{ $0.id != product.id }
         total -= product.price
-        display()
-    }
-    
-    func display() {
-        for x in items {
-            print(x.name)
-        }
     }
     
 }

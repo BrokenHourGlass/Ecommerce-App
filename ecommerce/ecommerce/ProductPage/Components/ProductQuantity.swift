@@ -14,7 +14,7 @@ struct ProductQuantity: View {
     
     var body: some View {
         HStack {
-            QuantityHelper()
+            QuantityHelper(product: product)
             Spacer()
             Button(action: {
                 print("Added to cart!")
