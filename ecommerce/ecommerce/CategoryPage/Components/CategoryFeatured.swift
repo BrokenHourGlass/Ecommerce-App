@@ -14,28 +14,33 @@ struct CategoryFeatured: View {
     
     
     var body: some View {
-        ScrollView(.horizontal) {
-            LazyHGrid(rows: rows) {
-                ForEach(modelData, id: \.id) { product in
-                    HStack {
-                        VStack {
-                            Image(product.productIMG)
-                                .resizable()
-                                .frame(maxWidth: 100, maxHeight: 100)
-                                .scaledToFill()
-                                .clipped()
-                                .listRowInsets(EdgeInsets())
-                                .cornerRadius(10)
-                            Text(product.name)
-                                .bold()
-                                .font(.caption2)
-                            
+        VStack(alignment: .leading) {
+            Text("FEATURED")
+                .bold()
+            ScrollView(.horizontal) {
+                LazyHGrid(rows: rows) {
+                    ForEach(modelData, id: \.id) { product in
+                        HStack {
+                            VStack {
+                                Image(product.productIMG)
+                                    .resizable()
+                                    .frame(maxWidth: 100, maxHeight: 100)
+                                    .scaledToFill()
+                                    .clipped()
+                                    .listRowInsets(EdgeInsets())
+                                    .cornerRadius(10)
+                                Text(product.name)
+                                    .bold()
+                                    .font(.caption2)
+                            }
+                            .frame(width: 100)
                         }
-                        .frame(width: 100)
                     }
                 }
             }
+            
         }
+        
     }
 }
 
