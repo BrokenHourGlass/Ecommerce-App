@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CategoryHero: View {
     var body: some View {
-        Image("wp1820016")
+        Image("gettyimages-496319472-612x612")
             .resizable()
             .scaledToFill()
             .frame(height: 200)
