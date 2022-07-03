@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct CategorySVC: View {
+    var modelData = products
+    
+    let columns: [GridItem] = [GridItem(.flexible())]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            NavigationBar()
+            ScrollView {
+                LazyVGrid(columns: columns) {
+                    CategoryHero()
+                    CategoryFeatured()
+                    CategoryResults()
+                }
+            }
+        }
     }
 }
 
