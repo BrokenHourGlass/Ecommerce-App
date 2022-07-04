@@ -27,6 +27,10 @@ class CartManager: ObservableObject {
         }
     }
     
+    func clearCart() {
+        items = []
+    }
+    
     func getTotal() -> Int {
         var result = 0
         for x in items {
