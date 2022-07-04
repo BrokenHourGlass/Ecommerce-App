@@ -13,12 +13,18 @@ class CartManager: ObservableObject {
     
     func addToCart(product: NewProduct, qty: Int) {
         items.append(CartItem(item: product, unitPrice: product.price, quantity: qty))
-//        total += product.price * qty
     }
     
-    func remoteFromCart(product: NewProduct) {
-        items = items.filter{ $0.item.id != product.id }
-//        total -= product.price
+    func incrementQty(it: CartItem) {
+        if let idx = self.items.firstIndex(where: { $0.item.id == it.item.id}) {
+            items[idx].quantity += 1
+        }
+    }
+    
+    func decrementQty(it: CartItem) {
+        if let idx = self.items.firstIndex(where: { $0.item.id == it.item.id}) {
+            items[idx].quantity -= 1
+        }
     }
     
     func getTotal() -> Int {

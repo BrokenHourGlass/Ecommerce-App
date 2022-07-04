@@ -16,13 +16,13 @@ struct AddRemoveItem: View {
         VStack {
             HStack {
                 Button {
-                   print("removed item")
+                    cartManager.decrementQty(it: item)
                 } label: {
                     Image(systemName: "minus")
                 }
                 Text(String(item.quantity))
                 Button {
-                   print("added item")
+                    cartManager.incrementQty(it: item)
                 } label: {
                     Image(systemName: "plus")
                 }
