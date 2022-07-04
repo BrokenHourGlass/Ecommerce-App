@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct ShoppingCartSVC: View {
-    //    var modelData = ModelData()
-    var modelData = products
-    //    @StateObject var cartManager = CartManager()
     @EnvironmentObject var cartManager: CartManager
     
     private var gridItemLayout = [GridItem(.flexible())]

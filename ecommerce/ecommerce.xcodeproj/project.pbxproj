@@ -84,6 +84,11 @@
 		61E2ACCE287280AB00CD4F8F /* NavigationBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E2ACCD287280AB00CD4F8F /* NavigationBack.swift */; };
 		61E2ACD62872972B00CD4F8F /* ThankYouVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E2ACD52872972B00CD4F8F /* ThankYouVC.swift */; };
 		61E2ACD82872973600CD4F8F /* ThankYouSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E2ACD72872973600CD4F8F /* ThankYouSVC.swift */; };
+		61E2ACDA28729E2A00CD4F8F /* ThankYouImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E2ACD928729E2A00CD4F8F /* ThankYouImage.swift */; };
+		61E2ACDC28729E3900CD4F8F /* ThankYouMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E2ACDB28729E3900CD4F8F /* ThankYouMessage.swift */; };
+		61E2ACDE28729E4500CD4F8F /* ThankYouSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E2ACDD28729E4500CD4F8F /* ThankYouSummary.swift */; };
+		61E2ACE028729E5200CD4F8F /* ThankYouTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E2ACDF28729E5200CD4F8F /* ThankYouTotal.swift */; };
+		61E2ACE228729E5E00CD4F8F /* BackToHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E2ACE128729E5E00CD4F8F /* BackToHomePage.swift */; };
 		847F7F64286A4C30006E87AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F7F63286A4C30006E87AB /* AppDelegate.swift */; };
 		847F7F66286A4C30006E87AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F7F65286A4C30006E87AB /* SceneDelegate.swift */; };
 		847F7F68286A4C30006E87AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F7F67286A4C30006E87AB /* ViewController.swift */; };
@@ -171,6 +176,11 @@
 		61E2ACCD287280AB00CD4F8F /* NavigationBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBack.swift; sourceTree = "<group>"; };
 		61E2ACD52872972B00CD4F8F /* ThankYouVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouVC.swift; sourceTree = "<group>"; };
 		61E2ACD72872973600CD4F8F /* ThankYouSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouSVC.swift; sourceTree = "<group>"; };
+		61E2ACD928729E2A00CD4F8F /* ThankYouImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouImage.swift; sourceTree = "<group>"; };
+		61E2ACDB28729E3900CD4F8F /* ThankYouMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouMessage.swift; sourceTree = "<group>"; };
+		61E2ACDD28729E4500CD4F8F /* ThankYouSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouSummary.swift; sourceTree = "<group>"; };
+		61E2ACDF28729E5200CD4F8F /* ThankYouTotal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouTotal.swift; sourceTree = "<group>"; };
+		61E2ACE128729E5E00CD4F8F /* BackToHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackToHomePage.swift; sourceTree = "<group>"; };
 		847F7F60286A4C30006E87AB /* ecommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ecommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847F7F63286A4C30006E87AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847F7F65286A4C30006E87AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -692,6 +702,11 @@
 		61E2ACD3287296B900CD4F8F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				61E2ACD928729E2A00CD4F8F /* ThankYouImage.swift */,
+				61E2ACDB28729E3900CD4F8F /* ThankYouMessage.swift */,
+				61E2ACDD28729E4500CD4F8F /* ThankYouSummary.swift */,
+				61E2ACDF28729E5200CD4F8F /* ThankYouTotal.swift */,
+				61E2ACE128729E5E00CD4F8F /* BackToHomePage.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -825,6 +840,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61E2ACAE287156A900CD4F8F /* LoginViewController.swift in Sources */,
+				61E2ACDE28729E4500CD4F8F /* ThankYouSummary.swift in Sources */,
 				6107799B286E8DE30094F95A /* ProductFeatures.swift in Sources */,
 				61E2ACB0287156A900CD4F8F /* AccountViewController.swift in Sources */,
 				61CE6871286FE1C1008CD0C1 /* CompanyInfo.swift in Sources */,
@@ -836,6 +852,7 @@
 				61CE689B287110F0008CD0C1 /* NavigationBarView.swift in Sources */,
 				61077997286E8DA90094F95A /* ProductImage.swift in Sources */,
 				610779C6286F51C70094F95A /* About.swift in Sources */,
+				61E2ACE228729E5E00CD4F8F /* BackToHomePage.swift in Sources */,
 				61077972286E00800094F95A /* AddRemoveItem.swift in Sources */,
 				610779C1286F47FD0094F95A /* ChooseCategoryHelper.swift in Sources */,
 				61E2ACCE287280AB00CD4F8F /* NavigationBack.swift in Sources */,
@@ -883,7 +900,9 @@
 				61CE686D286FE19F008CD0C1 /* HomeLayout.swift in Sources */,
 				61E2ACB3287156A900CD4F8F /* ModelLogin.swift in Sources */,
 				61E2ACCB28727BC500CD4F8F /* NavigationFooter.swift in Sources */,
+				61E2ACE028729E5200CD4F8F /* ThankYouTotal.swift in Sources */,
 				61E2ACD82872973600CD4F8F /* ThankYouSVC.swift in Sources */,
+				61E2ACDC28729E3900CD4F8F /* ThankYouMessage.swift in Sources */,
 				6107795E286D51880094F95A /* Actions.swift in Sources */,
 				610779B1286F39DC0094F95A /* RecommendedHelper.swift in Sources */,
 				61CE688328710113008CD0C1 /* CartManager.swift in Sources */,
@@ -892,6 +911,7 @@
 				610779B8286F3C3F0094F95A /* RecommendedtemHelper.swift in Sources */,
 				847F7F66286A4C30006E87AB /* SceneDelegate.swift in Sources */,
 				61077975286E055F0094F95A /* NavigationBar.swift in Sources */,
+				61E2ACDA28729E2A00CD4F8F /* ThankYouImage.swift in Sources */,
 				61CE689A287110F0008CD0C1 /* MonitorCollections.swift in Sources */,
 				61CE68A528711129008CD0C1 /* CatalogViewController.swift in Sources */,
 				610779AD286EA0950094F95A /* FooterHelper.swift in Sources */,

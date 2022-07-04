@@ -14,6 +14,7 @@ struct CheckoutSVC: View {
         VStack {
             NavigationBar()
                 .environmentObject(cartManager)
+            NavigationBack()
             CheckoutForm()
                 .environmentObject(cartManager)
         }

@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct ThankYouSVC: View {
+    @EnvironmentObject var cartManager: CartManager
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ThankYouImage()
+            ThankYouMessage()
+            ThankYouSummary()
+                .environmentObject(cartManager)
+            ThankYouTotal()
+            BackToHomePage()
+        }
     }
 }
 
