@@ -15,7 +15,7 @@ struct ThankYouTotal: View {
             VStack(alignment: .leading, spacing: 15) {
                 Text("GRAND TOTAL")
                     .foregroundColor(Color.gray)
-                Text("$ \(cartManager.total)")
+                Text("$ \(cartManager.getTotal() + AddedCosts.shipping.rawValue + AddedCosts.tax.rawValue)")
                     .font(.title2)
                     .bold()
                     .foregroundColor(Color.white)

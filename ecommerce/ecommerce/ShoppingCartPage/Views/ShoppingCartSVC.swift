@@ -54,7 +54,7 @@ struct ShoppingCartSVC: View {
                     Text("TOTAL")
                         .fontWeight(.light)
                         .lineLimit(1)
-                    Text("$ \(getTotal(items: cartManager.items))")
+                    Text("$ \(cartManager.getTotal())")
                 }
                 HStack {
                     Spacer()

@@ -13,12 +13,25 @@ class CartManager: ObservableObject {
     
     func addToCart(product: NewProduct, qty: Int) {
         items.append(CartItem(item: product, unitPrice: product.price, quantity: qty))
-        total += product.price * qty
+//        total += product.price * qty
     }
     
     func remoteFromCart(product: NewProduct) {
         items = items.filter{ $0.item.id != product.id }
-        total -= product.price
+//        total -= product.price
     }
     
+    func getTotal() -> Int {
+        var result = 0
+        for x in items {
+            result += x.unitPrice * x.quantity
+        }
+        return result
+    }
+    
+}
+
+enum AddedCosts: Int {
+    case tax = 5
+    case shipping = 10
 }
