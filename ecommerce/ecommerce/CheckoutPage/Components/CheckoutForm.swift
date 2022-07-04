@@ -21,6 +21,7 @@ struct CheckoutForm: View {
             
             ScrollView {
                 LazyVGrid(columns: columns, alignment: .leading) {
+                    
                     Text("BILLING DETAILS")
                         .foregroundColor(.red)
                         .padding([.top], 15)

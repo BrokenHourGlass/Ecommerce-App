@@ -20,7 +20,6 @@ struct ShoppingCartSVC: View {
                 Text("CART \(cartManager.items.count)")
                 Spacer()
                 Button("Remove All") {
-                    cartManager.clearCart()
                 }
             }
             .padding([.leading, .trailing], 27)
