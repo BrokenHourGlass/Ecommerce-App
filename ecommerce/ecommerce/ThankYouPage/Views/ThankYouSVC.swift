@@ -11,7 +11,8 @@ struct ThankYouSVC: View {
     @EnvironmentObject var cartManager: CartManager
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 20) {
+            Spacer()
             ThankYouImage()
             ThankYouMessage()
             ThankYouSummary()
@@ -19,8 +20,10 @@ struct ThankYouSVC: View {
             ThankYouTotal()
                 .environmentObject(cartManager)
             BackToHomePage()
+            Spacer()
         }
         .padding([.leading, .trailing], 30)
+        .padding([.top, .bottom], 50)
         .navigationTitle("")
         .navigationBarHidden(true)
     }

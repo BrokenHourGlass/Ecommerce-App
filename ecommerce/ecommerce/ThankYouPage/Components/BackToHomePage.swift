@@ -9,7 +9,17 @@ import SwiftUI
 
 struct BackToHomePage: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationLink(destination: TemporarySVC()) {
+            Section {
+                Text("BACK TO HOME")
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .border(Color.red)
+                
+            }
+            .foregroundColor(Color.white)
+            .background(Color.red)
+        }
     }
 }
 
