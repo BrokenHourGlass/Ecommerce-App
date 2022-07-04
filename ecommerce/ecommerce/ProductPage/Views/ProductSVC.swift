@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct ProductSVC: View {
-//    @StateObject var cartManager = CartManager()
-    var product = products[0]
+    var product: NewProduct?
     let columns: [GridItem] = [GridItem(.flexible())]
     
     var body: some View {
@@ -17,30 +16,32 @@ struct ProductSVC: View {
             NavigationBar()
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 30) {
-                    ProductImage(product: product)
+                    ProductImage(product: product!)
                         .padding([.leading, .trailing], 27)
-                    ProductDetails(product: product)
+                    ProductDetails(product: product!)
                         .padding([.leading, .trailing], 27)
-                    ProductQuantity(product: product)
+                    ProductQuantity(product: product!)
                         .padding([.leading, .trailing], 27)
-                    ProductFeatures(product: product)
+                    ProductFeatures(product: product!)
                         .padding([.leading, .trailing], 27)
-                    ProductContents(product: product)
+                    ProductContents(product: product!)
                         .padding([.leading, .trailing], 27)
-                    ProductPreview(product: product)
+                    ProductPreview(product: product!)
                         .padding([.leading, .trailing], 27)
-                    RecommendedHelper(product: product)
+                    RecommendedHelper(product: product!)
                     ChooseCategory()
                     About()
                     FooterHelper()
                 }
             }
         }
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
 }
 
 struct ProductSVC_Previews: PreviewProvider {
     static var previews: some View {
-        ProductSVC()
+        ProductSVC(product: products[0])
     }
 }

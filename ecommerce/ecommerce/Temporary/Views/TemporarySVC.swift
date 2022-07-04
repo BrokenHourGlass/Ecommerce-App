@@ -37,20 +37,12 @@ struct TemporarySVC: View {
                 }
                 .tag(2)
             
-            ProductSVC()
-                .environmentObject(cartManager)
-                .tabItem {
-                    Image(systemName: "person.crop.circle.fill")
-                    Text("Product")
-                }
-                .tag(3)
-            
             CategorySVC()
                 .tabItem {
                     Image(systemName: "person.crop.circle.fill")
                     Text("Category")
                 }
-                .tag(4)
+                .tag(3)
             
             
         } //TabView

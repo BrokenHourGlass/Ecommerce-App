@@ -20,7 +20,9 @@ struct CategoryResults: View {
             ScrollView {
                 LazyVGrid(columns: columns) {
                     ForEach(modelData, id: \.id) { product in
-                        CategoryItemHelper(product: product)
+                        NavigationLink(destination: ProductSVC(product: product)) {
+                            CategoryItemHelper(product: product)
+                        }
                     }
                 }
             }

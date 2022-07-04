@@ -13,15 +13,20 @@ struct CategorySVC: View {
     let columns: [GridItem] = [GridItem(.flexible())]
     
     var body: some View {
-        VStack {
-            NavigationBar()
-            ScrollView {
-                LazyVGrid(columns: columns, spacing: 20) {
-                    CategoryHero()
-                    CategoryFeatured()
-                    CategoryResults()
+        NavigationView {
+            VStack {
+                NavigationBar()
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 20) {
+                        CategoryHero()
+                        CategoryFeatured()
+                        CategoryResults()
+                    }
                 }
             }
+            .navigationTitle("")
+            .navigationBarHidden(true)
+            
         }
     }
 }

@@ -11,25 +11,26 @@ struct CategoryItemHelper: View {
     var product: NewProduct
     
     var body: some View {
-        HStack {
-            Image(product.productIMG)
-                .resizable()
-                .frame(maxWidth: 200, maxHeight: 200)
-                .scaledToFill()
-                .clipped()
-                .listRowInsets(EdgeInsets())
-            VStack(alignment: .leading, spacing: 10) {
-                Text(product.name)
-                    .bold()
-                Text("$ \(product.price)")
-                    .font(.title)
-                Text(product.description)
-                    .fontWeight(.light)
-                    .lineLimit(2)
+            HStack {
+                Image(product.productIMG)
+                    .resizable()
+                    .frame(maxWidth: 200, maxHeight: 200)
+                    .scaledToFill()
+                    .clipped()
+                    .listRowInsets(EdgeInsets())
+                VStack(alignment: .leading, spacing: 10) {
+                    Text(product.name)
+                        .bold()
+                    Text("$ \(product.price)")
+                        .font(.title)
+                    Text(product.description)
+                        .fontWeight(.light)
+                        .lineLimit(2)
+                }
+                Spacer()
+                
             }
-            Spacer()
-        }
-        .frame(maxHeight: 200)
+            .frame(maxHeight: 200)
     }
 }
 
