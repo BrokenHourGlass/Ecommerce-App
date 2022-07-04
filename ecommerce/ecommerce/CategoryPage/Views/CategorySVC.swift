@@ -18,6 +18,7 @@ struct CategorySVC: View {
         NavigationView {
             VStack {
                 NavigationBar()
+                    .environmentObject(cartManager)
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 20) {
                         CategoryHero()

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NavigationBar: View {
+    @EnvironmentObject var cartManager: CartManager
     
     var body: some View {
         HStack {
@@ -20,9 +21,7 @@ struct NavigationBar: View {
             Text("Amazona")
                 .foregroundColor(.white)
             Spacer()
-            Button {
-               print("add")
-            } label: {
+            NavigationLink(destination: ShoppingCartSVC().environmentObject(cartManager)) {
                 Image(systemName: "cart")
             }
         }

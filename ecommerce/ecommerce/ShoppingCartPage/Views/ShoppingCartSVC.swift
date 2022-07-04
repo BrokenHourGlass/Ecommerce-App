@@ -18,6 +18,7 @@ struct ShoppingCartSVC: View {
     var body: some View {
         VStack {
             NavigationBar()
+            NavigationBack()
             HStack {
                 Text("CART \(cartManager.items.count)")
                 Spacer()
@@ -26,7 +27,7 @@ struct ShoppingCartSVC: View {
                 }
             }
             .padding([.leading, .trailing], 27)
-            .padding([.top, .bottom], 15)
+            .padding([.top, .bottom], 5)
             ScrollView(.vertical) {
                 LazyVGrid(columns: gridItemLayout) {
                     ForEach(cartManager.items, id: \.id) { item in
@@ -66,6 +67,8 @@ struct ShoppingCartSVC: View {
                 }
             }
             .padding([.leading, .top, .trailing, .bottom], 27)
+            .navigationTitle("")
+            .navigationBarHidden(true)
         }
         
     }
