@@ -43,6 +43,7 @@ struct TemporarySVC: View {
                     Text("Category")
                 }
                 .tag(3)
+                .environmentObject(cartManager)
             
             
         } //TabView

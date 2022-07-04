@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CategoryResults: View {
+    @EnvironmentObject var cartManager: CartManager
+    
     var modelData = products
     
     let columns: [GridItem] = [GridItem(.flexible())]
@@ -20,7 +22,7 @@ struct CategoryResults: View {
             ScrollView {
                 LazyVGrid(columns: columns) {
                     ForEach(modelData, id: \.id) { product in
-                        NavigationLink(destination: ProductSVC(product: product)) {
+                        NavigationLink(destination: ProductSVC(product: product).environmentObject(cartManager)) {
                             CategoryItemHelper(product: product)
                         }
                     }

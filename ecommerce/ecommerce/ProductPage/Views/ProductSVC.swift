@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProductSVC: View {
+    @EnvironmentObject var cartManager: CartManager
+    
     var product: NewProduct?
     let columns: [GridItem] = [GridItem(.flexible())]
     
@@ -23,6 +25,7 @@ struct ProductSVC: View {
                         .padding([.leading, .trailing], 27)
                     ProductQuantity(product: product!)
                         .padding([.leading, .trailing], 27)
+                        .environmentObject(cartManager)
                     ProductFeatures(product: product!)
                         .padding([.leading, .trailing], 27)
                     ProductContents(product: product!)

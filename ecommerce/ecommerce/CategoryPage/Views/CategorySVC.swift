@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CategorySVC: View {
+    @EnvironmentObject var cartManager: CartManager
+    
     var modelData = products
     
     let columns: [GridItem] = [GridItem(.flexible())]
@@ -20,7 +22,9 @@ struct CategorySVC: View {
                     LazyVGrid(columns: columns, spacing: 20) {
                         CategoryHero()
                         CategoryFeatured()
+                            .environmentObject(cartManager)
                         CategoryResults()
+                            .environmentObject(cartManager)
                     }
                 }
             }

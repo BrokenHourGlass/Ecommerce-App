@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CategoryFeatured: View {
+    @EnvironmentObject var cartManager: CartManager
+    
     var modelData = products
     
     let rows: [GridItem] = [GridItem(.flexible())]
@@ -21,7 +23,7 @@ struct CategoryFeatured: View {
             ScrollView(.horizontal) {
                 LazyHGrid(rows: rows) {
                     ForEach(modelData, id: \.id) { product in
-                        NavigationLink(destination: ProductSVC(product: product)) {
+                        NavigationLink(destination: ProductSVC(product: product).environmentObject(cartManager)) {
                             HStack {
                                 VStack {
                                     Image(product.productIMG)
