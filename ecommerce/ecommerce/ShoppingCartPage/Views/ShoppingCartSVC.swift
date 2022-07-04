@@ -17,7 +17,7 @@ struct ShoppingCartSVC: View {
             NavigationBar()
             NavigationBack()
             HStack {
-                Text("CART \(cartManager.items.count)")
+                Text("CART (\(cartManager.items.count))")
                 Spacer()
                 Button("Remove All") {
                 }
@@ -50,15 +50,24 @@ struct ShoppingCartSVC: View {
             VStack(spacing: 10) {
                 HStack {
                     Spacer()
-                    Text("TOTAL")
-                        .fontWeight(.light)
+                    Text("TOTAL:")
+                        .font(.title2)
+                        .bold()
                         .lineLimit(1)
                     Text("$ \(cartManager.getTotal())")
+                        .font(.title2)
                 }
                 HStack {
                     Spacer()
                     NavigationLink(destination: CheckoutSVC().environmentObject(cartManager)) {
-                        Text("CHECKOUT")
+                        Section {
+                            Text("CHECKOUT")
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .border(Color.red)
+                        }
+                        .foregroundColor(Color.white)
+                        .background(Color.red)
                     }
                 }
             }
