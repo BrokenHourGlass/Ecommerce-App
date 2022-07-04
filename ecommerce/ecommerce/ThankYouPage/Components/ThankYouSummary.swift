@@ -13,19 +13,24 @@ struct ThankYouSummary: View {
     var body: some View {
         ScrollView {
             LazyVStack {
-                ForEach(cartManager.items, id: \.id) { product in
+                ForEach(cartManager.items, id: \.item.id) { it in
                     HStack {
-                        Image(product.cartIMG)
+                        Image(it.item.cartIMG)
                             .resizable()
                             .frame(width: 100, height: 100)
                         VStack(alignment: .leading, spacing: 5) {
-                            Text(product.name)
+                            Text(it.item.name)
                                 .fontWeight(.bold)
                                 .foregroundColor(.black)
                                 .lineLimit(1)
-                            Text("$ \(product.price)")
+                            Text("$ \(it.item.price)")
                         }
                         Spacer()
+                        VStack {
+                            Text("\(it.quantity)x")
+                                .foregroundColor(Color.gray)
+                                .padding()
+                        }
                     }
                 }
             }
