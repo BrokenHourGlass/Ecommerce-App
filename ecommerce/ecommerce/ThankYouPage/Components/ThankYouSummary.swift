@@ -8,8 +8,28 @@
 import SwiftUI
 
 struct ThankYouSummary: View {
+    @EnvironmentObject var cartManager: CartManager
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            LazyVStack {
+                ForEach(cartManager.items, id: \.id) { product in
+                    HStack {
+                        Image(product.cartIMG)
+                            .resizable()
+                            .frame(width: 100, height: 100)
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text(product.name)
+                                .fontWeight(.bold)
+                                .foregroundColor(.black)
+                                .lineLimit(1)
+                            Text("$ \(product.price)")
+                        }
+                        Spacer()
+                    }
+                }
+            }
+        }
     }
 }
 
