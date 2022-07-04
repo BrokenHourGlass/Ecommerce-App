@@ -23,7 +23,7 @@ struct ThankYouSVC: View {
             Spacer()
         }
         .padding([.leading, .trailing], 30)
-        .padding([.top, .bottom], 50)
+        .padding([.top, .bottom], 25)
         .navigationTitle("")
         .navigationBarHidden(true)
     }

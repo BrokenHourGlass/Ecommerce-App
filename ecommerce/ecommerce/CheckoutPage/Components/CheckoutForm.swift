@@ -29,7 +29,7 @@ struct CheckoutForm: View {
                     CheckoutField(title: "Email", placeholder: "Enter name email")
                     CheckoutField(title: "Phone Number", placeholder: "+1202-555-0136")
                     
-                    Text("BILLING DETAILS")
+                    Text("SHIPPING INFO")
                         .foregroundColor(.red)
                         .padding([.top], 30)
                         .padding([.bottom], 10)
