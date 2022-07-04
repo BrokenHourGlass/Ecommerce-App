@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct CheckoutDetails: View {
-//    var modelData = ModelData()
+    @EnvironmentObject var cartManager: CartManager
     var modelData = products
     
     var body: some View {
         VStack(spacing: 5) {
-            CheckoutDetail(label: "TOTAL", cost: getTotal(products: modelData))
+            CheckoutDetail(label: "TOTAL", cost: getTotal(items: cartManager.items))
             CheckoutDetail(label: "SHIPPING", cost: 5)
             CheckoutDetail(label: "TAX", cost: 10)
             CheckoutDetail(label: "GRAND TOTAL", cost: 599 * 5 + 5 + 10)

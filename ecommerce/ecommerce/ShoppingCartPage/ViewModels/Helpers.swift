@@ -7,10 +7,10 @@
 
 import Foundation
 
-func getTotal(products: [NewProduct]) -> Int {
+func getTotal(items: [CartItem]) -> Int {
     var total = 0
-    for x in products {
-        total = total + x.price
+    for x in items {
+        total = x.unitPrice * x.quantity
     }
     return total
 }

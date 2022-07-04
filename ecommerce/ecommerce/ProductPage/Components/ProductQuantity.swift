@@ -9,16 +9,17 @@ import SwiftUI
 
 struct ProductQuantity: View {
     @EnvironmentObject var cartManager: CartManager
+    @State private var quantity = 0
     
     var product: NewProduct?
     
     var body: some View {
         HStack {
-            QuantityHelper(product: product!)
+            QuantityHelper(quantity: self.$quantity)
             Spacer()
             Button(action: {
                 print("Added to cart!")
-                cartManager.addToCart(product: product!)
+                cartManager.addToCart(product: product!, qty: quantity)
             }) {
                 Text("ADD TO CART")
                     .padding()

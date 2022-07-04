@@ -27,21 +27,21 @@ struct ShoppingCartSVC: View {
             .padding([.top, .bottom], 5)
             ScrollView(.vertical) {
                 LazyVGrid(columns: gridItemLayout) {
-                    ForEach(cartManager.items, id: \.id) { item in
+                    ForEach(cartManager.items, id: \.item.id) { it in
                         HStack(spacing: 15) {
-                            Image(item.cartIMG)
+                            Image(it.item.cartIMG)
                                 .resizable()
                                 .frame(width: 100, height: 100)
                             Spacer()
                             VStack(alignment: .leading, spacing: 5) {
-                                Text(item.name)
+                                Text(it.item.name)
                                     .fontWeight(.bold)
                                     .foregroundColor(.black)
                                     .lineLimit(1)
-                                Text("$ \(item.price)")
+                                Text("$ \(it.unitPrice)")
                             }
                             Spacer()
-                            AddRemoveItem(product: item)
+                            AddRemoveItem(item: it)
                                 .environmentObject(cartManager)
                         }
                     }
@@ -54,7 +54,7 @@ struct ShoppingCartSVC: View {
                     Text("TOTAL")
                         .fontWeight(.light)
                         .lineLimit(1)
-                    Text("$ \(getTotal(products: cartManager.items))")
+                    Text("$ \(getTotal(items: cartManager.items))")
                 }
                 HStack {
                     Spacer()
