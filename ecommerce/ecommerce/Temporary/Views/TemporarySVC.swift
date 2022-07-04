@@ -22,35 +22,28 @@ struct TemporarySVC: View {
                 }
                 .tag(0)
             
-            ShoppingCartSVC()
-                .environmentObject(cartManager)
+//            ShoppingCartSVC()
+//                .environmentObject(cartManager)
+//                .tabItem {
+//                    Image(systemName: "photo.fill")
+//                    Text("Cart")
+//                }
+//                .tag(1)
+            
+//            CheckoutSVC()
+//                .tabItem {
+//                    Image(systemName: "envelope.fill")
+//                    Text("Checkout")
+//                }
+//                .tag(2)
+            
+            CategorySVC()
                 .tabItem {
-                    Image(systemName: "photo.fill")
-                    Text("Cart")
+                    Image(systemName: "person.crop.circle.fill")
+                    Text("Category")
                 }
                 .tag(1)
-            
-            CheckoutSVC()
-                .tabItem {
-                    Image(systemName: "envelope.fill")
-                    Text("Checkout")
-                }
-                .tag(2)
-            
-            ProductSVC()
                 .environmentObject(cartManager)
-                .tabItem {
-                    Image(systemName: "person.crop.circle.fill")
-                    Text("Product")
-                }
-                .tag(3)
-            
-            HomePage()
-                .tabItem {
-                    Image(systemName: "person.crop.circle.fill")
-                    Text("Home")
-                }
-                .tag(4)
             
             
         } //TabView

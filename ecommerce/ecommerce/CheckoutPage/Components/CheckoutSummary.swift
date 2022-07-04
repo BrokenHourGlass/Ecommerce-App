@@ -2,13 +2,13 @@
 //  CheckoutSummary.swift
 //  ecommerce
 //
-//  Created by Vincent Salinas on 6/30/22.
+//  Created by Vincent Salinas on 6/29/22.
 //
 
 import SwiftUI
 
 struct CheckoutSummary: View {
-    var modelData = products
+    @EnvironmentObject var cartManager: CartManager
     
     private var columns = [GridItem(.flexible())]
     
@@ -17,26 +17,38 @@ struct CheckoutSummary: View {
             Text("SUMMARY")
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    ForEach(0..<modelData.count) { index in
+                    ForEach(cartManager.items, id: \.id) { product in
                         HStack {
-                            Image(modelData[index].cartIMG)
+                            Image(product.cartIMG)
                                 .resizable()
                                 .frame(width: 100, height: 100)
                             VStack(alignment: .leading, spacing: 5) {
-                                Text(modelData[index].name)
+                                Text(product.name)
                                     .fontWeight(.bold)
                                     .foregroundColor(.black)
                                     .lineLimit(1)
-                                Text("$ \(modelData[index].price)")
+                                Text("$ \(product.price)")
                             }
                             Spacer()
                         }
                     }
                     CheckoutDetails()
-                    ButtonA(title: "CONTINUE & PAY")
+                    NavigationLink(destination: ThankYouSVC().environmentObject(cartManager)) {
+                        Section {
+                            Text("CONTINUE & PAY")
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .border(Color.red)
+                            
+                        }
+                        .foregroundColor(Color.white)
+                        .background(Color.red)
+                    }
                 }
             }
         }
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
 }
 

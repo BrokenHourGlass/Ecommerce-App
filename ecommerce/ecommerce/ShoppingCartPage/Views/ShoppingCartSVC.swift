@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct ShoppingCartSVC: View {
-//    var modelData = ModelData()
-    var modelData = products
-//    @StateObject var cartManager = CartManager()
     @EnvironmentObject var cartManager: CartManager
     
     private var gridItemLayout = [GridItem(.flexible())]
@@ -18,6 +15,7 @@ struct ShoppingCartSVC: View {
     var body: some View {
         VStack {
             NavigationBar()
+            NavigationBack()
             HStack {
                 Text("CART \(cartManager.items.count)")
                 Spacer()
@@ -26,7 +24,7 @@ struct ShoppingCartSVC: View {
                 }
             }
             .padding([.leading, .trailing], 27)
-            .padding([.top, .bottom], 15)
+            .padding([.top, .bottom], 5)
             ScrollView(.vertical) {
                 LazyVGrid(columns: gridItemLayout) {
                     ForEach(cartManager.items, id: \.id) { item in
@@ -60,12 +58,14 @@ struct ShoppingCartSVC: View {
                 }
                 HStack {
                     Spacer()
-                    Button("CHECKOUT") {
-                        
+                    NavigationLink(destination: CheckoutSVC().environmentObject(cartManager)) {
+                        Text("CHECKOUT")
                     }
                 }
             }
             .padding([.leading, .top, .trailing, .bottom], 27)
+            .navigationTitle("")
+            .navigationBarHidden(true)
         }
         
     }

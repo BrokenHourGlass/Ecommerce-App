@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct CheckoutForm: View {
+    @EnvironmentObject var cartManager: CartManager
+    
     let columns: [GridItem] = [
         GridItem(.flexible())
     ]
-    
     
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
@@ -28,7 +29,7 @@ struct CheckoutForm: View {
                     CheckoutField(title: "Email", placeholder: "Enter name email")
                     CheckoutField(title: "Phone Number", placeholder: "+1202-555-0136")
                     
-                    Text("BILLING DETAILS")
+                    Text("SHIPPING INFO")
                         .foregroundColor(.red)
                         .padding([.top], 30)
                         .padding([.bottom], 10)
@@ -39,6 +40,7 @@ struct CheckoutForm: View {
                     
                     CheckoutSummary()
                         .padding([.top], 30)
+                        .environmentObject(cartManager)
                 }
                 
             }
