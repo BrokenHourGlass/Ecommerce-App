@@ -209,6 +209,36 @@
             </objects>
             <point key="canvasLocation" x="3172" y="96"/>
         </scene>
+        <!--Thank YouVC-->
+        <scene sceneID="3fw-ob-I81">
+            <objects>
+                <viewController id="59z-IS-Pjx" customClass="ThankYouVC" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uTQ-SQ-8vY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhB-5k-Zq3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rVL-B4-fdC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rVL-B4-fdC" firstAttribute="bottom" secondItem="fhB-5k-Zq3" secondAttribute="bottom" id="0wC-RR-7vj"/>
+                            <constraint firstItem="rVL-B4-fdC" firstAttribute="trailing" secondItem="fhB-5k-Zq3" secondAttribute="trailing" id="2Uq-gG-hS6"/>
+                            <constraint firstItem="fhB-5k-Zq3" firstAttribute="top" secondItem="rVL-B4-fdC" secondAttribute="top" id="Gk6-Zy-hPm"/>
+                            <constraint firstItem="fhB-5k-Zq3" firstAttribute="leading" secondItem="rVL-B4-fdC" secondAttribute="leading" id="zeP-pt-eUh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="fhB-5k-Zq3" id="Sgp-xQ-p6K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C3B-1r-WjF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4268" y="96"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="kcX-dY-gHj">
             <objects>

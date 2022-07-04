@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct CheckoutSVC: View {
+    @EnvironmentObject var cartManager: CartManager
+    
     var body: some View {
         VStack {
             NavigationBar()
+                .environmentObject(cartManager)
             CheckoutForm()
+                .environmentObject(cartManager)
         }
     }
 }

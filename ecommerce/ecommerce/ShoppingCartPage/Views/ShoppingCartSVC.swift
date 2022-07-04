@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ShoppingCartSVC: View {
-//    var modelData = ModelData()
+    //    var modelData = ModelData()
     var modelData = products
-//    @StateObject var cartManager = CartManager()
+    //    @StateObject var cartManager = CartManager()
     @EnvironmentObject var cartManager: CartManager
     
     private var gridItemLayout = [GridItem(.flexible())]
@@ -61,8 +61,8 @@ struct ShoppingCartSVC: View {
                 }
                 HStack {
                     Spacer()
-                    Button("CHECKOUT") {
-                        
+                    NavigationLink(destination: CheckoutSVC().environmentObject(cartManager)) {
+                        Text("CHECKOUT")
                     }
                 }
             }
