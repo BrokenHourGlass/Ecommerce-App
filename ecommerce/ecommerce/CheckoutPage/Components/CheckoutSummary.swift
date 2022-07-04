@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct CheckoutSummary: View {
-    var modelData = products
     @EnvironmentObject var cartManager: CartManager
     
     private var columns = [GridItem(.flexible())]
@@ -34,10 +33,22 @@ struct CheckoutSummary: View {
                         }
                     }
                     CheckoutDetails()
-                    ButtonA(title: "CONTINUE & PAY")
+                    NavigationLink(destination: ThankYouSVC().environmentObject(cartManager)) {
+                        Section {
+                            Text("CONTINUE & PAY")
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .border(Color.red)
+                            
+                        }
+                        .foregroundColor(Color.white)
+                        .background(Color.red)
+                    }
                 }
             }
         }
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
 }
 

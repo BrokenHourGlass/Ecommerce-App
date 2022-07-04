@@ -17,6 +17,8 @@ struct CheckoutSVC: View {
             CheckoutForm()
                 .environmentObject(cartManager)
         }
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
 }
 
