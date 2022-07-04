@@ -19,6 +19,7 @@ struct ThankYouSVC: View {
             ThankYouTotal()
             BackToHomePage()
         }
+        .padding([.leading, .trailing], 30)
     }
 }
 
