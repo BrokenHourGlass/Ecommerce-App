@@ -11,15 +11,18 @@ struct ThankYouSVC: View {
     @EnvironmentObject var cartManager: CartManager
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             ThankYouImage()
             ThankYouMessage()
             ThankYouSummary()
                 .environmentObject(cartManager)
             ThankYouTotal()
+                .environmentObject(cartManager)
             BackToHomePage()
         }
         .padding([.leading, .trailing], 30)
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
 }
 

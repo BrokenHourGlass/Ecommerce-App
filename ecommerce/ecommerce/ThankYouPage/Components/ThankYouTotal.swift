@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct ThankYouTotal: View {
+    @EnvironmentObject var cartManager: CartManager
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            VStack(alignment: .leading, spacing: 15) {
+                Text("GRAND TOTAL")
+                    .foregroundColor(Color.gray)
+                Text("$ \(cartManager.total)")
+                    .font(.title2)
+                    .bold()
+                    .foregroundColor(Color.white)
+            }
+            Spacer()
+        }
+        .padding(27)
+        .background(Color.black)
+        .cornerRadius(5)
     }
 }
 
