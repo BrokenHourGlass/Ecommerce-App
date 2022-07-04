@@ -14,6 +14,7 @@ struct ProductSVC: View {
     var body: some View {
         VStack {
             NavigationBar()
+            NavigationBack()
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 30) {
                     ProductImage(product: product!)

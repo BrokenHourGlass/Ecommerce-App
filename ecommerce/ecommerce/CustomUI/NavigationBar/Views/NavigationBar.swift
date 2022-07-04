@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NavigationBar: View {
+    
     var body: some View {
         HStack {
             Button {
