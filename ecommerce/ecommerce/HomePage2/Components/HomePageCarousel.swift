@@ -30,6 +30,7 @@ struct HomePageCarousel: View {
                 }
             }
         }
+        .padding([.leading], 14)
     }
 }
 
