@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct HomePageAd: View {
+    var img: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .center) {
+            Image(img)
+                .resizable()
+                .scaledToFill()
+                .frame(height: 180)
+                .clipped()
+                .listRowInsets(EdgeInsets())
+        }
     }
 }
 
 struct HomePageAd_Previews: PreviewProvider {
     static var previews: some View {
-        HomePageAd()
+        HomePageAd(img: "image")
     }
 }
