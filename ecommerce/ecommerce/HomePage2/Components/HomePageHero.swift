@@ -20,7 +20,7 @@ struct HomePageHero: View {
     }
 }
 
-struct HomePageMessage_Previews: PreviewProvider {
+struct HomePageHero_Previews: PreviewProvider {
     static var previews: some View {
         HomePageHero()
     }
