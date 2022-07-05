@@ -19,7 +19,7 @@ struct HomePage2SVC: View {
                 LazyVGrid(columns: columns) {
                     HomePageCarousel()
                         .environmentObject(cartManager)
-                    HomePageMessage()
+                    HomePageHero()
                     HomePageFeatured()
                     HomePageCategories()
                     HomePageAd()
