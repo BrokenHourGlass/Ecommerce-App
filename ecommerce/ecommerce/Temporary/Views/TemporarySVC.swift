@@ -16,6 +16,7 @@ struct TemporarySVC: View {
         TabView(selection: $selection) {
             
             HomePage2SVC()
+                .environmentObject(cartManager)
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Home")

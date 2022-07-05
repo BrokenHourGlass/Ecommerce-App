@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct HomePage2SVC: View {
+    @EnvironmentObject var cartManager: CartManager
+    
     let columns: [GridItem] = [GridItem(.flexible())]
     
     var body: some View {
         VStack {
             NavigationBar()
             ScrollView {
-                LazyVStack(columns: columns) {
+                LazyVGrid(columns: columns) {
                     HomePageCarousel()
+                        .environmentObject(cartManager)
                     HomePageMessage()
                     HomePageFeatured()
                     HomePageCategories()
@@ -34,5 +37,6 @@ struct HomePage2SVC: View {
 struct HomePage2SVC_Previews: PreviewProvider {
     static var previews: some View {
         HomePage2SVC()
+            .environmentObject(CartManager())
     }
 }
