@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct HomePage2SVC: View {
+    let columns: [GridItem] = [GridItem(.flexible())]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            NavigationBar()
+            ScrollView {
+                LazyVStack(columns: columns) {
+                    HomePageCarousel()
+                    HomePageMessage()
+                    HomePageFeatured()
+                    HomePageCategories()
+                    HomePageAd()
+                    HomePageCategories()
+                    HomePageAd()
+                    HomePageAd()
+                    HomePageCategories()
+                    FooterHelper()
+                }
+            }
+        }
     }
 }
 
