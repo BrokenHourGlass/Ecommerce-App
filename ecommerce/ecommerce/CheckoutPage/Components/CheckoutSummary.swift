@@ -30,6 +30,11 @@ struct CheckoutSummary: View {
                                 Text("$ \(it.item.price)")
                             }
                             Spacer()
+                            VStack {
+                                Text("\(it.quantity)x")
+                                    .foregroundColor(Color.gray)
+                                    .padding()
+                            }
                         }
                     }
                     CheckoutDetails()
