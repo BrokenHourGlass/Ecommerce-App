@@ -40,7 +40,7 @@ struct ShoppingCartSVC: View {
                                 Text("$ \(it.unitPrice)")
                             }
                             Spacer()
-                            AddRemoveItem(item: it)
+                            AddRemoveItem(it.quantity, item: it)
                                 .environmentObject(cartManager)
                         }
                     }
