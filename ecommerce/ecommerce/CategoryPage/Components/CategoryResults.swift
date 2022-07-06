@@ -30,6 +30,8 @@ struct CategoryResults: View {
             }
         }
         .padding([.leading, .trailing], 17)
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
 }
 

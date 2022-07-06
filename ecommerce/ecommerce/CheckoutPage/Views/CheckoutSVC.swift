@@ -20,6 +20,7 @@ struct CheckoutSVC: View {
         }
         .navigationTitle("")
         .navigationBarHidden(true)
+        
     }
 }
 

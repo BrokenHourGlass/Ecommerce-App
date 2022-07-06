@@ -10,8 +10,6 @@ import SwiftUI
 struct CategorySVC: View {
     @EnvironmentObject var cartManager: CartManager
     
-    var modelData = products
-    
     let columns: [GridItem] = [GridItem(.flexible())]
     
     var body: some View {
@@ -19,6 +17,7 @@ struct CategorySVC: View {
             VStack {
                 NavigationBar()
                     .environmentObject(cartManager)
+                NavigationBack()
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 20) {
                         CategoryHero()
@@ -31,7 +30,6 @@ struct CategorySVC: View {
             }
             .navigationTitle("")
             .navigationBarHidden(true)
-            
         }
     }
 }

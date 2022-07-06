@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct BackToHomePage: View {
+    @EnvironmentObject var cartManager: CartManager
+    
     var body: some View {
-        NavigationLink(destination: TemporarySVC()) {
+        NavigationLink(destination: HomePage2SVC().environmentObject(cartManager).navigationTitle("").navigationBarHidden(true)) {
             Section {
                 Text("BACK TO HOME")
                     .padding()
@@ -26,5 +28,6 @@ struct BackToHomePage: View {
 struct BackToHomePage_Previews: PreviewProvider {
     static var previews: some View {
         BackToHomePage()
+            .environmentObject(CartManager())
     }
 }

@@ -14,36 +14,28 @@ struct TemporarySVC: View {
     
     var body: some View {
         TabView(selection: $selection) {
+            HomePage2SVC()
+                .environmentObject(cartManager)
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Home")
+                }
+                .tag(0)
             
             ContentView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Catalog")
                 }
-                .tag(0)
-            
-//            ShoppingCartSVC()
-//                .environmentObject(cartManager)
-//                .tabItem {
-//                    Image(systemName: "photo.fill")
-//                    Text("Cart")
-//                }
-//                .tag(1)
-            
-//            CheckoutSVC()
-//                .tabItem {
-//                    Image(systemName: "envelope.fill")
-//                    Text("Checkout")
-//                }
-//                .tag(2)
+                .tag(1)
             
             CategorySVC()
+                .environmentObject(cartManager)
                 .tabItem {
-                    Image(systemName: "person.crop.circle.fill")
+                    Image(systemName: "person")
                     Text("Category")
                 }
-                .tag(1)
-                .environmentObject(cartManager)
+                .tag(2)
             
             
         } //TabView
