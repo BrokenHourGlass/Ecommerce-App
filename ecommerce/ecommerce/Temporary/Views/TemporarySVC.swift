@@ -14,7 +14,6 @@ struct TemporarySVC: View {
     
     var body: some View {
         TabView(selection: $selection) {
-            
             HomePage2SVC()
                 .environmentObject(cartManager)
                 .tabItem {
@@ -29,7 +28,6 @@ struct TemporarySVC: View {
                     Text("Catalog")
                 }
                 .tag(1)
-            
         } //TabView
     }
 }
