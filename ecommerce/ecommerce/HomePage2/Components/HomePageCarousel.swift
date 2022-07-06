@@ -31,6 +31,7 @@ struct HomePageCarousel: View {
             }
         }
         .padding([.leading], 14)
+        .padding([.top, .bottom], 14)
     }
 }
 
