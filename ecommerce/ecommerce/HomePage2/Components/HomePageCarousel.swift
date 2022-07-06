@@ -15,9 +15,9 @@ struct HomePageCarousel: View {
     
     var body: some View {
         ScrollView(.horizontal) {
-            LazyHGrid(rows: rows, spacing: 15) {
+            LazyHStack(spacing: 15) {
                 ForEach(0..<categories.count) { index in
-                    NavigationLink(destination: CategorySVC().environmentObject(cartManager)) {
+                    NavigationLink(destination: CategorySVC().environmentObject(cartManager).navigationTitle("").navigationBarHidden(true)) {
                         Text(categories[index])
                             .padding([.top, .bottom], 8)
                             .padding([.leading, .trailing], 12)
@@ -31,7 +31,7 @@ struct HomePageCarousel: View {
             }
         }
         .padding([.leading], 14)
-        .padding([.top, .bottom], 14)
+        .frame(height: 50)
     }
 }
 

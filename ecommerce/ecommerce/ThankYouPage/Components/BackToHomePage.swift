@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BackToHomePage: View {
     var body: some View {
-        NavigationLink(destination: TemporarySVC()) {
+        NavigationLink(destination: HomePage2SVC()) {
             Section {
                 Text("BACK TO HOME")
                     .padding()
