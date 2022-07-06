@@ -52,15 +52,6 @@
 		61CE688328710113008CD0C1 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE688228710113008CD0C1 /* CartManager.swift */; };
 		61CE6896287110F0008CD0C1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE6886287110F0008CD0C1 /* Constant.swift */; };
 		61CE6898287110F0008CD0C1 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE688A287110F0008CD0C1 /* TitleView.swift */; };
-		61CE6899287110F0008CD0C1 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE688B287110F0008CD0C1 /* CollectionView.swift */; };
-		61CE689A287110F0008CD0C1 /* MonitorCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE688C287110F0008CD0C1 /* MonitorCollections.swift */; };
-		61CE689B287110F0008CD0C1 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE688D287110F0008CD0C1 /* NavigationBarView.swift */; };
-		61CE689C287110F0008CD0C1 /* LaptTopCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE688E287110F0008CD0C1 /* LaptTopCollection.swift */; };
-		61CE689D287110F0008CD0C1 /* GameCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE688F287110F0008CD0C1 /* GameCollections.swift */; };
-		61CE689E287110F0008CD0C1 /* CellphoneCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE6890287110F0008CD0C1 /* CellphoneCollection.swift */; };
-		61CE689F287110F0008CD0C1 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE6891287110F0008CD0C1 /* LogoView.swift */; };
-		61CE68A0287110F0008CD0C1 /* KeyboardCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE6892287110F0008CD0C1 /* KeyboardCollections.swift */; };
-		61CE68A1287110F0008CD0C1 /* HeadSetCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE6893287110F0008CD0C1 /* HeadSetCollections.swift */; };
 		61CE68A528711129008CD0C1 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE68A428711129008CD0C1 /* CatalogViewController.swift */; };
 		61CE68A728711130008CD0C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE68A628711130008CD0C1 /* ContentView.swift */; };
 		61E2ACA128713EB700CD4F8F /* TemporaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E2ACA028713EB700CD4F8F /* TemporaryVC.swift */; };
@@ -104,6 +95,14 @@
 		847F7F6E286A4C30006E87AB /* ecommerce.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 847F7F6C286A4C30006E87AB /* ecommerce.xcdatamodeld */; };
 		847F7F70286A4C31006E87AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847F7F6F286A4C31006E87AB /* Assets.xcassets */; };
 		847F7F73286A4C31006E87AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847F7F71286A4C31006E87AB /* LaunchScreen.storyboard */; };
+		F7D42BA22875236600C554CC /* CatalogMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D42BA12875236600C554CC /* CatalogMain.swift */; };
+		F7D42BA6287524C300C554CC /* CategoryViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D42BA5287524C300C554CC /* CategoryViewCells.swift */; };
+		F7D42BA828752F7800C554CC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D42BA728752F7800C554CC /* GameViewController.swift */; };
+		F7D42BAA28752F8B00C554CC /* LaptopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D42BA928752F8B00C554CC /* LaptopViewController.swift */; };
+		F7D42BAC28752F9800C554CC /* HeadPhonesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D42BAB28752F9800C554CC /* HeadPhonesViewController.swift */; };
+		F7D42BAE28752FA600C554CC /* MonitorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D42BAD28752FA600C554CC /* MonitorsViewController.swift */; };
+		F7D42BB028752FB600C554CC /* KeyboardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D42BAF28752FB600C554CC /* KeyboardsViewController.swift */; };
+		F7D42BB2287554F900C554CC /* CellPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D42BB1287554F900C554CC /* CellPhoneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -152,15 +151,6 @@
 		61CE688228710113008CD0C1 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		61CE6886287110F0008CD0C1 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		61CE688A287110F0008CD0C1 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
-		61CE688B287110F0008CD0C1 /* CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
-		61CE688C287110F0008CD0C1 /* MonitorCollections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorCollections.swift; sourceTree = "<group>"; };
-		61CE688D287110F0008CD0C1 /* NavigationBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
-		61CE688E287110F0008CD0C1 /* LaptTopCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaptTopCollection.swift; sourceTree = "<group>"; };
-		61CE688F287110F0008CD0C1 /* GameCollections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCollections.swift; sourceTree = "<group>"; };
-		61CE6890287110F0008CD0C1 /* CellphoneCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellphoneCollection.swift; sourceTree = "<group>"; };
-		61CE6891287110F0008CD0C1 /* LogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
-		61CE6892287110F0008CD0C1 /* KeyboardCollections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardCollections.swift; sourceTree = "<group>"; };
-		61CE6893287110F0008CD0C1 /* HeadSetCollections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadSetCollections.swift; sourceTree = "<group>"; };
 		61CE68A428711129008CD0C1 /* CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
 		61CE68A628711130008CD0C1 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		61E2ACA028713EB700CD4F8F /* TemporaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryVC.swift; sourceTree = "<group>"; };
@@ -206,6 +196,14 @@
 		847F7F6F286A4C31006E87AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		847F7F72286A4C31006E87AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		847F7F74286A4C31006E87AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7D42BA12875236600C554CC /* CatalogMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogMain.swift; sourceTree = "<group>"; };
+		F7D42BA5287524C300C554CC /* CategoryViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCells.swift; sourceTree = "<group>"; };
+		F7D42BA728752F7800C554CC /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		F7D42BA928752F8B00C554CC /* LaptopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaptopViewController.swift; sourceTree = "<group>"; };
+		F7D42BAB28752F9800C554CC /* HeadPhonesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadPhonesViewController.swift; sourceTree = "<group>"; };
+		F7D42BAD28752FA600C554CC /* MonitorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorsViewController.swift; sourceTree = "<group>"; };
+		F7D42BAF28752FB600C554CC /* KeyboardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardsViewController.swift; sourceTree = "<group>"; };
+		F7D42BB1287554F900C554CC /* CellPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPhoneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -488,13 +486,6 @@
 			path = CatalogData;
 			sourceTree = "<group>";
 		};
-		61676C7428711427006205B8 /* CatalogModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CatalogModel;
-			sourceTree = "<group>";
-		};
 		61676C752871142D006205B8 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -536,7 +527,6 @@
 			isa = PBXGroup;
 			children = (
 				61676C752871142D006205B8 /* Utility */,
-				61676C7428711427006205B8 /* CatalogModel */,
 				61676C7328711420006205B8 /* CatalogData */,
 				61CE6885287110F0008CD0C1 /* CatalogConstants */,
 				61CE6888287110F0008CD0C1 /* View */,
@@ -566,15 +556,6 @@
 			isa = PBXGroup;
 			children = (
 				61CE688A287110F0008CD0C1 /* TitleView.swift */,
-				61CE688B287110F0008CD0C1 /* CollectionView.swift */,
-				61CE688C287110F0008CD0C1 /* MonitorCollections.swift */,
-				61CE688D287110F0008CD0C1 /* NavigationBarView.swift */,
-				61CE688E287110F0008CD0C1 /* LaptTopCollection.swift */,
-				61CE688F287110F0008CD0C1 /* GameCollections.swift */,
-				61CE6890287110F0008CD0C1 /* CellphoneCollection.swift */,
-				61CE6891287110F0008CD0C1 /* LogoView.swift */,
-				61CE6892287110F0008CD0C1 /* KeyboardCollections.swift */,
-				61CE6893287110F0008CD0C1 /* HeadSetCollections.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -808,6 +789,9 @@
 		847F7F62286A4C30006E87AB /* ecommerce */ = {
 			isa = PBXGroup;
 			children = (
+				F7D42BA42875245200C554CC /* CatalogViews */,
+				F7D42BA3287523F900C554CC /* CatalogViewModels */,
+				F7D42BA028751F4100C554CC /* CatalogControllers */,
 				61E2ACE42874932800CD4F8F /* HomePage2 */,
 				61E2ACCF2872968E00CD4F8F /* ThankYouPage */,
 				61E2ACB52872071C00CD4F8F /* CategoryPage */,
@@ -834,6 +818,35 @@
 				847F7F6C286A4C30006E87AB /* ecommerce.xcdatamodeld */,
 			);
 			path = ecommerce;
+			sourceTree = "<group>";
+		};
+		F7D42BA028751F4100C554CC /* CatalogControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7D42BA12875236600C554CC /* CatalogMain.swift */,
+				F7D42BA728752F7800C554CC /* GameViewController.swift */,
+				F7D42BA928752F8B00C554CC /* LaptopViewController.swift */,
+				F7D42BAB28752F9800C554CC /* HeadPhonesViewController.swift */,
+				F7D42BAD28752FA600C554CC /* MonitorsViewController.swift */,
+				F7D42BAF28752FB600C554CC /* KeyboardsViewController.swift */,
+				F7D42BB1287554F900C554CC /* CellPhoneViewController.swift */,
+			);
+			path = CatalogControllers;
+			sourceTree = "<group>";
+		};
+		F7D42BA3287523F900C554CC /* CatalogViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CatalogViewModels;
+			sourceTree = "<group>";
+		};
+		F7D42BA42875245200C554CC /* CatalogViews */ = {
+			isa = PBXGroup;
+			children = (
+				F7D42BA5287524C300C554CC /* CategoryViewCells.swift */,
+			);
+			path = CatalogViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -920,9 +933,10 @@
 				61E2ACC42872094B00CD4F8F /* CategoryResults.swift in Sources */,
 				61E2ACFB2874E6E600CD4F8F /* HomePageAd.swift in Sources */,
 				61077949286D28080094F95A /* ShoppingCartVC.swift in Sources */,
+				F7D42BA828752F7800C554CC /* GameViewController.swift in Sources */,
+				F7D42BAC28752F9800C554CC /* HeadPhonesViewController.swift in Sources */,
 				610779D5286F9E7F0094F95A /* JSONDecoder.swift in Sources */,
 				610779BF286F47760094F95A /* ChooseCategory.swift in Sources */,
-				61CE689B287110F0008CD0C1 /* NavigationBarView.swift in Sources */,
 				61077997286E8DA90094F95A /* ProductImage.swift in Sources */,
 				610779C6286F51C70094F95A /* About.swift in Sources */,
 				61E2ACE228729E5E00CD4F8F /* BackToHomePage.swift in Sources */,
@@ -935,11 +949,9 @@
 				61E2ACF72874E6CD00CD4F8F /* HomePageFeatured.swift in Sources */,
 				61077982286E398F0094F95A /* CheckoutForm.swift in Sources */,
 				61CE6875286FE1F9008CD0C1 /* Design Elements.swift in Sources */,
-				61CE6899287110F0008CD0C1 /* CollectionView.swift in Sources */,
 				61077960286D51F60094F95A /* Helpers.swift in Sources */,
 				61E2ACC8287274D600CD4F8F /* NavigationBar2.swift in Sources */,
 				610779D3286F9D760094F95A /* NewProduct.swift in Sources */,
-				61CE68A1287110F0008CD0C1 /* HeadSetCollections.swift in Sources */,
 				61077986286E461E0094F95A /* CheckoutSummary.swift in Sources */,
 				610779BC286F3EE10094F95A /* ButtonA.swift in Sources */,
 				61CE687E2870FF67008CD0C1 /* CartItem.swift in Sources */,
@@ -953,16 +965,18 @@
 				61CE686B286FE189008CD0C1 /* HomePage.swift in Sources */,
 				610779C3286F48EB0094F95A /* ButtonB.swift in Sources */,
 				61077984286E3BD80094F95A /* CheckoutField.swift in Sources */,
-				61CE689D287110F0008CD0C1 /* GameCollections.swift in Sources */,
-				61CE689C287110F0008CD0C1 /* LaptTopCollection.swift in Sources */,
 				61077988286E49090094F95A /* CheckoutDetails.swift in Sources */,
+				F7D42BAA28752F8B00C554CC /* LaptopViewController.swift in Sources */,
 				61E2ACA328713EC400CD4F8F /* TemporarySVC.swift in Sources */,
 				61E2ACB2287156A900CD4F8F /* RegisterViewController.swift in Sources */,
 				61E2ACC22872093F00CD4F8F /* CategoryFeatured.swift in Sources */,
+				F7D42BB028752FB600C554CC /* KeyboardsViewController.swift in Sources */,
+				F7D42BA22875236600C554CC /* CatalogMain.swift in Sources */,
 				61E2ACAD287156A900CD4F8F /* SettingsTableViewCell.swift in Sources */,
+				F7D42BAE28752FA600C554CC /* MonitorsViewController.swift in Sources */,
+				F7D42BB2287554F900C554CC /* CellPhoneViewController.swift in Sources */,
 				610779AB286E9DCF0094F95A /* PreviewHelper.swift in Sources */,
 				61077999286E8DD50094F95A /* ProductDetails.swift in Sources */,
-				61CE689E287110F0008CD0C1 /* CellphoneCollection.swift in Sources */,
 				61E2ACA128713EB700CD4F8F /* TemporaryVC.swift in Sources */,
 				61E2ACF32874E6B000CD4F8F /* HomePageCarousel.swift in Sources */,
 				6107794B286D28B80094F95A /* ShoppingCartSVC.swift in Sources */,
@@ -982,6 +996,7 @@
 				61E2ACCB28727BC500CD4F8F /* NavigationFooter.swift in Sources */,
 				61E2ACE028729E5200CD4F8F /* ThankYouTotal.swift in Sources */,
 				61E2ACD82872973600CD4F8F /* ThankYouSVC.swift in Sources */,
+				F7D42BA6287524C300C554CC /* CategoryViewCells.swift in Sources */,
 				61E2ACDC28729E3900CD4F8F /* ThankYouMessage.swift in Sources */,
 				6107795E286D51880094F95A /* Actions.swift in Sources */,
 				610779B1286F39DC0094F95A /* RecommendedHelper.swift in Sources */,
@@ -992,15 +1007,12 @@
 				847F7F66286A4C30006E87AB /* SceneDelegate.swift in Sources */,
 				61077975286E055F0094F95A /* NavigationBar.swift in Sources */,
 				61E2ACDA28729E2A00CD4F8F /* ThankYouImage.swift in Sources */,
-				61CE689A287110F0008CD0C1 /* MonitorCollections.swift in Sources */,
 				61CE68A528711129008CD0C1 /* CatalogViewController.swift in Sources */,
 				610779AD286EA0950094F95A /* FooterHelper.swift in Sources */,
 				61CE6898287110F0008CD0C1 /* TitleView.swift in Sources */,
 				61077995286E7D8B0094F95A /* ProductSVC.swift in Sources */,
-				61CE689F287110F0008CD0C1 /* LogoView.swift in Sources */,
 				610779A9286E9A990094F95A /* ItemHelper.swift in Sources */,
 				6107797E286E386A0094F95A /* CheckoutVC.swift in Sources */,
-				61CE68A0287110F0008CD0C1 /* KeyboardCollections.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
