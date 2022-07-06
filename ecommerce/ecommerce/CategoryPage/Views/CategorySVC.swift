@@ -13,22 +13,24 @@ struct CategorySVC: View {
     let columns: [GridItem] = [GridItem(.flexible())]
     
     var body: some View {
-        VStack {
-            NavigationBar()
-                .environmentObject(cartManager)
-            NavigationBack()
-            ScrollView {
-                LazyVGrid(columns: columns, spacing: 20) {
-                    CategoryHero()
-                    CategoryFeatured()
-                        .environmentObject(cartManager)
-                    CategoryResults()
-                        .environmentObject(cartManager)
+        NavigationView {
+            VStack {
+                NavigationBar()
+                    .environmentObject(cartManager)
+                NavigationBack()
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 20) {
+                        CategoryHero()
+                        CategoryFeatured()
+                            .environmentObject(cartManager)
+                        CategoryResults()
+                            .environmentObject(cartManager)
+                    }
                 }
             }
+            .navigationTitle("")
+            .navigationBarHidden(true)
         }
-        .navigationTitle("")
-        .navigationBarHidden(true)
     }
 }
 
