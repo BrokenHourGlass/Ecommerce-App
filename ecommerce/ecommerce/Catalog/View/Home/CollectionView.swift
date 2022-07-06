@@ -43,7 +43,7 @@ struct CollectionView: View {
         }
         .background(Color.white)
         
-        
+        //pizza
     }
     
 }
