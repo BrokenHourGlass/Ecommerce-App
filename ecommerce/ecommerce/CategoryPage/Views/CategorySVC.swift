@@ -10,8 +10,6 @@ import SwiftUI
 struct CategorySVC: View {
     @EnvironmentObject var cartManager: CartManager
     
-    var modelData = products
-    
     let columns: [GridItem] = [GridItem(.flexible())]
     
     var body: some View {
