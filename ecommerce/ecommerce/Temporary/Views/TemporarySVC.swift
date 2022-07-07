@@ -27,20 +27,21 @@ struct TemporarySVC: View {
                     }
                     .tag(0)
                 
-                ContentView()
+                CatalogSVC()
+                    .environmentObject(cartManager)
                     .tabItem {
                         Image(systemName: "magnifyingglass")
                         Text("Catalog")
                     }
                     .tag(1)
                 
-                CategorySVC()
-                    .environmentObject(cartManager)
-                    .tabItem {
-                        Image(systemName: "person")
-                        Text("Category")
-                    }
-                    .tag(2)
+//                CategorySVC()
+//                    .environmentObject(cartManager)
+//                    .tabItem {
+//                        Image(systemName: "person")
+//                        Text("Category")
+//                    }
+//                    .tag(2)
             } //TabView
         }
     }
