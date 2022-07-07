@@ -15,8 +15,6 @@ struct HomePage2SVC: View {
     var body: some View {
         VStack {
             NavigationBar()
-            HomePageCarousel()
-                .environmentObject(cartManager)
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 10) {
                     HomePageHero()
