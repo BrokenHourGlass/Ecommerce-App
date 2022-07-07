@@ -17,7 +17,7 @@ struct CatalogSVC: View {
                     .environmentObject(cartManager)
                 ScrollView {
                     LazyVStack {
-                        CatalogSignUp()
+                        SignupModal()
                         CatalogAd()
                         CatalogCategories()
                         CatalogAd()
@@ -28,6 +28,8 @@ struct CatalogSVC: View {
                     }
                 }
             }
+            .navigationTitle("")
+            .navigationBarHidden(true)
         }
     }
 }
