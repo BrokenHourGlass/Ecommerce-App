@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct CatalogCategories: View {
+    let columns: [GridItem] = [GridItem(.flexible()), GridItem(.flexible())]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            Text("Categories")
+                .font(.title2)
+                .bold()
+            LazyVGrid(columns: columns) {
+                ForEach(0..<CatalogData.categories.count) { index in
+                    CatalogCategory(categoryData: CatalogData.categories[index])
+                }
+            }
+        }
+        .padding()
     }
 }
 
