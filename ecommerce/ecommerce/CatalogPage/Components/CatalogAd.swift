@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct CatalogAd: View {
+    var img: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .center) {
+            Image(img)
+                .resizable()
+                .scaledToFill()
+                .clipped()
+                .listRowInsets(EdgeInsets())
+        }
     }
 }
 
 struct CatalogAd_Previews: PreviewProvider {
     static var previews: some View {
-        CatalogAd()
+        CatalogAd(img: "image")
     }
 }
