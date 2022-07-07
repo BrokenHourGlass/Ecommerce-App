@@ -22,9 +22,9 @@ struct SearchHistorySVC: View {
                 .padding([.leading, .trailing], 14)
             ScrollView {
                 LazyVStack {
-                    ForEach(0..<products.count) { index in
-                        NavigationLink(destination: ProductSVC(product: products[index]).environmentObject(cartManager)) {
-                            SearchHistoryItem(product: products[index])
+                    ForEach(historyManager.history, id: \.id) { product in
+                        NavigationLink(destination: ProductSVC(product: product).environmentObject(cartManager)) {
+                            SearchHistoryItem(product: product)
                         }
                     }
                 }

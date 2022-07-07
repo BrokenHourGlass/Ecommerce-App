@@ -22,6 +22,7 @@ struct TemporarySVC: View {
             TabView(selection: $selection) {
                 HomePage2SVC()
                     .environmentObject(cartManager)
+                    .environmentObject(historyManager)
                     .tabItem {
                         Image(systemName: "house.fill")
                         Text("Home")
@@ -30,6 +31,7 @@ struct TemporarySVC: View {
                 
                 CatalogSVC()
                     .environmentObject(cartManager)
+                    .environmentObject(historyManager)
                     .tabItem {
                         Image(systemName: "magnifyingglass")
                         Text("Catalog")
@@ -37,8 +39,8 @@ struct TemporarySVC: View {
                     .tag(1)
                 
                 SearchHistorySVC()
-                    .environmentObject(historyManager)
                     .environmentObject(cartManager)
+                    .environmentObject(historyManager)
                     .tabItem {
                         Image(systemName: "person")
                         Text("History")

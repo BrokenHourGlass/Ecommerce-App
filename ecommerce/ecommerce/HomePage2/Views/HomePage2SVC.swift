@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomePage2SVC: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var historyManager: HistoryManager
     
     let columns: [GridItem] = [GridItem(.flexible())]
     
@@ -21,13 +22,19 @@ struct HomePage2SVC: View {
                     HomePageHero()
                     HomePageFeatured(fgColor: Color.white, bgColor: Color.blue)
                         .environmentObject(cartManager)
+                        .environmentObject(historyManager)
                     HomePageAd(img: "home/pexels-jessica-lewis-creative-593324")
                     HomePageCategories(title: "Up to 20% off marked laptops!", description: "Big savings on tech setups, plus free shipping", fgColor: Color.black, bgColor: Color.white)
                         .environmentObject(cartManager)
+                        .environmentObject(historyManager)
                     HomePageAd(img: "home/pexels-karol-d-325153")
                     HomePageCategories(title: "Today's Deals", description: "All with free shipping", fgColor: Color.white, bgColor: Color.pink)
+                        .environmentObject(cartManager)
+                        .environmentObject(historyManager)
                     HomePageAd(img: "home/pexels-pixabay-414548")
                     HomePageCategories(title: "Make your workstation summer ready!", description: "Check out all the latest gear", fgColor: Color.black, bgColor: Color.white)
+                        .environmentObject(cartManager)
+                        .environmentObject(historyManager)
                     FooterHelper()
                 }
             }
@@ -41,5 +48,6 @@ struct HomePage2SVC_Previews: PreviewProvider {
     static var previews: some View {
         HomePage2SVC()
             .environmentObject(CartManager())
+            .environmentObject(HistoryManager())
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomePageCategories: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var historyManager: HistoryManager
     
     var title: String
     var description: String
@@ -27,7 +28,7 @@ struct HomePageCategories: View {
             ScrollView(.horizontal) {
                 LazyHStack {
                     ForEach(0..<products.count) { index in
-                        NavigationLink(destination: ProductSVC(product: products[index]).environmentObject(cartManager)) {
+                        NavigationLink(destination: ProductSVC(product: products[index]).environmentObject(cartManager).environmentObject(historyManager)) {
                             HomePageProduct(product: products[index])
                         }
                     }
@@ -44,5 +45,6 @@ struct HomePageCategories_Previews: PreviewProvider {
     static var previews: some View {
         HomePageCategories(title: "title", description: "description", fgColor: Color.white, bgColor: Color.blue)
             .environmentObject(CartManager())
+            .environmentObject(HistoryManager())
     }
 }

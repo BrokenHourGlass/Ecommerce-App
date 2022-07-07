@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProductSVC: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var historyManager: HistoryManager
     
     var product: NewProduct?
     let columns: [GridItem] = [GridItem(.flexible())]
@@ -16,6 +17,7 @@ struct ProductSVC: View {
     var body: some View {
         VStack {
             NavigationBar()
+                .environmentObject(cartManager)
             NavigationBack()
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 30) {
@@ -41,11 +43,16 @@ struct ProductSVC: View {
         }
         .navigationTitle("")
         .navigationBarHidden(true)
+        .onAppear(perform: {
+            historyManager.addToHistory(product: product!)
+        })
     }
 }
 
 struct ProductSVC_Previews: PreviewProvider {
     static var previews: some View {
         ProductSVC(product: products[0])
+            .environmentObject(CartManager())
+            .environmentObject(HistoryManager())
     }
 }
