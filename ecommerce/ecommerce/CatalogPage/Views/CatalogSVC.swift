@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CatalogSVC: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var historyManager: HistoryManager
     
     var body: some View {
         VStack {
@@ -22,6 +23,7 @@ struct CatalogSVC: View {
                         .environmentObject(cartManager)
                     CatalogAd(img: "catalog/szxm6eoPQq5avEnDen2omR-1024-80")
                     CatalogFeatured()
+                        .environmentObject(historyManager)
                     CatalogAd(img: "catalog/9bf037e1886f5de27c01b532fb552b2c")
                     About()
                     FooterHelper()
@@ -38,5 +40,7 @@ struct CatalogSVC_Previews: PreviewProvider {
     static var previews: some View {
         CatalogSVC()
             .environmentObject(CartManager())
+            .environmentObject(HistoryManager())
+        
     }
 }

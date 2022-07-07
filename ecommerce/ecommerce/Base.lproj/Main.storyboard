@@ -119,14 +119,29 @@
         <!--Item-->
         <scene sceneID="SyF-fk-S1y">
             <objects>
-                <viewController id="Bpo-OU-XcI" customClass="MainPage" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Bpo-OU-XcI" customClass="SearchHistoryVC" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VLV-kd-YdT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MqI-pk-xhi">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ZhS-j1-vlz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZhS-j1-vlz" firstAttribute="bottom" secondItem="MqI-pk-xhi" secondAttribute="bottom" id="V0Z-gF-uHG"/>
+                            <constraint firstItem="MqI-pk-xhi" firstAttribute="top" secondItem="ZhS-j1-vlz" secondAttribute="top" id="bvJ-P4-gm1"/>
+                            <constraint firstItem="MqI-pk-xhi" firstAttribute="leading" secondItem="ZhS-j1-vlz" secondAttribute="leading" id="fwE-47-kMN"/>
+                            <constraint firstItem="ZhS-j1-vlz" firstAttribute="trailing" secondItem="MqI-pk-xhi" secondAttribute="trailing" id="n3W-MT-RYz"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="dDV-22-WYR"/>
+                    <connections>
+                        <outlet property="container" destination="MqI-pk-xhi" id="C5A-xy-zoy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yfh-wT-OL8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

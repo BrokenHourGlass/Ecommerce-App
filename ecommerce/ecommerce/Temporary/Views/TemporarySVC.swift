@@ -10,6 +10,7 @@ import SwiftUI
 struct TemporarySVC: View {
     
     @StateObject var cartManager = CartManager()
+    @StateObject var historyManager = HistoryManager()
     @State private var selection = 0
     
     init() {
@@ -21,6 +22,7 @@ struct TemporarySVC: View {
             TabView(selection: $selection) {
                 HomePage2SVC()
                     .environmentObject(cartManager)
+                    .environmentObject(historyManager)
                     .tabItem {
                         Image(systemName: "house.fill")
                         Text("Home")
@@ -29,19 +31,21 @@ struct TemporarySVC: View {
                 
                 CatalogSVC()
                     .environmentObject(cartManager)
+                    .environmentObject(historyManager)
                     .tabItem {
                         Image(systemName: "magnifyingglass")
                         Text("Catalog")
                     }
                     .tag(1)
                 
-//                CategorySVC()
-//                    .environmentObject(cartManager)
-//                    .tabItem {
-//                        Image(systemName: "person")
-//                        Text("Category")
-//                    }
-//                    .tag(2)
+                SearchHistorySVC()
+                    .environmentObject(cartManager)
+                    .environmentObject(historyManager)
+                    .tabItem {
+                        Image(systemName: "person")
+                        Text("History")
+                    }
+                    .tag(2)
             } //TabView
         }
     }

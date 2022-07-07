@@ -22,18 +22,18 @@ struct CategoryFeatured: View {
                 .bold()
             ScrollView(.horizontal) {
                 LazyHGrid(rows: rows) {
-                    ForEach(modelData, id: \.id) { product in
-                        NavigationLink(destination: ProductSVC(product: product).environmentObject(cartManager)) {
+                    ForEach(0..<products.count) { index in
+                        NavigationLink(destination: ProductSVC(product: products[index]).environmentObject(cartManager)) {
                             HStack {
                                 VStack {
-                                    Image(product.productIMG)
+                                    Image(products[index].productIMG)
                                         .resizable()
                                         .frame(maxWidth: 100, maxHeight: 100)
                                         .scaledToFill()
                                         .clipped()
                                         .listRowInsets(EdgeInsets())
                                         .cornerRadius(10)
-                                    Text(product.name)
+                                    Text(products[index].name)
                                         .bold()
                                         .font(.caption2)
                                 }
