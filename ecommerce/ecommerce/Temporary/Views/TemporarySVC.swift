@@ -10,6 +10,7 @@ import SwiftUI
 struct TemporarySVC: View {
     
     @StateObject var cartManager = CartManager()
+    @StateObject var historyManager = HistoryManager()
     @State private var selection = 0
     
     init() {
@@ -35,13 +36,14 @@ struct TemporarySVC: View {
                     }
                     .tag(1)
                 
-//                CategorySVC()
-//                    .environmentObject(cartManager)
-//                    .tabItem {
-//                        Image(systemName: "person")
-//                        Text("Category")
-//                    }
-//                    .tag(2)
+                SearchHistorySVC()
+                    .environmentObject(historyManager)
+                    .environmentObject(cartManager)
+                    .tabItem {
+                        Image(systemName: "person")
+                        Text("History")
+                    }
+                    .tag(2)
             } //TabView
         }
     }
