@@ -445,6 +445,7 @@
 		610779B2286F3A510094F95A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				61E2AD162876868B00CD4F8F /* SignupModal */,
 				610779C4286F51B90094F95A /* About */,
 				610779BD286F474D0094F95A /* ChooseCategory */,
 				610779B3286F3A570094F95A /* Recommended */,
@@ -825,7 +826,6 @@
 		61E2AD0228766A3B00CD4F8F /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				61E2AD082876719800CD4F8F /* SignupModal.swift */,
 				61E2AD0A287671B300CD4F8F /* CatalogAd.swift */,
 				61E2AD0C287671D500CD4F8F /* CatalogCategories.swift */,
 				61E2AD102876720900CD4F8F /* CatalogFeatured.swift */,
@@ -839,6 +839,14 @@
 			children = (
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		61E2AD162876868B00CD4F8F /* SignupModal */ = {
+			isa = PBXGroup;
+			children = (
+				61E2AD082876719800CD4F8F /* SignupModal.swift */,
+			);
+			path = SignupModal;
 			sourceTree = "<group>";
 		};
 		847F7F57286A4C2F006E87AB = {

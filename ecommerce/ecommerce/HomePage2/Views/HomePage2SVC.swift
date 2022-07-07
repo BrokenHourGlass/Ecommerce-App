@@ -17,6 +17,7 @@ struct HomePage2SVC: View {
             NavigationBar()
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 10) {
+                    SignupModal()
                     HomePageHero()
                     HomePageFeatured()
                         .environmentObject(cartManager)
