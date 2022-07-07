@@ -10,6 +10,9 @@ import SwiftUI
 struct HomePageFeatured: View {
     @EnvironmentObject var cartManager: CartManager
     
+    var fgColor: Color
+    var bgColor: Color
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Checkout these summer essentials!")
@@ -28,14 +31,14 @@ struct HomePageFeatured: View {
             }
         }
         .padding([.leading, .top, .bottom], 15)
-        .foregroundColor(Color.white)
-        .background(Color.pink)
+        .foregroundColor(fgColor)
+        .background(bgColor)
     }
 }
 
 struct HomePageFeatured_Previews: PreviewProvider {
     static var previews: some View {
-        HomePageFeatured()
+        HomePageFeatured(fgColor: Color.white, bgColor: Color.pink)
             .environmentObject(CartManager())
     }
 }
