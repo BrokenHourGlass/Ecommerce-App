@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CatalogCategories: View {
+    
     let columns: [GridItem] = [GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {

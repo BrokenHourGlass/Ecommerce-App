@@ -20,9 +20,11 @@ struct CatalogSVC: View {
                         SignupModal()
                         CatalogAd(img: "catalog/c6a13e043f5b874eaf0cfadcb2802bef")
                         CatalogCategories()
+                            .environmentObject(cartManager)
                         CatalogAd(img: "catalog/szxm6eoPQq5avEnDen2omR-1024-80")
                         CatalogFeatured()
                         CatalogAd(img: "catalog/9bf037e1886f5de27c01b532fb552b2c")
+                        About()
                         FooterHelper()
                         Spacer()
                     }
