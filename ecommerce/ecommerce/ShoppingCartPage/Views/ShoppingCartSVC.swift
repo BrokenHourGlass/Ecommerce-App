@@ -31,7 +31,6 @@ struct ShoppingCartSVC: View {
                             Image(it.item.cartIMG)
                                 .resizable()
                                 .frame(width: 100, height: 100)
-                            Spacer()
                             VStack(alignment: .leading, spacing: 5) {
                                 Text(it.item.name)
                                     .fontWeight(.bold)
@@ -40,8 +39,10 @@ struct ShoppingCartSVC: View {
                                 Text("$ \(it.unitPrice)")
                             }
                             Spacer()
-                            AddRemoveItem(it.quantity, item: it)
-                                .environmentObject(cartManager)
+                            VStack(alignment: .leading) {
+                                Text("\(it.quantity)x")
+                                    .foregroundColor(Color.gray)
+                            }
                         }
                     }
                 }
