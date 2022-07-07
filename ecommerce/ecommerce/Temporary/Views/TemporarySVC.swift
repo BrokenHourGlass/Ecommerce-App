@@ -27,7 +27,8 @@ struct TemporarySVC: View {
                     }
                     .tag(0)
                 
-                ContentView()
+                CatalogSVC()
+                    .environmentObject(cartManager)
                     .tabItem {
                         Image(systemName: "magnifyingglass")
                         Text("Catalog")
