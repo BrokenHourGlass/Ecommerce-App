@@ -15,6 +15,13 @@ class TemporaryVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ProductDB.productDb.createDB()
+        ProductDB.productDb.createTable()
+        ProductDB.productDb.insertData(name: "bob", category: "rock", new: 0, price: 9.99, featured: 1, cartIMG: "none", productIMG: "None", description: "Bob is to old for this shit", features: "A lack of hair")
+        print(ProductDB.productDb.getData())
+        print("done")
+        sleep(20)
+        
         // Do any additional setup after loading the view.
         let childView = UIHostingController(rootView: TemporarySVC())
         addChild(childView)

@@ -491,7 +491,6 @@
 			children = (
 				61CE686A286FE189008CD0C1 /* HomePage.swift */,
 				61CE686C286FE19F008CD0C1 /* HomeLayout.swift */,
-				61CE686E286FE1AB008CD0C1 /* ProductDB.swift */,
 				61CE6870286FE1C1008CD0C1 /* CompanyInfo.swift */,
 				61CE6872286FE1D2008CD0C1 /* detailsUI.swift */,
 				61CE6874286FE1F9008CD0C1 /* Design Elements.swift */,
@@ -718,6 +717,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		843E09652873829F00B7F5DC /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				61CE686E286FE1AB008CD0C1 /* ProductDB.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		847F7F57286A4C2F006E87AB = {
 			isa = PBXGroup;
 			children = (
@@ -737,6 +744,7 @@
 		847F7F62286A4C30006E87AB /* ecommerce */ = {
 			isa = PBXGroup;
 			children = (
+				843E09652873829F00B7F5DC /* Database */,
 				61E2ACCF2872968E00CD4F8F /* ThankYouPage */,
 				61E2ACB52872071C00CD4F8F /* CategoryPage */,
 				61E2ACA42871568700CD4F8F /* LoginPage */,
