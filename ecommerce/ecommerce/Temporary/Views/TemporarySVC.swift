@@ -35,13 +35,13 @@ struct TemporarySVC: View {
                     }
                     .tag(1)
                 
-                CategorySVC()
-                    .environmentObject(cartManager)
-                    .tabItem {
-                        Image(systemName: "person")
-                        Text("Category")
-                    }
-                    .tag(2)
+//                CategorySVC()
+//                    .environmentObject(cartManager)
+//                    .tabItem {
+//                        Image(systemName: "person")
+//                        Text("Category")
+//                    }
+//                    .tag(2)
             } //TabView
         }
     }
