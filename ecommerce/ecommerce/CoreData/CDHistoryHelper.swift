@@ -1,6 +1,7 @@
 //
 //  CDHistoryHelper.swift
 //  ecommerce
+//  Provides core data functionality for storing and retrieving data for Search History page.
 //
 //  Created by Vincent Salinas on 7/7/22.
 //
