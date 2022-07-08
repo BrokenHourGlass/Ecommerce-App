@@ -57,7 +57,7 @@ class CDHistoryHelper {
     }
     
     func addPreview(pid: Int, previewObj: NewPreview) {
-         let previewEntity = NSEntityDescription.insertNewObject(forEntityName: "Preview", into: context!) as! Preview
+        let previewEntity = NSEntityDescription.insertNewObject(forEntityName: "Preview", into: context!) as! Preview
         
         previewEntity.pid = Int64(pid)
         previewEntity.img = previewObj.img
@@ -71,5 +71,21 @@ class CDHistoryHelper {
         }
     }
     
+    func addRecommended(pid: Int, recommendedObj: NewRecommended) {
+        
+        let recommendedEntity = NSEntityDescription.insertNewObject(forEntityName: "Recommended", into: context!) as! Recommended
+        
+        recommendedEntity.pid = Int64(pid)
+        recommendedEntity.name = recommendedObj.name
+        recommendedEntity.img = recommendedObj.img
+        
+        do {
+            try context?.save()
+            print("data saved successfully")
+        } catch {
+            print("data save unsuccessful")
+            print(error.localizedDescription)
+        }
+    }
 }
 
