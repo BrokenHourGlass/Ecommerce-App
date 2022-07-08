@@ -34,6 +34,9 @@ struct SearchHistorySVC: View {
         }
         .navigationTitle("")
         .navigationBarHidden(true)
+        .onAppear(perform: {
+            CDHistoryHelper.cdHistoryHelper.displaySearchHistory()
+        })
     }
 }
 

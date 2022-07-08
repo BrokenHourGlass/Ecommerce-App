@@ -88,5 +88,26 @@ class CDHistoryHelper {
             print(error.localizedDescription)
         }
     }
+    
+    func displaySearchHistory() {
+        var productData = [Product]()
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Product")
+        
+        do {
+            productData = try context?.fetch(fetchRequest) as! [Product]
+        } catch {
+            print("can not fetch data")
+        }
+        
+        print(String(productData.count))
+        
+        
+    }
+    
+    
+    
+    
+    
 }
 

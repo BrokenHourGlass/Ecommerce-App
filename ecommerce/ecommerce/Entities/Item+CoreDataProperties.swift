@@ -17,7 +17,7 @@ extension Item {
     }
 
     @NSManaged public var item: String?
-    @NSManaged public var pid: Int16
+    @NSManaged public var pid: Int64
     @NSManaged public var quantity: Int64
 
 }

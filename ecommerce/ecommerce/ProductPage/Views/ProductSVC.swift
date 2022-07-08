@@ -45,6 +45,7 @@ struct ProductSVC: View {
         .navigationBarHidden(true)
         .onAppear(perform: {
             historyManager.addToHistory(product: product!)
+            SearchHistoryHelpers.addSearchItem(product: product!)
         })
     }
 }
