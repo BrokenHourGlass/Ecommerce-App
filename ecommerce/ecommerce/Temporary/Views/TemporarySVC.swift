@@ -48,6 +48,7 @@ struct TemporarySVC: View {
                     .tag(2)
             } //TabView
         }
+        .navigationViewStyle(.stack)
     }
 }
 

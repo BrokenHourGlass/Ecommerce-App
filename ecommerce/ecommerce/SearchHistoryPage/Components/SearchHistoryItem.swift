@@ -23,6 +23,7 @@ struct SearchHistoryItem: View {
             VStack(alignment: .leading) {
                 Text(product.name)
                     .bold()
+                    .foregroundColor(Color.accentColor)
                 Text(product.description)
                     .foregroundColor(Color.black)
                     .font(.caption)

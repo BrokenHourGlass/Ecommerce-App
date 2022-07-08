@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CategorySVC: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var historyManager: HistoryManager
     
     let columns: [GridItem] = [GridItem(.flexible())]
     
@@ -19,11 +20,14 @@ struct CategorySVC: View {
             NavigationBack()
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {
+                    SignupModal()
                     CategoryHero()
                     CategoryFeatured()
                         .environmentObject(cartManager)
+                        .environmentObject(historyManager)
                     CategoryResults()
                         .environmentObject(cartManager)
+                        .environmentObject(historyManager)
                 }
             }
         }
@@ -35,5 +39,7 @@ struct CategorySVC: View {
 struct CategorySVC_Previews: PreviewProvider {
     static var previews: some View {
         CategorySVC()
+            .environmentObject(CartManager())
+            .environmentObject(HistoryManager())
     }
 }

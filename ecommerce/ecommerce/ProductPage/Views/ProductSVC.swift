@@ -11,7 +11,7 @@ struct ProductSVC: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var historyManager: HistoryManager
     
-    var product: NewProduct?
+    var product: NewProduct
     let columns: [GridItem] = [GridItem(.flexible())]
     
     var body: some View {
@@ -20,21 +20,24 @@ struct ProductSVC: View {
                 .environmentObject(cartManager)
             NavigationBack()
             ScrollView {
-                LazyVGrid(columns: columns, spacing: 30) {
-                    ProductImage(product: product!)
-                        .padding([.leading, .trailing], 27)
-                    ProductDetails(product: product!)
-                        .padding([.leading, .trailing], 27)
-                    ProductQuantity(product: product!)
-                        .padding([.leading, .trailing], 27)
-                        .environmentObject(cartManager)
-                    ProductFeatures(product: product!)
-                        .padding([.leading, .trailing], 27)
-                    ProductContents(product: product!)
-                        .padding([.leading, .trailing], 27)
-                    ProductPreview(product: product!)
-                        .padding([.leading, .trailing], 27)
-                    RecommendedHelper(product: product!)
+                LazyVGrid(columns: columns) {
+                    SignupModal()
+                    VStack(spacing: 30) {
+                        ProductImage(product: product)
+                            .padding([.leading, .trailing], 27)
+                        ProductDetails(product: product)
+                            .padding([.leading, .trailing], 27)
+                        ProductQuantity(product: product)
+                            .padding([.leading, .trailing], 27)
+                            .environmentObject(cartManager)
+                        ProductFeatures(product: product)
+                            .padding([.leading, .trailing], 27)
+                        ProductContents(product: product)
+                            .padding([.leading, .trailing], 27)
+                        ProductPreview(product: product)
+                            .padding([.leading, .trailing], 27)
+                    }
+                    RecommendedHelper(product: product)
                     ChooseCategory()
                     About()
                     FooterHelper()
@@ -44,7 +47,8 @@ struct ProductSVC: View {
         .navigationTitle("")
         .navigationBarHidden(true)
         .onAppear(perform: {
-            historyManager.addToHistory(product: product!)
+            historyManager.addToHistory(product: product)
+            SearchHistoryHelpers.addSearchItem(product: product)
         })
     }
 }

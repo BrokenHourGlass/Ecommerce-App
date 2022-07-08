@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CatalogCategories: View {
+    @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var historyManager: HistoryManager
     
     let columns: [GridItem] = [GridItem(.flexible()), GridItem(.flexible())]
     
@@ -19,6 +21,8 @@ struct CatalogCategories: View {
             LazyVGrid(columns: columns) {
                 ForEach(0..<CatalogData.categories.count) { index in
                     CatalogCategory(categoryData: CatalogData.categories[index])
+                        .environmentObject(cartManager)
+                        .environmentObject(historyManager)
                 }
             }
         }
@@ -29,5 +33,7 @@ struct CatalogCategories: View {
 struct CatalogCategories_Previews: PreviewProvider {
     static var previews: some View {
         CatalogCategories()
+            .environmentObject(CartManager())
+            .environmentObject(HistoryManager())
     }
 }

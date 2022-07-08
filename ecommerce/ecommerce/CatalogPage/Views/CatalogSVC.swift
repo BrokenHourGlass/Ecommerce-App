@@ -21,6 +21,7 @@ struct CatalogSVC: View {
                     CatalogAd(img: "catalog/c6a13e043f5b874eaf0cfadcb2802bef")
                     CatalogCategories()
                         .environmentObject(cartManager)
+                        .environmentObject(historyManager)
                     CatalogAd(img: "catalog/szxm6eoPQq5avEnDen2omR-1024-80")
                     CatalogFeatured()
                         .environmentObject(cartManager)
