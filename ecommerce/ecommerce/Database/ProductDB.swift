@@ -72,6 +72,13 @@ class ProductDB{
             print("error in table creation", err)
         }
     }
+    
+    func insertAll(){
+        productItems = load("new-data.json")
+        for (index, val) in productItems.enumerated(){
+            insertData(name: productItems[index].name as NSString, category: productItems[index].category as NSString, new: productItems[index].new as NSNumber, price: productItems[index].price as NSNumber, featured: productItems[index].featured as NSNumber, cartIMG: productItems[index].cartIMG as NSString, productIMG: productItems[index].productIMG as NSString, description: productItems[index].description as NSString, features: productItems[index].description as NSString)
+        }
+    }
         
     func getData() -> [NewProduct]{
         productItems.removeAll()
@@ -126,9 +133,22 @@ class ProductDB{
         }
         return prod ?? NewProduct(id: -1, name: "Not Valid", category: "Not Valid", new: false, price: 0, featured: false, cartIMG: "None", productIMG: "None", description: "Not Valid", features: "none", contents: [NewItem](), previews: [NewPreview](), recommended: [NewRecommended]())
     }
+    /*
     func updateRecord(id: Int, alter: NewProduct){
-        
+        let name = NSString(string: alter.name)
+        let category = NSString(string: alter.category)
+        let new = alter.new
+        let price = NSNumber(alter.price)
+        let featured = alter.featured
+        let cartIMG = NSString(string: alter.cartIMG)
+        let productIMG = NSString(string: alter.productIMG)
+        let description = NSString(string: alter.description)
+        let contents = [NewItem]()
+        let previews = [NewPreview]()
+        let recommended = [NewRecommended]()
+        let query = "update product SET name = "
     }
+    */
 }
 
 /*
