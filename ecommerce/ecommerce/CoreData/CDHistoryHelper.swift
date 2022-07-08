@@ -103,7 +103,7 @@ class CDHistoryHelper {
         print(String(productData.count))
     }
     
-    func getSearchHistory() {
+    func getSearchHistory() -> [NewProduct] {
         var history = [NewProduct]()
         var productData = [Product]()
         var itemData = [Item]()
@@ -123,27 +123,32 @@ class CDHistoryHelper {
             
             for x in productData {
                 
-                let itemDataResult = itemData.filter { ite in
-                    return ite.pid == x.id
+                var itemDataResult = [NewItem]()
+                var previewDataResult = [NewPreview]()
+                var recommendedDataResult = [NewRecommended]()
+                
+                for ite in itemData {
+                    itemDataResult.append(NewItem(quantity: Int(ite.quantity), item: ite.item!))
                 }
                 
-                let previewDataResult = previewData.filter { pre in
-                    return pre.pid == x.id
+                for pre in previewData {
+                    previewDataResult.append(NewPreview(img: pre.img!))
                 }
                 
-                let recommendedDataResult = recommendedData.filter { rec in
-                    return rec.pid == x.id
+                for rec in recommendedData {
+                    recommendedDataResult.append(NewRecommended(name: rec.name!, img: rec.img!))
                 }
                 
-                
-              
-                
+                history.append(
+                    NewProduct(id: Int(x.id), name: x.name!, category: x.category!, new: x.new, price: Int(x.price), featured: x.featured, cartIMG: x.cartIMG!, productIMG: x.productIMG!, description: x.description, features: x.features!, contents: itemDataResult, previews: previewDataResult, recommended: recommendedDataResult)
+                )
             }
             
         } catch {
             print("can not fetch data")
         }
         
+        return history
         
     }
     
