@@ -125,6 +125,8 @@
 		F7D42BAE28752FA600C554CC /* MonitorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D42BAD28752FA600C554CC /* MonitorsViewController.swift */; };
 		F7D42BB028752FB600C554CC /* KeyboardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D42BAF28752FB600C554CC /* KeyboardsViewController.swift */; };
 		F7D42BB2287554F900C554CC /* CellPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D42BB1287554F900C554CC /* CellPhoneViewController.swift */; };
+		F7F049DA28789A280033E962 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F049D928789A280033E962 /* CommentView.swift */; };
+		F7F049DC2878B6870033E962 /* comment Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F049DB2878B6870033E962 /* comment Call.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -248,6 +250,8 @@
 		F7D42BAD28752FA600C554CC /* MonitorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorsViewController.swift; sourceTree = "<group>"; };
 		F7D42BAF28752FB600C554CC /* KeyboardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardsViewController.swift; sourceTree = "<group>"; };
 		F7D42BB1287554F900C554CC /* CellPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPhoneViewController.swift; sourceTree = "<group>"; };
+		F7F049D928789A280033E962 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		F7F049DB2878B6870033E962 /* comment Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "comment Call.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -957,6 +961,7 @@
 		847F7F62286A4C30006E87AB /* ecommerce */ = {
 			isa = PBXGroup;
 			children = (
+				F7F049D8287899F20033E962 /* Comments View */,
 				61E2AD402877A5DA00CD4F8F /* CoreData */,
 				61E2AD1B28772ED100CD4F8F /* SearchHistoryPage */,
 				61E2ACFE287669D600CD4F8F /* CatalogPage */,
@@ -1017,6 +1022,15 @@
 				F7D42BA5287524C300C554CC /* CategoryViewCells.swift */,
 			);
 			path = CatalogViews;
+			sourceTree = "<group>";
+		};
+		F7F049D8287899F20033E962 /* Comments View */ = {
+			isa = PBXGroup;
+			children = (
+				F7F049D928789A280033E962 /* CommentView.swift */,
+				F7F049DB2878B6870033E962 /* comment Call.swift */,
+			);
+			path = "Comments View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1120,6 +1134,7 @@
 				61E2AD2428772F3A00CD4F8F /* SearchHistorySVC.swift in Sources */,
 				610779C1286F47FD0094F95A /* ChooseCategoryHelper.swift in Sources */,
 				61E2ACCE287280AB00CD4F8F /* NavigationBack.swift in Sources */,
+				F7F049DA28789A280033E962 /* CommentView.swift in Sources */,
 				61E2AD502877A72500CD4F8F /* Product+CoreDataProperties.swift in Sources */,
 				61CE686F286FE1AB008CD0C1 /* ProductDB.swift in Sources */,
 				847F7F68286A4C30006E87AB /* ViewController.swift in Sources */,
@@ -1164,6 +1179,7 @@
 				61E2AD542877B11C00CD4F8F /* SearchHistoryHelpers.swift in Sources */,
 				61E2ACA128713EB700CD4F8F /* TemporaryVC.swift in Sources */,
 				61E2ACF32874E6B000CD4F8F /* HomePageCarousel.swift in Sources */,
+				F7F049DC2878B6870033E962 /* comment Call.swift in Sources */,
 				6107794B286D28B80094F95A /* ShoppingCartSVC.swift in Sources */,
 				61E2ACEB2874939100CD4F8F /* HomePage2VC.swift in Sources */,
 				6107799F286E8E090094F95A /* ProductPreview.swift in Sources */,

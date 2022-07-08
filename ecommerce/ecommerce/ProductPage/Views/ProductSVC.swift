@@ -15,6 +15,7 @@ struct ProductSVC: View {
     let columns: [GridItem] = [GridItem(.flexible())]
     
     var body: some View {
+        
         VStack {
             NavigationBar()
                 .environmentObject(cartManager)
@@ -23,6 +24,7 @@ struct ProductSVC: View {
                 LazyVGrid(columns: columns) {
                     SignupModal()
                     VStack(spacing: 30) {
+                        
                         ProductImage(product: product)
                             .padding([.leading, .trailing], 27)
                         ProductDetails(product: product)
@@ -37,10 +39,12 @@ struct ProductSVC: View {
                         ProductPreview(product: product)
                             .padding([.leading, .trailing], 27)
                     }
+                   
                     RecommendedHelper(product: product)
                     ChooseCategory()
                     About()
                     FooterHelper()
+                    
                 }
             }
         }
