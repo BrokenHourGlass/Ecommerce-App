@@ -56,5 +56,20 @@ class CDHistoryHelper {
         }
     }
     
+    func addPreview(pid: Int, previewObj: NewPreview) {
+         let previewEntity = NSEntityDescription.insertNewObject(forEntityName: "Preview", into: context!) as! Preview
+        
+        previewEntity.pid = Int64(pid)
+        previewEntity.img = previewObj.img
+        
+        do {
+            try context?.save()
+            print("data saved successfully")
+        } catch {
+            print("data save unsuccessful")
+            print(error.localizedDescription)
+        }
+    }
+    
 }
 
