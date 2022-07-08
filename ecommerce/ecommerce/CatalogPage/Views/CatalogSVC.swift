@@ -10,11 +10,13 @@ import SwiftUI
 struct CatalogSVC: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var historyManager: HistoryManager
+    @EnvironmentObject var ordersManager: OrdersManager
     
     var body: some View {
         VStack {
             NavigationBar()
                 .environmentObject(cartManager)
+                .environmentObject(OrdersManager())
             ScrollView {
                 LazyVStack {
                     SignupModal()
@@ -43,6 +45,7 @@ struct CatalogSVC_Previews: PreviewProvider {
         CatalogSVC()
             .environmentObject(CartManager())
             .environmentObject(HistoryManager())
+            .environmentObject(OrdersManager())
         
     }
 }

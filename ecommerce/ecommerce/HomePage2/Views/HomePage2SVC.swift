@@ -10,12 +10,15 @@ import SwiftUI
 struct HomePage2SVC: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var historyManager: HistoryManager
+    @EnvironmentObject var ordersManager: OrdersManager
     
     let columns: [GridItem] = [GridItem(.flexible())]
     
     var body: some View {
         VStack {
             NavigationBar()
+                .environmentObject(cartManager)
+                .environmentObject(ordersManager)
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 10) {
                     SignupModal()
@@ -49,5 +52,6 @@ struct HomePage2SVC_Previews: PreviewProvider {
         HomePage2SVC()
             .environmentObject(CartManager())
             .environmentObject(HistoryManager())
+            .environmentObject(OrdersManager())
     }
 }

@@ -1,5 +1,5 @@
 //
-//  OrdersHistory.swift
+//  OrdersManager.swift
 //  ecommerce
 //
 //  Created by Vincent Salinas on 7/8/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class OrdersHistory: ObservableObject {
+class OrdersManager: ObservableObject {
     @Published private(set) var orders: [Order] = []
     
     func addToHistory(cart: [CartItem]) {

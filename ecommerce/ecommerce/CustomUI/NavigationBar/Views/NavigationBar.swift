@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NavigationBar: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var ordersManager: OrdersManager
     
     var body: some View {
         HStack {
@@ -21,7 +22,7 @@ struct NavigationBar: View {
             Text("Amazona")
                 .foregroundColor(.white)
             Spacer()
-            NavigationLink(destination: ShoppingCartSVC().environmentObject(cartManager)) {
+            NavigationLink(destination: ShoppingCartSVC().environmentObject(cartManager).environmentObject(ordersManager)) {
                 Image(systemName: "cart")
             }
         }
@@ -34,5 +35,7 @@ struct NavigationBar: View {
 struct NavigationBar_Previews: PreviewProvider {
     static var previews: some View {
         NavigationBar()
+            .environmentObject(CartManager())
+            .environmentObject(OrdersManager())
     }
 }

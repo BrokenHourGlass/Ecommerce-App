@@ -10,11 +10,13 @@ import SwiftUI
 struct OrderHistorySVC: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var historyManager: HistoryManager
+    @EnvironmentObject var ordersManager: OrdersManager
     
     var body: some View {
         VStack(alignment: .leading) {
             NavigationBar()
                 .environmentObject(cartManager)
+                .environmentObject(OrdersManager())
                 .navigationTitle("")
                 .navigationBarHidden(true)
             SignupModal()
@@ -35,5 +37,6 @@ struct OrderHistorySVC_Previews: PreviewProvider {
         OrderHistorySVC()
             .environmentObject(CartManager())
             .environmentObject(HistoryManager())
+            .environmentObject(OrdersManager())
     }
 }

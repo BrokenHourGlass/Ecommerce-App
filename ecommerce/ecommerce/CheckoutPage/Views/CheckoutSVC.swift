@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CheckoutSVC: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var ordersManager: OrdersManager
     
     var body: some View {
         VStack {
@@ -17,6 +18,7 @@ struct CheckoutSVC: View {
             NavigationBack()
             CheckoutForm()
                 .environmentObject(cartManager)
+                .environmentObject(ordersManager)
         }
         .navigationTitle("")
         .navigationBarHidden(true)
@@ -27,5 +29,7 @@ struct CheckoutSVC: View {
 struct CheckoutSVC_Previews: PreviewProvider {
     static var previews: some View {
         CheckoutSVC()
+            .environmentObject(CartManager())
+            .environmentObject(OrdersManager())
     }
 }

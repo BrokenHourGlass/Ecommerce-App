@@ -21,6 +21,5 @@ struct OrderHistoryList_Previews: PreviewProvider {
         OrderHistoryList()
             .environmentObject(CartManager())
             .environmentObject(HistoryManager())
-        
     }
 }

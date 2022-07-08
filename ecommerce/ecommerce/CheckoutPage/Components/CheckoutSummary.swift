@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CheckoutSummary: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var ordersManager: OrdersManager
     
     private var columns = [GridItem(.flexible())]
     
@@ -39,9 +40,9 @@ struct CheckoutSummary: View {
                     }
                     CheckoutDetails()
                         .environmentObject(cartManager)
-                    NavigationLink {
-                        ThankYouSVC().environmentObject(cartManager)
-                    } label: {
+                    NavigationLink(destination: ThankYouSVC().environmentObject(cartManager).onAppear{
+                        ordersManager.addToHistory(cart: cartManager.items)
+                    }) {
                         Section {
                             Text("CONTINUE & PAY")
                                 .padding()
@@ -63,5 +64,6 @@ struct CheckoutSummary_Previews: PreviewProvider {
     static var previews: some View {
         CheckoutSummary()
             .environmentObject(CartManager())
+            .environmentObject(OrdersManager())
     }
 }

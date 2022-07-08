@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ShoppingCartSVC: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var ordersManager: OrdersManager
     
     private var gridItemLayout = [GridItem(.flexible())]
     
@@ -60,7 +61,7 @@ struct ShoppingCartSVC: View {
                 }
                 HStack {
                     Spacer()
-                    NavigationLink(destination: CheckoutSVC().environmentObject(cartManager)) {
+                    NavigationLink(destination: CheckoutSVC().environmentObject(cartManager).environmentObject(ordersManager)) {
                         Section {
                             Text("CHECKOUT")
                                 .padding()
@@ -85,5 +86,6 @@ struct ShoppingCartSVC_Previews: PreviewProvider {
     static var previews: some View {
         ShoppingCartSVC()
             .environmentObject(CartManager())
+            .environmentObject(OrdersManager())
     }
 }
