@@ -46,6 +46,16 @@ struct TemporarySVC: View {
                         Text("History")
                     }
                     .tag(2)
+                
+                OrderHistorySVC()
+                    .environmentObject(cartManager)
+                    .environmentObject(historyManager)
+                    .tabItem {
+                        Image(systemName: "list.bullet.rectangle.fill")
+                        Text("Orders")
+                    }
+                    .tag(3)
+                
             } //TabView
         }
         .navigationViewStyle(.stack)

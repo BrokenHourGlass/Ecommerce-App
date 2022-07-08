@@ -19,15 +19,17 @@ struct CategorySVC: View {
                 .environmentObject(cartManager)
             NavigationBack()
             ScrollView {
-                LazyVGrid(columns: columns, spacing: 20) {
+                LazyVGrid(columns: columns) {
                     SignupModal()
-                    CategoryHero()
-                    CategoryFeatured()
-                        .environmentObject(cartManager)
-                        .environmentObject(historyManager)
-                    CategoryResults()
-                        .environmentObject(cartManager)
-                        .environmentObject(historyManager)
+                    VStack(spacing: 20) {
+                        CategoryHero()
+                        CategoryFeatured()
+                            .environmentObject(cartManager)
+                            .environmentObject(historyManager)
+                        CategoryResults()
+                            .environmentObject(cartManager)
+                            .environmentObject(historyManager)
+                    }
                 }
             }
         }
