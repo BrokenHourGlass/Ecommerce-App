@@ -9,11 +9,11 @@ import SwiftUI
 
 struct CategoryFeatured: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var historyManager: HistoryManager
     
     var modelData = products
     
     let rows: [GridItem] = [GridItem(.flexible())]
-    
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -23,7 +23,7 @@ struct CategoryFeatured: View {
             ScrollView(.horizontal) {
                 LazyHGrid(rows: rows) {
                     ForEach(0..<products.count) { index in
-                        NavigationLink(destination: ProductSVC(product: products[index]).environmentObject(cartManager)) {
+                        NavigationLink(destination: ProductSVC(product: products[index]).environmentObject(cartManager).environmentObject(historyManager)) {
                             HStack {
                                 VStack {
                                     Image(products[index].productIMG)
@@ -52,5 +52,7 @@ struct CategoryFeatured: View {
 struct CategoryFeatured_Previews: PreviewProvider {
     static var previews: some View {
         CategoryFeatured()
+            .environmentObject(CartManager())
+            .environmentObject(HistoryManager())
     }
 }

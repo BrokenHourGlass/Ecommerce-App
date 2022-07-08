@@ -8,7 +8,7 @@
 import Foundation
 
 class HistoryManager: ObservableObject {
-    @Published private(set) var history: [NewProduct] = []
+    @Published private(set) var history: [NewProduct] = CDHistoryHelper.cdHistoryHelper.getSearchHistory()
     
     func addToHistory(product: NewProduct) {
         history.append(product)
