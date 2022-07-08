@@ -20,6 +20,7 @@ struct CategorySVC: View {
             NavigationBack()
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {
+                    SignupModal()
                     CategoryHero()
                     CategoryFeatured()
                         .environmentObject(cartManager)
