@@ -572,8 +572,7 @@
 				61E2AD1928772D6B00CD4F8F /* HistoryManager.swift */,
 				61E2AD662878809900CD4F8F /* OrdersManager.swift */,
 			);
-			name = Models;
-			path = ../Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		61CE6884287110C1008CD0C1 /* Catalog */ = {
@@ -717,7 +716,6 @@
 		61E2ACCF2872968E00CD4F8F /* ThankYouPage */ = {
 			isa = PBXGroup;
 			children = (
-				61CE687C2870FDF7008CD0C1 /* Models */,
 				61E2ACD4287296C400CD4F8F /* Helpers */,
 				61E2ACD3287296B900CD4F8F /* Components */,
 				61E2ACD2287296B300CD4F8F /* ViewModels */,
@@ -1035,6 +1033,7 @@
 				61E2ACCF2872968E00CD4F8F /* ThankYouPage */,
 				61E2ACB52872071C00CD4F8F /* CategoryPage */,
 				61E2ACA42871568700CD4F8F /* LoginPage */,
+				61CE687C2870FDF7008CD0C1 /* Models */,
 				61E2AC9E28713E9C00CD4F8F /* Temporary */,
 				61CE6884287110C1008CD0C1 /* Catalog */,
 				61CE6869286FE110008CD0C1 /* HomePage */,
