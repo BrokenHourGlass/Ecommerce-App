@@ -101,6 +101,48 @@ class CDHistoryHelper {
         }
         
         print(String(productData.count))
+    }
+    
+    func getSearchHistory() {
+        var history = [NewProduct]()
+        var productData = [Product]()
+        var itemData = [Item]()
+        var previewData = [Preview]()
+        var recommendedData = [Recommended]()
+        
+        let fetchProducts = NSFetchRequest<NSFetchRequestResult>(entityName: "Product")
+        let fetchItems = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
+        let fetchPreviews = NSFetchRequest<NSFetchRequestResult>(entityName: "Preview")
+        let fetchRecommended = NSFetchRequest<NSFetchRequestResult>(entityName: "Recommended")
+        
+        do {
+            productData = try context?.fetch(fetchProducts) as! [Product]
+            itemData = try context?.fetch(fetchItems) as! [Item]
+            previewData = try context?.fetch(fetchPreviews) as! [Preview]
+            recommendedData = try context?.fetch(fetchRecommended) as! [Recommended]
+            
+            for x in productData {
+                
+                let itemDataResult = itemData.filter { ite in
+                    return ite.pid == x.id
+                }
+                
+                let previewDataResult = previewData.filter { pre in
+                    return pre.pid == x.id
+                }
+                
+                let recommendedDataResult = recommendedData.filter { rec in
+                    return rec.pid == x.id
+                }
+                
+                
+              
+                
+            }
+            
+        } catch {
+            print("can not fetch data")
+        }
         
         
     }
