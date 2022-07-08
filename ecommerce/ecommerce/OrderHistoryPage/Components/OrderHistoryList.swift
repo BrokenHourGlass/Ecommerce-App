@@ -16,7 +16,7 @@ struct OrderHistoryList: View {
         ScrollView {
             LazyVStack {
                 ForEach(ordersManager.orders, id: \.id) { order in
-                    Text("Ordered")
+                    OrderItem(orderObj: order)
                 }
             }
         }
