@@ -12,14 +12,16 @@ class OrdersManager: ObservableObject {
     
     func addToHistory(cart: [CartItem]) {
         orders.append(Order(items: cart))
+        print("Added order to orders history")
     }
     
     func getHistory() -> [Order] {
         return orders
     }
+    
 }
 
-class Order {
+class Order: Identifiable {
     var id = UUID()
     var date = Date()
     var items: [CartItem]

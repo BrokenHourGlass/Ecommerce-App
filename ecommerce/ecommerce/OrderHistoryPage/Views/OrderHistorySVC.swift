@@ -25,6 +25,7 @@ struct OrderHistorySVC: View {
                     .font(.title2)
                     .bold()
                 OrderHistoryList()
+                    .environmentObject(ordersManager)
             }
             .padding(.horizontal, 17)
             Spacer()
