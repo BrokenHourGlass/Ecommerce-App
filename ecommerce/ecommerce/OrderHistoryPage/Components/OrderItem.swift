@@ -15,10 +15,12 @@ struct OrderItem: View {
             Image(systemName: "circle")
                 .foregroundColor(Color.accentColor)
             Text(orderObj.id.uuidString)
+                .lineLimit(1)
             Spacer()
             Button("Refund") {
                 print("refund requested")
             }
+            .foregroundColor(Color.accentColor)
         }
     }
 }
