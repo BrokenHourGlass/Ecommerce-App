@@ -39,7 +39,9 @@ struct CheckoutSummary: View {
                     }
                     CheckoutDetails()
                         .environmentObject(cartManager)
-                    NavigationLink(destination: ThankYouSVC().environmentObject(cartManager)) {
+                    NavigationLink {
+                        ThankYouSVC().environmentObject(cartManager)
+                    } label: {
                         Section {
                             Text("CONTINUE & PAY")
                                 .padding()
