@@ -10,11 +10,12 @@ import SwiftUI
 struct CatalogCategory: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var historyManager: HistoryManager
+    @EnvironmentObject var ordersManager: OrdersManager
     
     var categoryData: CategoryData
     
     var body: some View {
-        NavigationLink(destination: CategorySVC().environmentObject(cartManager).environmentObject(historyManager)) {
+        NavigationLink(destination: CategorySVC().environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager)) {
             VStack {
                 Image(categoryData.img)
                     .resizable()
@@ -35,5 +36,6 @@ struct CatalogCategory_Previews: PreviewProvider {
         CatalogCategory(categoryData: CategoryData(category: "category", img: "image"))
             .environmentObject(CartManager())
             .environmentObject(HistoryManager())
+            .environmentObject(OrdersManager())
     }
 }

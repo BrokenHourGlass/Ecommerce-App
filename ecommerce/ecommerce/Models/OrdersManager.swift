@@ -8,14 +8,10 @@
 import Foundation
 
 class OrdersManager: ObservableObject {
-    @Published private(set) var orders: [Order] = [
-        Order(items: [
-            CartItem(item: products[0], unitPrice: products[0].price, quantity: 399),
-        ])
-    ]
+    @Published private(set) var orders: [Order] = []
     
-    func addToHistory(cart: [CartItem]) {
-        orders.append(Order(items: cart))
+    func addToHistory(order: Order) {
+        orders.append(order)
         print("Added order to orders history")
     }
     
@@ -26,13 +22,14 @@ class OrdersManager: ObservableObject {
 }
 
 class Order: Identifiable {
-    var id = UUID()
-    var date = Date()
-    var status = OrderStatus.ordered.rawValue
-    var items: [CartItem]
+    var orderId: String
+    var date: Date
+    var status: Int
     
-    init(items: [CartItem]) {
-        self.items = items
+    init(orderId: String, date: Date, status: Int) {
+        self.orderId = orderId
+        self.date = date
+        self.status = status
     }
 }
 

@@ -16,6 +16,8 @@ struct ShoppingCartSVC: View {
     var body: some View {
         VStack {
             NavigationBar()
+                .environmentObject(cartManager)
+                .environmentObject(ordersManager)
             NavigationBack()
             HStack {
                 Text("CART (\(cartManager.items.count))")

@@ -10,6 +10,7 @@ import SwiftUI
 struct CatalogCategories: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var historyManager: HistoryManager
+    @EnvironmentObject var ordersManager: OrdersManager
     
     let columns: [GridItem] = [GridItem(.flexible()), GridItem(.flexible())]
     
@@ -23,6 +24,7 @@ struct CatalogCategories: View {
                     CatalogCategory(categoryData: CatalogData.categories[index])
                         .environmentObject(cartManager)
                         .environmentObject(historyManager)
+                        .environmentObject(ordersManager)
                 }
             }
         }
@@ -35,5 +37,6 @@ struct CatalogCategories_Previews: PreviewProvider {
         CatalogCategories()
             .environmentObject(CartManager())
             .environmentObject(HistoryManager())
+            .environmentObject(OrdersManager())
     }
 }

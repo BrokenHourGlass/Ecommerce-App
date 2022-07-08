@@ -10,6 +10,7 @@ import SwiftUI
 struct CategoryFeatured: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var historyManager: HistoryManager
+    @EnvironmentObject var ordersManager: OrdersManager
     
     var modelData = products
     
@@ -23,7 +24,7 @@ struct CategoryFeatured: View {
             ScrollView(.horizontal) {
                 LazyHGrid(rows: rows) {
                     ForEach(0..<products.count) { index in
-                        NavigationLink(destination: ProductSVC(product: products[index]).environmentObject(cartManager).environmentObject(historyManager)) {
+                        NavigationLink(destination: ProductSVC(product: products[index]).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager)) {
                             HStack {
                                 VStack {
                                     Image(products[index].productIMG)
@@ -54,5 +55,6 @@ struct CategoryFeatured_Previews: PreviewProvider {
         CategoryFeatured()
             .environmentObject(CartManager())
             .environmentObject(HistoryManager())
+            .environmentObject(OrdersManager())
     }
 }

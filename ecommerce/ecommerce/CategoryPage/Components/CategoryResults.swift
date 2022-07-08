@@ -10,6 +10,7 @@ import SwiftUI
 struct CategoryResults: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var historyManager: HistoryManager
+    @EnvironmentObject var ordersManager: OrdersManager
     
     var modelData = products
     
@@ -23,7 +24,7 @@ struct CategoryResults: View {
             ScrollView {
                 LazyVGrid(columns: columns) {
                     ForEach(modelData, id: \.id) { product in
-                        NavigationLink(destination: ProductSVC(product: product).environmentObject(cartManager).environmentObject(historyManager)) {
+                        NavigationLink(destination: ProductSVC(product: product).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager)) {
                             CategoryItemHelper(product: product)
                         }
                     }
@@ -41,5 +42,6 @@ struct CategoryResults_Previews: PreviewProvider {
         CategoryResults()
             .environmentObject(CartManager())
             .environmentObject(HistoryManager())
+            .environmentObject(OrdersManager())
     }
 }

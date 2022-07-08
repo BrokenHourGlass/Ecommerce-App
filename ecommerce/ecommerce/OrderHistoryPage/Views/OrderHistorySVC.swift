@@ -16,7 +16,7 @@ struct OrderHistorySVC: View {
         VStack(alignment: .leading) {
             NavigationBar()
                 .environmentObject(cartManager)
-                .environmentObject(OrdersManager())
+                .environmentObject(ordersManager)
                 .navigationTitle("")
                 .navigationBarHidden(true)
             SignupModal()

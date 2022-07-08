@@ -41,7 +41,9 @@ struct CheckoutSummary: View {
                     CheckoutDetails()
                         .environmentObject(cartManager)
                     NavigationLink(destination: ThankYouSVC().environmentObject(cartManager).onAppear{
-                        ordersManager.addToHistory(cart: cartManager.items)
+                        let newOrder = OrdersViewModel.createNewOrder()
+                        
+                        ordersManager.addToHistory(order: newOrder)
                     }) {
                         Section {
                             Text("CONTINUE & PAY")

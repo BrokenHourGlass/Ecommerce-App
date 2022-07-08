@@ -14,7 +14,7 @@ struct OrderItem: View {
         HStack {
             Image(systemName: "circle")
                 .foregroundColor(Color.accentColor)
-            Text(orderObj.id.uuidString)
+            Text(orderObj.orderId)
                 .lineLimit(1)
             Spacer()
             Button("Refund") {
@@ -27,6 +27,6 @@ struct OrderItem: View {
 
 struct OrderItem_Previews: PreviewProvider {
     static var previews: some View {
-        OrderItem(orderObj: Order(items: [CartItem(item: products[0], unitPrice: products[0].price, quantity: 399)]))
+        OrderItem(orderObj: Order(orderId: UUID().uuidString, date: Date(), status: 0))
     }
 }
