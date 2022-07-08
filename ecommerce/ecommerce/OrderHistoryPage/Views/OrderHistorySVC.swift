@@ -12,18 +12,19 @@ struct OrderHistorySVC: View {
     @EnvironmentObject var historyManager: HistoryManager
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             NavigationBar()
                 .environmentObject(cartManager)
-            ScrollView {
-                LazyVStack {
-                    SignupModal()
-                    Text("Order History")
-                        .font(.title2)
-                        .bold()
-                    OrderHistoryList()
-                }
+                .navigationTitle("")
+                .navigationBarHidden(true)
+            SignupModal()
+            Group {
+                Text("Order History")
+                    .font(.title2)
+                    .bold()
+                OrderHistoryList()
             }
+            .padding(.horizontal, 17)
             Spacer()
         }
     }
