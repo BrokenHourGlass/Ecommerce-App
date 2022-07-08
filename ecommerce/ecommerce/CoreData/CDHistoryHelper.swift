@@ -140,7 +140,7 @@ class CDHistoryHelper {
                 }
                 
                 history.append(
-                    NewProduct(id: Int(x.id), name: x.name!, category: x.category!, new: x.new, price: Int(x.price), featured: x.featured, cartIMG: x.cartIMG!, productIMG: x.productIMG!, description: x.description, features: x.features!, contents: itemDataResult, previews: previewDataResult, recommended: recommendedDataResult)
+                    NewProduct(id: Int(x.id), name: x.name!, category: x.category!, new: x.new, price: Int(x.price), featured: x.featured, cartIMG: x.cartIMG!, productIMG: x.productIMG!, description: x.pDescription!, features: x.features!, contents: itemDataResult, previews: previewDataResult, recommended: recommendedDataResult)
                 )
             }
             
