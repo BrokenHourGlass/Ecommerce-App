@@ -8,13 +8,31 @@
 import SwiftUI
 
 struct OrderHistorySVC: View {
+    @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var historyManager: HistoryManager
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            NavigationBar()
+                .environmentObject(cartManager)
+            ScrollView {
+                LazyVStack {
+                    SignupModal()
+                    Text("Order History")
+                        .font(.title2)
+                        .bold()
+                    OrderHistoryList()
+                }
+            }
+            Spacer()
+        }
     }
 }
 
 struct OrderHistorySVC_Previews: PreviewProvider {
     static var previews: some View {
         OrderHistorySVC()
+            .environmentObject(CartManager())
+            .environmentObject(HistoryManager())
     }
 }
