@@ -11,7 +11,7 @@ struct ProductSVC: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var historyManager: HistoryManager
     
-    var product: NewProduct?
+    var product: NewProduct
     let columns: [GridItem] = [GridItem(.flexible())]
     
     var body: some View {
@@ -21,20 +21,20 @@ struct ProductSVC: View {
             NavigationBack()
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 30) {
-                    ProductImage(product: product!)
+                    ProductImage(product: product)
                         .padding([.leading, .trailing], 27)
-                    ProductDetails(product: product!)
+                    ProductDetails(product: product)
                         .padding([.leading, .trailing], 27)
-                    ProductQuantity(product: product!)
+                    ProductQuantity(product: product)
                         .padding([.leading, .trailing], 27)
                         .environmentObject(cartManager)
-                    ProductFeatures(product: product!)
+                    ProductFeatures(product: product)
                         .padding([.leading, .trailing], 27)
-                    ProductContents(product: product!)
+                    ProductContents(product: product)
                         .padding([.leading, .trailing], 27)
-                    ProductPreview(product: product!)
+                    ProductPreview(product: product)
                         .padding([.leading, .trailing], 27)
-                    RecommendedHelper(product: product!)
+                    RecommendedHelper(product: product)
                     ChooseCategory()
                     About()
                     FooterHelper()
@@ -44,8 +44,8 @@ struct ProductSVC: View {
         .navigationTitle("")
         .navigationBarHidden(true)
         .onAppear(perform: {
-            historyManager.addToHistory(product: product!)
-            SearchHistoryHelpers.addSearchItem(product: product!)
+            historyManager.addToHistory(product: product)
+            SearchHistoryHelpers.addSearchItem(product: product)
         })
     }
 }
