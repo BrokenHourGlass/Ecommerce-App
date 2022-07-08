@@ -17,7 +17,6 @@ class TemporaryVC: UIViewController {
         
         ProductDB.productDb.createDB()
         ProductDB.productDb.createTable()
-        ProductDB.productDb.insertAll()
         print(ProductDB.productDb.getData())
         print("done")
         sleep(20)

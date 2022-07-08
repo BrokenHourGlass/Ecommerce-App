@@ -28,6 +28,9 @@ class ProductDB{
             let err = String(cString: sqlite3_errmsg(pointer))
             print("error in table creation")
         }
+        else{
+            insertAll()
+        }
     }
     
     func insertData(name: NSString, category: NSString, new: NSNumber, price: NSNumber, featured: NSNumber, cartIMG: NSString, productIMG: NSString, description: NSString, features: NSString){
@@ -40,28 +43,28 @@ class ProductDB{
             print("error in query creation", err)
         }
         
-        if sqlite3_bind_text(stmt, 1, name.utf8String, -1, nil) != SQLITE_OK{
+        if sqlite3_bind_text(stmt, 1, name.utf8String, -1, nil) != SQLITE_OK{ //name binding
             let err = String(cString: sqlite3_errmsg(pointer))
         }
-        if sqlite3_bind_text(stmt, 2, category.utf8String, -1, nil) != SQLITE_OK{
+        if sqlite3_bind_text(stmt, 2, category.utf8String, -1, nil) != SQLITE_OK{//category binding
             let err = String(cString: sqlite3_errmsg(pointer))
         }
-        if sqlite3_bind_int(stmt, 3, -1) != SQLITE_OK{
+        if sqlite3_bind_int(stmt, 3, -1) != SQLITE_OK{// if product is new bind
             let err = String(cString: sqlite3_errmsg(pointer))
         }
-        if sqlite3_bind_int(stmt, 4, -1) != SQLITE_OK{
+        if sqlite3_bind_int64(stmt, 4, Int64(price)) != SQLITE_OK{ // price
             let err = String(cString: sqlite3_errmsg(pointer))
         }
-        if sqlite3_bind_int(stmt, 5, -1) != SQLITE_OK{
+        if sqlite3_bind_int(stmt, 5, -1) != SQLITE_OK{// if product is featured
             let err = String(cString: sqlite3_errmsg(pointer))
         }
-        if sqlite3_bind_text(stmt, 6, cartIMG.utf8String, -1, nil) != SQLITE_OK{
+        if sqlite3_bind_text(stmt, 6, cartIMG.utf8String, -1, nil) != SQLITE_OK{// cart image url
             let err = String(cString: sqlite3_errmsg(pointer))
         }
-        if sqlite3_bind_text(stmt, 7, productIMG.utf8String, -1, nil) != SQLITE_OK{
+        if sqlite3_bind_text(stmt, 7, productIMG.utf8String, -1, nil) != SQLITE_OK{// product image url
             let err = String(cString: sqlite3_errmsg(pointer))
         }
-        if sqlite3_bind_text(stmt, 8, description.utf8String, -1, nil) != SQLITE_OK{
+        if sqlite3_bind_text(stmt, 8, description.utf8String, -1, nil) != SQLITE_OK{// item description string
             let err = String(cString: sqlite3_errmsg(pointer))
         }
         if sqlite3_bind_text(stmt, 9, features.utf8String, -1, nil) != SQLITE_OK{
@@ -75,8 +78,10 @@ class ProductDB{
     
     func insertAll(){
         productItems = load("new-data.json")
-        for (index, val) in productItems.enumerated(){
+        for (index, _) in productItems.enumerated(){
             insertData(name: productItems[index].name as NSString, category: productItems[index].category as NSString, new: productItems[index].new as NSNumber, price: productItems[index].price as NSNumber, featured: productItems[index].featured as NSNumber, cartIMG: productItems[index].cartIMG as NSString, productIMG: productItems[index].productIMG as NSString, description: productItems[index].description as NSString, features: productItems[index].description as NSString)
+            var l = productItems[index].price as NSNumber
+            print(l)
         }
     }
         
@@ -131,7 +136,7 @@ class ProductDB{
         else{
             print("error in query")
         }
-        return prod ?? NewProduct(id: -1, name: "Not Valid", category: "Not Valid", new: false, price: 0, featured: false, cartIMG: "None", productIMG: "None", description: "Not Valid", features: "none", contents: [NewItem](), previews: [NewPreview](), recommended: [NewRecommended]())
+        return prod ?? NewProduct(id: 0, name: "Not Valid", category: "Not Valid", new: false, price: 0, featured: false, cartIMG: "None", productIMG: "None", description: "Not Valid", features: "none", contents: [NewItem](), previews: [NewPreview](), recommended: [NewRecommended]())
     }
     /*
     func updateRecord(id: Int, alter: NewProduct){
