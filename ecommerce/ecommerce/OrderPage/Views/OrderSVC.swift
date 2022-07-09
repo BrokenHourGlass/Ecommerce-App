@@ -9,13 +9,25 @@ import SwiftUI
 
 struct OrderSVC: View {
     
+    var orderId: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            SignupModal()
+            ScrollView {
+                LazyVStack {
+                    ForEach(CDOrderHelper.cdOrderHelper.getOrderItems(orderId: orderId), id: \.item.id) { item in
+                        OrderItemSVC(it: item)
+                    }
+                }
+            }
+            Spacer()
+        }
     }
 }
 
 struct OrderSVC_Previews: PreviewProvider {
     static var previews: some View {
-        OrderSVC()
+        OrderSVC(orderId: "some order Id")
     }
 }
