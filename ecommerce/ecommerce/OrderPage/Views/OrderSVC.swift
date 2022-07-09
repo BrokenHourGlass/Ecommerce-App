@@ -13,6 +13,7 @@ struct OrderSVC: View {
     
     var body: some View {
         VStack {
+            NavigationBack()
             SignupModal()
             ScrollView {
                 LazyVStack {
