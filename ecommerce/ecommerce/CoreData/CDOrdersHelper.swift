@@ -16,11 +16,11 @@ class CDOrdersHelper {
     let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     
     func addOrder(orderObj: Order) {
-        let orderEntity = NSEntityDescription.insertNewObject(forEntityName: "Order", into: context!) as! Order
+        let orderEntity = NSEntityDescription.insertNewObject(forEntityName: "PNPOrder", into: context!) as! PNPOrder
         
         orderEntity.orderId = orderObj.orderId
         orderEntity.date = orderObj.date
-        orderEntity.status = orderObj.status
+        orderEntity.status = Int16(orderObj.status)
         
         do {
             try context?.save()

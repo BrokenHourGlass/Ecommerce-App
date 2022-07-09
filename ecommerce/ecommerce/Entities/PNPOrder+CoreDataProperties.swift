@@ -16,8 +16,8 @@ extension PNPOrder {
         return NSFetchRequest<PNPOrder>(entityName: "PNPOrder")
     }
 
-    @NSManaged public var orderId: String?
     @NSManaged public var date: Date?
+    @NSManaged public var orderId: String?
     @NSManaged public var status: Int16
 
 }

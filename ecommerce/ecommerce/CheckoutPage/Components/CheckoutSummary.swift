@@ -44,6 +44,7 @@ struct CheckoutSummary: View {
                         let newOrder = OrdersViewModel.createNewOrder()
                         
                         ordersManager.addToHistory(order: newOrder)
+                        CDOrdersHelper.cdOrdersHelper.addOrder(orderObj: newOrder)
                     }) {
                         Section {
                             Text("CONTINUE & PAY")

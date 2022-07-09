@@ -8,7 +8,7 @@
 import Foundation
 
 class OrdersManager: ObservableObject {
-    @Published private(set) var orders: [Order] = []
+    @Published private(set) var orders: [Order] = CDOrdersHelper.cdOrdersHelper.getOrders()
     
     func addToHistory(order: Order) {
         orders.append(order)

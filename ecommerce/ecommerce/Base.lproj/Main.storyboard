@@ -725,6 +725,36 @@
             </objects>
             <point key="canvasLocation" x="1154" y="3362"/>
         </scene>
+        <!--OrderVC-->
+        <scene sceneID="31Q-Kd-7J0">
+            <objects>
+                <viewController id="fdm-BF-chn" customClass="OrderVC" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3ux-fp-VXu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4hU-KZ-oYZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JSl-6O-YfW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JSl-6O-YfW" firstAttribute="bottom" secondItem="4hU-KZ-oYZ" secondAttribute="bottom" id="3OP-Q3-o4D"/>
+                            <constraint firstItem="4hU-KZ-oYZ" firstAttribute="top" secondItem="JSl-6O-YfW" secondAttribute="top" id="LQN-EB-G97"/>
+                            <constraint firstItem="JSl-6O-YfW" firstAttribute="trailing" secondItem="4hU-KZ-oYZ" secondAttribute="trailing" id="Rsh-3t-KlW"/>
+                            <constraint firstItem="4hU-KZ-oYZ" firstAttribute="leading" secondItem="JSl-6O-YfW" secondAttribute="leading" id="aIe-qp-2iw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="4hU-KZ-oYZ" id="Y4o-wP-p9H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c5x-kJ-Phd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2151" y="3362"/>
+        </scene>
         <!--Register View Controller-->
         <scene sceneID="gLP-un-ZVV">
             <objects>
