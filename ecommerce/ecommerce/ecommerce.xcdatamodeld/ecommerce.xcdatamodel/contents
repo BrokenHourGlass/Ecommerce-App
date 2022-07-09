@@ -11,8 +11,8 @@
         <attribute name="status" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="PNPOrderItem" representedClassName="PNPOrderItem" syncable="YES">
-        <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="orderId" optional="YES" attributeType="String"/>
+        <attribute name="productId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="quantity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="Preview" representedClassName="Preview" syncable="YES">

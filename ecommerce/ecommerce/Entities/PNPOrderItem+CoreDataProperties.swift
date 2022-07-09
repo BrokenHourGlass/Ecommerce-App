@@ -17,7 +17,7 @@ extension PNPOrderItem {
     }
 
     @NSManaged public var orderId: String?
-    @NSManaged public var name: String?
+    @NSManaged public var productId: Int64
     @NSManaged public var quantity: Int64
 
 }
