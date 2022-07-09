@@ -20,6 +20,7 @@ struct OrderItem: View {
                     .foregroundColor(Color.accentColor)
                 Text(orderObj.orderId)
                     .lineLimit(1)
+                    .foregroundColor(Color.black)
                 Spacer()
                 Button("Refund") {
                     print("refund requested")

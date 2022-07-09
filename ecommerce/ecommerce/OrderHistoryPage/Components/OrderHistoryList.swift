@@ -14,8 +14,8 @@ struct OrderHistoryList: View {
     
     var body: some View {
         ScrollView {
-            LazyVStack {
-                ForEach(ordersManager.orders, id: \.id) { order in
+            LazyVStack(spacing: 12) {
+                ForEach(ordersManager.orders.reversed(), id: \.id) { order in
                     OrderItem(orderObj: order)
                         .environmentObject(cartManager)
                         .environmentObject(ordersManager)
