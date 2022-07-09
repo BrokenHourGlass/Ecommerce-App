@@ -11,16 +11,20 @@ struct OrderItem: View {
     var orderObj: Order
     
     var body: some View {
-        HStack {
-            Image(systemName: "circle")
+        NavigationLink(destination: OrderSVC(orderId: orderObj.orderId).onAppear(perform: {
+            print("Count: \(CDOrderHelper.cdOrderHelper.getOrderItems(orderId: orderObj.orderId).count)")
+        })) {
+            HStack {
+                Image(systemName: "circle")
+                    .foregroundColor(Color.accentColor)
+                Text(orderObj.orderId)
+                    .lineLimit(1)
+                Spacer()
+                Button("Refund") {
+                    print("refund requested")
+                }
                 .foregroundColor(Color.accentColor)
-            Text(orderObj.orderId)
-                .lineLimit(1)
-            Spacer()
-            Button("Refund") {
-                print("refund requested")
             }
-            .foregroundColor(Color.accentColor)
         }
     }
 }

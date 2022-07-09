@@ -9,20 +9,22 @@ import SwiftUI
 
 struct OrderSVC: View {
     
-    var orderId: String
+    var orderId: String?
     
     var body: some View {
         VStack {
             SignupModal()
             ScrollView {
                 LazyVStack {
-                    ForEach(CDOrderHelper.cdOrderHelper.getOrderItems(orderId: orderId), id: \.item.id) { item in
+                    ForEach(CDOrderHelper.cdOrderHelper.getOrderItems(orderId: orderId!), id: \.item.id) { item in
                         OrderItemSVC(it: item)
                     }
                 }
             }
             Spacer()
         }
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
 }
 
