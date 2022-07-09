@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct OrderSVC: View {
+    @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var ordersManager: OrdersManager
     
     var orderId: String?
     
     var body: some View {
         VStack {
+            NavigationBar()
+                .environmentObject(cartManager)
+                .environmentObject(ordersManager)
             NavigationBack()
             SignupModal()
             ScrollView {
@@ -21,6 +26,7 @@ struct OrderSVC: View {
                         OrderItemSVC(it: item)
                     }
                 }
+                .padding(.horizontal, 17)
             }
             Spacer()
         }
@@ -32,5 +38,7 @@ struct OrderSVC: View {
 struct OrderSVC_Previews: PreviewProvider {
     static var previews: some View {
         OrderSVC(orderId: "some order Id")
+            .environmentObject(CartManager())
+            .environmentObject(OrdersManager())
     }
 }

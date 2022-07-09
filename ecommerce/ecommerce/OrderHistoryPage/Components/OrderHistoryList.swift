@@ -17,6 +17,8 @@ struct OrderHistoryList: View {
             LazyVStack {
                 ForEach(ordersManager.orders, id: \.id) { order in
                     OrderItem(orderObj: order)
+                        .environmentObject(cartManager)
+                        .environmentObject(ordersManager)
                 }
             }
         }

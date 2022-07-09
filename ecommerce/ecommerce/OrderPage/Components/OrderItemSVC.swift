@@ -16,6 +16,7 @@ struct OrderItemSVC: View {
             Image(it.item.cartIMG)
                 .resizable()
                 .frame(width: 100, height: 100)
+                .cornerRadius(15)
             VStack(alignment: .leading, spacing: 5) {
                 Text(it.item.name)
                     .fontWeight(.bold)
