@@ -12,6 +12,9 @@ struct CatalogCategories: View {
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
     
+    @State var showNextView = false
+    @State var current = 0
+    
     let columns: [GridItem] = [GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {
@@ -19,14 +22,23 @@ struct CatalogCategories: View {
             Text("Categories")
                 .font(.title2)
                 .bold()
+            NavigationLink(destination: CategorySVC().environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager), isActive: $showNextView) {
+                EmptyView()
+            }
             LazyVGrid(columns: columns) {
                 ForEach(0..<CatalogData.categories.count) { index in
-                    CatalogCategory(categoryData: CatalogData.categories[index])
-                        .environmentObject(cartManager)
-                        .environmentObject(historyManager)
-                        .environmentObject(ordersManager)
+                    Button(action: {
+                        current = index
+                        showNextView = true
+                    }) {
+                        CatalogCategory(categoryData: CatalogData.categories[index])
+                            .environmentObject(cartManager)
+                            .environmentObject(historyManager)
+                            .environmentObject(ordersManager)
+                    }
                 }
             }
+            .padding([.top], 10)
         }
         .padding()
     }

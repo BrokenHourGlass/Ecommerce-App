@@ -15,18 +15,15 @@ struct CatalogCategory: View {
     var categoryData: CategoryData
     
     var body: some View {
-        NavigationLink(destination: CategorySVC().environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager)) {
-            VStack {
-                Image(categoryData.img)
-                    .resizable()
-                    .scaledToFill()
-                    .clipped()
-                    .listRowInsets(EdgeInsets())
-                    .cornerRadius(15)
-                Text(categoryData.category)
-                    .bold()
-            }
-            
+        VStack {
+            Image(categoryData.img)
+                .resizable()
+                .scaledToFill()
+                .clipped()
+                .listRowInsets(EdgeInsets())
+                .cornerRadius(15)
+            Text(categoryData.category)
+                .bold()
         }
     }
 }
