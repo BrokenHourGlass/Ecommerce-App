@@ -12,7 +12,8 @@ struct CategoryResults: View {
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
     
-    var modelData = products
+    @State var showNextView = false
+    @State var current = 0
     
     let columns: [GridItem] = [GridItem(.flexible())]
     
@@ -21,15 +22,22 @@ struct CategoryResults: View {
             Text("RESULTS")
                 .font(.title2)
                 .bold()
+            NavigationLink(destination: ProductSVC(product: products[current]).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager), isActive: $showNextView) {
+                EmptyView()
+            }
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    ForEach(modelData, id: \.id) { product in
-                        NavigationLink(destination: ProductSVC(product: product).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager)) {
-                            CategoryItemHelper(product: product)
+                    ForEach(0..<products.count) { index in
+                        Button(action: {
+                            current = index
+                            showNextView = true
+                        }) {
+                            CategoryItemHelper(product: products[index])
                         }
                     }
                 }
             }
+            .padding([.top], 10)
         }
         .padding([.leading, .trailing], 17)
         .navigationTitle("")
