@@ -14,19 +14,17 @@ struct OrderItem: View {
     var orderObj: Order
     
     var body: some View {
-        NavigationLink(destination: OrderSVC(orderId: orderObj.orderId).environmentObject(cartManager).environmentObject(ordersManager)) {
-            HStack {
-                Image(systemName: "circle")
-                    .foregroundColor(Color.accentColor)
-                Text(orderObj.orderId)
-                    .lineLimit(1)
-                    .foregroundColor(Color.black)
-                Spacer()
-                Button("Refund") {
-                    print("refund requested")
-                }
+        HStack {
+            Image(systemName: "circle")
                 .foregroundColor(Color.accentColor)
+            Text(orderObj.orderId)
+                .lineLimit(1)
+                .foregroundColor(Color.black)
+            Spacer()
+            Button("Refund") {
+                print("refund requested")
             }
+            .foregroundColor(Color.accentColor)
         }
     }
 }

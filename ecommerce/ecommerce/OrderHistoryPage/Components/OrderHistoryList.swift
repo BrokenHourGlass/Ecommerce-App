@@ -12,15 +12,29 @@ struct OrderHistoryList: View {
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
     
+    @State var showNextView = false
+    @State var current = ""
+    
     var body: some View {
-        ScrollView {
-            LazyVStack(spacing: 12) {
-                ForEach(ordersManager.orders.reversed(), id: \.id) { order in
-                    OrderItem(orderObj: order)
-                        .environmentObject(cartManager)
-                        .environmentObject(ordersManager)
+        Group {
+            NavigationLink(destination: OrderSVC(orderId: current).environmentObject(cartManager).environmentObject(ordersManager), isActive: $showNextView) {
+                EmptyView()
+            }
+            ScrollView {
+                LazyVStack(spacing: 12) {
+                    ForEach(ordersManager.orders.reversed(), id: \.id) { order in
+                        Button(action: {
+                            current = order.orderId
+                            showNextView = true
+                        }) {
+                            OrderItem(orderObj: order)
+                                .environmentObject(cartManager)
+                                .environmentObject(ordersManager)
+                        }
+                    }
                 }
             }
+            .padding([.top], 12)
         }
     }
 }
