@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CheckoutDetails: View {
     @EnvironmentObject var cartManager: CartManager
-    var modelData = products
     
     var body: some View {
         VStack(spacing: 5) {
