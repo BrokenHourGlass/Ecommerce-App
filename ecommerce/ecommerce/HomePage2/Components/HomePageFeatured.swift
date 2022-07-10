@@ -25,11 +25,11 @@ struct HomePageFeatured: View {
                 .bold()
             Text("Up to 50% off marked prices")
                 .font(.title3)
+            NavigationLink(destination: ProductSVC(product: products[current]).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager), isActive: $showNextView) {
+                EmptyView()
+            }
             ScrollView(.horizontal) {
                 LazyHStack {
-                    NavigationLink(destination: ProductSVC(product: products[current]).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager), isActive: $showNextView) {
-                        EmptyView()
-                    }
                     ForEach(0..<products.count) { index in
                         Button(action: {
                             current = index
@@ -40,6 +40,7 @@ struct HomePageFeatured: View {
                     }
                 }
             }
+            .padding([.top], 15)
         }
         .padding([.leading, .top, .bottom], 15)
         .foregroundColor(fgColor)
