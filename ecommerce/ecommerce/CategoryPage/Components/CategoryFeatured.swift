@@ -12,7 +12,8 @@ struct CategoryFeatured: View {
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
     
-    var modelData = products
+    @State var showNextView = false
+    @State var current = 0
     
     let rows: [GridItem] = [GridItem(.flexible())]
     
@@ -21,10 +22,16 @@ struct CategoryFeatured: View {
             Text("FEATURED")
                 .font(.title2)
                 .bold()
+            NavigationLink(destination: ProductSVC(product: products[current]).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager), isActive: $showNextView) {
+                EmptyView()
+            }
             ScrollView(.horizontal) {
                 LazyHGrid(rows: rows) {
                     ForEach(0..<products.count) { index in
-                        NavigationLink(destination: ProductSVC(product: products[index]).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager)) {
+                        Button(action: {
+                            current = index
+                            showNextView = true
+                        }) {
                             HStack {
                                 VStack {
                                     Image(products[index].productIMG)
@@ -44,6 +51,7 @@ struct CategoryFeatured: View {
                     }
                 }
             }
+            .padding([.top], 10)
         }
         .padding([.leading], 17)
         
