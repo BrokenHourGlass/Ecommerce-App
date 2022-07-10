@@ -40,7 +40,7 @@ struct HomePageFeatured: View {
                     }
                 }
             }
-            .padding([.top], 15)
+            .padding([.top], 10)
         }
         .padding([.leading, .top, .bottom], 15)
         .foregroundColor(fgColor)
