@@ -21,13 +21,11 @@ struct OrderSVC: View {
             NavigationBack()
             SignupModal()
             ScrollView {
-                LazyVStack {
-                    ForEach(CDOrderHelper.cdOrderHelper.getOrderItems(orderId: orderId!), id: \.item.id) { item in
-                        OrderItemSVC(it: item)
-                    }
+                ForEach(CDOrderHelper.cdOrderHelper.getOrderItems(orderId: orderId!), id: \.item.id) { item in
+                    OrderItemSVC(it: item)
                 }
-                .padding(.horizontal, 17)
             }
+            .padding(.horizontal, 15)
             Spacer()
         }
         .navigationTitle("")
