@@ -21,17 +21,16 @@ struct OrderHistoryList: View {
                 EmptyView()
             }
             ScrollView {
-                LazyVStack(spacing: 12) {
-                    ForEach(ordersManager.orders.reversed(), id: \.id) { order in
-                        Button(action: {
-                            current = order.orderId
-                            showNextView = true
-                        }) {
-                            OrderItem(orderObj: order)
-                                .environmentObject(cartManager)
-                                .environmentObject(ordersManager)
-                        }
+                ForEach(ordersManager.orders.reversed(), id: \.id) { order in
+                    Button(action: {
+                        current = order.orderId
+                        showNextView = true
+                    }) {
+                        OrderItem(orderObj: order)
+                            .environmentObject(cartManager)
+                            .environmentObject(ordersManager)
                     }
+                    .padding([.bottom], 5)
                 }
             }
             .padding([.top], 12)

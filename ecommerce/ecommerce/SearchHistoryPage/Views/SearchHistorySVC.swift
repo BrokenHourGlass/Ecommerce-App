@@ -23,10 +23,8 @@ struct SearchHistorySVC: View {
                 .bold()
                 .padding([.leading, .trailing], 14)
             ScrollView {
-                LazyVStack {
-                    ForEach(historyManager.history.reversed(), id: \.id) { x in
-                        SearchHistoryItem(product: x.product)
-                    }
+                ForEach(historyManager.history.reversed(), id: \.id) { x in
+                    SearchHistoryItem(product: x.product)
                 }
             }
             .padding([.leading, .trailing], 14)
