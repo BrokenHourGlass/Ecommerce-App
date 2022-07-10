@@ -12,6 +12,9 @@ struct HomePageFeatured: View {
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
     
+    @State var showNextView = false
+    @State var current: Int = 0
+    
     var fgColor: Color
     var bgColor: Color
     
@@ -24,8 +27,14 @@ struct HomePageFeatured: View {
                 .font(.title3)
             ScrollView(.horizontal) {
                 LazyHStack {
+                    NavigationLink(destination: ProductSVC(product: products[current]).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager), isActive: $showNextView) {
+                        EmptyView()
+                    }
                     ForEach(0..<products.count) { index in
-                        NavigationLink(destination: ProductSVC(product: products[index]).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager)) {
+                        Button(action: {
+                            current = index
+                            showNextView = true
+                        }) {
                             HomePageProduct(product: products[index])
                         }
                     }
