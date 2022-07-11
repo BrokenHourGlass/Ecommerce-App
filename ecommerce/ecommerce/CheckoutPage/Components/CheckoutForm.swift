@@ -47,7 +47,7 @@ struct CheckoutForm: View {
                     CheckoutField(title: "City", placeholder: "New York", value: $city)
                     CheckoutField(title: "Country", placeholder: "United States", value: $country)
                     
-                    CheckoutSummary()
+                    CheckoutSummary(checkoutDetailsObj: CheckoutDetailsObj(name: name, email: email, phoneNumber: phoneNumber, address: address, zip: zip, city: city, country: country))
                         .padding([.top], 30)
                         .environmentObject(cartManager)
                 }

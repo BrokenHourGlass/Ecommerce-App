@@ -13,6 +13,8 @@ struct CheckoutSummary: View {
     
     @State var showNextView = false
     
+    var checkoutDetailsObj: CheckoutDetailsObj
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("SUMMARY")
