@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ButtonB: View {
+    @Binding var showNextView: Bool
     var title: String
     
     var body: some View {
         Button(action: {
-            print("Button B")
+            showNextView = true
         }) {
             Label(title, systemImage: "chevron.right")
                 .labelStyle(.titleAndIcon)
@@ -24,6 +25,6 @@ struct ButtonB: View {
 
 struct ButtonB_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonB(title: "Button B")
+        ButtonB(showNextView: .constant(true), title: "Button B")
     }
 }
