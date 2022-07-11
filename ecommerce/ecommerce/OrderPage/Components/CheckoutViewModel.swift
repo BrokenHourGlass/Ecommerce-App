@@ -13,4 +13,8 @@ class CheckoutViewModel {
             CDOrderHelper.cdOrderHelper.addOrderItem(orderId: orderId, cartItemObj: x)
         }
     }
+    
+    static func validateForm() {
+        
+    }
 }
