@@ -15,11 +15,11 @@ struct RecommendedHelper: View {
     var product: NewProduct
     
     var body: some View {
-        VStack(spacing: 30) {
+        VStack(spacing: 10) {
             Text("YOU MAY ALSO LIKE")
                 .font(.title2)
                 .bold()
-            VStack(spacing: 50) {
+            VStack(spacing: 30) {
                 RecommendedItemHelper(recommended: product.recommended[0])
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
@@ -34,6 +34,7 @@ struct RecommendedHelper: View {
                     .environmentObject(ordersManager)
             }
         }
+        .padding(.vertical, 40)
     }
 }
 

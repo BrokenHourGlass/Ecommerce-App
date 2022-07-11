@@ -21,13 +21,16 @@ struct RecommendedItemHelper: View {
             EmptyView()
         }
         VStack {
-            Image(recommended.img)
-                .resizable()
-                .frame(width: 200, height: 200)
-            Text(recommended.name)
-                .font(.title2)
-                .bold()
+            VStack(spacing: 15) {
+                Image(recommended.img)
+                    .resizable()
+                    .frame(width: 200, height: 200)
+                Text(recommended.name)
+                    .font(.title2)
+                    .bold()
+            }
             ButtonA(title: "SEE PRODUCT", showNextView: $showNextView)
+                .padding([.top], 15)
         }
         .frame(width: 250)
     }
