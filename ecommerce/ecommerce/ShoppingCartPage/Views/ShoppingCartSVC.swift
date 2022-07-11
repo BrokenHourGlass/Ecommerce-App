@@ -11,12 +11,18 @@ struct ShoppingCartSVC: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var ordersManager: OrdersManager
     
+    @State var showNextView = false
+    
     var body: some View {
         VStack {
             NavigationBar()
                 .environmentObject(cartManager)
                 .environmentObject(ordersManager)
             NavigationBack()
+            SignupModal()
+            NavigationLink(destination: CheckoutSVC().environmentObject(cartManager).environmentObject(ordersManager), isActive: $showNextView) {
+                EmptyView()
+            }
             HStack {
                 Text("CART (\(cartManager.items.count))")
                 Spacer()
@@ -59,16 +65,17 @@ struct ShoppingCartSVC: View {
                 }
                 HStack {
                     Spacer()
-                    NavigationLink(destination: CheckoutSVC().environmentObject(cartManager).environmentObject(ordersManager)) {
-                        Section {
-                            Text("CHECKOUT")
-                                .padding()
-                                .frame(maxWidth: .infinity)
-                                .border(Color.red)
-                        }
-                        .foregroundColor(Color.white)
-                        .background(Color.red)
+                    Button(action: {
+                        showNextView = ShoppingCartViewModel.cartIsNotEmpty(cart: cartManager.items)
+                    }) {
+                        Text("CHECKOUT")
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .border(Color.red)
                     }
+                    .disabled(!ShoppingCartViewModel.cartIsNotEmpty(cart: cartManager.items))
+                    .foregroundColor(Color.white)
+                    .background(ShoppingCartViewModel.cartIsNotEmpty(cart: cartManager.items) ? Color.red : Color.gray)
                 }
             }
             .padding([.leading, .top, .trailing, .bottom], 27)
