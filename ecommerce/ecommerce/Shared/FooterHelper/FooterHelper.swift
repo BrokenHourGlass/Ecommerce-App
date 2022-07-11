@@ -8,14 +8,7 @@
 import SwiftUI
 
 struct FooterHelper: View {
-    var name = "Amazona"
-    
-    enum Categories: String {
-        case home = "HOME"
-        case headphones = "HEADPHONES"
-        case speakers = "SPEAKERS"
-        case earphones = "EARPHONES"
-    }
+    var name = GlobalConstants.app.rawValue
     
     var body: some View {
         VStack(alignment: .center, spacing: 30) {
@@ -32,9 +25,9 @@ struct FooterHelper: View {
                 Text(Categories.earphones.rawValue)
                     .bold()
             }
-            Text("Amazona is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.")
+            Text(GlobalConstants.footer.rawValue)
                 .multilineTextAlignment(.center)
-            Text("Copyright 2022. All Rights Reserved")
+            Text(GlobalConstants.copyright.rawValue)
                 .multilineTextAlignment(.center)
         }
         .padding([.leading, .trailing], 27)

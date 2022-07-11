@@ -16,7 +16,6 @@ struct ProductSVC: View {
     let columns: [GridItem] = [GridItem(.flexible())]
     
     var body: some View {
-        
         VStack {
             NavigationBar()
                 .environmentObject(cartManager)
@@ -24,23 +23,25 @@ struct ProductSVC: View {
             NavigationBack()
             ScrollView {
                 SignupModal()
+                    .padding(.horizontal, 12)
                 VStack(spacing: 30) {
                     ProductImage(product: product)
-                        .padding([.leading, .trailing], 27)
                     ProductDetails(product: product)
-                        .padding([.leading, .trailing], 27)
                     ProductQuantity(product: product)
-                        .padding([.leading, .trailing], 27)
                         .environmentObject(cartManager)
                     ProductFeatures(product: product)
-                        .padding([.leading, .trailing], 27)
                     ProductContents(product: product)
-                        .padding([.leading, .trailing], 27)
                     ProductPreview(product: product)
-                        .padding([.leading, .trailing], 27)
                 }
+                .padding(.horizontal, 27)
                 RecommendedHelper(product: product)
+                    .environmentObject(cartManager)
+                    .environmentObject(historyManager)
+                    .environmentObject(ordersManager)
                 ChooseCategory()
+                    .environmentObject(cartManager)
+                    .environmentObject(historyManager)
+                    .environmentObject(ordersManager)
                 About()
                 FooterHelper()
             }

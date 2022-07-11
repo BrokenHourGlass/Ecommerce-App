@@ -14,16 +14,21 @@ struct NavigationBar: View {
     var body: some View {
         HStack {
             Button {
-               print("remove")
+                print("remove")
             } label: {
                 Image(systemName: "line.3.horizontal")
+                    .foregroundColor(Color.white)
+                
             }
             Spacer()
-            Text("Amazona")
+            Text("Pick'n'Pay")
                 .foregroundColor(.white)
+                .font(.title)
+                .bold()
             Spacer()
             NavigationLink(destination: ShoppingCartSVC().environmentObject(cartManager).environmentObject(ordersManager)) {
                 Image(systemName: "cart")
+                    .foregroundColor(Color.white)
             }
         }
         .padding([.leading, .trailing], 27)
