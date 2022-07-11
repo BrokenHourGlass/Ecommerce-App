@@ -504,7 +504,6 @@
 				610779A6286E959E0094F95A /* QuantityHelper.swift */,
 				610779A8286E9A990094F95A /* ItemHelper.swift */,
 				610779AA286E9DCF0094F95A /* PreviewHelper.swift */,
-				610779AC286EA0950094F95A /* FooterHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -512,6 +511,7 @@
 		610779B2286F3A510094F95A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				6133A2E7287C6C9600CE728F /* FooterHelper */,
 				61E2AD162876868B00CD4F8F /* SignupModal */,
 				610779C4286F51B90094F95A /* About */,
 				610779BD286F474D0094F95A /* ChooseCategory */,
@@ -569,6 +569,14 @@
 				6133A2E5287C6A4700CE728F /* GlobalConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		6133A2E7287C6C9600CE728F /* FooterHelper */ = {
+			isa = PBXGroup;
+			children = (
+				610779AC286EA0950094F95A /* FooterHelper.swift */,
+			);
+			path = FooterHelper;
 			sourceTree = "<group>";
 		};
 		61676C7328711420006205B8 /* CatalogData */ = {
