@@ -16,6 +16,7 @@ struct ProductSVC: View {
     let columns: [GridItem] = [GridItem(.flexible())]
     
     var body: some View {
+        
         VStack {
             NavigationBar()
                 .environmentObject(cartManager)
