@@ -1,15 +1,17 @@
 //
-//  CheckoutSVC.swift
+//  OrderSVC.swift
 //  ecommerce
 //
-//  Created by Vincent Salinas on 6/30/22.
+//  Created by Vincent Salinas on 7/8/22.
 //
 
 import SwiftUI
 
-struct CheckoutSVC: View {
+struct OrderSVC: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var ordersManager: OrdersManager
+    
+    var orderId: String?
     
     var body: some View {
         VStack {
@@ -17,19 +19,23 @@ struct CheckoutSVC: View {
                 .environmentObject(cartManager)
                 .environmentObject(ordersManager)
             NavigationBack()
-            CheckoutForm()
-                .environmentObject(cartManager)
-                .environmentObject(ordersManager)
+            SignupModal()
+            ScrollView {
+                ForEach(CDOrderHelper.cdOrderHelper.getOrderItems(orderId: orderId!), id: \.item.id) { item in
+                    OrderItemSVC(it: item)
+                }
+            }
+            .padding(.horizontal, 15)
+            Spacer()
         }
         .navigationTitle("")
         .navigationBarHidden(true)
-        
     }
 }
 
-struct CheckoutSVC_Previews: PreviewProvider {
+struct OrderSVC_Previews: PreviewProvider {
     static var previews: some View {
-        CheckoutSVC()
+        OrderSVC(orderId: "some order Id")
             .environmentObject(CartManager())
             .environmentObject(OrdersManager())
     }

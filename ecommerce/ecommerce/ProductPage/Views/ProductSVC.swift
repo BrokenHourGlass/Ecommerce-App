@@ -10,6 +10,7 @@ import SwiftUI
 struct ProductSVC: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var historyManager: HistoryManager
+    @EnvironmentObject var ordersManager: OrdersManager
     
     var product: NewProduct
     let columns: [GridItem] = [GridItem(.flexible())]
@@ -19,33 +20,29 @@ struct ProductSVC: View {
         VStack {
             NavigationBar()
                 .environmentObject(cartManager)
+                .environmentObject(ordersManager)
             NavigationBack()
             ScrollView {
-                LazyVGrid(columns: columns) {
-                    SignupModal()
-                    VStack(spacing: 30) {
-                        
-                        ProductImage(product: product)
-                            .padding([.leading, .trailing], 27)
-                        ProductDetails(product: product)
-                            .padding([.leading, .trailing], 27)
-                        ProductQuantity(product: product)
-                            .padding([.leading, .trailing], 27)
-                            .environmentObject(cartManager)
-                        ProductFeatures(product: product)
-                            .padding([.leading, .trailing], 27)
-                        ProductContents(product: product)
-                            .padding([.leading, .trailing], 27)
-                        ProductPreview(product: product)
-                            .padding([.leading, .trailing], 27)
-                    }
-                   
-                    RecommendedHelper(product: product)
-                    ChooseCategory()
-                    About()
-                    FooterHelper()
-                    
+                SignupModal()
+                VStack(spacing: 30) {
+                    ProductImage(product: product)
+                        .padding([.leading, .trailing], 27)
+                    ProductDetails(product: product)
+                        .padding([.leading, .trailing], 27)
+                    ProductQuantity(product: product)
+                        .padding([.leading, .trailing], 27)
+                        .environmentObject(cartManager)
+                    ProductFeatures(product: product)
+                        .padding([.leading, .trailing], 27)
+                    ProductContents(product: product)
+                        .padding([.leading, .trailing], 27)
+                    ProductPreview(product: product)
+                        .padding([.leading, .trailing], 27)
                 }
+                RecommendedHelper(product: product)
+                ChooseCategory()
+                About()
+                FooterHelper()
             }
         }
         .navigationTitle("")
@@ -62,5 +59,6 @@ struct ProductSVC_Previews: PreviewProvider {
         ProductSVC(product: products[0])
             .environmentObject(CartManager())
             .environmentObject(HistoryManager())
+            .environmentObject(OrdersManager())
     }
 }

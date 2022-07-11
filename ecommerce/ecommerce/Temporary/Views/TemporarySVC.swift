@@ -11,6 +11,7 @@ struct TemporarySVC: View {
     
     @StateObject var cartManager = CartManager()
     @StateObject var historyManager = HistoryManager()
+    @StateObject var ordersManager = OrdersManager()
     @State private var selection = 0
     
     init() {
@@ -23,6 +24,7 @@ struct TemporarySVC: View {
                 HomePage2SVC()
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
+                    .environmentObject(ordersManager)
                     .tabItem {
                         Image(systemName: "house.fill")
                         Text("Home")
@@ -32,6 +34,7 @@ struct TemporarySVC: View {
                 CatalogSVC()
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
+                    .environmentObject(ordersManager)
                     .tabItem {
                         Image(systemName: "magnifyingglass")
                         Text("Catalog")
@@ -41,11 +44,23 @@ struct TemporarySVC: View {
                 SearchHistorySVC()
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
+                    .environmentObject(ordersManager)
                     .tabItem {
                         Image(systemName: "person")
                         Text("History")
                     }
                     .tag(2)
+                
+                OrderHistorySVC()
+                    .environmentObject(cartManager)
+                    .environmentObject(historyManager)
+                    .environmentObject(ordersManager)
+                    .tabItem {
+                        Image(systemName: "list.bullet.rectangle.fill")
+                        Text("Orders")
+                    }
+                    .tag(3)
+                
             } //TabView
         }
         .navigationViewStyle(.stack)
