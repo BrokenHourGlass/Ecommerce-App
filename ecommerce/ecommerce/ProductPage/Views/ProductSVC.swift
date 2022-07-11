@@ -40,6 +40,9 @@ struct ProductSVC: View {
                         .padding([.leading, .trailing], 27)
                 }
                 RecommendedHelper(product: product)
+                    .environmentObject(cartManager)
+                    .environmentObject(historyManager)
+                    .environmentObject(ordersManager)
                 ChooseCategory()
                 About()
                 FooterHelper()

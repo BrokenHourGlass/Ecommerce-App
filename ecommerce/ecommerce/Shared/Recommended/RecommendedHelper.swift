@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct RecommendedHelper: View {
+    @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var historyManager: HistoryManager
+    @EnvironmentObject var ordersManager: OrdersManager
+    
     var product: NewProduct
     
     var body: some View {
@@ -17,8 +21,17 @@ struct RecommendedHelper: View {
                 .bold()
             VStack(spacing: 50) {
                 RecommendedItemHelper(recommended: product.recommended[0])
+                    .environmentObject(cartManager)
+                    .environmentObject(historyManager)
+                    .environmentObject(ordersManager)
                 RecommendedItemHelper(recommended: product.recommended[1])
+                    .environmentObject(cartManager)
+                    .environmentObject(historyManager)
+                    .environmentObject(ordersManager)
                 RecommendedItemHelper(recommended: product.recommended[2])
+                    .environmentObject(cartManager)
+                    .environmentObject(historyManager)
+                    .environmentObject(ordersManager)
             }
         }
     }
@@ -27,5 +40,9 @@ struct RecommendedHelper: View {
 struct RecommendedHelper_Previews: PreviewProvider {
     static var previews: some View {
         RecommendedHelper(product: products[0])
+            .environmentObject(CartManager())
+            .environmentObject(HistoryManager())
+            .environmentObject(OrdersManager())
+        
     }
 }
