@@ -28,7 +28,8 @@ class ProductDB{
             let err = String(cString: sqlite3_errmsg(pointer))
             print("error in table creation")
         }
-        else{
+        else if getData().count == 0{
+            print("did the thing")
             insertAll()
         }
     }
