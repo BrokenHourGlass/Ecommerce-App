@@ -11,6 +11,7 @@ struct CategoryResults: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
+    @EnvironmentObject var commentsManager: CommentsManager
     
     @State var showNextView = false
     @State var current = 0
@@ -22,7 +23,7 @@ struct CategoryResults: View {
             Text("RESULTS")
                 .font(.title2)
                 .bold()
-            NavigationLink(destination: ProductSVC(product: products[current]).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager), isActive: $showNextView) {
+            NavigationLink(destination: ProductSVC(product: products[current]).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager), isActive: $showNextView) {
                 EmptyView()
             }
             ScrollView {
@@ -51,5 +52,6 @@ struct CategoryResults_Previews: PreviewProvider {
             .environmentObject(CartManager())
             .environmentObject(HistoryManager())
             .environmentObject(OrdersManager())
+            .environmentObject(CommentsManager())
     }
 }
