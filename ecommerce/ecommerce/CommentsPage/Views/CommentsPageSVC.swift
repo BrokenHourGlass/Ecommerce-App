@@ -11,7 +11,7 @@ struct CommentsPageSVC: View {
     
     @State var showNextView = false
     
-    @State var comments = CDCommentHelper.cdCommentHelper.getComments()
+    var comments = CDCommentHelper.cdCommentHelper.getComments()
     var product: NewProduct?
     
     var body: some View {
