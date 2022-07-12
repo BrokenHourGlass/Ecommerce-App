@@ -11,7 +11,7 @@ struct CommentsPageSVC: View {
     
     @State var showNextView = false
     
-    var notes = NoteModel.fetchNotes()
+    var notes = CDCommentHelper.cdCommentHelper.getComments()
     
     var body: some View {
         VStack(alignment: .leading) {
