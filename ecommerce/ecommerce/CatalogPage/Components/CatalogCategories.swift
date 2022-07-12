@@ -11,6 +11,7 @@ struct CatalogCategories: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
+    @EnvironmentObject var commentsManager: CommentsManager
     
     @State var showNextView = false
     @State var current = 0
@@ -22,7 +23,7 @@ struct CatalogCategories: View {
             Text("Categories")
                 .font(.title2)
                 .bold()
-            NavigationLink(destination: CategorySVC().environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager), isActive: $showNextView) {
+            NavigationLink(destination: CategorySVC().environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager), isActive: $showNextView) {
                 EmptyView()
             }
             LazyVGrid(columns: columns) {
@@ -50,5 +51,6 @@ struct CatalogCategories_Previews: PreviewProvider {
             .environmentObject(CartManager())
             .environmentObject(HistoryManager())
             .environmentObject(OrdersManager())
+            .environmentObject(CommentsManager())
     }
 }
