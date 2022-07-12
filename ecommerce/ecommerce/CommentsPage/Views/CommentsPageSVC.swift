@@ -19,7 +19,7 @@ struct CommentsPageSVC: View {
         VStack(alignment: .leading) {
             NavigationBack()
             NavigationLink(destination: CommentSVC(product: product).environmentObject(commentsManager), isActive: $showNextView) {
-               EmptyView()
+                EmptyView()
             }
             HStack {
                 Text("Comments")
