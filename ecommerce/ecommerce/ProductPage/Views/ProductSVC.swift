@@ -25,6 +25,7 @@ struct ProductSVC: View {
                 SignupModal()
                     .padding(.horizontal, 12)
                 VStack(spacing: 30) {
+                    ProductComments(product: product)
                     ProductImage(product: product)
                     ProductDetails(product: product)
                     ProductQuantity(product: product)

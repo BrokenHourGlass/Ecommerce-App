@@ -255,6 +255,66 @@
             </objects>
             <point key="canvasLocation" x="3172" y="96"/>
         </scene>
+        <!--Comments PageVC-->
+        <scene sceneID="2dn-aP-cNj">
+            <objects>
+                <viewController id="fOM-ng-aMc" customClass="CommentsPageVC" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n8U-bE-2Aa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bi3-RU-KCa">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E9L-L5-apO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bi3-RU-KCa" firstAttribute="leading" secondItem="E9L-L5-apO" secondAttribute="leading" id="CYa-rI-u3t"/>
+                            <constraint firstItem="bi3-RU-KCa" firstAttribute="top" secondItem="E9L-L5-apO" secondAttribute="top" id="R4Y-ml-usf"/>
+                            <constraint firstItem="E9L-L5-apO" firstAttribute="trailing" secondItem="bi3-RU-KCa" secondAttribute="trailing" id="Yjy-JU-OU1"/>
+                            <constraint firstItem="E9L-L5-apO" firstAttribute="bottom" secondItem="bi3-RU-KCa" secondAttribute="bottom" id="aWT-D0-LQS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="bi3-RU-KCa" id="W39-aa-7EY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YT8-St-fjm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3171" y="863"/>
+        </scene>
+        <!--CommentVC-->
+        <scene sceneID="Qcx-rk-DB3">
+            <objects>
+                <viewController id="4J6-RB-0fP" customClass="CommentVC" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1nW-cJ-uJo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZE-CK-Quj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mbZ-dC-XCe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NZE-CK-Quj" firstAttribute="top" secondItem="mbZ-dC-XCe" secondAttribute="top" id="ESB-25-1TD"/>
+                            <constraint firstItem="mbZ-dC-XCe" firstAttribute="trailing" secondItem="NZE-CK-Quj" secondAttribute="trailing" id="QZV-Io-K9B"/>
+                            <constraint firstItem="NZE-CK-Quj" firstAttribute="leading" secondItem="mbZ-dC-XCe" secondAttribute="leading" id="RUX-Ud-urc"/>
+                            <constraint firstItem="mbZ-dC-XCe" firstAttribute="bottom" secondItem="NZE-CK-Quj" secondAttribute="bottom" id="xRD-m8-hLC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="NZE-CK-Quj" id="XMx-ew-VuQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dmk-MQ-yiM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4267" y="863"/>
+        </scene>
         <!--Thank YouVC-->
         <scene sceneID="3fw-ob-I81">
             <objects>
@@ -1453,7 +1513,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="A0c-I2-spe"/>
+        <segue reference="wSt-h3-5YS"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Untitled-2.png" width="808" height="200"/>
