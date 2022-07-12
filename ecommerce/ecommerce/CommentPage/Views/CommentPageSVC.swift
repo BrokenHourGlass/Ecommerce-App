@@ -12,7 +12,7 @@ struct CommentPageSVC: View {
     var notes = NoteModel.fetchNotes()
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text("Comments")
                 .font(.title)
             ScrollView {
@@ -20,7 +20,10 @@ struct CommentPageSVC: View {
                     CommentItem(note: note)
                 }
             }
+            Spacer()
         }
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
 }
 

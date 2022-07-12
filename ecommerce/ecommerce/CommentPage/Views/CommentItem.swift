@@ -12,12 +12,26 @@ struct CommentItem: View {
     var note: NoteModel
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading, spacing: 12) {
+            HStack {
+                Text(note.username)
+                Spacer()
+            }
+            HStack {
+                Text(note.title)
+                Spacer()
+            }
+            HStack {
+                Text(note.body)
+                Spacer()
+            }
+        }
+        .padding([.bottom], 20)
     }
 }
 
 struct CommentItem_Previews: PreviewProvider {
     static var previews: some View {
-        CommentItem(note: NoteModel(username: "name", title: "title", body: "body"))
+        CommentItem(note: NoteModel(username: "name", title: "title", date: Date(), body: "body"))
     }
 }
