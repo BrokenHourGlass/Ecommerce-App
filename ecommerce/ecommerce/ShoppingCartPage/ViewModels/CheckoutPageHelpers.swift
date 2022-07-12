@@ -6,7 +6,37 @@
 //
 
 import Foundation
+import SwiftUI
 
-func validateFields() {
+func validateFields(checkoutDetailsObj: CheckoutDetailsObj) throws {
+    
+    guard !checkoutDetailsObj.name.isEmpty else {
+        throw CheckoutErrors.fieldIsEmpty
+    }
+    
+    guard !checkoutDetailsObj.email.isEmpty else {
+        throw CheckoutErrors.fieldIsEmpty
+    }
+    
+    guard !checkoutDetailsObj.phoneNumber.isEmpty else {
+        throw CheckoutErrors.fieldIsEmpty
+    }
+    
+    guard !checkoutDetailsObj.address.isEmpty else {
+        throw CheckoutErrors.fieldIsEmpty
+    }
+    
+    guard !checkoutDetailsObj.zip.isEmpty else {
+        throw CheckoutErrors.fieldIsEmpty
+    }
+    
+    guard !checkoutDetailsObj.city.isEmpty else {
+        throw CheckoutErrors.fieldIsEmpty
+    }
+    
+    guard !checkoutDetailsObj.country.isEmpty else {
+        throw CheckoutErrors.fieldIsEmpty
+    }
     
 }
+

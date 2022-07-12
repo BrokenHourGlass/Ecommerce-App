@@ -14,7 +14,22 @@ class CheckoutViewModel {
         }
     }
     
-    static func validateForm() {
+    static func validateForm(checkoutDetailsObj: CheckoutDetailsObj) -> Bool {
+        var status = false
         
+        do {
+            try validateFields(checkoutDetailsObj: checkoutDetailsObj)
+            status = true
+        } catch CheckoutErrors.fieldIsEmpty {
+            print("All fields must be filled in")
+        } catch {
+            print("Unknown error thrown")
+        }
+        
+        return status
     }
+}
+
+enum CheckoutErrors: Error {
+    case fieldIsEmpty
 }

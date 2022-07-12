@@ -50,7 +50,7 @@ struct CheckoutSummary: View {
                 CheckoutDetails()
                     .environmentObject(cartManager)
                 Button(action: {
-                    showNextView = true
+                    showNextView = CheckoutViewModel.validateForm(checkoutDetailsObj: checkoutDetailsObj)
                 }) {
                     Text("CONTINUE & PAY")
                         .padding()
@@ -68,7 +68,7 @@ struct CheckoutSummary: View {
 
 struct CheckoutSummary_Previews: PreviewProvider {
     static var previews: some View {
-        CheckoutSummary()
+        CheckoutSummary(checkoutDetailsObj: CheckoutDetailsObj(name: "", email: "", phoneNumber: "", address: "", zip: "", city: "", country: ""))
             .environmentObject(CartManager())
             .environmentObject(OrdersManager())
     }
