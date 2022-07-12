@@ -18,7 +18,7 @@ class NoteModel {
         self.body = body
     }
     
-    func fetchNotes() -> [NoteModel] {
+    static func fetchNotes() -> [NoteModel] {
         return [
             NoteModel(username: "name", title: "title", body: "body"),
             NoteModel(username: "name", title: "title", body: "body"),

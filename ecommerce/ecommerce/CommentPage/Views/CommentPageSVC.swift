@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct CommentPageSVC: View {
+    
+    var notes = NoteModel.fetchNotes()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Comments")
+                .font(.title)
+            ScrollView {
+                ForEach(notes, id: \.username) { note in
+                    CommentItem(note: note)
+                }
+            }
+        }
     }
 }
 
