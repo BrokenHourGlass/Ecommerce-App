@@ -23,6 +23,7 @@ struct CommentSVC: View {
             NavigationBar()
                 .environmentObject(cartManager)
                 .environmentObject(ordersManager)
+            NavigationBack()
             VStack(alignment: .leading) {
                 Text("Title")
                 TextField("Enter title here", text: $titleText)
