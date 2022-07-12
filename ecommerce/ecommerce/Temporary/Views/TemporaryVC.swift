@@ -17,9 +17,10 @@ class TemporaryVC: UIViewController {
         
         ProductDB.productDb.createDB()
         ProductDB.productDb.createTable()
-        print(ProductDB.productDb.getData())
+        print(ProductDB.productDb.getOneRecord(id: 1))
         print("done")
-        sleep(20)
+        print(ProductDB.productDb.getItemCategory(category: "earphones"))
+        print("done")
         
         // Do any additional setup after loading the view.
         let childView = UIHostingController(rootView: TemporarySVC())
