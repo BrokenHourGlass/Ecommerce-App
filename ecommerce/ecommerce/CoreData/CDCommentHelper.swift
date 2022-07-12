@@ -35,15 +35,16 @@ class CDCommentHelper {
         }
     }
     
-    func getComments() -> [CommentModel] {
+    func getComments(productID: Int) -> [CommentModel] {
         var comments = [CommentModel]()
         
         let fetchComments = NSFetchRequest<NSFetchRequestResult>(entityName: "PNPComment")
         
         do {
             let commentsData = try context?.fetch(fetchComments) as! [PNPComment]
-            
-            for x in commentsData {
+            let filteredComments = commentsData.filter({ $0.productID == productID })
+                
+            for x in filteredComments {
                 comments.append(CommentModel(commentID: x.commentID!, productID: Int(x.productID), username: x.username!, title: x.title!, date: x.date!, body: x.body!))
             }
             

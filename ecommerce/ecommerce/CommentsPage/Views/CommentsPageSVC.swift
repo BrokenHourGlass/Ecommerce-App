@@ -12,7 +12,7 @@ struct CommentsPageSVC: View {
     
     @State var showNextView = false
     
-    var comments = CDCommentHelper.cdCommentHelper.getComments()
+//    var comments = CDCommentHelper.cdCommentHelper.getComments()
     var product: NewProduct?
     
     var body: some View {
@@ -37,14 +37,14 @@ struct CommentsPageSVC: View {
                 .cornerRadius(10)
             }
             ScrollView {
-                ForEach(commentsManager.comments.reversed(), id: \.commentID) { comment in
+                ForEach(CDCommentHelper.cdCommentHelper.getComments(productID: product!.id).reversed(), id: \.commentID) { comment in
                     CommentItem(comment: comment)
                 }
             }
             Spacer()
         }
         .onAppear(perform: {
-            commentsManager.loadComments(commentsData: CDCommentHelper.cdCommentHelper.getComments())
+            commentsManager.loadComments(commentsData: CDCommentHelper.cdCommentHelper.getComments(productID: product!.id))
         })
         .padding()
         .navigationTitle("")
