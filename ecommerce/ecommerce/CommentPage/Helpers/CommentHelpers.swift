@@ -12,7 +12,7 @@ func validateComment(commentObj: CommentModel) throws {
         throw CommentErrors.titleIsEmpty
     }
     
-    guard !commentObj.title.isEmpty else {
+    guard !commentObj.body.isEmpty else {
         throw CommentErrors.bodyIsEmpty
     }
 }
