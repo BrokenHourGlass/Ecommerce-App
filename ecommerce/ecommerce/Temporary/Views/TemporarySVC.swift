@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TemporarySVC: View {
     
+    
+    
     @StateObject var cartManager = CartManager()
     @StateObject var historyManager = HistoryManager()
     @StateObject var ordersManager = OrdersManager()

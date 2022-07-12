@@ -9,7 +9,7 @@ import Foundation
 import SQLite3
 
 class ProductDB{
-    static var productDb = ProductDB()
+    public static var productDb = ProductDB()
     
     var productItems = [NewProduct]()
     
