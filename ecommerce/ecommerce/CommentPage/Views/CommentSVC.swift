@@ -11,6 +11,7 @@ struct CommentSVC: View {
     @EnvironmentObject var commentsManager: CommentsManager
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var ordersManager: OrdersManager
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     @State var titleText: String = ""
     @State var bodyText: String = ""
@@ -31,6 +32,7 @@ struct CommentSVC: View {
                 Button {
                     commentsManager.addComment(commentObj: CommentModel(commentID: UUID().uuidString, productID: product!.id, username: "Rando", title: titleText, date: Date(), body: bodyText))
                     CDCommentHelper.cdCommentHelper.addComment(commentObj: CommentModel(commentID: UUID().uuidString, productID: product!.id, username: "Rando", title: titleText, date: Date(), body: bodyText))
+                    self.presentationMode.wrappedValue.dismiss()
                 } label: {
                     Text("Submit")
                         .font(.title2)
