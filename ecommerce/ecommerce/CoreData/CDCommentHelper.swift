@@ -15,10 +15,11 @@ class CDCommentHelper {
     
     let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     
-    func addComment(commentObj: NoteModel) {
+    func addComment(commentObj: CommentModel) {
         
         let commentEntity = NSEntityDescription.insertNewObject(forEntityName: "PNPComment", into: context!) as! PNPComment
         
+        commentEntity.commentID = commentObj.commentID
         commentEntity.productID = Int64(commentObj.productID)
         commentEntity.username = commentObj.username
         commentEntity.date = commentObj.date
@@ -34,8 +35,8 @@ class CDCommentHelper {
         }
     }
     
-    func getComments() -> [NoteModel] {
-        var comments = [NoteModel]()
+    func getComments() -> [CommentModel] {
+        var comments = [CommentModel]()
         
         let fetchComments = NSFetchRequest<NSFetchRequestResult>(entityName: "PNPComment")
         
@@ -43,7 +44,7 @@ class CDCommentHelper {
             let commentsData = try context?.fetch(fetchComments) as! [PNPComment]
             
             for x in commentsData {
-                comments.append(NoteModel(productID: Int(x.productID), username: x.username!, title: x.title!, date: x.date!, body: x.body!))
+                comments.append(CommentModel(commentID: x.commentID!, productID: Int(x.productID), username: x.username!, title: x.title!, date: x.date!, body: x.body!))
             }
             
         } catch {

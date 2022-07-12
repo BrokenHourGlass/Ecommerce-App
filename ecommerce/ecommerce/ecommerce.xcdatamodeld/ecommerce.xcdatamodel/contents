@@ -7,6 +7,7 @@
     </entity>
     <entity name="PNPComment" representedClassName="PNPComment" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String"/>
+        <attribute name="commentID" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="productID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
@@ -53,6 +54,6 @@
         <element name="Preview" positionX="18" positionY="72" width="128" height="14"/>
         <element name="Product" positionX="-27" positionY="27" width="128" height="224"/>
         <element name="Recommended" positionX="54" positionY="108" width="128" height="14"/>
-        <element name="PNPComment" positionX="27" positionY="135" width="128" height="104"/>
+        <element name="PNPComment" positionX="27" positionY="135" width="128" height="119"/>
     </elements>
 </model>

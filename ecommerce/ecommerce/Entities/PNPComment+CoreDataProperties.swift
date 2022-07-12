@@ -2,7 +2,7 @@
 //  PNPComment+CoreDataProperties.swift
 //  ecommerce
 //
-//  Created by Vincent Salinas on 7/11/22.
+//  Created by Vincent Salinas on 7/12/22.
 //
 //
 
@@ -21,6 +21,7 @@ extension PNPComment {
     @NSManaged public var title: String?
     @NSManaged public var date: Date?
     @NSManaged public var body: String?
+    @NSManaged public var commentID: String?
 
 }
 

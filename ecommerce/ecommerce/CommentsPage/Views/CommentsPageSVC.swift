@@ -11,7 +11,7 @@ struct CommentsPageSVC: View {
     
     @State var showNextView = false
     
-    var notes = CDCommentHelper.cdCommentHelper.getComments()
+    @State var comments = CDCommentHelper.cdCommentHelper.getComments()
     var product: NewProduct?
     
     var body: some View {
@@ -36,8 +36,8 @@ struct CommentsPageSVC: View {
                 .cornerRadius(10)
             }
             ScrollView {
-                ForEach(notes, id: \.username) { note in
-                    CommentItem(note: note)
+                ForEach(comments, id: \.commentID) { comment in
+                    CommentItem(comment: comment)
                 }
             }
             Spacer()

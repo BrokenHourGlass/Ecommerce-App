@@ -22,7 +22,7 @@ struct CommentSVC: View {
             TextField("Enter body text here", text: $bodyText)
             Spacer()
             Button {
-                CDCommentHelper.cdCommentHelper.addComment(commentObj: NoteModel(productID: product!.id, username: "Rando", title: titleText, date: Date(), body: bodyText))
+                CDCommentHelper.cdCommentHelper.addComment(commentObj: CommentModel(commentID: UUID().uuidString, productID: product!.id, username: "Rando", title: titleText, date: Date(), body: bodyText))
             } label: {
                 Text("Submit")
                     .font(.title2)

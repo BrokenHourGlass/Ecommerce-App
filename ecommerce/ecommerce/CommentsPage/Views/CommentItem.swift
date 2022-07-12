@@ -9,21 +9,21 @@ import SwiftUI
 
 struct CommentItem: View {
     
-    var note: NoteModel
+    var comment: CommentModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
-                Text(note.username)
+                Text(comment.username)
                 Spacer()
             }
             HStack {
-                Text(note.title)
+                Text(comment.title)
                     .bold()
                 Spacer()
             }
             HStack {
-                Text(note.body)
+                Text(comment.body)
                 Spacer()
             }
         }
@@ -33,6 +33,6 @@ struct CommentItem: View {
 
 struct CommentItem_Previews: PreviewProvider {
     static var previews: some View {
-        CommentItem(note: NoteModel(productID: 0, username: "name", title: "title", date: Date(), body: "body"))
+        CommentItem(comment: CommentModel(commentID: "commentID", productID: 0, username: "name", title: "title", date: Date(), body: "body"))
     }
 }
