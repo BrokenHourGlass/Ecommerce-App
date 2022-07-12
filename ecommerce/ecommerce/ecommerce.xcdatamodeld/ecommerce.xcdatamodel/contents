@@ -5,6 +5,13 @@
         <attribute name="pid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="quantity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
+    <entity name="PNPComment" representedClassName="PNPComment" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="productID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="PNPOrder" representedClassName="PNPOrder" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="orderId" optional="YES" attributeType="String"/>
@@ -42,9 +49,10 @@
     <elements>
         <element name="Item" positionX="18" positionY="72" width="128" height="74"/>
         <element name="PNPOrder" positionX="72" positionY="189" width="128" height="74"/>
+        <element name="PNPOrderItem" positionX="27" positionY="135" width="128" height="74"/>
         <element name="Preview" positionX="18" positionY="72" width="128" height="14"/>
         <element name="Product" positionX="-27" positionY="27" width="128" height="224"/>
         <element name="Recommended" positionX="54" positionY="108" width="128" height="14"/>
-        <element name="PNPOrderItem" positionX="27" positionY="135" width="128" height="74"/>
+        <element name="PNPComment" positionX="27" positionY="135" width="128" height="104"/>
     </elements>
 </model>
