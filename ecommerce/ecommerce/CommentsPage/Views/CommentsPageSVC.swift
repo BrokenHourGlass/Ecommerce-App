@@ -9,17 +9,22 @@ import SwiftUI
 
 struct CommentsPageSVC: View {
     
+    @State var showNextView = false
+    
     var notes = NoteModel.fetchNotes()
     
     var body: some View {
         VStack(alignment: .leading) {
+            NavigationLink(destination: CommentSVC(), isActive: $showNextView) {
+               EmptyView()
+            }
             HStack {
                 Text("Comments")
                     .font(.title)
                     .bold()
                 Spacer()
                 Button {
-                    print("Add new comment")
+                    showNextView = true
                 } label: {
                     Image(systemName: "plus")
                 }
