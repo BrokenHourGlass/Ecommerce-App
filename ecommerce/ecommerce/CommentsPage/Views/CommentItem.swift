@@ -16,6 +16,7 @@ struct CommentItem: View {
             HStack {
                 Text(comment.username)
                 Spacer()
+                Text(formateDate(date: comment.date))
             }
             HStack {
                 Text(comment.title)
