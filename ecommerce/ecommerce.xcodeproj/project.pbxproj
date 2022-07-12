@@ -631,7 +631,6 @@
 		6133A2FB287D047A00CE728F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6133A303287D08F900CE728F /* NoteModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -715,6 +714,7 @@
 		61CE687C2870FDF7008CD0C1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6133A303287D08F900CE728F /* NoteModel.swift */,
 				61CE688228710113008CD0C1 /* CartManager.swift */,
 				610779D2286F9D760094F95A /* NewProduct.swift */,
 				61CE687D2870FF67008CD0C1 /* CartItem.swift */,
