@@ -33,6 +33,6 @@ struct CommentItem: View {
 
 struct CommentItem_Previews: PreviewProvider {
     static var previews: some View {
-        CommentItem(note: NoteModel(username: "name", title: "title", date: Date(), body: "body"))
+        CommentItem(note: NoteModel(productID: 0, username: "name", title: "title", date: Date(), body: "body"))
     }
 }
