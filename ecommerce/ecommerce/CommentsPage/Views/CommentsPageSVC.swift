@@ -37,7 +37,7 @@ struct CommentsPageSVC: View {
                 .cornerRadius(10)
             }
             ScrollView {
-                ForEach(commentsManager.comments, id: \.commentID) { comment in
+                ForEach(commentsManager.comments.reversed(), id: \.commentID) { comment in
                     CommentItem(comment: comment)
                 }
             }
