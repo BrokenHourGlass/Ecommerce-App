@@ -14,6 +14,8 @@ struct CommentItem: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
+                Image(systemName: "person.circle")
+                    .foregroundColor(Color.accentColor)
                 Text(comment.username)
                 Spacer()
                 Text(formateDate(date: comment.date))
