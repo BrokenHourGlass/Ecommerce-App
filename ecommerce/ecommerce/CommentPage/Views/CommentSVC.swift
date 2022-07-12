@@ -12,6 +12,8 @@ struct CommentSVC: View {
     @State var titleText: String = ""
     @State var bodyText: String = ""
     
+    var product: NewProduct?
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Title")
@@ -20,7 +22,7 @@ struct CommentSVC: View {
             TextField("Enter body text here", text: $bodyText)
             Spacer()
             Button {
-                print("Added new comment")
+                CDCommentHelper.cdCommentHelper.addComment(commentObj: NoteModel(productID: product!.id, username: "Rando", title: titleText, date: Date(), body: bodyText))
             } label: {
                 Text("Submit")
                     .font(.title2)
@@ -35,8 +37,8 @@ struct CommentSVC: View {
     }
 }
 
-struct CommentSVC_Previews: PreviewProvider {
-    static var previews: some View {
-        CommentSVC()
-    }
-}
+//struct CommentSVC_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CommentSVC()
+//    }
+//}

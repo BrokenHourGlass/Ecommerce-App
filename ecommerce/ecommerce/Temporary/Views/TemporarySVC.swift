@@ -61,13 +61,6 @@ struct TemporarySVC: View {
                     }
                     .tag(3)
                 
-                CommentsPageSVC()
-                    .tabItem {
-                        Image(systemName: "circle")
-                        Text("Comments")
-                    }
-                    .tag(4)
-                
             } //TabView
         }
         .navigationViewStyle(.stack)

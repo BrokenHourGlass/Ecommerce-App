@@ -12,10 +12,12 @@ struct CommentsPageSVC: View {
     @State var showNextView = false
     
     var notes = CDCommentHelper.cdCommentHelper.getComments()
+    var product: NewProduct?
     
     var body: some View {
         VStack(alignment: .leading) {
-            NavigationLink(destination: CommentSVC(), isActive: $showNextView) {
+            NavigationBack()
+            NavigationLink(destination: CommentSVC(product: product), isActive: $showNextView) {
                EmptyView()
             }
             HStack {
@@ -46,8 +48,8 @@ struct CommentsPageSVC: View {
     }
 }
 
-struct CommentsPageSVC_Previews: PreviewProvider {
-    static var previews: some View {
-        CommentsPageSVC()
-    }
-}
+//struct CommentsPageSVC_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CommentsPageSVC(product: NewProduct(id: <#T##Int#>, name: <#T##String#>, category: <#T##String#>, new: <#T##Bool#>, price: <#T##Int#>, featured: <#T##Bool#>, cartIMG: <#T##String#>, productIMG: <#T##String#>, description: <#T##String#>, features: <#T##String#>, contents: <#T##[NewItem]#>, previews: <#T##[NewPreview]#>, recommended: <#T##[NewRecommended]#>))
+//    }
+//}

@@ -15,7 +15,7 @@ struct ProductComments: View {
     
     var body: some View {
         VStack {
-            NavigationLink(destination: CommentsPageSVC(), isActive: $showNextView) {
+            NavigationLink(destination: CommentsPageSVC(product: product), isActive: $showNextView) {
                EmptyView()
             }
             Button {
