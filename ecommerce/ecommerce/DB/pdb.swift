@@ -29,7 +29,7 @@ class ProductDB{
             print("error in table creation")
         }
         else{
-            //insertAll()
+            insertAll()
         }
     }
     

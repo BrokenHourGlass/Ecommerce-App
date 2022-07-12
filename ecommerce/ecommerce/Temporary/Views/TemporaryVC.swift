@@ -17,7 +17,7 @@ class TemporaryVC: UIViewController {
         
         ProductDB.productDb.createDB()
         ProductDB.productDb.createTable()
-        print(ProductDB.productDb.getOneRecord(id: 1))
+        print(ProductDB.productDb.getData())
         print("done")
         print(ProductDB.productDb.getItemCategory(category: "earphones"))
         print("done")
