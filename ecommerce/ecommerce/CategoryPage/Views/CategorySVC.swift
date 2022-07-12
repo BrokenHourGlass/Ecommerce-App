@@ -11,6 +11,7 @@ struct CategorySVC: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
+    @EnvironmentObject var commentsManager: CommentsManager
     
     let columns: [GridItem] = [GridItem(.flexible())]
     
@@ -28,10 +29,12 @@ struct CategorySVC: View {
                         .environmentObject(cartManager)
                         .environmentObject(historyManager)
                         .environmentObject(ordersManager)
+                        .environmentObject(commentsManager)
                     CategoryResults()
                         .environmentObject(cartManager)
                         .environmentObject(historyManager)
                         .environmentObject(ordersManager)
+                        .environmentObject(commentsManager)
                 }
             }
         }
@@ -46,5 +49,6 @@ struct CategorySVC_Previews: PreviewProvider {
             .environmentObject(CartManager())
             .environmentObject(HistoryManager())
             .environmentObject(OrdersManager())
+            .environmentObject(CommentsManager())
     }
 }

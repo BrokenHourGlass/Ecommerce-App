@@ -20,7 +20,7 @@ struct NavigationBack: View {
             }
             Spacer()
         }
-        .padding([.leading, .trailing], 20)
+        .padding([.leading, .trailing], 15)
         .padding([.top], 5)
     }
 }
