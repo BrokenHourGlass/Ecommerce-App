@@ -19,6 +19,7 @@ struct CommentItem: View {
             }
             HStack {
                 Text(note.title)
+                    .bold()
                 Spacer()
             }
             HStack {

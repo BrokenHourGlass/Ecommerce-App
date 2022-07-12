@@ -22,6 +22,7 @@ struct CommentPageSVC: View {
             }
             Spacer()
         }
+        .padding()
         .navigationTitle("")
         .navigationBarHidden(true)
     }
