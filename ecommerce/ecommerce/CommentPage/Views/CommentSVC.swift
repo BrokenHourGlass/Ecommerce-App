@@ -15,6 +15,7 @@ struct CommentSVC: View {
     
     @State var titleText: String = ""
     @State var bodyText: String = ""
+    @State var showAlert = false
     
     var product: NewProduct?
     
@@ -31,9 +32,14 @@ struct CommentSVC: View {
                 TextField("Enter body text here", text: $bodyText)
                 Spacer()
                 Button {
-                    commentsManager.addComment(commentObj: CommentModel(commentID: UUID().uuidString, productID: product!.id, username: "Rando", title: titleText, date: Date(), body: bodyText))
-                    CDCommentHelper.cdCommentHelper.addComment(commentObj: CommentModel(commentID: UUID().uuidString, productID: product!.id, username: "Rando", title: titleText, date: Date(), body: bodyText))
-                    self.presentationMode.wrappedValue.dismiss()
+                    let newComment = CommentModel(commentID: UUID().uuidString, productID: product!.id, username: "Rando", title: titleText, date: Date(), body: bodyText)
+                    if (CommentViewModel.commentValidation(commentObj: newComment)) {
+                        commentsManager.addComment(commentObj: newComment)
+                        CDCommentHelper.cdCommentHelper.addComment(commentObj: newComment)
+                        self.presentationMode.wrappedValue.dismiss()
+                    } else {
+                        showAlert = true
+                    }
                 } label: {
                     Text("Submit")
                         .font(.title2)
@@ -48,6 +54,10 @@ struct CommentSVC: View {
             .navigationTitle("")
             .navigationBarHidden(true)
         }
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("Notification"), message: Text("Please fill in all fields before continuing"), dismissButton: .default(Text("Dismiss")))
+        }
+        
     }
 }
 
