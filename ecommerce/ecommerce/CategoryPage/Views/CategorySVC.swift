@@ -9,35 +9,42 @@ import SwiftUI
 
 struct CategorySVC: View {
     @EnvironmentObject var cartManager: CartManager
-    
-    var modelData = products
+    @EnvironmentObject var historyManager: HistoryManager
+    @EnvironmentObject var ordersManager: OrdersManager
     
     let columns: [GridItem] = [GridItem(.flexible())]
     
     var body: some View {
-        NavigationView {
-            VStack {
-                NavigationBar()
-                    .environmentObject(cartManager)
-                ScrollView {
-                    LazyVGrid(columns: columns, spacing: 20) {
-                        CategoryHero()
-                        CategoryFeatured()
-                            .environmentObject(cartManager)
-                        CategoryResults()
-                            .environmentObject(cartManager)
-                    }
+        VStack {
+            NavigationBar()
+                .environmentObject(cartManager)
+                .environmentObject(ordersManager)
+            NavigationBack()
+            ScrollView {
+                SignupModal()
+                VStack(spacing: 20) {
+                    CategoryHero()
+                    CategoryFeatured()
+                        .environmentObject(cartManager)
+                        .environmentObject(historyManager)
+                        .environmentObject(ordersManager)
+                    CategoryResults()
+                        .environmentObject(cartManager)
+                        .environmentObject(historyManager)
+                        .environmentObject(ordersManager)
                 }
             }
-            .navigationTitle("")
-            .navigationBarHidden(true)
-            
         }
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
 }
 
 struct CategorySVC_Previews: PreviewProvider {
     static var previews: some View {
         CategorySVC()
+            .environmentObject(CartManager())
+            .environmentObject(HistoryManager())
+            .environmentObject(OrdersManager())
     }
 }

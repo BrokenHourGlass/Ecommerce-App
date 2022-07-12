@@ -10,20 +10,28 @@ import SwiftUI
 struct AddRemoveItem: View {
     @EnvironmentObject var cartManager: CartManager
     
-    var product: NewProduct
+    @State var qty : Int
+    
+    var item: CartItem
+    
+    init(_ qty: Int, item: CartItem) {
+        _qty = State<Int>(initialValue: qty)
+        self.item = item
+    }
     
     var body: some View {
         VStack {
             HStack {
                 Button {
-                   print("removed item")
+                    qty -= 1
+                    cartManager.decrementQty(it: item)
                 } label: {
                     Image(systemName: "minus")
                 }
-                Text("2")
+                Text(String(qty))
                 Button {
-                   print("added item")
-                    cartManager.addToCart(product: product)
+                    qty += 1
+                    cartManager.incrementQty(it: item)
                 } label: {
                     Image(systemName: "plus")
                 }
@@ -34,7 +42,7 @@ struct AddRemoveItem: View {
 
 struct AddRemoveItem_Previews: PreviewProvider {
     static var previews: some View {
-        AddRemoveItem(product: products[0])
+        AddRemoveItem(5, item: CartItem(item: products[0], unitPrice: 399, quantity: 5))
             .environmentObject(CartManager())
     }
 }

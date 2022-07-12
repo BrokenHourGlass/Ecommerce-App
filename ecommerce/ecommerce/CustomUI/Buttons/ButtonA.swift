@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ButtonA: View {
     var title: String
+    @Binding var showNextView: Bool
     
     var body: some View {
         Button(action: {
-            print("Button A")
+            showNextView = true
         }) {
             Text(title)
                 .padding()
@@ -26,6 +27,6 @@ struct ButtonA: View {
 
 struct ButtonA_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonA(title: "ButtonA")
+        ButtonA(title: "ButtonA", showNextView: .constant(false))
     }
 }

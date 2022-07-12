@@ -16,7 +16,7 @@ class ProductVC: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        let childView = UIHostingController(rootView: ProductSVC())
+        let childView = UIHostingController(rootView: ProductSVC(product: products[0]))
         addChild(childView)
         childView.view.frame = container.bounds
         container.addSubview(childView.view)

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ChooseCategoryHelper: View {
+    @Binding var showNextView: Bool
+    
     var category: String
     var img: String
     
@@ -20,13 +22,13 @@ struct ChooseCategoryHelper: View {
                 Text(category)
                     .bold()
             }
-            ButtonB(title: "SHOP")
+            ButtonB(showNextView: $showNextView, title: "SHOP")
         }
     }
 }
 
 struct ChooseCategoryHelper_Previews: PreviewProvider {
     static var previews: some View {
-        ChooseCategoryHelper(category: "Category", img: products[0].productIMG)
+        ChooseCategoryHelper(showNextView: .constant(false), category: "Category", img: products[0].productIMG)
     }
 }

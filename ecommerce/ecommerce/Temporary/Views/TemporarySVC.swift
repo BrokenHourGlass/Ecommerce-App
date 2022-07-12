@@ -10,43 +10,60 @@ import SwiftUI
 struct TemporarySVC: View {
     
     @StateObject var cartManager = CartManager()
+    @StateObject var historyManager = HistoryManager()
+    @StateObject var ordersManager = OrdersManager()
     @State private var selection = 0
     
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor.systemGray6
+    }
+    
     var body: some View {
-        TabView(selection: $selection) {
-            
-            ContentView()
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("Catalog")
-                }
-                .tag(0)
-            
-//            ShoppingCartSVC()
-//                .environmentObject(cartManager)
-//                .tabItem {
-//                    Image(systemName: "photo.fill")
-//                    Text("Cart")
-//                }
-//                .tag(1)
-            
-//            CheckoutSVC()
-//                .tabItem {
-//                    Image(systemName: "envelope.fill")
-//                    Text("Checkout")
-//                }
-//                .tag(2)
-            
-            CategorySVC()
-                .tabItem {
-                    Image(systemName: "person.crop.circle.fill")
-                    Text("Category")
-                }
-                .tag(1)
-                .environmentObject(cartManager)
-            
-            
-        } //TabView
+        NavigationView {
+            TabView(selection: $selection) {
+                HomePage2SVC()
+                    .environmentObject(cartManager)
+                    .environmentObject(historyManager)
+                    .environmentObject(ordersManager)
+                    .tabItem {
+                        Image(systemName: "house.fill")
+                        Text("Home")
+                    }
+                    .tag(0)
+                
+                CatalogSVC()
+                    .environmentObject(cartManager)
+                    .environmentObject(historyManager)
+                    .environmentObject(ordersManager)
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text("Catalog")
+                    }
+                    .tag(1)
+                
+                SearchHistorySVC()
+                    .environmentObject(cartManager)
+                    .environmentObject(historyManager)
+                    .environmentObject(ordersManager)
+                    .tabItem {
+                        Image(systemName: "person")
+                        Text("History")
+                    }
+                    .tag(2)
+                
+                OrderHistorySVC()
+                    .environmentObject(cartManager)
+                    .environmentObject(historyManager)
+                    .environmentObject(ordersManager)
+                    .tabItem {
+                        Image(systemName: "list.bullet.rectangle.fill")
+                        Text("Orders")
+                    }
+                    .tag(3)
+                
+            } //TabView
+        }
+        .navigationViewStyle(.stack)
     }
 }
 

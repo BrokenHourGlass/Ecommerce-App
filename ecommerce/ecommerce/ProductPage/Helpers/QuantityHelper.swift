@@ -8,18 +8,20 @@
 import SwiftUI
 
 struct QuantityHelper: View {
-    var product: NewProduct
+    @Binding var quantity: Int
     
     var body: some View {
         HStack {
             Button {
+                quantity -= 1
             } label: {
                 Image(systemName: "minus")
             }
             .frame(width: 50)
-            Text("1")
+            Text(String(quantity))
                 .bold()
             Button {
+                quantity += 1
             } label: {
                 Image(systemName: "plus")
             }
@@ -28,9 +30,9 @@ struct QuantityHelper: View {
     }
 }
 
-struct QuantityHelper_Previews: PreviewProvider {
-    static var previews: some View {
-        QuantityHelper(product: products[0])
-            .environmentObject(CartManager())
-    }
-}
+//struct QuantityHelper_Previews: PreviewProvider {
+//    static var previews: some View {
+//        QuantityHelper()
+//            .environmentObject(CartManager())
+//    }
+//}
