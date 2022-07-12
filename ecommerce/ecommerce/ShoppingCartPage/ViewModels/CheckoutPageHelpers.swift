@@ -40,3 +40,6 @@ func validateFields(checkoutDetailsObj: CheckoutDetailsObj) throws {
     
 }
 
+func messageBox(title: String, msg: String) -> Alert {
+    return Alert(title: Text(title), message: Text(msg), dismissButton: .default(Text("Dismiss")))
+}

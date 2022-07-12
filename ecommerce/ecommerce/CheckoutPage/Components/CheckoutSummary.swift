@@ -12,6 +12,7 @@ struct CheckoutSummary: View {
     @EnvironmentObject var ordersManager: OrdersManager
     
     @State var showNextView = false
+    @State var showAlert = false
     
     var checkoutDetailsObj: CheckoutDetailsObj
     
@@ -51,6 +52,7 @@ struct CheckoutSummary: View {
                     .environmentObject(cartManager)
                 Button(action: {
                     showNextView = CheckoutViewModel.validateForm(checkoutDetailsObj: checkoutDetailsObj)
+                    showAlert = !CheckoutViewModel.validateForm(checkoutDetailsObj: checkoutDetailsObj)
                 }) {
                     Text("CONTINUE & PAY")
                         .padding()
@@ -63,6 +65,9 @@ struct CheckoutSummary: View {
         }
         .navigationTitle("")
         .navigationBarHidden(true)
+        .alert(isPresented: $showAlert, content: {
+            messageBox(title: "Notification", msg: "Please fill in all fields before continuing")
+        })
     }
 }
 
