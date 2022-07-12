@@ -11,6 +11,7 @@ struct CatalogSVC: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
+    @EnvironmentObject var commentsManager: CommentsManager
     
     var body: some View {
         VStack {
@@ -24,11 +25,13 @@ struct CatalogSVC: View {
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
+                    .environmentObject(commentsManager)
                 CatalogAd(img: "catalog/szxm6eoPQq5avEnDen2omR-1024-80")
                 CatalogFeatured()
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
+                    .environmentObject(commentsManager)
                 CatalogAd(img: "catalog/9bf037e1886f5de27c01b532fb552b2c")
                 About()
                 FooterHelper()
@@ -46,6 +49,7 @@ struct CatalogSVC_Previews: PreviewProvider {
             .environmentObject(CartManager())
             .environmentObject(HistoryManager())
             .environmentObject(OrdersManager())
+            .environmentObject(CommentsManager())
         
     }
 }
