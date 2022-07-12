@@ -11,7 +11,7 @@ struct CheckoutField: View {
     var title: String
     var placeholder: String
     
-    @State private var value: String = ""
+    @Binding var value: String
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -28,6 +28,6 @@ struct CheckoutField: View {
 
 struct CheckoutField_Previews: PreviewProvider {
     static var previews: some View {
-        CheckoutField(title: "title", placeholder: "placeholder")
+        CheckoutField(title: "", placeholder: "title", value: .constant(""))
     }
 }

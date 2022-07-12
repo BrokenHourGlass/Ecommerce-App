@@ -11,9 +11,22 @@ struct CheckoutSummary: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var ordersManager: OrdersManager
     
+    @State var showNextView = false
+    @State var showAlert = false
+    
+    var checkoutDetailsObj: CheckoutDetailsObj
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("SUMMARY")
+            NavigationLink(destination: ThankYouSVC().environmentObject(cartManager).onAppear{
+                let newOrder = OrdersViewModel.createNewOrder()
+                ordersManager.addToHistory(order: newOrder)
+                CDOrdersHelper.cdOrdersHelper.addOrder(orderObj: newOrder)
+                CheckoutViewModel.storeOrderItems(orderId: newOrder.orderId, cart: cartManager.items)
+            }, isActive: $showNextView) {
+                EmptyView()
+            }
             ScrollView {
                 ForEach(cartManager.items, id: \.item.id) { it in
                     HStack {
@@ -37,31 +50,30 @@ struct CheckoutSummary: View {
                 }
                 CheckoutDetails()
                     .environmentObject(cartManager)
-                NavigationLink(destination: ThankYouSVC().environmentObject(cartManager).onAppear{
-                    let newOrder = OrdersViewModel.createNewOrder()
-                    ordersManager.addToHistory(order: newOrder)
-                    CDOrdersHelper.cdOrdersHelper.addOrder(orderObj: newOrder)
-                    CheckoutViewModel.storeOrderItems(orderId: newOrder.orderId, cart: cartManager.items)
+                Button(action: {
+                    showNextView = CheckoutViewModel.validateForm(checkoutDetailsObj: checkoutDetailsObj)
+                    showAlert = !CheckoutViewModel.validateForm(checkoutDetailsObj: checkoutDetailsObj)
                 }) {
-                    Section {
-                        Text("CONTINUE & PAY")
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .border(Color.red)
-                    }
-                    .foregroundColor(Color.white)
-                    .background(Color.red)
+                    Text("CONTINUE & PAY")
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .border(Color.red)
                 }
+                .foregroundColor(Color.white)
+                .background(Color.red)
             }
         }
         .navigationTitle("")
         .navigationBarHidden(true)
+        .alert(isPresented: $showAlert, content: {
+            messageBox(title: "Notification", msg: "Please fill in all fields before continuing")
+        })
     }
 }
 
 struct CheckoutSummary_Previews: PreviewProvider {
     static var previews: some View {
-        CheckoutSummary()
+        CheckoutSummary(checkoutDetailsObj: CheckoutDetailsObj(name: "", email: "", phoneNumber: "", address: "", zip: "", city: "", country: ""))
             .environmentObject(CartManager())
             .environmentObject(OrdersManager())
     }
