@@ -24,7 +24,7 @@ struct CommentsPageSVC: View {
                 .environmentObject(ordersManager)
             SignupModal()
             NavigationBack()
-            NavigationLink(destination: CommentSVC(product: product).environmentObject(commentsManager), isActive: $showNextView) {
+            NavigationLink(destination: CommentSVC(product: product).environmentObject(commentsManager).environmentObject(cartManager).environmentObject(ordersManager), isActive: $showNextView) {
                 EmptyView()
             }
             VStack {
