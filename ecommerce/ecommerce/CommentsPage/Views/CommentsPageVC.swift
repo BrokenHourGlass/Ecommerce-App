@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-class CommentPageVC: UIViewController {
+class CommentsPageVC: UIViewController {
 
     @IBOutlet weak var container: UIView!
     
@@ -16,7 +16,7 @@ class CommentPageVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let childView = UIHostingController(rootView: CommentPageSVC())
+        let childView = UIHostingController(rootView: CommentsPageSVC())
         addChild(childView)
         childView.view.frame = container.bounds
         container.addSubview(childView.view)

@@ -61,7 +61,7 @@ struct TemporarySVC: View {
                     }
                     .tag(3)
                 
-                CommentPageSVC()
+                CommentsPageSVC()
                     .tabItem {
                         Image(systemName: "circle")
                         Text("Comments")

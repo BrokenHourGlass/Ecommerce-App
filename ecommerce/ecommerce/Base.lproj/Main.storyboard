@@ -255,10 +255,10 @@
             </objects>
             <point key="canvasLocation" x="3172" y="96"/>
         </scene>
-        <!--Comment PageVC-->
+        <!--Comments PageVC-->
         <scene sceneID="2dn-aP-cNj">
             <objects>
-                <viewController id="fOM-ng-aMc" customClass="CommentPageVC" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fOM-ng-aMc" customClass="CommentsPageVC" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n8U-bE-2Aa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CommentPageSVC: View {
+struct CommentsPageSVC: View {
     
     var notes = NoteModel.fetchNotes()
     
@@ -41,8 +41,8 @@ struct CommentPageSVC: View {
     }
 }
 
-struct CommentPageSVC_Previews: PreviewProvider {
+struct CommentsPageSVC_Previews: PreviewProvider {
     static var previews: some View {
-        CommentPageSVC()
+        CommentsPageSVC()
     }
 }
