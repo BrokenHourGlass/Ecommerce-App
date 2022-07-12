@@ -43,6 +43,9 @@ struct CommentsPageSVC: View {
             }
             Spacer()
         }
+        .onAppear(perform: {
+            commentsManager.loadComments(commentsData: CDCommentHelper.cdCommentHelper.getComments())
+        })
         .padding()
         .navigationTitle("")
         .navigationBarHidden(true)

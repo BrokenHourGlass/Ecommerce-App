@@ -18,4 +18,8 @@ class CommentsManager: ObservableObject {
         return CDCommentHelper.cdCommentHelper.getComments()
     }
     
+    func loadComments(commentsData: [CommentModel]) {
+        comments = commentsData
+    }
+    
 }
