@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProductComments: View {
+    @EnvironmentObject var commentsManager: CommentsManager
     
     @State var showNextView = false
     
@@ -15,7 +16,7 @@ struct ProductComments: View {
     
     var body: some View {
         VStack {
-            NavigationLink(destination: CommentsPageSVC(product: product), isActive: $showNextView) {
+            NavigationLink(destination: CommentsPageSVC(product: product).environmentObject(commentsManager), isActive: $showNextView) {
                EmptyView()
             }
             Button {

@@ -11,6 +11,7 @@ struct HomePageFeatured: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
+    @EnvironmentObject var commentsManager: CommentsManager
     
     @State var showNextView = false
     @State var current: Int = 0
@@ -25,7 +26,7 @@ struct HomePageFeatured: View {
                 .bold()
             Text("Up to 50% off marked prices")
                 .font(.title3)
-            NavigationLink(destination: ProductSVC(product: products[current]).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager), isActive: $showNextView) {
+            NavigationLink(destination: ProductSVC(product: products[current]).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager), isActive: $showNextView) {
                 EmptyView()
             }
             ScrollView(.horizontal) {
@@ -54,5 +55,6 @@ struct HomePageFeatured_Previews: PreviewProvider {
             .environmentObject(CartManager())
             .environmentObject(HistoryManager())
             .environmentObject(OrdersManager())
+            .environmentObject(CommentsManager())
     }
 }

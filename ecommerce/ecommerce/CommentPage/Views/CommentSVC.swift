@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CommentSVC: View {
+    @EnvironmentObject var commentsManager: CommentsManager
     
     @State var titleText: String = ""
     @State var bodyText: String = ""
@@ -22,6 +23,7 @@ struct CommentSVC: View {
             TextField("Enter body text here", text: $bodyText)
             Spacer()
             Button {
+                commentsManager.addComment(commentObj: CommentModel(commentID: UUID().uuidString, productID: product!.id, username: "Rando", title: titleText, date: Date(), body: bodyText))
                 CDCommentHelper.cdCommentHelper.addComment(commentObj: CommentModel(commentID: UUID().uuidString, productID: product!.id, username: "Rando", title: titleText, date: Date(), body: bodyText))
             } label: {
                 Text("Submit")

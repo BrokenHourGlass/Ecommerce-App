@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CommentsPageSVC: View {
+    @EnvironmentObject var commentsManager: CommentsManager
     
     @State var showNextView = false
     
@@ -17,7 +18,7 @@ struct CommentsPageSVC: View {
     var body: some View {
         VStack(alignment: .leading) {
             NavigationBack()
-            NavigationLink(destination: CommentSVC(product: product), isActive: $showNextView) {
+            NavigationLink(destination: CommentSVC(product: product).environmentObject(commentsManager), isActive: $showNextView) {
                EmptyView()
             }
             HStack {
@@ -36,7 +37,7 @@ struct CommentsPageSVC: View {
                 .cornerRadius(10)
             }
             ScrollView {
-                ForEach(comments, id: \.commentID) { comment in
+                ForEach(commentsManager.comments, id: \.commentID) { comment in
                     CommentItem(comment: comment)
                 }
             }

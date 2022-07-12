@@ -12,6 +12,7 @@ struct TemporarySVC: View {
     @StateObject var cartManager = CartManager()
     @StateObject var historyManager = HistoryManager()
     @StateObject var ordersManager = OrdersManager()
+    @StateObject var commentsManager = CommentsManager()
     @State private var selection = 0
     
     init() {
@@ -25,6 +26,7 @@ struct TemporarySVC: View {
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
+                    .environmentObject(commentsManager)
                     .tabItem {
                         Image(systemName: "house.fill")
                         Text("Home")
