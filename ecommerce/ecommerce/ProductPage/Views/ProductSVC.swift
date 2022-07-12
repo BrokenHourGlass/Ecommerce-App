@@ -28,6 +28,8 @@ struct ProductSVC: View {
                 VStack(spacing: 30) {
                     ProductComments(product: product)
                         .environmentObject(commentsManager)
+                        .environmentObject(cartManager)
+                        .environmentObject(ordersManager)
                     ProductImage(product: product)
                     ProductDetails(product: product)
                     ProductQuantity(product: product)
