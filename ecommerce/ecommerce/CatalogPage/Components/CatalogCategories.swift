@@ -14,6 +14,7 @@ struct CatalogCategories: View {
     @EnvironmentObject var commentsManager: CommentsManager
     
     @State var showNextView = false
+    @State var chosenCategory = ""
     @State var current = 0
     
     let columns: [GridItem] = [GridItem(.flexible()), GridItem(.flexible())]
@@ -27,12 +28,12 @@ struct CatalogCategories: View {
                 EmptyView()
             }
             LazyVGrid(columns: columns) {
-                ForEach(0..<CatalogData.categories.count) { index in
+                ForEach(CatalogData.categories, id: \.category) { categoryObj in
                     Button(action: {
-                        current = index
                         showNextView = true
+                        chosenCategory = categoryObj.category
                     }) {
-                        CatalogCategory(categoryData: CatalogData.categories[index])
+                        CatalogCategory(categoryData: categoryObj)
                             .environmentObject(cartManager)
                             .environmentObject(historyManager)
                             .environmentObject(ordersManager)

@@ -1030,6 +1030,7 @@
 		61E2AD0028766A2500CD4F8F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				61E2AD1228767AC600CD4F8F /* CatalogData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1037,7 +1038,6 @@
 		61E2AD0128766A3200CD4F8F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				61E2AD1228767AC600CD4F8F /* CatalogData.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1273,7 +1273,6 @@
 		847F7F62286A4C30006E87AB /* ecommerce */ = {
 			isa = PBXGroup;
 			children = (
-				6133A31D287DED4900CE728F /* Utils */,
 				843B4F3E287DFEE4005EFD33 /* DB */,
 				6133A31D287DED4900CE728F /* Utils */,
 				6133A307287D10AC00CE728F /* CommentPage */,
