@@ -13,7 +13,7 @@ struct SignupModal: View {
             Text("Sign in for the best experience")
                 .font(.title2)
                 .fontWeight(.light)
-            NavigationLink(destination: TemporarySVC()) {
+            NavigationLink(destination: MainTabControllerSVC()) {
                 Text("Sign in securely")
                     .fontWeight(.light)
                     .padding()
@@ -22,7 +22,7 @@ struct SignupModal: View {
             }
             .foregroundColor(Color.black)
             .background(Color.orange)
-            NavigationLink(destination: TemporarySVC()) {
+            NavigationLink(destination: MainTabControllerSVC()) {
                 Text("Create an account")
                     .fontWeight(.light)
             }

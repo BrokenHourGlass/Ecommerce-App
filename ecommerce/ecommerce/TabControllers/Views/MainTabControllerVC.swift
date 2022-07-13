@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-class TemporaryVC: UIViewController {
+class MainTabControllerVC: UIViewController {
     
     @IBOutlet weak var container: UIView!
     
@@ -16,7 +16,7 @@ class TemporaryVC: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        let childView = UIHostingController(rootView: TemporarySVC())
+        let childView = UIHostingController(rootView: MainTabControllerSVC())
         addChild(childView)
         childView.view.frame = container.bounds
         container.addSubview(childView.view)

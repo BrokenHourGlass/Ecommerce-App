@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="38" y="-1719"/>
         </scene>
-        <!--TemporaryVC-->
+        <!--Main Tab ControllerVC-->
         <scene sceneID="m9y-O9-e4w">
             <objects>
-                <viewController id="mtK-yK-toQ" customClass="TemporaryVC" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mtK-yK-toQ" customClass="MainTabControllerVC" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Rd-CK-law">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1512,9 +1512,6 @@
             <point key="canvasLocation" x="3367" y="2755"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="wSt-h3-5YS"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Untitled-2.png" width="808" height="200"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="64"/>

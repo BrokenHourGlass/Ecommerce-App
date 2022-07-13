@@ -73,8 +73,8 @@
 		61CE6898287110F0008CD0C1 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE688A287110F0008CD0C1 /* TitleView.swift */; };
 		61CE68A528711129008CD0C1 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE68A428711129008CD0C1 /* CatalogViewController.swift */; };
 		61CE68A728711130008CD0C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE68A628711130008CD0C1 /* ContentView.swift */; };
-		61E2ACA128713EB700CD4F8F /* TemporaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E2ACA028713EB700CD4F8F /* TemporaryVC.swift */; };
-		61E2ACA328713EC400CD4F8F /* TemporarySVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E2ACA228713EC400CD4F8F /* TemporarySVC.swift */; };
+		61E2ACA128713EB700CD4F8F /* MainTabControllerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E2ACA028713EB700CD4F8F /* MainTabControllerVC.swift */; };
+		61E2ACA328713EC400CD4F8F /* MainTabControllerSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E2ACA228713EC400CD4F8F /* MainTabControllerSVC.swift */; };
 		61E2ACAD287156A900CD4F8F /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E2ACA5287156A900CD4F8F /* SettingsTableViewCell.swift */; };
 		61E2ACAE287156A900CD4F8F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E2ACA6287156A900CD4F8F /* LoginViewController.swift */; };
 		61E2ACAF287156A900CD4F8F /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E2ACA7287156A900CD4F8F /* login.storyboard */; };
@@ -230,8 +230,8 @@
 		61CE688A287110F0008CD0C1 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		61CE68A428711129008CD0C1 /* CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
 		61CE68A628711130008CD0C1 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		61E2ACA028713EB700CD4F8F /* TemporaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryVC.swift; sourceTree = "<group>"; };
-		61E2ACA228713EC400CD4F8F /* TemporarySVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporarySVC.swift; sourceTree = "<group>"; };
+		61E2ACA028713EB700CD4F8F /* MainTabControllerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabControllerVC.swift; sourceTree = "<group>"; };
+		61E2ACA228713EC400CD4F8F /* MainTabControllerSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabControllerSVC.swift; sourceTree = "<group>"; };
 		61E2ACA5287156A900CD4F8F /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		61E2ACA6287156A900CD4F8F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		61E2ACA7287156A900CD4F8F /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
@@ -796,19 +796,19 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		61E2AC9E28713E9C00CD4F8F /* Temporary */ = {
+		61E2AC9E28713E9C00CD4F8F /* TabControllers */ = {
 			isa = PBXGroup;
 			children = (
 				61E2AC9F28713EA200CD4F8F /* Views */,
 			);
-			path = Temporary;
+			path = TabControllers;
 			sourceTree = "<group>";
 		};
 		61E2AC9F28713EA200CD4F8F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				61E2ACA028713EB700CD4F8F /* TemporaryVC.swift */,
-				61E2ACA228713EC400CD4F8F /* TemporarySVC.swift */,
+				61E2ACA028713EB700CD4F8F /* MainTabControllerVC.swift */,
+				61E2ACA228713EC400CD4F8F /* MainTabControllerSVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1292,7 +1292,7 @@
 				61E2ACB52872071C00CD4F8F /* CategoryPage */,
 				61E2ACA42871568700CD4F8F /* LoginPage */,
 				61CE687C2870FDF7008CD0C1 /* Models */,
-				61E2AC9E28713E9C00CD4F8F /* Temporary */,
+				61E2AC9E28713E9C00CD4F8F /* TabControllers */,
 				61CE6884287110C1008CD0C1 /* Catalog */,
 				61CE6869286FE110008CD0C1 /* HomePage */,
 				610779D1286F9D490094F95A /* JSONDecoder */,
@@ -1494,7 +1494,7 @@
 				F7D42BAA28752F8B00C554CC /* LaptopViewController.swift in Sources */,
 				6133A2EE287C713700CE728F /* RecommendedHelperFuncs.swift in Sources */,
 				61E2AD4B2877A72500CD4F8F /* Preview+CoreDataClass.swift in Sources */,
-				61E2ACA328713EC400CD4F8F /* TemporarySVC.swift in Sources */,
+				61E2ACA328713EC400CD4F8F /* MainTabControllerSVC.swift in Sources */,
 				6133A324287E018400CE728F /* CommentHelpers.swift in Sources */,
 				61E2ACB2287156A900CD4F8F /* RegisterViewController.swift in Sources */,
 				61E2ACC22872093F00CD4F8F /* CategoryFeatured.swift in Sources */,
@@ -1508,7 +1508,7 @@
 				6133A314287D1C9F00CE728F /* CDCommentHelper.swift in Sources */,
 				61077999286E8DD50094F95A /* ProductDetails.swift in Sources */,
 				61E2AD542877B11C00CD4F8F /* SearchHistoryHelpers.swift in Sources */,
-				61E2ACA128713EB700CD4F8F /* TemporaryVC.swift in Sources */,
+				61E2ACA128713EB700CD4F8F /* MainTabControllerVC.swift in Sources */,
 				61E2ACF32874E6B000CD4F8F /* HomePageCarousel.swift in Sources */,
 				6107794B286D28B80094F95A /* ShoppingCartSVC.swift in Sources */,
 				61E2ACEB2874939100CD4F8F /* HomePage2VC.swift in Sources */,

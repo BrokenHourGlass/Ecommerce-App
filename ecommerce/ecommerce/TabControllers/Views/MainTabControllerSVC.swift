@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-struct TemporarySVC: View {
-    
-    
+struct MainTabControllerSVC: View {
     
     @StateObject var cartManager = CartManager()
     @StateObject var historyManager = HistoryManager()
@@ -74,6 +72,6 @@ struct TemporarySVC: View {
 
 struct TemporarySVC_Previews: PreviewProvider {
     static var previews: some View {
-        TemporarySVC()
+        MainTabControllerSVC()
     }
 }
