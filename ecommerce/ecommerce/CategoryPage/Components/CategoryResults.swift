@@ -17,6 +17,7 @@ struct CategoryResults: View {
     @State var current = 0
     
     let columns: [GridItem] = [GridItem(.flexible())]
+    var filteredProducts: [NewProduct]
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -28,12 +29,11 @@ struct CategoryResults: View {
             }
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    ForEach(0..<products.count) { index in
+                    ForEach(filteredProducts, id: \.id) { productObj in
                         Button(action: {
-                            current = index
                             showNextView = true
                         }) {
-                            CategoryItemHelper(product: products[index])
+                            CategoryItemHelper(product: productObj)
                         }
                     }
                 }
@@ -48,7 +48,7 @@ struct CategoryResults: View {
 
 struct CategoryResults_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryResults()
+        CategoryResults(filteredProducts: [])
             .environmentObject(CartManager())
             .environmentObject(HistoryManager())
             .environmentObject(OrdersManager())

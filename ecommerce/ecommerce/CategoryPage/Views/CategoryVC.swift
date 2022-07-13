@@ -16,7 +16,7 @@ class CategoryVC: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        let childView = UIHostingController(rootView: CategorySVC())
+        let childView = UIHostingController(rootView: CategorySVC(category: ""))
         addChild(childView)
         childView.view.frame = container.bounds
         container.addSubview(childView.view)

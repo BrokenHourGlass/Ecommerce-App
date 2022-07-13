@@ -344,5 +344,1232 @@
                 "img": "shared/image-zx9-speaker"
             },
         ]
-    }
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    {
+        "id": 6,
+        "name": "YX1 Wireless Earphones",
+        "category": "earphones",
+        "new": true,
+        "price": 599,
+        "featured": false,
+        "cartIMG": "cart/image-yx1-earphones",
+        "productIMG": "product-yx1-earphones/image-category-page-preview",
+        "description": "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
+        "features": "Experience unrivalled stereo sound thanks to innovative acoustic technology. With improved ergonomics designed for full day wearing, these revolutionary earphones have been finely crafted to provide you with the perfect fit, delivering complete comfort all day long while enjoying exceptional noise isolation and truly immersive sound.\n\nThe YX1 Wireless Earphones features customizable controls for volume, music, calls, and voice assistants built into both earbuds. The new 7-hour battery life can be extended up to 28 hours with the charging case, giving you uninterrupted play time. Exquisite craftsmanship with a splash resistant design now available in an all new white and grey color scheme as well as the popular classic black.",
+        "contents": [
+            {
+                "quantity": 2,
+                "item": "Earphone unit"
+            },
+            {
+                "quantity": 6,
+                "item": "Multi-size earplugs"
+            },
+            {
+                "quantity": 1,
+                "item": "User manual"
+            },
+            {
+                "quantity": 1,
+                "item": "USB-C charging cable"
+            },
+            {
+                "quantity": 1,
+                "item": "Travel pouch"
+            }
+        ],
+        "previews": [
+            {
+                "img": "product-yx1-earphones/image-gallery-1"
+            },
+            {
+                "img": "product-yx1-earphones/image-gallery-2"
+            },
+            {
+                "img": "product-yx1-earphones/image-gallery-3"
+            },
+        ],
+        "recommended": [
+            {
+                "name": "XX99 Mark I",
+                "img": "shared/image-xx99-mark-one-headphones"
+            },
+            {
+                "name": "XX59 Headphones",
+                "img": "shared/image-xx59-headphones"
+            },
+            {
+                "name": "ZX9 Speaker",
+                "img": "shared/image-zx9-speaker"
+            },
+        ]
+    },
+    {
+        "id": 7,
+        "name": "YX1 Wireless Earphones",
+        "category": "earphones",
+        "new": true,
+        "price": 599,
+        "featured": false,
+        "cartIMG": "cart/image-yx1-earphones",
+        "productIMG": "product-yx1-earphones/image-category-page-preview",
+        "description": "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
+        "features": "Experience unrivalled stereo sound thanks to innovative acoustic technology. With improved ergonomics designed for full day wearing, these revolutionary earphones have been finely crafted to provide you with the perfect fit, delivering complete comfort all day long while enjoying exceptional noise isolation and truly immersive sound.\n\nThe YX1 Wireless Earphones features customizable controls for volume, music, calls, and voice assistants built into both earbuds. The new 7-hour battery life can be extended up to 28 hours with the charging case, giving you uninterrupted play time. Exquisite craftsmanship with a splash resistant design now available in an all new white and grey color scheme as well as the popular classic black.",
+        "contents": [
+            {
+                "quantity": 2,
+                "item": "Earphone unit"
+            },
+            {
+                "quantity": 6,
+                "item": "Multi-size earplugs"
+            },
+            {
+                "quantity": 1,
+                "item": "User manual"
+            },
+            {
+                "quantity": 1,
+                "item": "USB-C charging cable"
+            },
+            {
+                "quantity": 1,
+                "item": "Travel pouch"
+            }
+        ],
+        "previews": [
+            {
+                "img": "product-yx1-earphones/image-gallery-1"
+            },
+            {
+                "img": "product-yx1-earphones/image-gallery-2"
+            },
+            {
+                "img": "product-yx1-earphones/image-gallery-3"
+            },
+        ],
+        "recommended": [
+            {
+                "name": "XX99 Mark I",
+                "img": "shared/image-xx99-mark-one-headphones"
+            },
+            {
+                "name": "XX59 Headphones",
+                "img": "shared/image-xx59-headphones"
+            },
+            {
+                "name": "ZX9 Speaker",
+                "img": "shared/image-zx9-speaker"
+            },
+        ]
+    },
+    {
+        "id": 8,
+        "name": "YX1 Wireless Earphones",
+        "category": "earphones",
+        "new": true,
+        "price": 599,
+        "featured": false,
+        "cartIMG": "cart/image-yx1-earphones",
+        "productIMG": "product-yx1-earphones/image-category-page-preview",
+        "description": "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
+        "features": "Experience unrivalled stereo sound thanks to innovative acoustic technology. With improved ergonomics designed for full day wearing, these revolutionary earphones have been finely crafted to provide you with the perfect fit, delivering complete comfort all day long while enjoying exceptional noise isolation and truly immersive sound.\n\nThe YX1 Wireless Earphones features customizable controls for volume, music, calls, and voice assistants built into both earbuds. The new 7-hour battery life can be extended up to 28 hours with the charging case, giving you uninterrupted play time. Exquisite craftsmanship with a splash resistant design now available in an all new white and grey color scheme as well as the popular classic black.",
+        "contents": [
+            {
+                "quantity": 2,
+                "item": "Earphone unit"
+            },
+            {
+                "quantity": 6,
+                "item": "Multi-size earplugs"
+            },
+            {
+                "quantity": 1,
+                "item": "User manual"
+            },
+            {
+                "quantity": 1,
+                "item": "USB-C charging cable"
+            },
+            {
+                "quantity": 1,
+                "item": "Travel pouch"
+            }
+        ],
+        "previews": [
+            {
+                "img": "product-yx1-earphones/image-gallery-1"
+            },
+            {
+                "img": "product-yx1-earphones/image-gallery-2"
+            },
+            {
+                "img": "product-yx1-earphones/image-gallery-3"
+            },
+        ],
+        "recommended": [
+            {
+                "name": "XX99 Mark I",
+                "img": "shared/image-xx99-mark-one-headphones"
+            },
+            {
+                "name": "XX59 Headphones",
+                "img": "shared/image-xx59-headphones"
+            },
+            {
+                "name": "ZX9 Speaker",
+                "img": "shared/image-zx9-speaker"
+            },
+        ]
+    },
+    {
+        "id": 9,
+        "name": "YX1 Wireless Earphones",
+        "category": "earphones",
+        "new": true,
+        "price": 599,
+        "featured": false,
+        "cartIMG": "cart/image-yx1-earphones",
+        "productIMG": "product-yx1-earphones/image-category-page-preview",
+        "description": "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
+        "features": "Experience unrivalled stereo sound thanks to innovative acoustic technology. With improved ergonomics designed for full day wearing, these revolutionary earphones have been finely crafted to provide you with the perfect fit, delivering complete comfort all day long while enjoying exceptional noise isolation and truly immersive sound.\n\nThe YX1 Wireless Earphones features customizable controls for volume, music, calls, and voice assistants built into both earbuds. The new 7-hour battery life can be extended up to 28 hours with the charging case, giving you uninterrupted play time. Exquisite craftsmanship with a splash resistant design now available in an all new white and grey color scheme as well as the popular classic black.",
+        "contents": [
+            {
+                "quantity": 2,
+                "item": "Earphone unit"
+            },
+            {
+                "quantity": 6,
+                "item": "Multi-size earplugs"
+            },
+            {
+                "quantity": 1,
+                "item": "User manual"
+            },
+            {
+                "quantity": 1,
+                "item": "USB-C charging cable"
+            },
+            {
+                "quantity": 1,
+                "item": "Travel pouch"
+            }
+        ],
+        "previews": [
+            {
+                "img": "product-yx1-earphones/image-gallery-1"
+            },
+            {
+                "img": "product-yx1-earphones/image-gallery-2"
+            },
+            {
+                "img": "product-yx1-earphones/image-gallery-3"
+            },
+        ],
+        "recommended": [
+            {
+                "name": "XX99 Mark I",
+                "img": "shared/image-xx99-mark-one-headphones"
+            },
+            {
+                "name": "XX59 Headphones",
+                "img": "shared/image-xx59-headphones"
+            },
+            {
+                "name": "ZX9 Speaker",
+                "img": "shared/image-zx9-speaker"
+            },
+        ]
+    },
+    {
+        "id": 10,
+        "name": "YX1 Wireless Earphones",
+        "category": "earphones",
+        "new": true,
+        "price": 599,
+        "featured": false,
+        "cartIMG": "cart/image-yx1-earphones",
+        "productIMG": "product-yx1-earphones/image-category-page-preview",
+        "description": "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
+        "features": "Experience unrivalled stereo sound thanks to innovative acoustic technology. With improved ergonomics designed for full day wearing, these revolutionary earphones have been finely crafted to provide you with the perfect fit, delivering complete comfort all day long while enjoying exceptional noise isolation and truly immersive sound.\n\nThe YX1 Wireless Earphones features customizable controls for volume, music, calls, and voice assistants built into both earbuds. The new 7-hour battery life can be extended up to 28 hours with the charging case, giving you uninterrupted play time. Exquisite craftsmanship with a splash resistant design now available in an all new white and grey color scheme as well as the popular classic black.",
+        "contents": [
+            {
+                "quantity": 2,
+                "item": "Earphone unit"
+            },
+            {
+                "quantity": 6,
+                "item": "Multi-size earplugs"
+            },
+            {
+                "quantity": 1,
+                "item": "User manual"
+            },
+            {
+                "quantity": 1,
+                "item": "USB-C charging cable"
+            },
+            {
+                "quantity": 1,
+                "item": "Travel pouch"
+            }
+        ],
+        "previews": [
+            {
+                "img": "product-yx1-earphones/image-gallery-1"
+            },
+            {
+                "img": "product-yx1-earphones/image-gallery-2"
+            },
+            {
+                "img": "product-yx1-earphones/image-gallery-3"
+            },
+        ],
+        "recommended": [
+            {
+                "name": "XX99 Mark I",
+                "img": "shared/image-xx99-mark-one-headphones"
+            },
+            {
+                "name": "XX59 Headphones",
+                "img": "shared/image-xx59-headphones"
+            },
+            {
+                "name": "ZX9 Speaker",
+                "img": "shared/image-zx9-speaker"
+            },
+        ]
+    },
+    
+    
+    
+    
+    
+    
+    
+    {
+        "id": 11,
+        "name": "ZX7 Speaker",
+        "category": "speakers",
+        "new": false,
+        "price": 3500,
+        "featured": false,
+        "cartIMG": "cart/image-zx7-speaker",
+        "productIMG": "product-zx7-speaker/image-category-page-preview",
+        "description": "Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
+        "features": "Reap the advantages of a flat diaphragm tweeter cone. This provides a fast response rate and excellent high frequencies that lower tiered bookshelf speakers cannot provide. The woofers are made from aluminum that produces a unique and clear sound. XLR inputs allow you to connect to a mixer for more advanced usage.\n\nThe ZX7 speaker is the perfect blend of stylish design and high performance. It houses an encased MDF wooden enclosure which minimises acoustic resonance. Dual connectivity allows pairing through bluetooth or traditional optical and RCA input. Switch input sources and control volume at your finger tips with the included wireless remote. This versatile speaker is equipped to deliver an authentic listening experience.",
+        "contents": [
+            {
+                "quantity": 2,
+                "item": "Speaker unit"
+            },
+            {
+                "quantity": 2,
+                "item": "Speaker cloth panel"
+            },
+            {
+                "quantity": 1,
+                "item": "User manual"
+            },
+            {
+                "quantity": 1,
+                "item": "3.5mm 7.5m audio cable"
+            },
+            {
+                "quantity": 1,
+                "item": "7.5m optical cable"
+            }
+        ],
+        "previews": [
+            {
+                "img": "product-zx7-speaker/image-gallery-1"
+            },
+            {
+                "img": "product-zx7-speaker/image-gallery-2"
+            },
+            {
+                "img": "product-zx7-speaker/image-gallery-3"
+            },
+        ],
+        "recommended": [
+            {
+                "name": "XX99 Mark I",
+                "img": "shared/image-xx99-mark-one-headphones"
+            },
+            {
+                "name": "XX59 Headphones",
+                "img": "shared/image-xx59-headphones"
+            },
+            {
+                "name": "ZX9 Speaker",
+                "img": "shared/image-zx9-speaker"
+            },
+        ]
+    },
+    {
+        "id": 12,
+        "name": "ZX7 Speaker",
+        "category": "speakers",
+        "new": false,
+        "price": 3500,
+        "featured": false,
+        "cartIMG": "cart/image-zx7-speaker",
+        "productIMG": "product-zx7-speaker/image-category-page-preview",
+        "description": "Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
+        "features": "Reap the advantages of a flat diaphragm tweeter cone. This provides a fast response rate and excellent high frequencies that lower tiered bookshelf speakers cannot provide. The woofers are made from aluminum that produces a unique and clear sound. XLR inputs allow you to connect to a mixer for more advanced usage.\n\nThe ZX7 speaker is the perfect blend of stylish design and high performance. It houses an encased MDF wooden enclosure which minimises acoustic resonance. Dual connectivity allows pairing through bluetooth or traditional optical and RCA input. Switch input sources and control volume at your finger tips with the included wireless remote. This versatile speaker is equipped to deliver an authentic listening experience.",
+        "contents": [
+            {
+                "quantity": 2,
+                "item": "Speaker unit"
+            },
+            {
+                "quantity": 2,
+                "item": "Speaker cloth panel"
+            },
+            {
+                "quantity": 1,
+                "item": "User manual"
+            },
+            {
+                "quantity": 1,
+                "item": "3.5mm 7.5m audio cable"
+            },
+            {
+                "quantity": 1,
+                "item": "7.5m optical cable"
+            }
+        ],
+        "previews": [
+            {
+                "img": "product-zx7-speaker/image-gallery-1"
+            },
+            {
+                "img": "product-zx7-speaker/image-gallery-2"
+            },
+            {
+                "img": "product-zx7-speaker/image-gallery-3"
+            },
+        ],
+        "recommended": [
+            {
+                "name": "XX99 Mark I",
+                "img": "shared/image-xx99-mark-one-headphones"
+            },
+            {
+                "name": "XX59 Headphones",
+                "img": "shared/image-xx59-headphones"
+            },
+            {
+                "name": "ZX9 Speaker",
+                "img": "shared/image-zx9-speaker"
+            },
+        ]
+    },
+    {
+        "id": 13,
+        "name": "ZX7 Speaker",
+        "category": "speakers",
+        "new": false,
+        "price": 3500,
+        "featured": false,
+        "cartIMG": "cart/image-zx7-speaker",
+        "productIMG": "product-zx7-speaker/image-category-page-preview",
+        "description": "Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
+        "features": "Reap the advantages of a flat diaphragm tweeter cone. This provides a fast response rate and excellent high frequencies that lower tiered bookshelf speakers cannot provide. The woofers are made from aluminum that produces a unique and clear sound. XLR inputs allow you to connect to a mixer for more advanced usage.\n\nThe ZX7 speaker is the perfect blend of stylish design and high performance. It houses an encased MDF wooden enclosure which minimises acoustic resonance. Dual connectivity allows pairing through bluetooth or traditional optical and RCA input. Switch input sources and control volume at your finger tips with the included wireless remote. This versatile speaker is equipped to deliver an authentic listening experience.",
+        "contents": [
+            {
+                "quantity": 2,
+                "item": "Speaker unit"
+            },
+            {
+                "quantity": 2,
+                "item": "Speaker cloth panel"
+            },
+            {
+                "quantity": 1,
+                "item": "User manual"
+            },
+            {
+                "quantity": 1,
+                "item": "3.5mm 7.5m audio cable"
+            },
+            {
+                "quantity": 1,
+                "item": "7.5m optical cable"
+            }
+        ],
+        "previews": [
+            {
+                "img": "product-zx7-speaker/image-gallery-1"
+            },
+            {
+                "img": "product-zx7-speaker/image-gallery-2"
+            },
+            {
+                "img": "product-zx7-speaker/image-gallery-3"
+            },
+        ],
+        "recommended": [
+            {
+                "name": "XX99 Mark I",
+                "img": "shared/image-xx99-mark-one-headphones"
+            },
+            {
+                "name": "XX59 Headphones",
+                "img": "shared/image-xx59-headphones"
+            },
+            {
+                "name": "ZX9 Speaker",
+                "img": "shared/image-zx9-speaker"
+            },
+        ]
+    },
+    {
+        "id": 14,
+        "name": "ZX7 Speaker",
+        "category": "speakers",
+        "new": false,
+        "price": 3500,
+        "featured": false,
+        "cartIMG": "cart/image-zx7-speaker",
+        "productIMG": "product-zx7-speaker/image-category-page-preview",
+        "description": "Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
+        "features": "Reap the advantages of a flat diaphragm tweeter cone. This provides a fast response rate and excellent high frequencies that lower tiered bookshelf speakers cannot provide. The woofers are made from aluminum that produces a unique and clear sound. XLR inputs allow you to connect to a mixer for more advanced usage.\n\nThe ZX7 speaker is the perfect blend of stylish design and high performance. It houses an encased MDF wooden enclosure which minimises acoustic resonance. Dual connectivity allows pairing through bluetooth or traditional optical and RCA input. Switch input sources and control volume at your finger tips with the included wireless remote. This versatile speaker is equipped to deliver an authentic listening experience.",
+        "contents": [
+            {
+                "quantity": 2,
+                "item": "Speaker unit"
+            },
+            {
+                "quantity": 2,
+                "item": "Speaker cloth panel"
+            },
+            {
+                "quantity": 1,
+                "item": "User manual"
+            },
+            {
+                "quantity": 1,
+                "item": "3.5mm 7.5m audio cable"
+            },
+            {
+                "quantity": 1,
+                "item": "7.5m optical cable"
+            }
+        ],
+        "previews": [
+            {
+                "img": "product-zx7-speaker/image-gallery-1"
+            },
+            {
+                "img": "product-zx7-speaker/image-gallery-2"
+            },
+            {
+                "img": "product-zx7-speaker/image-gallery-3"
+            },
+        ],
+        "recommended": [
+            {
+                "name": "XX99 Mark I",
+                "img": "shared/image-xx99-mark-one-headphones"
+            },
+            {
+                "name": "XX59 Headphones",
+                "img": "shared/image-xx59-headphones"
+            },
+            {
+                "name": "ZX9 Speaker",
+                "img": "shared/image-zx9-speaker"
+            },
+        ]
+    },
+    {
+        "id": 15,
+        "name": "ZX7 Speaker",
+        "category": "speakers",
+        "new": false,
+        "price": 3500,
+        "featured": false,
+        "cartIMG": "cart/image-zx7-speaker",
+        "productIMG": "product-zx7-speaker/image-category-page-preview",
+        "description": "Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
+        "features": "Reap the advantages of a flat diaphragm tweeter cone. This provides a fast response rate and excellent high frequencies that lower tiered bookshelf speakers cannot provide. The woofers are made from aluminum that produces a unique and clear sound. XLR inputs allow you to connect to a mixer for more advanced usage.\n\nThe ZX7 speaker is the perfect blend of stylish design and high performance. It houses an encased MDF wooden enclosure which minimises acoustic resonance. Dual connectivity allows pairing through bluetooth or traditional optical and RCA input. Switch input sources and control volume at your finger tips with the included wireless remote. This versatile speaker is equipped to deliver an authentic listening experience.",
+        "contents": [
+            {
+                "quantity": 2,
+                "item": "Speaker unit"
+            },
+            {
+                "quantity": 2,
+                "item": "Speaker cloth panel"
+            },
+            {
+                "quantity": 1,
+                "item": "User manual"
+            },
+            {
+                "quantity": 1,
+                "item": "3.5mm 7.5m audio cable"
+            },
+            {
+                "quantity": 1,
+                "item": "7.5m optical cable"
+            }
+        ],
+        "previews": [
+            {
+                "img": "product-zx7-speaker/image-gallery-1"
+            },
+            {
+                "img": "product-zx7-speaker/image-gallery-2"
+            },
+            {
+                "img": "product-zx7-speaker/image-gallery-3"
+            },
+        ],
+        "recommended": [
+            {
+                "name": "XX99 Mark I",
+                "img": "shared/image-xx99-mark-one-headphones"
+            },
+            {
+                "name": "XX59 Headphones",
+                "img": "shared/image-xx59-headphones"
+            },
+            {
+                "name": "ZX9 Speaker",
+                "img": "shared/image-zx9-speaker"
+            },
+        ]
+    },
+    {
+        "id": 16,
+        "name": "ZX7 Speaker",
+        "category": "speakers",
+        "new": false,
+        "price": 3500,
+        "featured": false,
+        "cartIMG": "cart/image-zx7-speaker",
+        "productIMG": "product-zx7-speaker/image-category-page-preview",
+        "description": "Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
+        "features": "Reap the advantages of a flat diaphragm tweeter cone. This provides a fast response rate and excellent high frequencies that lower tiered bookshelf speakers cannot provide. The woofers are made from aluminum that produces a unique and clear sound. XLR inputs allow you to connect to a mixer for more advanced usage.\n\nThe ZX7 speaker is the perfect blend of stylish design and high performance. It houses an encased MDF wooden enclosure which minimises acoustic resonance. Dual connectivity allows pairing through bluetooth or traditional optical and RCA input. Switch input sources and control volume at your finger tips with the included wireless remote. This versatile speaker is equipped to deliver an authentic listening experience.",
+        "contents": [
+            {
+                "quantity": 2,
+                "item": "Speaker unit"
+            },
+            {
+                "quantity": 2,
+                "item": "Speaker cloth panel"
+            },
+            {
+                "quantity": 1,
+                "item": "User manual"
+            },
+            {
+                "quantity": 1,
+                "item": "3.5mm 7.5m audio cable"
+            },
+            {
+                "quantity": 1,
+                "item": "7.5m optical cable"
+            }
+        ],
+        "previews": [
+            {
+                "img": "product-zx7-speaker/image-gallery-1"
+            },
+            {
+                "img": "product-zx7-speaker/image-gallery-2"
+            },
+            {
+                "img": "product-zx7-speaker/image-gallery-3"
+            },
+        ],
+        "recommended": [
+            {
+                "name": "XX99 Mark I",
+                "img": "shared/image-xx99-mark-one-headphones"
+            },
+            {
+                "name": "XX59 Headphones",
+                "img": "shared/image-xx59-headphones"
+            },
+            {
+                "name": "ZX9 Speaker",
+                "img": "shared/image-zx9-speaker"
+            },
+        ]
+    },
+    {
+        "id": 17,
+        "name": "ZX7 Speaker",
+        "category": "speakers",
+        "new": false,
+        "price": 3500,
+        "featured": false,
+        "cartIMG": "cart/image-zx7-speaker",
+        "productIMG": "product-zx7-speaker/image-category-page-preview",
+        "description": "Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
+        "features": "Reap the advantages of a flat diaphragm tweeter cone. This provides a fast response rate and excellent high frequencies that lower tiered bookshelf speakers cannot provide. The woofers are made from aluminum that produces a unique and clear sound. XLR inputs allow you to connect to a mixer for more advanced usage.\n\nThe ZX7 speaker is the perfect blend of stylish design and high performance. It houses an encased MDF wooden enclosure which minimises acoustic resonance. Dual connectivity allows pairing through bluetooth or traditional optical and RCA input. Switch input sources and control volume at your finger tips with the included wireless remote. This versatile speaker is equipped to deliver an authentic listening experience.",
+        "contents": [
+            {
+                "quantity": 2,
+                "item": "Speaker unit"
+            },
+            {
+                "quantity": 2,
+                "item": "Speaker cloth panel"
+            },
+            {
+                "quantity": 1,
+                "item": "User manual"
+            },
+            {
+                "quantity": 1,
+                "item": "3.5mm 7.5m audio cable"
+            },
+            {
+                "quantity": 1,
+                "item": "7.5m optical cable"
+            }
+        ],
+        "previews": [
+            {
+                "img": "product-zx7-speaker/image-gallery-1"
+            },
+            {
+                "img": "product-zx7-speaker/image-gallery-2"
+            },
+            {
+                "img": "product-zx7-speaker/image-gallery-3"
+            },
+        ],
+        "recommended": [
+            {
+                "name": "XX99 Mark I",
+                "img": "shared/image-xx99-mark-one-headphones"
+            },
+            {
+                "name": "XX59 Headphones",
+                "img": "shared/image-xx59-headphones"
+            },
+            {
+                "name": "ZX9 Speaker",
+                "img": "shared/image-zx9-speaker"
+            },
+        ]
+    },
+    {
+        "id": 18,
+        "name": "ZX7 Speaker",
+        "category": "speakers",
+        "new": false,
+        "price": 3500,
+        "featured": false,
+        "cartIMG": "cart/image-zx7-speaker",
+        "productIMG": "product-zx7-speaker/image-category-page-preview",
+        "description": "Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
+        "features": "Reap the advantages of a flat diaphragm tweeter cone. This provides a fast response rate and excellent high frequencies that lower tiered bookshelf speakers cannot provide. The woofers are made from aluminum that produces a unique and clear sound. XLR inputs allow you to connect to a mixer for more advanced usage.\n\nThe ZX7 speaker is the perfect blend of stylish design and high performance. It houses an encased MDF wooden enclosure which minimises acoustic resonance. Dual connectivity allows pairing through bluetooth or traditional optical and RCA input. Switch input sources and control volume at your finger tips with the included wireless remote. This versatile speaker is equipped to deliver an authentic listening experience.",
+        "contents": [
+            {
+                "quantity": 2,
+                "item": "Speaker unit"
+            },
+            {
+                "quantity": 2,
+                "item": "Speaker cloth panel"
+            },
+            {
+                "quantity": 1,
+                "item": "User manual"
+            },
+            {
+                "quantity": 1,
+                "item": "3.5mm 7.5m audio cable"
+            },
+            {
+                "quantity": 1,
+                "item": "7.5m optical cable"
+            }
+        ],
+        "previews": [
+            {
+                "img": "product-zx7-speaker/image-gallery-1"
+            },
+            {
+                "img": "product-zx7-speaker/image-gallery-2"
+            },
+            {
+                "img": "product-zx7-speaker/image-gallery-3"
+            },
+        ],
+        "recommended": [
+            {
+                "name": "XX99 Mark I",
+                "img": "shared/image-xx99-mark-one-headphones"
+            },
+            {
+                "name": "XX59 Headphones",
+                "img": "shared/image-xx59-headphones"
+            },
+            {
+                "name": "ZX9 Speaker",
+                "img": "shared/image-zx9-speaker"
+            },
+        ]
+    },
+    
+    
+    
+    
+    
+    {
+        "id": 19,
+        "name": "XX59 Headphones",
+        "category": "headphones",
+        "new": false,
+        "price": 899,
+        "featured": false,
+        "cartIMG": "cart/image-xx59-headphones",
+        "productIMG": "product-xx59-headphones/image-category-page-preview",
+        "description": "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
+        "features": "These headphones have been created from durable, high-quality materials tough enough to take anywhere. Its compact folding design fuses comfort and minimalist style making it perfect for travel. Flawless transmission is assured by the latest wireless technology engineered for audio synchronization with videos.\n\nMore than a simple pair of headphones, this headset features a pair of built-in microphones for clear, hands-free calling when paired with a compatible smartphone. Controlling music and calls is also intuitive thanks to easy-access touch buttons on the earcups. Regardless of how you use the XX59 headphones, you can do so all day thanks to an impressive 30-hour battery life that can be rapidly recharged via USB-C.",
+        "contents": [
+            {
+                "quantity": 1,
+                "item": "Headphone unit"
+            },
+            {
+                "quantity": 2,
+                "item": "Replacement earcups"
+            },
+            {
+                "quantity": 1,
+                "item": "User manual"
+            },
+            {
+                "quantity": 1,
+                "item": "3.5mm 5m audio cable"
+            }
+        ],
+        "previews": [
+            {
+                "img": "product-xx59-headphones/image-gallery-1"
+            },
+            {
+                "img": "product-xx59-headphones/image-gallery-2"
+            },
+            {
+                "img": "product-xx59-headphones/image-gallery-3"
+            },
+        ],
+        "recommended": [
+            {
+                "name": "XX99 Mark I",
+                "img": "shared/image-xx99-mark-one-headphones"
+            },
+            {
+                "name": "XX59 Headphones",
+                "img": "shared/image-xx59-headphones"
+            },
+            {
+                "name": "ZX9 Speaker",
+                "img": "shared/image-zx9-speaker"
+            },
+        ]
+    },
+    {
+        "id": 20,
+        "name": "XX59 Headphones",
+        "category": "headphones",
+        "new": false,
+        "price": 899,
+        "featured": false,
+        "cartIMG": "cart/image-xx59-headphones",
+        "productIMG": "product-xx59-headphones/image-category-page-preview",
+        "description": "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
+        "features": "These headphones have been created from durable, high-quality materials tough enough to take anywhere. Its compact folding design fuses comfort and minimalist style making it perfect for travel. Flawless transmission is assured by the latest wireless technology engineered for audio synchronization with videos.\n\nMore than a simple pair of headphones, this headset features a pair of built-in microphones for clear, hands-free calling when paired with a compatible smartphone. Controlling music and calls is also intuitive thanks to easy-access touch buttons on the earcups. Regardless of how you use the XX59 headphones, you can do so all day thanks to an impressive 30-hour battery life that can be rapidly recharged via USB-C.",
+        "contents": [
+            {
+                "quantity": 1,
+                "item": "Headphone unit"
+            },
+            {
+                "quantity": 2,
+                "item": "Replacement earcups"
+            },
+            {
+                "quantity": 1,
+                "item": "User manual"
+            },
+            {
+                "quantity": 1,
+                "item": "3.5mm 5m audio cable"
+            }
+        ],
+        "previews": [
+            {
+                "img": "product-xx59-headphones/image-gallery-1"
+            },
+            {
+                "img": "product-xx59-headphones/image-gallery-2"
+            },
+            {
+                "img": "product-xx59-headphones/image-gallery-3"
+            },
+        ],
+        "recommended": [
+            {
+                "name": "XX99 Mark I",
+                "img": "shared/image-xx99-mark-one-headphones"
+            },
+            {
+                "name": "XX59 Headphones",
+                "img": "shared/image-xx59-headphones"
+            },
+            {
+                "name": "ZX9 Speaker",
+                "img": "shared/image-zx9-speaker"
+            },
+        ]
+    },
+    {
+        "id": 21,
+        "name": "XX59 Headphones",
+        "category": "headphones",
+        "new": false,
+        "price": 899,
+        "featured": false,
+        "cartIMG": "cart/image-xx59-headphones",
+        "productIMG": "product-xx59-headphones/image-category-page-preview",
+        "description": "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
+        "features": "These headphones have been created from durable, high-quality materials tough enough to take anywhere. Its compact folding design fuses comfort and minimalist style making it perfect for travel. Flawless transmission is assured by the latest wireless technology engineered for audio synchronization with videos.\n\nMore than a simple pair of headphones, this headset features a pair of built-in microphones for clear, hands-free calling when paired with a compatible smartphone. Controlling music and calls is also intuitive thanks to easy-access touch buttons on the earcups. Regardless of how you use the XX59 headphones, you can do so all day thanks to an impressive 30-hour battery life that can be rapidly recharged via USB-C.",
+        "contents": [
+            {
+                "quantity": 1,
+                "item": "Headphone unit"
+            },
+            {
+                "quantity": 2,
+                "item": "Replacement earcups"
+            },
+            {
+                "quantity": 1,
+                "item": "User manual"
+            },
+            {
+                "quantity": 1,
+                "item": "3.5mm 5m audio cable"
+            }
+        ],
+        "previews": [
+            {
+                "img": "product-xx59-headphones/image-gallery-1"
+            },
+            {
+                "img": "product-xx59-headphones/image-gallery-2"
+            },
+            {
+                "img": "product-xx59-headphones/image-gallery-3"
+            },
+        ],
+        "recommended": [
+            {
+                "name": "XX99 Mark I",
+                "img": "shared/image-xx99-mark-one-headphones"
+            },
+            {
+                "name": "XX59 Headphones",
+                "img": "shared/image-xx59-headphones"
+            },
+            {
+                "name": "ZX9 Speaker",
+                "img": "shared/image-zx9-speaker"
+            },
+        ]
+    },
+    {
+        "id": 22,
+        "name": "XX59 Headphones",
+        "category": "headphones",
+        "new": false,
+        "price": 899,
+        "featured": false,
+        "cartIMG": "cart/image-xx59-headphones",
+        "productIMG": "product-xx59-headphones/image-category-page-preview",
+        "description": "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
+        "features": "These headphones have been created from durable, high-quality materials tough enough to take anywhere. Its compact folding design fuses comfort and minimalist style making it perfect for travel. Flawless transmission is assured by the latest wireless technology engineered for audio synchronization with videos.\n\nMore than a simple pair of headphones, this headset features a pair of built-in microphones for clear, hands-free calling when paired with a compatible smartphone. Controlling music and calls is also intuitive thanks to easy-access touch buttons on the earcups. Regardless of how you use the XX59 headphones, you can do so all day thanks to an impressive 30-hour battery life that can be rapidly recharged via USB-C.",
+        "contents": [
+            {
+                "quantity": 1,
+                "item": "Headphone unit"
+            },
+            {
+                "quantity": 2,
+                "item": "Replacement earcups"
+            },
+            {
+                "quantity": 1,
+                "item": "User manual"
+            },
+            {
+                "quantity": 1,
+                "item": "3.5mm 5m audio cable"
+            }
+        ],
+        "previews": [
+            {
+                "img": "product-xx59-headphones/image-gallery-1"
+            },
+            {
+                "img": "product-xx59-headphones/image-gallery-2"
+            },
+            {
+                "img": "product-xx59-headphones/image-gallery-3"
+            },
+        ],
+        "recommended": [
+            {
+                "name": "XX99 Mark I",
+                "img": "shared/image-xx99-mark-one-headphones"
+            },
+            {
+                "name": "XX59 Headphones",
+                "img": "shared/image-xx59-headphones"
+            },
+            {
+                "name": "ZX9 Speaker",
+                "img": "shared/image-zx9-speaker"
+            },
+        ]
+    },
+    {
+        "id": 23,
+        "name": "XX59 Headphones",
+        "category": "headphones",
+        "new": false,
+        "price": 899,
+        "featured": false,
+        "cartIMG": "cart/image-xx59-headphones",
+        "productIMG": "product-xx59-headphones/image-category-page-preview",
+        "description": "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
+        "features": "These headphones have been created from durable, high-quality materials tough enough to take anywhere. Its compact folding design fuses comfort and minimalist style making it perfect for travel. Flawless transmission is assured by the latest wireless technology engineered for audio synchronization with videos.\n\nMore than a simple pair of headphones, this headset features a pair of built-in microphones for clear, hands-free calling when paired with a compatible smartphone. Controlling music and calls is also intuitive thanks to easy-access touch buttons on the earcups. Regardless of how you use the XX59 headphones, you can do so all day thanks to an impressive 30-hour battery life that can be rapidly recharged via USB-C.",
+        "contents": [
+            {
+                "quantity": 1,
+                "item": "Headphone unit"
+            },
+            {
+                "quantity": 2,
+                "item": "Replacement earcups"
+            },
+            {
+                "quantity": 1,
+                "item": "User manual"
+            },
+            {
+                "quantity": 1,
+                "item": "3.5mm 5m audio cable"
+            }
+        ],
+        "previews": [
+            {
+                "img": "product-xx59-headphones/image-gallery-1"
+            },
+            {
+                "img": "product-xx59-headphones/image-gallery-2"
+            },
+            {
+                "img": "product-xx59-headphones/image-gallery-3"
+            },
+        ],
+        "recommended": [
+            {
+                "name": "XX99 Mark I",
+                "img": "shared/image-xx99-mark-one-headphones"
+            },
+            {
+                "name": "XX59 Headphones",
+                "img": "shared/image-xx59-headphones"
+            },
+            {
+                "name": "ZX9 Speaker",
+                "img": "shared/image-zx9-speaker"
+            },
+        ]
+    },
+    {
+        "id": 24,
+        "name": "XX59 Headphones",
+        "category": "headphones",
+        "new": false,
+        "price": 899,
+        "featured": false,
+        "cartIMG": "cart/image-xx59-headphones",
+        "productIMG": "product-xx59-headphones/image-category-page-preview",
+        "description": "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
+        "features": "These headphones have been created from durable, high-quality materials tough enough to take anywhere. Its compact folding design fuses comfort and minimalist style making it perfect for travel. Flawless transmission is assured by the latest wireless technology engineered for audio synchronization with videos.\n\nMore than a simple pair of headphones, this headset features a pair of built-in microphones for clear, hands-free calling when paired with a compatible smartphone. Controlling music and calls is also intuitive thanks to easy-access touch buttons on the earcups. Regardless of how you use the XX59 headphones, you can do so all day thanks to an impressive 30-hour battery life that can be rapidly recharged via USB-C.",
+        "contents": [
+            {
+                "quantity": 1,
+                "item": "Headphone unit"
+            },
+            {
+                "quantity": 2,
+                "item": "Replacement earcups"
+            },
+            {
+                "quantity": 1,
+                "item": "User manual"
+            },
+            {
+                "quantity": 1,
+                "item": "3.5mm 5m audio cable"
+            }
+        ],
+        "previews": [
+            {
+                "img": "product-xx59-headphones/image-gallery-1"
+            },
+            {
+                "img": "product-xx59-headphones/image-gallery-2"
+            },
+            {
+                "img": "product-xx59-headphones/image-gallery-3"
+            },
+        ],
+        "recommended": [
+            {
+                "name": "XX99 Mark I",
+                "img": "shared/image-xx99-mark-one-headphones"
+            },
+            {
+                "name": "XX59 Headphones",
+                "img": "shared/image-xx59-headphones"
+            },
+            {
+                "name": "ZX9 Speaker",
+                "img": "shared/image-zx9-speaker"
+            },
+        ]
+    },
+    {
+        "id": 25,
+        "name": "XX59 Headphones",
+        "category": "headphones",
+        "new": false,
+        "price": 899,
+        "featured": false,
+        "cartIMG": "cart/image-xx59-headphones",
+        "productIMG": "product-xx59-headphones/image-category-page-preview",
+        "description": "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
+        "features": "These headphones have been created from durable, high-quality materials tough enough to take anywhere. Its compact folding design fuses comfort and minimalist style making it perfect for travel. Flawless transmission is assured by the latest wireless technology engineered for audio synchronization with videos.\n\nMore than a simple pair of headphones, this headset features a pair of built-in microphones for clear, hands-free calling when paired with a compatible smartphone. Controlling music and calls is also intuitive thanks to easy-access touch buttons on the earcups. Regardless of how you use the XX59 headphones, you can do so all day thanks to an impressive 30-hour battery life that can be rapidly recharged via USB-C.",
+        "contents": [
+            {
+                "quantity": 1,
+                "item": "Headphone unit"
+            },
+            {
+                "quantity": 2,
+                "item": "Replacement earcups"
+            },
+            {
+                "quantity": 1,
+                "item": "User manual"
+            },
+            {
+                "quantity": 1,
+                "item": "3.5mm 5m audio cable"
+            }
+        ],
+        "previews": [
+            {
+                "img": "product-xx59-headphones/image-gallery-1"
+            },
+            {
+                "img": "product-xx59-headphones/image-gallery-2"
+            },
+            {
+                "img": "product-xx59-headphones/image-gallery-3"
+            },
+        ],
+        "recommended": [
+            {
+                "name": "XX99 Mark I",
+                "img": "shared/image-xx99-mark-one-headphones"
+            },
+            {
+                "name": "XX59 Headphones",
+                "img": "shared/image-xx59-headphones"
+            },
+            {
+                "name": "ZX9 Speaker",
+                "img": "shared/image-zx9-speaker"
+            },
+        ]
+    },
+    {
+        "id": 26,
+        "name": "XX59 Headphones",
+        "category": "headphones",
+        "new": false,
+        "price": 899,
+        "featured": false,
+        "cartIMG": "cart/image-xx59-headphones",
+        "productIMG": "product-xx59-headphones/image-category-page-preview",
+        "description": "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
+        "features": "These headphones have been created from durable, high-quality materials tough enough to take anywhere. Its compact folding design fuses comfort and minimalist style making it perfect for travel. Flawless transmission is assured by the latest wireless technology engineered for audio synchronization with videos.\n\nMore than a simple pair of headphones, this headset features a pair of built-in microphones for clear, hands-free calling when paired with a compatible smartphone. Controlling music and calls is also intuitive thanks to easy-access touch buttons on the earcups. Regardless of how you use the XX59 headphones, you can do so all day thanks to an impressive 30-hour battery life that can be rapidly recharged via USB-C.",
+        "contents": [
+            {
+                "quantity": 1,
+                "item": "Headphone unit"
+            },
+            {
+                "quantity": 2,
+                "item": "Replacement earcups"
+            },
+            {
+                "quantity": 1,
+                "item": "User manual"
+            },
+            {
+                "quantity": 1,
+                "item": "3.5mm 5m audio cable"
+            }
+        ],
+        "previews": [
+            {
+                "img": "product-xx59-headphones/image-gallery-1"
+            },
+            {
+                "img": "product-xx59-headphones/image-gallery-2"
+            },
+            {
+                "img": "product-xx59-headphones/image-gallery-3"
+            },
+        ],
+        "recommended": [
+            {
+                "name": "XX99 Mark I",
+                "img": "shared/image-xx99-mark-one-headphones"
+            },
+            {
+                "name": "XX59 Headphones",
+                "img": "shared/image-xx59-headphones"
+            },
+            {
+                "name": "ZX9 Speaker",
+                "img": "shared/image-zx9-speaker"
+            },
+        ]
+    },
 ]

@@ -17,6 +17,7 @@ struct CategoryFeatured: View {
     @State var current = 0
     
     let rows: [GridItem] = [GridItem(.flexible())]
+    var filteredProducts: [NewProduct]
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -28,21 +29,20 @@ struct CategoryFeatured: View {
             }
             ScrollView(.horizontal) {
                 LazyHGrid(rows: rows) {
-                    ForEach(0..<products.count) { index in
+                    ForEach(filteredProducts, id: \.id) { product in
                         Button(action: {
-                            current = index
                             showNextView = true
                         }) {
                             HStack {
                                 VStack {
-                                    Image(products[index].productIMG)
+                                    Image(product.productIMG)
                                         .resizable()
                                         .frame(maxWidth: 100, maxHeight: 100)
                                         .scaledToFill()
                                         .clipped()
                                         .listRowInsets(EdgeInsets())
                                         .cornerRadius(10)
-                                    Text(products[index].name)
+                                    Text(product.name)
                                         .bold()
                                         .font(.caption2)
                                 }
@@ -61,7 +61,7 @@ struct CategoryFeatured: View {
 
 struct CategoryFeatured_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryFeatured()
+        CategoryFeatured(filteredProducts: [])
             .environmentObject(CartManager())
             .environmentObject(HistoryManager())
             .environmentObject(OrdersManager())
