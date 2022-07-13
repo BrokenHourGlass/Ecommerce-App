@@ -14,6 +14,7 @@ struct CategorySVC: View {
     @EnvironmentObject var commentsManager: CommentsManager
     
     let columns: [GridItem] = [GridItem(.flexible())]
+    var category: String
     
     var body: some View {
         VStack {
@@ -25,12 +26,12 @@ struct CategorySVC: View {
                 SignupModal()
                 VStack(spacing: 20) {
                     CategoryHero()
-                    CategoryFeatured()
+                    CategoryFeatured(filteredProducts: CategoryViewModel.filterByCategory(targetCategory: category))
                         .environmentObject(cartManager)
                         .environmentObject(historyManager)
                         .environmentObject(ordersManager)
                         .environmentObject(commentsManager)
-                    CategoryResults()
+                    CategoryResults(filteredProducts: CategoryViewModel.filterByCategory(targetCategory: category))
                         .environmentObject(cartManager)
                         .environmentObject(historyManager)
                         .environmentObject(ordersManager)
@@ -45,7 +46,7 @@ struct CategorySVC: View {
 
 struct CategorySVC_Previews: PreviewProvider {
     static var previews: some View {
-        CategorySVC()
+        CategorySVC(category: "headphones")
             .environmentObject(CartManager())
             .environmentObject(HistoryManager())
             .environmentObject(OrdersManager())

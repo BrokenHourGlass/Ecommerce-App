@@ -24,14 +24,14 @@ struct CatalogCategories: View {
             Text("Categories")
                 .font(.title2)
                 .bold()
-            NavigationLink(destination: CategorySVC().environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager), isActive: $showNextView) {
+            NavigationLink(destination: CategorySVC(category: chosenCategory).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager), isActive: $showNextView) {
                 EmptyView()
             }
             LazyVGrid(columns: columns) {
                 ForEach(CatalogData.categories, id: \.category) { categoryObj in
                     Button(action: {
+                        chosenCategory = categoryObj.category.lowercased()
                         showNextView = true
-                        chosenCategory = categoryObj.category
                     }) {
                         CatalogCategory(categoryData: categoryObj)
                             .environmentObject(cartManager)
