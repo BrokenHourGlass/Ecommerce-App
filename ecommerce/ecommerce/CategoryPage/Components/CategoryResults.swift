@@ -14,7 +14,7 @@ struct CategoryResults: View {
     @EnvironmentObject var commentsManager: CommentsManager
     
     @State var showNextView = false
-    @State var current = 0
+    @State var current: NewProduct = CategoryViewModel.placeholderProduct()
     
     let columns: [GridItem] = [GridItem(.flexible())]
     var filteredProducts: [NewProduct]
@@ -24,13 +24,14 @@ struct CategoryResults: View {
             Text("RESULTS")
                 .font(.title2)
                 .bold()
-            NavigationLink(destination: ProductSVC(product: products[current]).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager), isActive: $showNextView) {
+            NavigationLink(destination: ProductSVC(product: current).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager), isActive: $showNextView) {
                 EmptyView()
             }
             ScrollView {
                 LazyVGrid(columns: columns) {
                     ForEach(filteredProducts, id: \.id) { productObj in
                         Button(action: {
+                            current = productObj
                             showNextView = true
                         }) {
                             CategoryItemHelper(product: productObj)
