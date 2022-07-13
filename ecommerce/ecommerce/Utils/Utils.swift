@@ -16,6 +16,13 @@ func formateDate(date: Date) -> String {
     return dateFormatter.string(from: date)
 }
 
-func initializeDatabase() {
+func constructProductsData() -> [NewProduct] {
+    let sqlDB = ProductDB.productDb.getData()
+    var productsData = [NewProduct]()
     
+    for idx in 0..<sqlDB.count {
+        productsData.append(NewProduct(id: sqlDB[idx].id, name: sqlDB[idx].name, category: sqlDB[idx].category, new: sqlDB[idx].new, price: sqlDB[idx].price, featured: sqlDB[idx].featured, cartIMG: sqlDB[idx].cartIMG, productIMG: sqlDB[idx].productIMG, description: sqlDB[idx].description, features: sqlDB[idx].features, contents: productsJSON[idx].contents, previews: productsJSON[idx].previews, recommended: productsJSON[idx].recommended))
+    }
+    
+    return productsData
 }

@@ -28,7 +28,7 @@ class TemporaryVC: UIViewController {
     func initializeDatabase() {
         ProductDB.productDb.createDB()
         ProductDB.productDb.createTable()
-        print(ProductDB.productDb.getData())
+//        print(ProductDB.productDb.getData())
         
     }
     
