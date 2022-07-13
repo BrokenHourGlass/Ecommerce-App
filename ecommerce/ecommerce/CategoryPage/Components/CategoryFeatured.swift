@@ -14,7 +14,7 @@ struct CategoryFeatured: View {
     @EnvironmentObject var commentsManager: CommentsManager
     
     @State var showNextView = false
-    @State var current = 0
+    @State var current: NewProduct = CategoryViewModel.placeholderProduct()
     
     let rows: [GridItem] = [GridItem(.flexible())]
     var filteredProducts: [NewProduct]
@@ -24,13 +24,14 @@ struct CategoryFeatured: View {
             Text("FEATURED")
                 .font(.title2)
                 .bold()
-            NavigationLink(destination: ProductSVC(product: products[current]).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager), isActive: $showNextView) {
+            NavigationLink(destination: ProductSVC(product: current).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager), isActive: $showNextView) {
                 EmptyView()
             }
             ScrollView(.horizontal) {
                 LazyHGrid(rows: rows) {
                     ForEach(filteredProducts, id: \.id) { product in
                         Button(action: {
+                            current = product
                             showNextView = true
                         }) {
                             HStack {
