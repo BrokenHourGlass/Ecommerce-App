@@ -8,25 +8,27 @@
 import UIKit
 import SwiftUI
 
-class TemporaryVC: UIViewController {
+class MainTabControllerVC: UIViewController {
     
     @IBOutlet weak var container: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ProductDB.productDb.createDB()
-        ProductDB.productDb.createTable()
-        print(ProductDB.productDb.getData())
-        print("done")
-        print(ProductDB.productDb.getItemCategory(category: "earphones"))
-        print("done")
-        
         // Do any additional setup after loading the view.
-        let childView = UIHostingController(rootView: TemporarySVC())
+        let childView = UIHostingController(rootView: MainTabControllerSVC())
         addChild(childView)
         childView.view.frame = container.bounds
         container.addSubview(childView.view)
+        
+        initializeDatabase()
+        
+    }
+    
+    func initializeDatabase() {
+        ProductDB.productDb.createDB()
+        ProductDB.productDb.createTable()
+//        print(ProductDB.productDb.getData())
         
     }
     

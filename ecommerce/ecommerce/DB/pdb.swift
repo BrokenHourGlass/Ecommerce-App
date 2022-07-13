@@ -29,7 +29,6 @@ class ProductDB{
             print("error in table creation")
         }
         else if getData().count == 0{
-            print("did the thing")
             insertAll()
         }
     }
@@ -82,7 +81,6 @@ class ProductDB{
         for (index, _) in productItems.enumerated(){
             insertData(name: productItems[index].name as NSString, category: productItems[index].category as NSString, new: productItems[index].new as NSNumber, price: productItems[index].price as NSNumber, featured: productItems[index].featured as NSNumber, cartIMG: productItems[index].cartIMG as NSString, productIMG: productItems[index].productIMG as NSString, description: productItems[index].description as NSString, features: productItems[index].description as NSString)
             var l = productItems[index].price as NSNumber
-            print(l)
         }
     }
         
