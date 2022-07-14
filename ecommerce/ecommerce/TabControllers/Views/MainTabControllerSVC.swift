@@ -64,6 +64,17 @@ struct MainTabControllerSVC: View {
                     }
                     .tag(3)
                 
+                WishListPageSVC()
+                    .environmentObject(cartManager)
+                    .environmentObject(historyManager)
+                    .environmentObject(ordersManager)
+                    .tabItem {
+                        Image(systemName: "star.fill")
+                        Text("Wish List")
+                    }
+                    .tag(4)
+                
+                
             } //TabView
         }
         .navigationViewStyle(.stack)
