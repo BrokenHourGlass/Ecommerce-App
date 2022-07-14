@@ -48,4 +48,25 @@ class CDWishlistHelper {
         
     }
     
+    func getWishlist(userId: String) -> [WishlistItemModel] {
+        var wishlist = [WishlistItemModel]()
+        
+        let fetchWishlist = NSFetchRequest<NSFetchRequestResult>(entityName: "PNPWishlistItem")
+        
+        do {
+            let result = try context?.fetch(fetchWishlist) as! [PNPWishlistItem]
+            
+            for x in result {
+                if (x.userId == userId) {
+                    wishlist.append(WishlistItemModel(id: x.id!, productId: Int(x.productId), status: x.status, userId: x.userId!))
+                }
+            }
+            
+        } catch {
+            print("can not fetch data")
+        }
+        
+        return wishlist
+    }
+    
 }
