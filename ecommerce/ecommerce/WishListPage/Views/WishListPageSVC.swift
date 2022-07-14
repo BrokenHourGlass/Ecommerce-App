@@ -13,15 +13,33 @@ struct WishListPageSVC: View {
     @EnvironmentObject var ordersManager: OrdersManager
     @EnvironmentObject var commentsManager: CommentsManager
     
+    @State var showNextView = false
+    @State var current: NewProduct = CategoryViewModel.placeholderProduct()
+    
     var body: some View {
         VStack {
             NavigationBar()
                 .environmentObject(cartManager)
                 .environmentObject(ordersManager)
-            
-            
-            Spacer()
-            
+            NavigationLink(destination: ProductSVC(product: current).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager), isActive: $showNextView) {
+                EmptyView()
+            }
+            VStack(alignment: .leading) {
+                Text("Wish List")
+                    .font(.title)
+                    .bold()
+                ScrollView {
+                    ForEach(products, id: \.id) { productObj in
+                        Button(action: {
+                            current = productObj
+                            showNextView = true
+                        }) {
+                            CategoryItemHelper(product: productObj)
+                        }
+                    }
+                }
+            }
+            .padding()
         }
         .navigationTitle("")
         .navigationBarHidden(true)

@@ -719,6 +719,7 @@
 		6163584028805B80001D78BF /* WishListPage */ = {
 			isa = PBXGroup;
 			children = (
+				6163584A288065CB001D78BF /* Components */,
 				6163584328805B96001D78BF /* ViewModels */,
 				6163584228805B91001D78BF /* Models */,
 				6163584128805B8B001D78BF /* Views */,
@@ -747,6 +748,13 @@
 			children = (
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6163584A288065CB001D78BF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		61676C7328711420006205B8 /* CatalogData */ = {
