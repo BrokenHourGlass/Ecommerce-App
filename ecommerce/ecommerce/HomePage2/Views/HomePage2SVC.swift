@@ -12,6 +12,7 @@ struct HomePage2SVC: View {
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
     @EnvironmentObject var commentsManager: CommentsManager
+    @EnvironmentObject var wishlistManager: WishlistManager
     
     let columns: [GridItem] = [GridItem(.flexible())]
     
@@ -28,6 +29,7 @@ struct HomePage2SVC: View {
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
                     .environmentObject(commentsManager)
+                    .environmentObject(wishlistManager)
                 HomePageAd(img: "home/pexels-jessica-lewis-creative-593324")
                 HomePageCategories(title: "Up to 20% off marked laptops!", description: "Big savings on tech setups, plus free shipping", fgColor: Color.black, bgColor: Color.white)
                     .environmentObject(cartManager)
@@ -61,5 +63,6 @@ struct HomePage2SVC_Previews: PreviewProvider {
             .environmentObject(HistoryManager())
             .environmentObject(OrdersManager())
             .environmentObject(CommentsManager())
+            .environmentObject(WishlistManager())
     }
 }

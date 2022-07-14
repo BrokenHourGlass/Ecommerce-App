@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct FavoriterHelper: View {
+    @EnvironmentObject var wishlistManager: WishlistManager
     
     var product: NewProduct
     
     var body: some View {
         Button(action: {
-//            wishlistManager.addToWishlist(wishlistItemObj: WishlistItemModel(id: UUID().uuidString, productId: product.id, status: true, userId: "Rando"))
+            wishlistManager.addToWishlist(wishlistItemObj: WishlistItemModel(id: UUID().uuidString, productId: product.id, status: true, userId: "Rando"))
         }) {
             Image(systemName: "star.fill")
                 .foregroundColor(Color.yellow)
@@ -25,5 +26,6 @@ struct FavoriterHelper: View {
 struct FavoriterHelper_Previews: PreviewProvider {
     static var previews: some View {
         FavoriterHelper(product: CategoryViewModel.placeholderProduct())
+            .environmentObject(WishlistManager())
     }
 }

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProductDetails: View {
+    @EnvironmentObject var wishlistManager: WishlistManager
+    
     var product: NewProduct
     
     var body: some View {
@@ -18,6 +20,7 @@ struct ProductDetails: View {
                     .bold()
                 Spacer()
                 FavoriterHelper(product: product)
+                    .environmentObject(wishlistManager)
             }
             Text(product.description)
             Text("$ \(product.price)")
@@ -29,5 +32,6 @@ struct ProductDetails: View {
 struct ProductDetails_Previews: PreviewProvider {
     static var previews: some View {
         ProductDetails(product: products[0])
+            .environmentObject(WishlistManager())
     }
 }

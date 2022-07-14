@@ -20,8 +20,8 @@ class WishlistManager: ObservableObject {
         }
     }
     
-    func getWishlist(userId: String) -> [WishlistItemModel] {
-        return wishlist.filter {
+    func getWishlist(userId: String) {
+        wishlist = wishlist.filter {
             $0.userId == userId
         }
     }
