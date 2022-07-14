@@ -26,9 +26,12 @@ struct WishListPageSVC: View {
                 EmptyView()
             }
             VStack(alignment: .leading) {
-                Text("Wish List")
-                    .font(.title)
-                    .bold()
+                HStack {
+                    Text("Wish List")
+                        .font(.title)
+                        .bold()
+                    Spacer()
+                }
                 ScrollView {
                     ForEach(wishlistManager.wishlist.reversed(), id: \.id) { item in
                         WishListItem(showNextView: $showNextView, current: $current, product: WishlistViewModel.getProduct(productID: item.productId), id: item.id)

@@ -11,7 +11,7 @@ struct WishListItem: View {
     @EnvironmentObject var wishlistManager: WishlistManager
     
     @Binding var showNextView: Bool
-    @Binding var current: NewProduct 
+    @Binding var current: NewProduct
     var product: NewProduct
     var id: String
     
