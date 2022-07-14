@@ -12,9 +12,13 @@ struct ProductDetails: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 13)  {
-            Text(product.name)
-                .font(.title)
-                .bold()
+            HStack {
+                Text(product.name)
+                    .font(.title)
+                    .bold()
+                Spacer()
+                FavoriterHelper()
+            }
             Text(product.description)
             Text("$ \(product.price)")
                 .fontWeight(.bold)
