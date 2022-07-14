@@ -8,13 +8,33 @@
 import SwiftUI
 
 struct WishListPageSVC: View {
+    @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var historyManager: HistoryManager
+    @EnvironmentObject var ordersManager: OrdersManager
+    @EnvironmentObject var commentsManager: CommentsManager
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            NavigationBar()
+                .environmentObject(cartManager)
+                .environmentObject(ordersManager)
+            
+            
+            Spacer()
+            
+        }
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
 }
 
 struct WishListPageSVC_Previews: PreviewProvider {
     static var previews: some View {
         WishListPageSVC()
+            .environmentObject(CartManager())
+            .environmentObject(HistoryManager())
+            .environmentObject(OrdersManager())
+            .environmentObject(CommentsManager())
+        
     }
 }

@@ -68,6 +68,7 @@ struct MainTabControllerSVC: View {
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
+                    .environmentObject(commentsManager)
                     .tabItem {
                         Image(systemName: "star.fill")
                         Text("Wish List")
