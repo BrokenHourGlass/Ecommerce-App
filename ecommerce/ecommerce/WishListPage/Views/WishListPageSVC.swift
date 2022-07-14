@@ -30,6 +30,7 @@ struct WishListPageSVC: View {
                     Text("Wish List")
                         .font(.title)
                         .bold()
+                    Spacer()
                 }
                 ScrollView {
                     ForEach(wishlistManager.wishlist.reversed(), id: \.id) { item in
