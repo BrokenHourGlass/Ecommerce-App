@@ -12,6 +12,7 @@ struct WishListPageSVC: View {
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
     @EnvironmentObject var commentsManager: CommentsManager
+    @EnvironmentObject var wishlistManager: WishlistManager
     
     @State var showNextView = false
     @State var current: NewProduct = CategoryViewModel.placeholderProduct()
@@ -29,13 +30,16 @@ struct WishListPageSVC: View {
                     .font(.title)
                     .bold()
                 ScrollView {
-                    ForEach(products, id: \.id) { productObj in
-                        WishListItem(showNextView: $showNextView, current: $current, product: productObj)
+                    ForEach(wishlistManager.wishlist.reversed(), id: \.id) { item in
+                        WishListItem(showNextView: $showNextView, current: $current, product: WishlistViewModel.getProduct(productID: item.productId))
                     }
                 }
             }
             .padding()
         }
+        .onAppear(perform: {
+            wishlistManager.getWishlist(userId: "Rando")
+        })
         .navigationTitle("")
         .navigationBarHidden(true)
     }
@@ -48,6 +52,6 @@ struct WishListPageSVC_Previews: PreviewProvider {
             .environmentObject(HistoryManager())
             .environmentObject(OrdersManager())
             .environmentObject(CommentsManager())
-        
+            .environmentObject(WishlistManager())
     }
 }

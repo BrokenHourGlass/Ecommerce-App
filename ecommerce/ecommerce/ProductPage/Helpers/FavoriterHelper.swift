@@ -14,7 +14,9 @@ struct FavoriterHelper: View {
     
     var body: some View {
         Button(action: {
+            print("added item to wishlist")
             wishlistManager.addToWishlist(wishlistItemObj: WishlistItemModel(id: UUID().uuidString, productId: product.id, status: true, userId: "Rando"))
+            CDWishlistHelper.cdWishlistHelper.addToWishlist(wishlistItemObj: WishlistItemModel(id: UUID().uuidString, productId: product.id, status: true, userId: "Rando"))
         }) {
             Image(systemName: "star.fill")
                 .foregroundColor(Color.yellow)

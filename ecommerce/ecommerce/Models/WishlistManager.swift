@@ -21,9 +21,7 @@ class WishlistManager: ObservableObject {
     }
     
     func getWishlist(userId: String) {
-        wishlist = wishlist.filter {
-            $0.userId == userId
-        }
+        wishlist = CDWishlistHelper.cdWishlistHelper.getWishlist(userId: userId)
     }
     
 }
