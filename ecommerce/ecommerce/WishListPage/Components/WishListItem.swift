@@ -50,6 +50,7 @@ struct WishListItem: View {
             .frame(width: 50)
             
         }
+        .padding([.top], 20)
         .frame(maxHeight: 200)
     }
 }
