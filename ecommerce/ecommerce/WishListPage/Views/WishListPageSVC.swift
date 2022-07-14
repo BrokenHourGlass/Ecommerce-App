@@ -30,12 +30,7 @@ struct WishListPageSVC: View {
                     .bold()
                 ScrollView {
                     ForEach(products, id: \.id) { productObj in
-                        Button(action: {
-                            current = productObj
-                            showNextView = true
-                        }) {
-                            WishListItem(product: productObj)
-                        }
+                        WishListItem(showNextView: $showNextView, current: $current, product: productObj)
                     }
                 }
             }
