@@ -41,6 +41,7 @@ struct MainTabControllerSVC: View {
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
                     .environmentObject(commentsManager)
+                    .environmentObject(wishlistManager)
                     .tabItem {
                         Image(systemName: "magnifyingglass")
                         Text("Catalog")
