@@ -27,6 +27,7 @@ struct OrderSVC: View {
             }
             .padding(.horizontal, 15)
             Spacer()
+            OrderRefund()
         }
         .navigationTitle("")
         .navigationBarHidden(true)
