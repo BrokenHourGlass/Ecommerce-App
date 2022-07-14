@@ -34,7 +34,7 @@ struct WishListPageSVC: View {
                             current = productObj
                             showNextView = true
                         }) {
-                            CategoryItemHelper(product: productObj)
+                            WishListItem(product: productObj)
                         }
                     }
                 }
