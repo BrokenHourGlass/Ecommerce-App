@@ -17,7 +17,7 @@ struct ProductDetails: View {
                     .font(.title)
                     .bold()
                 Spacer()
-                FavoriterHelper()
+                FavoriterHelper(product: product)
             }
             Text(product.description)
             Text("$ \(product.price)")
