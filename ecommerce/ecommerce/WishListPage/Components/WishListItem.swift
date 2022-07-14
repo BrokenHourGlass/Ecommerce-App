@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct WishListItem: View {
+    @EnvironmentObject var wishlistManager: WishlistManager
     
     @Binding var showNextView: Bool
     @Binding var current: NewProduct 
     var product: NewProduct
+    var id: String
     
     var body: some View {
         HStack {
@@ -39,7 +41,8 @@ struct WishListItem: View {
             }
             Spacer()
             Button(action: {
-                print("button pressed")
+                wishlistManager.remoteFromWishlist(id: id)
+                CDWishlistHelper.cdWishlistHelper.removeFromWishlist(wishlistItemID: id)
             }) {
                 Image(systemName: "star.fill")
                     .foregroundColor(Color.yellow)

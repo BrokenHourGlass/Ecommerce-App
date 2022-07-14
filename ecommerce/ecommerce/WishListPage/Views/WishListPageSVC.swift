@@ -22,7 +22,7 @@ struct WishListPageSVC: View {
             NavigationBar()
                 .environmentObject(cartManager)
                 .environmentObject(ordersManager)
-            NavigationLink(destination: ProductSVC(product: current).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager), isActive: $showNextView) {
+            NavigationLink(destination: ProductSVC(product: current).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager), isActive: $showNextView) {
                 EmptyView()
             }
             VStack(alignment: .leading) {
@@ -31,7 +31,8 @@ struct WishListPageSVC: View {
                     .bold()
                 ScrollView {
                     ForEach(wishlistManager.wishlist.reversed(), id: \.id) { item in
-                        WishListItem(showNextView: $showNextView, current: $current, product: WishlistViewModel.getProduct(productID: item.productId))
+                        WishListItem(showNextView: $showNextView, current: $current, product: WishlistViewModel.getProduct(productID: item.productId), id: item.id)
+                            .environmentObject(wishlistManager)
                     }
                 }
             }
