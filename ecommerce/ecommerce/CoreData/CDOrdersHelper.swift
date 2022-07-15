@@ -49,5 +49,22 @@ class CDOrdersHelper {
         return orders
         
     }
+    
+    func refundOrder(orderId: String) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PNPOrder")
+        fetchRequest.predicate = NSPredicate(format: "orderId == %@", orderId)
+        
+        do {
+            let orders = try context?.fetch(fetchRequest) as! [PNPOrder]
+            if (orders.count != 0) {
+                let order = orders.first!
+                order.status = 0
+                try context?.save()
+                print("data update successfully")
+            }
+        } catch {
+            print("Error detected")
+        }
+    }
 }
 
