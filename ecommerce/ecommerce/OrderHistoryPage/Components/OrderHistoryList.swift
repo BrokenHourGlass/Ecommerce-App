@@ -12,6 +12,7 @@ struct OrderHistoryList: View {
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
     
+    @State var ordersData = [Order]()
     @State var showNextView = false
     @State var current = ""
     
@@ -21,7 +22,7 @@ struct OrderHistoryList: View {
                 EmptyView()
             }
             ScrollView {
-                ForEach(ordersManager.orders.reversed(), id: \.id) { order in
+                ForEach(ordersData.reversed(), id: \.id) { order in
                     Button(action: {
                         current = order.orderId
                         showNextView = true
@@ -35,6 +36,9 @@ struct OrderHistoryList: View {
             }
             .padding([.top], 12)
         }
+        .onAppear(perform: {
+            ordersData = CDOrdersHelper.cdOrdersHelper.getOrders()
+        })
     }
 }
 

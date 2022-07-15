@@ -16,10 +16,12 @@ class OrdersManager: ObservableObject {
     }
     
     func refundOrder(orderId: String) {
-        let target = orders.first(where: {
-            $0.orderId == orderId
-        })
-        target?.status = 0
+        for x in orders {
+            if (x.orderId == orderId) {
+                x.status = 0
+            }
+        }
+        
         print("Refunded successful in Orders Manager")
     }
     
