@@ -23,6 +23,7 @@ struct OrderItem: View {
                     .foregroundColor(Color.black)
                 Text(formateDate(date: orderObj.date))
                     .foregroundColor(Color.gray)
+                    .font(.caption)
             }
             .padding(.horizontal, 5)
             Spacer()
