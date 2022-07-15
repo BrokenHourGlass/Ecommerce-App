@@ -63,8 +63,8 @@ struct CheckoutForm: View {
                             .padding([.top], 30)
                             .padding([.bottom], 10)
                         VStack(spacing: 15) {
-                            CheckoutRadioField(label: "e-Money", value: $eMoney)
-                            CheckoutRadioField(label: "Cash on Delivery", value: $COD)
+                            CheckoutRadioField(label: "e-Money", value: $eMoney, alt: $COD)
+                            CheckoutRadioField(label: "Cash on Delivery", value: $COD, alt: $eMoney)
                         }
                         .padding([.bottom], 8)
                         CheckoutField(title: "Credit Card #", placeholder: "1234-5678-9012-3456", value: $creditCardNum)
