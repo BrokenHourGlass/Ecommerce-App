@@ -14,7 +14,7 @@ struct OrderSVC: View {
     var orderId: String?
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             NavigationBar()
                 .environmentObject(cartManager)
                 .environmentObject(ordersManager)
@@ -27,6 +27,11 @@ struct OrderSVC: View {
             }
             .padding(.horizontal, 15)
             Spacer()
+            Text("Order ID: \(orderId!)")
+                .padding(.horizontal)
+                .font(.subheadline)
+            OrderRefund(orderId: orderId!)
+                .environmentObject(ordersManager)
         }
         .navigationTitle("")
         .navigationBarHidden(true)

@@ -12,7 +12,16 @@ class OrdersManager: ObservableObject {
     
     func addToHistory(order: Order) {
         orders.append(order)
-        print("Added order to orders history")
+    }
+    
+    func refundOrder(orderId: String) {
+        for x in orders {
+            if (x.orderId == orderId) {
+                x.status = 0
+            }
+        }
+        
+        print("Refunded successful in Orders Manager")
     }
     
     func getHistory() -> [Order] {

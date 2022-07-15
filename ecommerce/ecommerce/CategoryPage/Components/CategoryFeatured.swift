@@ -12,6 +12,7 @@ struct CategoryFeatured: View {
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
     @EnvironmentObject var commentsManager: CommentsManager
+    @EnvironmentObject var wishlistManager: WishlistManager
     
     @State var showNextView = false
     @State var current: NewProduct = CategoryViewModel.placeholderProduct()
@@ -24,7 +25,7 @@ struct CategoryFeatured: View {
             Text("FEATURED")
                 .font(.title2)
                 .bold()
-            NavigationLink(destination: ProductSVC(product: current).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager), isActive: $showNextView) {
+            NavigationLink(destination: ProductSVC(product: current).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager), isActive: $showNextView) {
                 EmptyView()
             }
             ScrollView(.horizontal) {
@@ -67,5 +68,6 @@ struct CategoryFeatured_Previews: PreviewProvider {
             .environmentObject(HistoryManager())
             .environmentObject(OrdersManager())
             .environmentObject(CommentsManager())
+            .environmentObject(WishlistManager())
     }
 }

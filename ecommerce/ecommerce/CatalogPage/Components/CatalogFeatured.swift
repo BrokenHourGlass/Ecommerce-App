@@ -12,6 +12,7 @@ struct CatalogFeatured: View {
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
     @EnvironmentObject var commentsManager: CommentsManager
+    @EnvironmentObject var wishlistManager: WishlistManager
     
     @State var showNextView = false
     @State var current = 0
@@ -23,7 +24,7 @@ struct CatalogFeatured: View {
                 .bold()
             Text("Check out all the new highly recommended swag")
                 .font(.title3)
-            NavigationLink(destination: ProductSVC(product: products[current]).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager), isActive: $showNextView) {
+            NavigationLink(destination: ProductSVC(product: products[current]).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager), isActive: $showNextView) {
                 EmptyView()
             }
             ScrollView(.horizontal) {
@@ -53,5 +54,6 @@ struct CatalogFeatured_Previews: PreviewProvider {
             .environmentObject(HistoryManager())
             .environmentObject(OrdersManager())
             .environmentObject(CommentsManager())
+            .environmentObject(WishlistManager())
     }
 }
