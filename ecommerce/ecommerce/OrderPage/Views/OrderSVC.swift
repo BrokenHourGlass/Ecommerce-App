@@ -27,6 +27,8 @@ struct OrderSVC: View {
             }
             .padding(.horizontal, 15)
             Spacer()
+            OrderRefund(orderId: orderId!)
+                .environmentObject(ordersManager)
         }
         .navigationTitle("")
         .navigationBarHidden(true)
