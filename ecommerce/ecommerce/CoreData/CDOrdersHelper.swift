@@ -65,6 +65,8 @@ class CDOrdersHelper {
         } catch {
             print("Error detected")
         }
+        
+        print("Refunded successful in Core Data")
     }
 }
 

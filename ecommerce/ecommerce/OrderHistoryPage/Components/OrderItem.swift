@@ -15,7 +15,7 @@ struct OrderItem: View {
     
     var body: some View {
         HStack {
-            Image(systemName: "circle")
+            Image(systemName: OrdersViewModel.getSymbol(status: orderObj.status))
                 .foregroundColor(Color.accentColor)
             Text(orderObj.orderId)
                 .lineLimit(1)

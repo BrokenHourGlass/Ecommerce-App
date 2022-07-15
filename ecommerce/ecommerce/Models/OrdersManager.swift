@@ -15,11 +15,12 @@ class OrdersManager: ObservableObject {
         print("Added order to orders history")
     }
     
-    func refundOrder(orderObj: Order) {
+    func refundOrder(orderId: String) {
         let target = orders.first(where: {
-            $0.orderId == orderObj.orderId
+            $0.orderId == orderId
         })
         target?.status = 0
+        print("Refunded successful in Orders Manager")
     }
     
     func getHistory() -> [Order] {
