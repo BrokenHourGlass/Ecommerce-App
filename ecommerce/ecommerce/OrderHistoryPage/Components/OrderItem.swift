@@ -17,9 +17,14 @@ struct OrderItem: View {
         HStack {
             Image(systemName: OrdersViewModel.getSymbol(status: orderObj.status))
                 .foregroundColor(Color.accentColor)
-            Text(orderObj.orderId)
-                .lineLimit(1)
-                .foregroundColor(Color.black)
+            VStack(alignment: .leading) {
+                Text(orderObj.orderId)
+                    .lineLimit(1)
+                    .foregroundColor(Color.black)
+                Text(formateDate(date: orderObj.date))
+                    .foregroundColor(Color.gray)
+            }
+            .padding(.horizontal, 5)
             Spacer()
             Button(OrdersViewModel.getStatus(status: orderObj.status)) {
                 print("refund requested")
