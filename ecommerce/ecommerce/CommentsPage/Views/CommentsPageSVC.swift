@@ -22,8 +22,8 @@ struct CommentsPageSVC: View {
             NavigationBar()
                 .environmentObject(cartManager)
                 .environmentObject(ordersManager)
-            SignupModal()
             NavigationBack()
+            SignupModal()
             NavigationLink(destination: CommentSVC(product: product).environmentObject(commentsManager).environmentObject(cartManager).environmentObject(ordersManager), isActive: $showNextView) {
                 EmptyView()
             }
@@ -61,8 +61,3 @@ struct CommentsPageSVC: View {
     }
 }
 
-//struct CommentsPageSVC_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CommentsPageSVC(product: NewProduct(id: <#T##Int#>, name: <#T##String#>, category: <#T##String#>, new: <#T##Bool#>, price: <#T##Int#>, featured: <#T##Bool#>, cartIMG: <#T##String#>, productIMG: <#T##String#>, description: <#T##String#>, features: <#T##String#>, contents: <#T##[NewItem]#>, previews: <#T##[NewPreview]#>, recommended: <#T##[NewRecommended]#>))
-//    }
-//}

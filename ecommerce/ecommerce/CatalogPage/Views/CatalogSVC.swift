@@ -46,14 +46,4 @@ struct CatalogSVC: View {
     }
 }
 
-struct CatalogSVC_Previews: PreviewProvider {
-    static var previews: some View {
-        CatalogSVC()
-            .environmentObject(CartManager())
-            .environmentObject(HistoryManager())
-            .environmentObject(OrdersManager())
-            .environmentObject(CommentsManager())
-            .environmentObject(WishlistManager())
-        
-    }
-}
+

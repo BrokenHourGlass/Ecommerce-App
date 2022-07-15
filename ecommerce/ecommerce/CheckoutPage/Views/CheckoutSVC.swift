@@ -27,10 +27,4 @@ struct CheckoutSVC: View {
     }
 }
 
-struct CheckoutSVC_Previews: PreviewProvider {
-    static var previews: some View {
-        CheckoutSVC()
-            .environmentObject(CartManager())
-            .environmentObject(OrdersManager())
-    }
-}
+

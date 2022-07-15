@@ -19,6 +19,8 @@ struct CheckoutForm: View {
     @State var city = ""
     @State var country = ""
     
+    @State var creditCardNum = ""
+    
     let columns: [GridItem] = [
         GridItem(.flexible())
     ]
@@ -30,22 +32,37 @@ struct CheckoutForm: View {
             
             ScrollView {
                 VStack(alignment: .leading) {
-                    Text("BILLING DETAILS")
-                        .foregroundColor(.red)
-                        .padding([.top], 15)
-                        .padding([.bottom], 10)
-                    CheckoutField(title: "Name", placeholder: "Enter name here", value: $name)
-                    CheckoutField(title: "Email", placeholder: "Enter name email", value: $email)
-                    CheckoutField(title: "Phone Number", placeholder: "+1202-555-0136", value: $phoneNumber)
+                    Group {
+                        Text("BILLING DETAILS")
+                            .foregroundColor(.red)
+                            .padding([.top], 15)
+                            .padding([.bottom], 10)
+                        CheckoutField(title: "Name", placeholder: "Enter name here", value: $name)
+                        CheckoutField(title: "Email", placeholder: "Enter name email", value: $email)
+                        CheckoutField(title: "Phone Number", placeholder: "+1202-555-0136", value: $phoneNumber)
+                        
+                    }
                     
-                    Text("SHIPPING INFO")
-                        .foregroundColor(.red)
-                        .padding([.top], 30)
-                        .padding([.bottom], 10)
-                    CheckoutField(title: "Your Address", placeholder: "1137 Williams Avenue", value: $address)
-                    CheckoutField(title: "ZIP Code", placeholder: "10001", value: $zip)
-                    CheckoutField(title: "City", placeholder: "New York", value: $city)
-                    CheckoutField(title: "Country", placeholder: "United States", value: $country)
+                    Group {
+                        Text("SHIPPING INFO")
+                            .foregroundColor(.red)
+                            .padding([.top], 30)
+                            .padding([.bottom], 10)
+                        CheckoutField(title: "Your Address", placeholder: "1137 Williams Avenue", value: $address)
+                        CheckoutField(title: "ZIP Code", placeholder: "10001", value: $zip)
+                        CheckoutField(title: "City", placeholder: "New York", value: $city)
+                        CheckoutField(title: "Country", placeholder: "United States", value: $country)
+                        
+                    }
+                    
+                    Group {
+                        Text("PAYMENT DETAILS")
+                            .foregroundColor(.red)
+                            .padding([.top], 30)
+                            .padding([.bottom], 10)
+                        CheckoutField(title: "Credit Card #", placeholder: "1234-5678-9012-3456", value: $creditCardNum)
+                    }
+                    
                     
                     CheckoutSummary(checkoutDetailsObj: CheckoutDetailsObj(name: name, email: email, phoneNumber: phoneNumber, address: address, zip: zip, city: city, country: country))
                         .padding([.top], 30)

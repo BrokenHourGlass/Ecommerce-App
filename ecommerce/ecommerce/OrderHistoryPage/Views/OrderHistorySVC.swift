@@ -33,11 +33,4 @@ struct OrderHistorySVC: View {
     }
 }
 
-struct OrderHistorySVC_Previews: PreviewProvider {
-    static var previews: some View {
-        OrderHistorySVC()
-            .environmentObject(CartManager())
-            .environmentObject(HistoryManager())
-            .environmentObject(OrdersManager())
-    }
-}
+

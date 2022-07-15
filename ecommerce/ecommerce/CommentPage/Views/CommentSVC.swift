@@ -21,10 +21,10 @@ struct CommentSVC: View {
     
     var body: some View {
         VStack {
+            NavigationBack()
             NavigationBar()
                 .environmentObject(cartManager)
                 .environmentObject(ordersManager)
-            NavigationBack()
             VStack(alignment: .leading) {
                 Text("Title")
                 TextField("Enter title here", text: $titleText)
@@ -60,9 +60,3 @@ struct CommentSVC: View {
         
     }
 }
-
-//struct CommentSVC_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CommentSVC()
-//    }
-//}

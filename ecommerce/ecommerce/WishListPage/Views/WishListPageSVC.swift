@@ -49,13 +49,3 @@ struct WishListPageSVC: View {
     }
 }
 
-struct WishListPageSVC_Previews: PreviewProvider {
-    static var previews: some View {
-        WishListPageSVC()
-            .environmentObject(CartManager())
-            .environmentObject(HistoryManager())
-            .environmentObject(OrdersManager())
-            .environmentObject(CommentsManager())
-            .environmentObject(WishlistManager())
-    }
-}
