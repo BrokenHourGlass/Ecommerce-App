@@ -21,7 +21,7 @@ struct OrderItem: View {
                 .lineLimit(1)
                 .foregroundColor(Color.black)
             Spacer()
-            Button("Refund") {
+            Button(OrdersViewModel.getStatus(status: orderObj.status)) {
                 print("refund requested")
             }
             .foregroundColor(Color.accentColor)
