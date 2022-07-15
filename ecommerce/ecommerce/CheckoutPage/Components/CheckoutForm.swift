@@ -21,6 +21,8 @@ struct CheckoutForm: View {
     
     @State var COD = false
     @State var eMoney = false
+    @State var eMoneyNum = ""
+    @State var eMoneyPin = ""
     @State var creditCardNum = ""
     
     let columns: [GridItem] = [
@@ -67,6 +69,8 @@ struct CheckoutForm: View {
                             CheckoutRadioField(label: "Cash on Delivery", value: $COD, alt: $eMoney)
                         }
                         .padding([.bottom], 8)
+                        CheckoutField(title: "e-Money Number", placeholder: "238521993", value: $eMoneyNum)
+                        CheckoutField(title: "e-Money PIN", placeholder: "1234", value: $eMoneyPin)
                         CheckoutField(title: "Credit Card #", placeholder: "1234-5678-9012-3456", value: $creditCardNum)
                     }
                     
