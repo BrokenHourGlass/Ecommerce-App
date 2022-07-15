@@ -60,13 +60,10 @@ class CDOrdersHelper {
                 let order = orders.first!
                 order.status = 0
                 try context?.save()
-                print("data update successfully")
             }
         } catch {
             print("Error detected")
         }
-        
-        print("Refunded successful in Core Data")
     }
 }
 

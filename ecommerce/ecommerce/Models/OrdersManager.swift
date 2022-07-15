@@ -12,7 +12,6 @@ class OrdersManager: ObservableObject {
     
     func addToHistory(order: Order) {
         orders.append(order)
-        print("Added order to orders history")
     }
     
     func refundOrder(orderId: String) {

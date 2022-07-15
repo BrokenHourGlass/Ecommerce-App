@@ -10,6 +10,8 @@ import SwiftUI
 struct OrderRefund: View {
     @EnvironmentObject var ordersManager: OrdersManager
     
+    @State var refunded = false
+    
     var orderId: String
     
     var body: some View {
@@ -17,16 +19,21 @@ struct OrderRefund: View {
             Button(action: {
                 ordersManager.refundOrder(orderId: orderId)
                 CDOrdersHelper.cdOrdersHelper.refundOrder(orderId: orderId)
+                refunded = true
             }) {
                 Text("Refund")
                     .padding()
                     .frame(maxWidth: .infinity)
                     .border(Color.red)
             }
+            .disabled(refunded)
             .foregroundColor(Color.white)
-            .background(Color.red)
+            .background(!refunded ? Color.red : Color.gray)
         }
         .padding()
+        .onAppear(perform: {
+            refunded = OrderViewModel.getStatus(orderObj: ordersManager.orders.first(where: { $0.orderId == orderId})!)
+        })
     }
     
 }
