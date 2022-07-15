@@ -12,6 +12,7 @@ struct ProductSVC: View {
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
     @EnvironmentObject var commentsManager: CommentsManager
+    @EnvironmentObject var wishlistManager: WishlistManager
     
     var product: NewProduct
     let columns: [GridItem] = [GridItem(.flexible())]
@@ -32,6 +33,7 @@ struct ProductSVC: View {
                         .environmentObject(ordersManager)
                     ProductImage(product: product)
                     ProductDetails(product: product)
+                        .environmentObject(wishlistManager)
                     ProductQuantity(product: product)
                         .environmentObject(cartManager)
                     ProductFeatures(product: product)
@@ -73,5 +75,6 @@ struct ProductSVC_Previews: PreviewProvider {
             .environmentObject(HistoryManager())
             .environmentObject(OrdersManager())
             .environmentObject(CommentsManager())
+            .environmentObject(WishlistManager())
     }
 }
