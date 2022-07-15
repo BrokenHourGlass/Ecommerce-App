@@ -15,12 +15,22 @@ struct CheckoutRadioField: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                ZStack {
-                    Circle().fill(Color.black.opacity(0.2)).frame(width: 20, height: 20)
-                    Circle().stroke(Color.black.opacity(0.2), lineWidth: 1).frame(width: 30, height: 30)
+                Button(action: {
+                    value.toggle()
+                }) {
+                    ZStack {
+                        if (value) {
+                            Circle().fill(Color.red).frame(width: 20, height: 20)
+                            Circle().stroke(Color.red, lineWidth: 1).frame(width: 30, height: 30)
+                        } else {
+                            Circle().fill(Color.black.opacity(0.2)).frame(width: 20, height: 20)
+                            Circle().stroke(Color.black.opacity(0.2), lineWidth: 1).frame(width: 30, height: 30)
+                        }
+                    }
+                    Text(label)
+                        .foregroundColor(Color.black)
+                    Spacer()
                 }
-                Text(label)
-                Spacer()
             }
             .padding()
             .overlay(
