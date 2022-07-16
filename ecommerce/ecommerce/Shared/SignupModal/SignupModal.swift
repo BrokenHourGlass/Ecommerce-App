@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct SignupModal: View {
+    var loggedIn = userDefaults.bool(forKey: "isLoggedIn")
+    
     var body: some View {
         VStack(alignment: .leading) {
-            if (!userDefaults.bool(forKey: "isLoggedIn")) {
-                Group {
+            if (!loggedIn) {
+                VStack(alignment: .leading) {
                     Text("Sign in for the best experience")
                         .font(.title2)
                         .fontWeight(.light)
@@ -25,16 +27,10 @@ struct SignupModal: View {
                     .foregroundColor(Color.black)
                     .background(Color.orange)
                 }
+                .padding()
             } else {
-                Group {
-                    HStack {
-                        Text("Welcome back!")
-                            .font(.title3)
-                            .foregroundColor(Color.accentColor)
-                    }
-                }
+                EmptyView()
             }
         }
-        .padding()
     }
 }
