@@ -11,14 +11,16 @@ struct CheckoutRadioField: View {
     var label: String
     
     @Binding var value: Bool
-    @Binding var alt: Bool
+    @Binding var alt1: Bool
+    @Binding var alt2: Bool
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
                 Button(action: {
                     value.toggle()
-                    alt = false
+                    alt1 = false
+                    alt2 = false
                 }) {
                     ZStack {
                         if (value) {
