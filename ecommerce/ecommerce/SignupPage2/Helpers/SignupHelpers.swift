@@ -41,13 +41,14 @@ func credentialsValidation(credentialsObj: SignupCredentials) throws {
         throw SignupErrors.invalidPasswordFormat
     }
     
+    guard credentialsObj.password == credentialsObj.confirmPassword else {
+        throw SignupErrors.passwordsDoNotMatch
+    }
+    
     guard !credentialsObj.mobileNumber.isEmpty else {
         throw SignupErrors.invalidMobileNumber
     }
     
-    guard credentialsObj.password == credentialsObj.confirmPassword else {
-        throw SignupErrors.passwordsDoNotMatch
-    }
     
 }
 

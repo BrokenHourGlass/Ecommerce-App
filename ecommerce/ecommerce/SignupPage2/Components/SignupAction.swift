@@ -18,6 +18,7 @@ struct SignupAction: View {
     
     @State var message = ""
     @State var showAlert = false
+    @State var showSuccess = false
     
     var body: some View {
         VStack {
@@ -39,6 +40,8 @@ struct SignupAction: View {
                         password = ""
                         confirmPassword = ""
                         mobileNumber = ""
+                        
+                        showSuccess = true
                     } else {
                         message = result.1
                         showAlert = true
@@ -60,6 +63,9 @@ struct SignupAction: View {
         .padding([.top], 15)
         .alert(isPresented: $showAlert) {
             Alert(title: Text("Notification"), message: Text(message), dismissButton: .default(Text("OK")))
+        }
+        .alert(isPresented: $showSuccess) {
+             Alert(title: Text("Congratulations!"), message: Text("You're all set! You can now login."), dismissButton: .default(Text("OK")))
         }
     }
 }
