@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SignupPage2SVC: View {
     
-    
     var body: some View {
         VStack(alignment: .leading) {
             Spacer()
@@ -24,6 +23,8 @@ struct SignupPage2SVC: View {
                 .padding(.horizontal, 15)
                 SignupPageModal()
             }
+            .navigationTitle("")
+            .navigationBarHidden(true)
             Spacer()
         }
         .padding()
