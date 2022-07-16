@@ -9,12 +9,20 @@ import SwiftUI
 
 struct LoginPage2SVC: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct LoginPage2SVC_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginPage2SVC()
+        VStack(alignment: .leading) {
+            Spacer()
+            HStack {
+                Text("Log in")
+                    .font(.title)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color.white)
+                Spacer()
+            }
+            .padding(.horizontal, 15)
+            LoginPageModal()
+            Spacer()
+        }
+        .padding()
+        .background(Color.black)
     }
 }

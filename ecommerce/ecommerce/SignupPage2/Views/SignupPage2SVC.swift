@@ -14,7 +14,7 @@ struct SignupPage2SVC: View {
         VStack(alignment: .leading) {
             Spacer()
             HStack {
-                Text("Sign Up")
+                Text("Sign up")
                     .font(.title)
                     .fontWeight(.heavy)
                     .foregroundColor(Color.white)
