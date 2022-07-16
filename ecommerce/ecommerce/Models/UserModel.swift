@@ -16,7 +16,7 @@ class UserModel {
     var mobileNumber: String
     
     init(userId: String, firstname: String, lastname: String, email: String, password: String, mobileNumber: String) {
-        self.userId = UUID().uuidString
+        self.userId = userId
         self.firstname = firstname
         self.lastname = lastname
         self.email = email

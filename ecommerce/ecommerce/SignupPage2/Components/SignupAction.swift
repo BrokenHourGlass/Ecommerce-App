@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct SignupAction: View {
+    
+    @Binding var firstname: String
+    @Binding var lastname: String
+    @Binding var email: String
+    @Binding var password: String
+    @Binding var confirmPassword: String
+    @Binding var mobileNumber: String
+    
     var body: some View {
         VStack {
             HStack {
@@ -15,8 +23,17 @@ struct SignupAction: View {
                     .foregroundColor(Color.white)
                 Spacer()
             }
-            
-            Button (action: {}) {
+            Button (action: {
+                CDUsersHelper.cdUsersHelper.addNewUser(userObj: UserModel(userId: UUID().uuidString, firstname: firstname, lastname: lastname, email: email, password: password, mobileNumber: mobileNumber))
+                
+                firstname = ""
+                lastname = ""
+                email = ""
+                password = ""
+                confirmPassword = ""
+                mobileNumber = ""
+                
+            }) {
                 Text("Agree and continue")
                     .bold()
                     .padding()

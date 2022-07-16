@@ -30,7 +30,7 @@ struct SignupPageModal: View {
             SignupField(placeholder: "Password", value: $password)
             SignupField(placeholder: "Confirm Password", value: $confirmPassword)
             SignupField(placeholder: "Mobile Number", value: $mobileNumber)
-            SignupAction()
+            SignupAction(firstname: $firstname, lastname: $lastname, email: $email, password: $password, confirmPassword: $confirmPassword, mobileNumber: $mobileNumber)
         }
         .padding()
         .background(Color.gray.opacity(0.25))
