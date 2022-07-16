@@ -22,7 +22,7 @@ struct LoginPageModal: View {
             }
             SignupField(placeholder: "Email", value: $email )
             SignupField(placeholder: "Password", value: $password)
-            LoginAction()
+            LoginAction(email: $email, password: $password)
         }
         .padding()
         .background(Color.gray.opacity(0.25))
