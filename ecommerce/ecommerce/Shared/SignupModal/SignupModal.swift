@@ -22,10 +22,6 @@ struct SignupModal: View {
             }
             .foregroundColor(Color.black)
             .background(Color.orange)
-            NavigationLink(destination: SignupPage2SVC()) {
-                Text("Create an account")
-                    .fontWeight(.light)
-            }
         }
         .padding()
     }
