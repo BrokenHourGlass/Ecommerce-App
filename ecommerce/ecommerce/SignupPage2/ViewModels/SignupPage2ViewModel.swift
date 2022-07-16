@@ -22,10 +22,14 @@ class SignupPage2ViewModel {
             msg = "Invalid lastname"
         } catch SignupErrors.invalidEmail {
             msg = "Invalid email"
+        } catch SignupErrors.invalidEmailFormat {
+           msg = "Invalid email format"
         } catch SignupErrors.invalidPassword {
             msg = "Invalid password"
         } catch SignupErrors.invalidConfirmPassword {
             msg = "Invalid confirm password"
+        } catch SignupErrors.invalidPasswordFormat {
+            msg = "Invalid password format"
         } catch SignupErrors.invalidMobileNumber {
             msg = "Invalid mobile number"
         } catch SignupErrors.passwordsDoNotMatch {
@@ -42,8 +46,10 @@ enum SignupErrors: Error {
     case invalidFirstname
     case invalidLastname
     case invalidEmail
+    case invalidEmailFormat
     case invalidPassword
     case invalidConfirmPassword
+    case invalidPasswordFormat
     case invalidMobileNumber
     case passwordsDoNotMatch
 }
