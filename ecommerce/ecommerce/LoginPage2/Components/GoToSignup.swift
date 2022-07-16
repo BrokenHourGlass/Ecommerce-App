@@ -1,25 +1,26 @@
 //
-//  GoToLogin.swift
+//  GoToSignup.swift
 //  ecommerce
 //
-//  Created by Vincent Salinas on 7/15/22.
+//  Created by Vincent Salinas on 7/16/22.
 //
 
 import SwiftUI
 
-struct GoToLogin: View {
+struct GoToSignup: View {
     
     @State var showNextView = false
     
     var body: some View {
         Section {
-            NavigationLink(destination: LoginPage2SVC().navigationTitle("").navigationBarHidden(true), isActive: $showNextView) {
+            NavigationLink(destination: SignupPage2SVC().navigationTitle("").navigationBarHidden(true), isActive: $showNextView) {
                 EmptyView()
             }
             Button (action: {
                 showNextView = true
+                print("Go to login")
             }) {
-                Text("Login")
+                Text("Create Account")
                     .bold()
                     .padding()
                     .frame(maxWidth: .infinity)
@@ -31,3 +32,4 @@ struct GoToLogin: View {
         }
     }
 }
+

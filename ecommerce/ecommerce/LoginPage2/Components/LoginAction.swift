@@ -16,24 +16,27 @@ struct LoginAction: View {
             HStack {
                 Spacer()
             }
-            Button (action: {
-                validate()
-            }) {
-                Text("Continue")
-                    .bold()
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .border(Color.green)
+            VStack(spacing: 10) {
+                Button (action: {
+                    validate()
+                }) {
+                    Text("Continue")
+                        .bold()
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .border(Color.green)
+                }
+                .foregroundColor(Color.white)
+                .background(Color.green)
+                .cornerRadius(15)
+                GoToSignup()
             }
-            .foregroundColor(Color.white)
-            .background(Color.green)
-            .cornerRadius(15)
         }
         .padding([.top], 15)
     }
     
     func validate(){
-
+        
         if checkInput(text: email) && checkInput(text: password){
             //check if user is registered
             if !CDUsersHelper.cdUsersHelper.isUserRegistered(email: email){
@@ -50,15 +53,10 @@ struct LoginAction: View {
                     print(" please try entering the correct password")
                 }
             }
-            
         }
         else{
             print("please input username and password")
         }
-        
-    
-
-
     }
     
     func checkInput(text: String) -> Bool{
@@ -71,8 +69,3 @@ struct LoginAction: View {
     
 }
 
-//struct LoginAction_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LoginAction()
-//    }
-//}
