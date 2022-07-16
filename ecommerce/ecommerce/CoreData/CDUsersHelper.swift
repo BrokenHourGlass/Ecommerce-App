@@ -57,4 +57,70 @@ class CDUsersHelper {
         return user
     }
     
+    func getData() -> [PNPUser]{
+     
+        
+        var pnpuser = [PNPUser]()
+        
+        var fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PNPUser")
+        
+        do{
+            pnpuser = try context?.fetch(fetchRequest) as! [PNPUser]
+        } catch{
+            print("could not fetch data")
+        }
+
+        return pnpuser
+    }
+    
+    func isUserRegistered(email: String) -> Bool{
+        var isUserCreated = false
+        
+        var pnpuser = PNPUser()
+        var fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PNPUser")
+        fetchRequest.predicate = NSPredicate(format: "email ==%@", email)
+        fetchRequest.fetchLimit = 1
+        
+        do{
+            let request = try context?.fetch(fetchRequest) as! [PNPUser]
+            if request.count != 0{
+                isUserCreated = true
+                pnpuser = request.first as! PNPUser
+            } else{
+                isUserCreated = false
+                print("erro: no user found")
+            }
+                
+        } catch{
+            print("ERror: no user found")
+        }
+        return isUserCreated
+        
+    }
+    
+    func getOne(email: String) -> PNPUser{
+        var pnpuser = PNPUser()
+        let fetchrequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PNPUser")
+        fetchrequest.predicate = NSPredicate(format: "email == %@", email)
+        fetchrequest.fetchLimit = 1
+        
+        do{
+            let request = try context?.fetch(fetchrequest) as! [PNPUser]
+            if request.count != 0 {
+                pnpuser = request.first as! PNPUser
+            } else{
+                print("error: no user found")
+                return pnpuser
+            }
+            
+        } catch{
+            print("error")
+        }
+        return pnpuser
+        
+        
+    }
+    
+    
+    
 }
