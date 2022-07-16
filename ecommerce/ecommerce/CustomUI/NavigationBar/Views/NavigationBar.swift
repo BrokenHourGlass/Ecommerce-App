@@ -16,7 +16,7 @@ struct NavigationBar: View {
             Button {
                 print("remove")
             } label: {
-                Image(systemName: "line.3.horizontal")
+                Image(systemName: "gear")
                     .foregroundColor(Color.white)
             }
             Spacer()

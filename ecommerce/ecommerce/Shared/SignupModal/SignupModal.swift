@@ -15,7 +15,7 @@ struct SignupModal: View {
                     Text("Sign in for the best experience")
                         .font(.title2)
                         .fontWeight(.light)
-                    NavigationLink(destination: SignupPage2SVC()) {
+                    NavigationLink(destination: LoginPage2SVC()) {
                         Text("Sign in securely")
                             .fontWeight(.light)
                             .padding()
@@ -27,8 +27,11 @@ struct SignupModal: View {
                 }
             } else {
                 Group {
-                    Text("Welcome back!")
-                        .foregroundColor(Color.accentColor)
+                    HStack {
+                        Text("Welcome back!")
+                            .font(.title3)
+                            .foregroundColor(Color.accentColor)
+                    }
                 }
             }
         }
