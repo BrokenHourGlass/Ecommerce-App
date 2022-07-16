@@ -48,6 +48,20 @@ struct MainTabControllerSVC: View {
                     }
                     .tag(1)
                 
+                LoginPage2SVC()
+                    .tabItem {
+                        Image(systemName: "person")
+                        Text("Login")
+                    }
+                    .tag(2)
+                
+                SignupPage2SVC()
+                    .tabItem {
+                        Image(systemName: "person")
+                        Text("Signup")
+                    }
+                    .tag(3)
+                
                 SearchHistorySVC()
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
@@ -56,7 +70,7 @@ struct MainTabControllerSVC: View {
                         Image(systemName: "person")
                         Text("History")
                     }
-                    .tag(2)
+                    .tag(4)
                 
                 OrderHistorySVC()
                     .environmentObject(cartManager)
@@ -66,7 +80,7 @@ struct MainTabControllerSVC: View {
                         Image(systemName: "list.bullet.rectangle.fill")
                         Text("Orders")
                     }
-                    .tag(3)
+                    .tag(5)
                 
                 WishListPageSVC()
                     .environmentObject(cartManager)
@@ -78,22 +92,7 @@ struct MainTabControllerSVC: View {
                         Image(systemName: "star.fill")
                         Text("Wish List")
                     }
-                    .tag(4)
-                
-                LoginPage2SVC()
-                    .tabItem {
-                        Image(systemName: "person")
-                        Text("Login")
-                    }
-                    .tag(5)
-                
-                SignupPage2SVC()
-                    .tabItem {
-                        Image(systemName: "person")
-                        Text("Signup")
-                    }
                     .tag(6)
-                
                 
             } //TabView
         }

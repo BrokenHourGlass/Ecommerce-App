@@ -8,6 +8,18 @@
 import SwiftUI
 
 struct SignupAction: View {
+    
+    @Binding var firstname: String
+    @Binding var lastname: String
+    @Binding var email: String
+    @Binding var password: String
+    @Binding var confirmPassword: String
+    @Binding var mobileNumber: String
+    
+    @State var message = ""
+    @State var showAlert = false
+    @State var showSuccess = false
+    
     var body: some View {
         VStack {
             HStack {
@@ -15,19 +27,46 @@ struct SignupAction: View {
                     .foregroundColor(Color.white)
                 Spacer()
             }
-            
-            Button (action: {}) {
-                Text("Agree and continue")
-                    .bold()
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .border(Color.green)
+            VStack(spacing: 10) {
+                Button (action: {
+                    let result = SignupPage2ViewModel.validateCredentials(credentials: SignupCredentials(firstname: firstname, lastname: lastname, email: email, password: password, confirmPassword: confirmPassword, mobileNumber: mobileNumber))
+                    
+                    if (result.0) {
+                        CDUsersHelper.cdUsersHelper.addNewUser(userObj: UserModel(userId: UUID().uuidString, firstname: firstname, lastname: lastname, email: email, password: password, mobileNumber: mobileNumber))
+                        
+                        firstname = ""
+                        lastname = ""
+                        email = ""
+                        password = ""
+                        confirmPassword = ""
+                        mobileNumber = ""
+                        
+                        showSuccess = true
+                    } else {
+                        message = result.1
+                        showAlert = true
+                    }
+                }) {
+                    Text("Agree and continue")
+                        .bold()
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .border(Color.green)
+                }
+                .foregroundColor(Color.white)
+                .background(Color.green)
+                .cornerRadius(15)
+                GoToLogin()
+                
             }
-            .foregroundColor(Color.white)
-            .background(Color.green)
-            .cornerRadius(15)
         }
         .padding([.top], 15)
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("Notification"), message: Text(message), dismissButton: .default(Text("OK")))
+        }
+        .alert(isPresented: $showSuccess) {
+             Alert(title: Text("Congratulations!"), message: Text("You're all set! You can now login."), dismissButton: .default(Text("OK")))
+        }
     }
 }
 

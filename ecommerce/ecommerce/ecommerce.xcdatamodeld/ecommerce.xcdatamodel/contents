@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Item" representedClassName="Item" syncable="YES">
         <attribute name="item" optional="YES" attributeType="String"/>
         <attribute name="pid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
@@ -22,6 +22,14 @@
         <attribute name="orderId" optional="YES" attributeType="String"/>
         <attribute name="productId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="quantity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="PNPUser" representedClassName="PNPUser" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstname" optional="YES" attributeType="String"/>
+        <attribute name="lastname" optional="YES" attributeType="String"/>
+        <attribute name="mobileNumber" optional="YES" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="userId" optional="YES" attributeType="String"/>
     </entity>
     <entity name="PNPWishlistItem" representedClassName="PNPWishlistItem" syncable="YES">
         <attribute name="id" optional="YES" attributeType="String"/>
@@ -70,10 +78,11 @@
         <element name="PNPComment" positionX="27" positionY="135" width="128" height="119"/>
         <element name="PNPOrder" positionX="72" positionY="189" width="128" height="74"/>
         <element name="PNPOrderItem" positionX="27" positionY="135" width="128" height="74"/>
+        <element name="PNPWishlistItem" positionX="27" positionY="135" width="128" height="89"/>
         <element name="Preview" positionX="18" positionY="72" width="128" height="14"/>
         <element name="Product" positionX="-27" positionY="27" width="128" height="224"/>
         <element name="Recommended" positionX="54" positionY="108" width="128" height="14"/>
-        <element name="User" positionX="36" positionY="144" width="128" height="104"/>
-        <element name="PNPWishlistItem" positionX="27" positionY="135" width="128" height="89"/>
+        <element name="User" positionX="36" positionY="144" width="128" height="14"/>
+        <element name="PNPUser" positionX="27" positionY="135" width="128" height="119"/>
     </elements>
 </model>
