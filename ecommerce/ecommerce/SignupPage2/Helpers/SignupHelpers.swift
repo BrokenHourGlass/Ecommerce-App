@@ -14,23 +14,27 @@ func credentialsValidation(credentialsObj: SignupCredentials) throws {
     }
     
     guard !credentialsObj.lastname.isEmpty else {
-        throw SignupErrors.invalidFirstname
+        throw SignupErrors.invalidLastname
     }
     
     guard !credentialsObj.email.isEmpty else {
-        throw SignupErrors.invalidFirstname
+        throw SignupErrors.invalidEmail
     }
     
     guard !credentialsObj.password.isEmpty else {
-        throw SignupErrors.invalidFirstname
+        throw SignupErrors.invalidPassword
     }
     
     guard !credentialsObj.confirmPassword.isEmpty else {
-        throw SignupErrors.invalidFirstname
+        throw SignupErrors.invalidConfirmPassword
     }
     
     guard !credentialsObj.mobileNumber.isEmpty else {
-        throw SignupErrors.invalidFirstname
+        throw SignupErrors.invalidMobileNumber
+    }
+    
+    guard credentialsObj.password == credentialsObj.confirmPassword else {
+        throw SignupErrors.passwordsDoNotMatch
     }
     
 }

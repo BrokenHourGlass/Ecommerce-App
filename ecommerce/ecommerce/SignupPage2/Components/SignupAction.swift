@@ -16,6 +16,9 @@ struct SignupAction: View {
     @Binding var confirmPassword: String
     @Binding var mobileNumber: String
     
+    @State var message = ""
+    @State var showAlert = false
+    
     var body: some View {
         VStack {
             HStack {
@@ -25,15 +28,21 @@ struct SignupAction: View {
             }
             VStack(spacing: 10) {
                 Button (action: {
-                    CDUsersHelper.cdUsersHelper.addNewUser(userObj: UserModel(userId: UUID().uuidString, firstname: firstname, lastname: lastname, email: email, password: password, mobileNumber: mobileNumber))
+                    let result = SignupPage2ViewModel.validateCredentials(credentials: SignupCredentials(firstname: firstname, lastname: lastname, email: email, password: password, confirmPassword: confirmPassword, mobileNumber: mobileNumber))
                     
-                    firstname = ""
-                    lastname = ""
-                    email = ""
-                    password = ""
-                    confirmPassword = ""
-                    mobileNumber = ""
-                    
+                    if (result.0) {
+                        CDUsersHelper.cdUsersHelper.addNewUser(userObj: UserModel(userId: UUID().uuidString, firstname: firstname, lastname: lastname, email: email, password: password, mobileNumber: mobileNumber))
+                        
+                        firstname = ""
+                        lastname = ""
+                        email = ""
+                        password = ""
+                        confirmPassword = ""
+                        mobileNumber = ""
+                    } else {
+                        message = result.1
+                        showAlert = true
+                    }
                 }) {
                     Text("Agree and continue")
                         .bold()
@@ -49,6 +58,9 @@ struct SignupAction: View {
             }
         }
         .padding([.top], 15)
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("Notification"), message: Text(message), dismissButton: .default(Text("OK")))
+        }
     }
 }
 

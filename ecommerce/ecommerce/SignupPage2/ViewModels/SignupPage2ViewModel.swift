@@ -28,6 +28,8 @@ class SignupPage2ViewModel {
             msg = "Invalid confirm password"
         } catch SignupErrors.invalidMobileNumber {
             msg = "Invalid mobile number"
+        } catch SignupErrors.passwordsDoNotMatch {
+            msg = "Passwords do not match"
         } catch {
             msg = "Unknown error detected"
         }
@@ -43,4 +45,5 @@ enum SignupErrors: Error {
     case invalidPassword
     case invalidConfirmPassword
     case invalidMobileNumber
+    case passwordsDoNotMatch
 }
