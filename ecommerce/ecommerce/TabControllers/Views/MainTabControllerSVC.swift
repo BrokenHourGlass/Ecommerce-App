@@ -87,8 +87,4 @@ struct MainTabControllerSVC: View {
     }
 }
 
-struct TemporarySVC_Previews: PreviewProvider {
-    static var previews: some View {
-        MainTabControllerSVC()
-    }
-}
+

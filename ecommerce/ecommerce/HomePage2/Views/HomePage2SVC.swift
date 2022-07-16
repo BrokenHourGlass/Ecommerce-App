@@ -59,13 +59,4 @@ struct HomePage2SVC: View {
     }
 }
 
-struct HomePage2SVC_Previews: PreviewProvider {
-    static var previews: some View {
-        HomePage2SVC()
-            .environmentObject(CartManager())
-            .environmentObject(HistoryManager())
-            .environmentObject(OrdersManager())
-            .environmentObject(CommentsManager())
-            .environmentObject(WishlistManager())
-    }
-}
+

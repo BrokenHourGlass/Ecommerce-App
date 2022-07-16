@@ -85,10 +85,4 @@ struct ShoppingCartSVC: View {
     }
 }
 
-struct ShoppingCartSVC_Previews: PreviewProvider {
-    static var previews: some View {
-        ShoppingCartSVC()
-            .environmentObject(CartManager())
-            .environmentObject(OrdersManager())
-    }
-}
+

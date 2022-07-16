@@ -35,11 +35,4 @@ struct SearchHistorySVC: View {
     }
 }
 
-struct SearchHistorySVC_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchHistorySVC()
-            .environmentObject(CartManager())
-            .environmentObject(HistoryManager())
-            .environmentObject(OrdersManager())
-    }
-}
+

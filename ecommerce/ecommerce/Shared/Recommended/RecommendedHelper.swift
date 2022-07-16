@@ -12,6 +12,7 @@ struct RecommendedHelper: View {
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
     @EnvironmentObject var commentsManager: CommentsManager
+    @EnvironmentObject var wishlistManager: WishlistManager
     
     var product: NewProduct
     
@@ -25,27 +26,20 @@ struct RecommendedHelper: View {
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
+                    .environmentObject(wishlistManager)
                 RecommendedItemHelper(recommended: product.recommended[1])
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
+                    .environmentObject(wishlistManager)
                 RecommendedItemHelper(recommended: product.recommended[2])
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
+                    .environmentObject(wishlistManager)
             }
         }
         .padding(.vertical, 40)
     }
 }
 
-struct RecommendedHelper_Previews: PreviewProvider {
-    static var previews: some View {
-        RecommendedHelper(product: products[0])
-            .environmentObject(CartManager())
-            .environmentObject(HistoryManager())
-            .environmentObject(OrdersManager())
-            .environmentObject(CommentsManager())
-        
-    }
-}

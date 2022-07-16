@@ -29,8 +29,4 @@ struct ThankYouSVC: View {
     }
 }
 
-struct ThankYouSVC_Previews: PreviewProvider {
-    static var previews: some View {
-        ThankYouSVC()
-    }
-}
+

@@ -50,11 +50,13 @@ struct ProductSVC: View {
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
                     .environmentObject(commentsManager)
+                    .environmentObject(wishlistManager)
                 ChooseCategory()
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
                     .environmentObject(commentsManager)
+                    .environmentObject(wishlistManager)
                 About()
                 FooterHelper()
             }
@@ -68,13 +70,3 @@ struct ProductSVC: View {
     }
 }
 
-struct ProductSVC_Previews: PreviewProvider {
-    static var previews: some View {
-        ProductSVC(product: products[0])
-            .environmentObject(CartManager())
-            .environmentObject(HistoryManager())
-            .environmentObject(OrdersManager())
-            .environmentObject(CommentsManager())
-            .environmentObject(WishlistManager())
-    }
-}

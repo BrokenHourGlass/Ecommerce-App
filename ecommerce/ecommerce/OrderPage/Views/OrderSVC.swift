@@ -38,10 +38,4 @@ struct OrderSVC: View {
     }
 }
 
-struct OrderSVC_Previews: PreviewProvider {
-    static var previews: some View {
-        OrderSVC(orderId: "some order Id")
-            .environmentObject(CartManager())
-            .environmentObject(OrdersManager())
-    }
-}
+

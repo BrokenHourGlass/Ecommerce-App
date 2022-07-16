@@ -47,13 +47,3 @@ struct CategorySVC: View {
     }
 }
 
-struct CategorySVC_Previews: PreviewProvider {
-    static var previews: some View {
-        CategorySVC(category: "headphones")
-            .environmentObject(CartManager())
-            .environmentObject(HistoryManager())
-            .environmentObject(OrdersManager())
-            .environmentObject(CommentsManager())
-            .environmentObject(WishlistManager())
-    }
-}

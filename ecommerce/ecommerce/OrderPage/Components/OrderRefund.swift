@@ -21,7 +21,7 @@ struct OrderRefund: View {
                 CDOrdersHelper.cdOrdersHelper.refundOrder(orderId: orderId)
                 refunded = true
             }) {
-                Text("Refund")
+                Text(refunded ? "Refunded" : "Refund")
                     .padding()
                     .frame(maxWidth: .infinity)
                     .border(Color.red)

@@ -12,6 +12,7 @@ struct ChooseCategory: View {
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
     @EnvironmentObject var commentsManager: CommentsManager
+    @EnvironmentObject var wishlistManager: WishlistManager
     
     @State var showNextView = false
     @State var chosenCategory = ""
@@ -22,7 +23,7 @@ struct ChooseCategory: View {
                 .font(.title2)
                 .bold()
                 .padding([.bottom], 15)
-            NavigationLink(destination: CategorySVC(category: chosenCategory).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager), isActive: $showNextView) {
+            NavigationLink(destination: CategorySVC(category: chosenCategory).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager), isActive: $showNextView) {
                 EmptyView()
             }
             ChooseCategoryHelper(showNextView: $showNextView, chosenCategory: $chosenCategory, category: "HEADPHONES", img: "shared/image-xx99-mark-one-headphones")
@@ -31,15 +32,5 @@ struct ChooseCategory: View {
         }
         .frame(width: 200)
         .padding([.top], 30)
-    }
-}
-
-struct ChooseCategory_Previews: PreviewProvider {
-    static var previews: some View {
-        ChooseCategory()
-            .environmentObject(CartManager())
-            .environmentObject(HistoryManager())
-            .environmentObject(OrdersManager())
-            .environmentObject(CommentsManager())
     }
 }
