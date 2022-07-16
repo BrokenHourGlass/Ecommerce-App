@@ -10,18 +10,27 @@ import SwiftUI
 struct SignupModal: View {
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Sign in for the best experience")
-                .font(.title2)
-                .fontWeight(.light)
-            NavigationLink(destination: SignupPage2SVC()) {
-                Text("Sign in securely")
-                    .fontWeight(.light)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .border(Color.orange)
+            if (!userDefaults.bool(forKey: "isLoggedIn")) {
+                Group {
+                    Text("Sign in for the best experience")
+                        .font(.title2)
+                        .fontWeight(.light)
+                    NavigationLink(destination: SignupPage2SVC()) {
+                        Text("Sign in securely")
+                            .fontWeight(.light)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .border(Color.orange)
+                    }
+                    .foregroundColor(Color.black)
+                    .background(Color.orange)
+                }
+            } else {
+                Group {
+                    Text("Welcome back!")
+                        .foregroundColor(Color.accentColor)
+                }
             }
-            .foregroundColor(Color.black)
-            .background(Color.orange)
         }
         .padding()
     }
