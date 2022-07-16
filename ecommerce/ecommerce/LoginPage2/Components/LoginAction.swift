@@ -10,15 +10,19 @@ struct LoginAction: View {
     
     @Binding var email: String
     @Binding var password: String
+    @State var showNextView = false
     
     var body: some View {
         VStack {
             HStack {
                 Spacer()
             }
+            NavigationLink(destination: MainTabControllerSVC().navigationTitle("").navigationBarHidden(true), isActive: $showNextView) {
+                EmptyView()
+            }
             VStack(spacing: 10) {
                 Button (action: {
-                    validate()
+                    showNextView = validate()
                 }) {
                     Text("Continue")
                         .bold()
@@ -35,9 +39,11 @@ struct LoginAction: View {
         .padding([.top], 15)
     }
     
-    func validate(){
+    func validate() -> Bool {
+        var result = false
         
         if checkInput(text: email) && checkInput(text: password){
+            
             //check if user is registered
             if !CDUsersHelper.cdUsersHelper.isUserRegistered(email: email){
                 print("please sign up first")
@@ -48,6 +54,7 @@ struct LoginAction: View {
                 if password == correctpassword{
                     
                     print("you entered the correct password")
+                    result = true
                     
                 } else{
                     print(" please try entering the correct password")
@@ -57,6 +64,8 @@ struct LoginAction: View {
         else{
             print("please input username and password")
         }
+        
+        return result
     }
     
     func checkInput(text: String) -> Bool{
