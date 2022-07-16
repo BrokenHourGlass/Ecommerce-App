@@ -13,7 +13,7 @@ struct SignupModal: View {
             Text("Sign in for the best experience")
                 .font(.title2)
                 .fontWeight(.light)
-            NavigationLink(destination: LoginPage2SVC()) {
+            NavigationLink(destination: SignupPage2SVC()) {
                 Text("Sign in securely")
                     .fontWeight(.light)
                     .padding()
@@ -28,11 +28,5 @@ struct SignupModal: View {
             }
         }
         .padding()
-    }
-}
-
-struct SignupModal_Previews: PreviewProvider {
-    static var previews: some View {
-        SignupModal()
     }
 }

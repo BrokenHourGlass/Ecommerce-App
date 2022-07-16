@@ -18,7 +18,6 @@ struct NavigationBar: View {
             } label: {
                 Image(systemName: "line.3.horizontal")
                     .foregroundColor(Color.white)
-                
             }
             Spacer()
             Text("Pick'n'Pay")
@@ -34,13 +33,5 @@ struct NavigationBar: View {
         .padding([.leading, .trailing], 27)
         .padding([.top, .bottom], 20)
         .background(Color.black)
-    }
-}
-
-struct NavigationBar_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationBar()
-            .environmentObject(CartManager())
-            .environmentObject(OrdersManager())
     }
 }
