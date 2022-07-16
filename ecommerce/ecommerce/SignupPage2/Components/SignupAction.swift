@@ -23,26 +23,30 @@ struct SignupAction: View {
                     .foregroundColor(Color.white)
                 Spacer()
             }
-            Button (action: {
-                CDUsersHelper.cdUsersHelper.addNewUser(userObj: UserModel(userId: UUID().uuidString, firstname: firstname, lastname: lastname, email: email, password: password, mobileNumber: mobileNumber))
+            VStack(spacing: 10) {
+                Button (action: {
+                    CDUsersHelper.cdUsersHelper.addNewUser(userObj: UserModel(userId: UUID().uuidString, firstname: firstname, lastname: lastname, email: email, password: password, mobileNumber: mobileNumber))
+                    
+                    firstname = ""
+                    lastname = ""
+                    email = ""
+                    password = ""
+                    confirmPassword = ""
+                    mobileNumber = ""
+                    
+                }) {
+                    Text("Agree and continue")
+                        .bold()
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .border(Color.green)
+                }
+                .foregroundColor(Color.white)
+                .background(Color.green)
+                .cornerRadius(15)
+                GoToLogin()
                 
-                firstname = ""
-                lastname = ""
-                email = ""
-                password = ""
-                confirmPassword = ""
-                mobileNumber = ""
-                
-            }) {
-                Text("Agree and continue")
-                    .bold()
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .border(Color.green)
             }
-            .foregroundColor(Color.white)
-            .background(Color.green)
-            .cornerRadius(15)
         }
         .padding([.top], 15)
     }

@@ -13,15 +13,17 @@ struct SignupPage2SVC: View {
     var body: some View {
         VStack(alignment: .leading) {
             Spacer()
-            HStack {
-                Text("Sign up")
-                    .font(.title)
-                    .fontWeight(.heavy)
-                    .foregroundColor(Color.white)
-                Spacer()
+            ScrollView {
+                HStack {
+                    Text("Sign up")
+                        .font(.title)
+                        .fontWeight(.heavy)
+                        .foregroundColor(Color.white)
+                    Spacer()
+                }
+                .padding(.horizontal, 15)
+                SignupPageModal()
             }
-            .padding(.horizontal, 15)
-            SignupPageModal()
             Spacer()
         }
         .padding()
