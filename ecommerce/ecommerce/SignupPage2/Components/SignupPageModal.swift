@@ -9,7 +9,8 @@ import SwiftUI
 
 struct SignupPageModal: View {
     
-    @State var username = ""
+    @State var firstname = ""
+    @State var lastname = ""
     @State var email = ""
     @State var password = ""
     @State var confirmPassword = ""
@@ -23,7 +24,8 @@ struct SignupPageModal: View {
             HStack {
                 Spacer()
             }
-            SignupField(placeholder: "Name", value: $username )
+            SignupField(placeholder: "First Name", value: $firstname )
+            SignupField(placeholder: "Last Name", value: $lastname )
             SignupField(placeholder: "Email", value: $email)
             SignupField(placeholder: "Password", value: $password)
             SignupField(placeholder: "Confirm Password", value: $confirmPassword)

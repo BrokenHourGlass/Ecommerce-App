@@ -7,14 +7,18 @@
 
 import Foundation
 
-class UserModal {
-    var name: String
+class UserModel {
+    var userId: String
+    var firstname: String
+    var lastname: String
     var email: String
     var password: String
     var mobileNumber: String
     
-    init(name: String, email: String, password: String, mobileNumber: String) {
-        self.name = name
+    init(userId: String, firstname: String, lastname: String, email: String, password: String, mobileNumber: String) {
+        self.userId = UUID().uuidString
+        self.firstname = firstname
+        self.lastname = lastname
         self.email = email
         self.password = password
         self.mobileNumber = mobileNumber
