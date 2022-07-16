@@ -16,7 +16,7 @@ struct SignupPageModal: View {
     @State var mobileNumber = ""
     
     var body: some View {
-        VStack {
+        VStack(spacing: 15) {
             Text("Create an account to enjoy all the features!")
                 .foregroundColor(Color.white)
                 .fontWeight(.light)
@@ -28,6 +28,7 @@ struct SignupPageModal: View {
             SignupField(placeholder: "Password", value: $password)
             SignupField(placeholder: "Confirm Password", value: $confirmPassword)
             SignupField(placeholder: "Mobile Number", value: $mobileNumber)
+            SignupAction()
         }
         .padding()
         .background(Color.gray.opacity(0.25))
