@@ -13,9 +13,7 @@ struct NavigationBar: View {
     
     var body: some View {
         HStack {
-            Button {
-                print("remove")
-            } label: {
+            NavigationLink(destination: AccountPageSVC().navigationTitle("").navigationBarHidden(true).environmentObject(cartManager).environmentObject(ordersManager)) {
                 Image(systemName: "gear")
                     .foregroundColor(Color.white)
             }
