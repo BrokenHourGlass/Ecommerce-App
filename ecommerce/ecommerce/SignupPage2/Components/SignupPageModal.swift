@@ -37,9 +37,3 @@ struct SignupPageModal: View {
         .cornerRadius(15)
     }
 }
-
-struct SignupPageModal_Previews: PreviewProvider {
-    static var previews: some View {
-        SignupPageModal()
-    }
-}
