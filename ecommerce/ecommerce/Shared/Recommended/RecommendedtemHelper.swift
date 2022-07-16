@@ -12,13 +12,14 @@ struct RecommendedItemHelper: View {
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
     @EnvironmentObject var commentsManager: CommentsManager
+    @EnvironmentObject var wishlistManager: WishlistManager
     
     @State var showNextView = false
     
     var recommended: NewRecommended
     
     var body: some View {
-        NavigationLink(destination: ProductSVC(product: RecommendedHelperFuncs.getProduct(productName: recommended.name)).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager), isActive: $showNextView) {
+        NavigationLink(destination: ProductSVC(product: RecommendedHelperFuncs.getProduct(productName: recommended.name)).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager), isActive: $showNextView) {
             EmptyView()
         }
         VStack {
@@ -34,15 +35,5 @@ struct RecommendedItemHelper: View {
                 .padding([.top], 15)
         }
         .frame(width: 250)
-    }
-}
-
-struct RecommendedItemHelper_Previews: PreviewProvider {
-    static var previews: some View {
-        RecommendedItemHelper(recommended: products[0].recommended[0])
-            .environmentObject(CartManager())
-            .environmentObject(HistoryManager())
-            .environmentObject(OrdersManager())
-            .environmentObject(CommentsManager())
     }
 }

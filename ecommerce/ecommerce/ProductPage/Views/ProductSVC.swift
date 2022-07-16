@@ -50,11 +50,13 @@ struct ProductSVC: View {
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
                     .environmentObject(commentsManager)
+                    .environmentObject(wishlistManager)
                 ChooseCategory()
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
                     .environmentObject(commentsManager)
+                    .environmentObject(wishlistManager)
                 About()
                 FooterHelper()
             }
