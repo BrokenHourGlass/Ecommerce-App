@@ -8,8 +8,24 @@
 import SwiftUI
 
 struct SignupPage2SVC: View {
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            Spacer()
+            HStack {
+                Text("Sign Up")
+                    .font(.title)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color.white)
+                Spacer()
+            }
+            .padding(.horizontal, 15)
+            SignupPageModal()
+            Spacer()
+        }
+        .padding()
+        .background(Color.black)
     }
 }
 
