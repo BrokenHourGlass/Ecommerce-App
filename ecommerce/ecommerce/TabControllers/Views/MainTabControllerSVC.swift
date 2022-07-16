@@ -80,6 +80,20 @@ struct MainTabControllerSVC: View {
                     }
                     .tag(4)
                 
+                LoginPage2SVC()
+                    .tabItem {
+                        Image(systemName: "person")
+                        Text("Login")
+                    }
+                    .tag(5)
+                
+                SignupPage2SVC()
+                    .tabItem {
+                        Image(systemName: "person")
+                        Text("Signup")
+                    }
+                    .tag(6)
+                
                 
             } //TabView
         }
