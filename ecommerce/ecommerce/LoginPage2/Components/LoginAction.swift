@@ -52,10 +52,9 @@ struct LoginAction: View {
                 let correctpassword = CDUsersHelper.cdUsersHelper.getOne(email: email).password
                 let uzer = CDUsersHelper.cdUsersHelper.getOne(email: email)
                 if password == correctpassword{
-                    
                     print("you entered the correct password")
                     result = true
-                    
+                    LoginPageViewModel.setUserDefaults(user: uzer)
                 } else{
                     print(" please try entering the correct password")
                 }

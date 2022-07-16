@@ -19,6 +19,7 @@ struct MainTabControllerSVC: View {
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor.systemGray6
+        LoginPageViewModel.resetUserDefaults()
     }
     
     var body: some View {
