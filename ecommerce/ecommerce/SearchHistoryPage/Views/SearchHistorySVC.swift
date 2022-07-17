@@ -18,18 +18,16 @@ struct SearchHistorySVC: View {
                 .environmentObject(cartManager)
                 .environmentObject(OrdersManager())
             SignupModal()
-            Group {
-                Text("Recent Searches")
-                    .font(.title2)
-                    .bold()
-                ScrollView {
-                    ForEach(historyManager.history.reversed(), id: \.id) { x in
-                        SearchHistoryItem(product: x.product)
-                    }
+            Text("Recent Searches")
+                .font(.title2)
+                .bold()
+                .padding(.horizontal)
+            ScrollView {
+                ForEach(historyManager.history.reversed(), id: \.id) { x in
+                    SearchHistoryItem(product: x.product)
                 }
             }
             .padding(.horizontal)
-            .padding(.top)
             Spacer()
         }
         .navigationTitle("")
