@@ -20,14 +20,13 @@ struct OrderHistorySVC: View {
                 .navigationTitle("")
                 .navigationBarHidden(true)
             SignupModal()
-            Group {
-                Text("Order History")
-                    .font(.title2)
-                    .bold()
-                OrderHistoryList()
-                    .environmentObject(ordersManager)
-            }
-            .padding()
+            Text("Order History")
+                .font(.title2)
+                .bold()
+                .padding(.horizontal)
+            OrderHistoryList()
+                .environmentObject(ordersManager)
+                .padding(.horizontal)
             Spacer()
         }
     }
