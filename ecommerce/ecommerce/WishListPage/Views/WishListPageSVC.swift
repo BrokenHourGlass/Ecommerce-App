@@ -47,7 +47,7 @@ struct WishListPageSVC: View {
             .padding()
         }
         .onAppear(perform: {
-            wishlistManager.getWishlist(userId: "Rando")
+            wishlistManager.getWishlist(userId: userId!)
         })
         .navigationTitle("")
         .navigationBarHidden(true)

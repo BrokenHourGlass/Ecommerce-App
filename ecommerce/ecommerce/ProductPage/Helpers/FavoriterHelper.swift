@@ -19,8 +19,9 @@ struct FavoriterHelper: View {
     var body: some View {
         Button(action: {
             if (loggedIn) {
-                wishlistManager.addToWishlist(wishlistItemObj: WishlistItemModel(id: userId!, productId: product.id, status: true, userId: "Rando"))
-                CDWishlistHelper.cdWishlistHelper.addToWishlist(wishlistItemObj: WishlistItemModel(id: userId!, productId: product.id, status: true, userId: "Rando"))
+                let id = UUID().uuidString
+                wishlistManager.addToWishlist(wishlistItemObj: WishlistItemModel(id: id, productId: product.id, status: true, userId: userId!))
+                CDWishlistHelper.cdWishlistHelper.addToWishlist(wishlistItemObj: WishlistItemModel(id: id, productId: product.id, status: true, userId: userId!))
             } else {
                 showAlert = true
             }
