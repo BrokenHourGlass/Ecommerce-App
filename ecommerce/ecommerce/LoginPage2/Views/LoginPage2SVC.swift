@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginPage2SVC: View {
     var body: some View {
         VStack(alignment: .leading) {
+            NavigationBack()
             Spacer()
             HStack {
                 Text("Log in")
@@ -24,5 +25,7 @@ struct LoginPage2SVC: View {
         }
         .padding()
         .background(Color.black)
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
 }

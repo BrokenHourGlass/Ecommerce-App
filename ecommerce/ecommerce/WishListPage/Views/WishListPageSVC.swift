@@ -17,6 +17,9 @@ struct WishListPageSVC: View {
     @State var showNextView = false
     @State var current: NewProduct = CategoryViewModel.placeholderProduct()
     
+    let loggedIn = userDefaults.bool(forKey: "isLoggedIn")
+    let userId = userDefaults.string(forKey: "userId")
+    
     var body: some View {
         VStack {
             NavigationBar()
@@ -33,16 +36,18 @@ struct WishListPageSVC: View {
                     Spacer()
                 }
                 ScrollView {
-                    ForEach(wishlistManager.wishlist.reversed(), id: \.id) { item in
-                        WishListItem(showNextView: $showNextView, current: $current, product: WishlistViewModel.getProduct(productID: item.productId), id: item.id)
-                            .environmentObject(wishlistManager)
+                    if (loggedIn) {
+                        ForEach(wishlistManager.wishlist.reversed(), id: \.id) { item in
+                            WishListItem(showNextView: $showNextView, current: $current, product: WishlistViewModel.getProduct(productID: item.productId), id: item.id)
+                                .environmentObject(wishlistManager)
+                        }
                     }
                 }
             }
             .padding()
         }
         .onAppear(perform: {
-            wishlistManager.getWishlist(userId: "Rando")
+            wishlistManager.getWishlist(userId: userId!)
         })
         .navigationTitle("")
         .navigationBarHidden(true)

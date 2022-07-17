@@ -21,6 +21,7 @@ struct CheckoutForm: View {
     
     @State var COD = false
     @State var eMoney = false
+    @State var creditFlag = false
     @State var eMoneyNum = ""
     @State var eMoneyPin = ""
     @State var creditCardNum = ""
@@ -65,15 +66,15 @@ struct CheckoutForm: View {
                             .padding([.top], 30)
                             .padding([.bottom], 10)
                         VStack(spacing: 15) {
-                            CheckoutRadioField(label: "e-Money", value: $eMoney, alt: $COD)
-                            CheckoutRadioField(label: "Cash on Delivery", value: $COD, alt: $eMoney)
+                            CheckoutRadioField(label: "e-Money", value: $eMoney, value2: $eMoneyNum, value3: $eMoneyPin, value4: $creditCardNum, alt1: $COD, alt2: $creditFlag)
+                            CheckoutRadioField(label: "Cash on Delivery", value: $COD, value2: $eMoneyNum, value3: $eMoneyPin, value4: $creditCardNum, alt1: $eMoney, alt2: $creditFlag)
+                            CheckoutRadioField(label: "Credit Card", value: $creditFlag, value2: $eMoneyNum, value3: $eMoneyPin, value4: $creditCardNum, alt1: $eMoney, alt2: $COD)
                         }
                         .padding([.bottom], 8)
-                        CheckoutField(title: "e-Money Number", placeholder: "238521993", value: $eMoneyNum)
-                        CheckoutField(title: "e-Money PIN", placeholder: "1234", value: $eMoneyPin)
-                        CheckoutField(title: "Credit Card #", placeholder: "1234-5678-9012-3456", value: $creditCardNum)
+                        CheckoutPaymentDetails(title: "e-Money Number", placeholder: "238521993", value: $eMoneyNum, alt1: $COD, alt2: $creditFlag)
+                        CheckoutPaymentDetails(title: "e-Money PIN", placeholder: "1234", value: $eMoneyPin, alt1: $COD, alt2: $creditFlag)
+                        CheckoutPaymentDetails(title: "Credit Card #", placeholder: "1234-5678-9012-3456", value: $creditCardNum, alt1: $eMoney, alt2: $COD)
                     }
-                    
                     
                     CheckoutSummary(checkoutDetailsObj: CheckoutDetailsObj(name: name, email: email, phoneNumber: phoneNumber, address: address, zip: zip, city: city, country: country))
                         .padding([.top], 30)

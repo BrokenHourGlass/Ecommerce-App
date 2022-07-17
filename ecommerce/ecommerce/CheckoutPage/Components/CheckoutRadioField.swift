@@ -11,14 +11,34 @@ struct CheckoutRadioField: View {
     var label: String
     
     @Binding var value: Bool
-    @Binding var alt: Bool
+    @Binding var value2: String
+    @Binding var value3: String
+    @Binding var value4: String
+    @Binding var alt1: Bool
+    @Binding var alt2: Bool
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
                 Button(action: {
                     value.toggle()
-                    alt = false
+                    alt1 = false
+                    alt2 = false
+                    
+                    if (label == "e-Money") {
+                        value4 = ""
+                    }
+                    
+                    if (label == "Cash on Delivery") {
+                        value2 = ""
+                        value3 = ""
+                        value4 = ""
+                    }
+                    
+                    if (label == "Credit Card") {
+                        value2 = ""
+                        value3 = ""
+                    }
                 }) {
                     ZStack {
                         if (value) {

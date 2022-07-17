@@ -13,12 +13,9 @@ struct NavigationBar: View {
     
     var body: some View {
         HStack {
-            Button {
-                print("remove")
-            } label: {
-                Image(systemName: "line.3.horizontal")
+            NavigationLink(destination: AccountPageSVC().navigationTitle("").navigationBarHidden(true).environmentObject(cartManager).environmentObject(ordersManager)) {
+                Image(systemName: "gear")
                     .foregroundColor(Color.white)
-                
             }
             Spacer()
             Text("Pick'n'Pay")
@@ -34,13 +31,5 @@ struct NavigationBar: View {
         .padding([.leading, .trailing], 27)
         .padding([.top, .bottom], 20)
         .background(Color.black)
-    }
-}
-
-struct NavigationBar_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationBar()
-            .environmentObject(CartManager())
-            .environmentObject(OrdersManager())
     }
 }

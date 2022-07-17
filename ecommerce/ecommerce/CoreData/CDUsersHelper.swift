@@ -58,7 +58,7 @@ class CDUsersHelper {
     }
     
     func getData() -> [PNPUser]{
-     
+        
         
         var pnpuser = [PNPUser]()
         
@@ -69,7 +69,7 @@ class CDUsersHelper {
         } catch{
             print("could not fetch data")
         }
-
+        
         return pnpuser
     }
     
@@ -90,7 +90,7 @@ class CDUsersHelper {
                 isUserCreated = false
                 print("erro: no user found")
             }
-                
+            
         } catch{
             print("ERror: no user found")
         }

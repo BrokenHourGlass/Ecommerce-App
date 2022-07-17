@@ -12,6 +12,7 @@ struct ShoppingCartSVC: View {
     @EnvironmentObject var ordersManager: OrdersManager
     
     @State var showNextView = false
+    @State var showAlert = false
     
     var body: some View {
         VStack {
@@ -66,7 +67,11 @@ struct ShoppingCartSVC: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        showNextView = ShoppingCartViewModel.cartIsNotEmpty(cart: cartManager.items)
+                        if (userDefaults.bool(forKey: "isLoggedIn")) {
+                            showNextView = ShoppingCartViewModel.cartIsNotEmpty(cart: cartManager.items)
+                        } else {
+                            showAlert = true
+                        }
                     }) {
                         Text("CHECKOUT")
                             .padding()
@@ -81,6 +86,9 @@ struct ShoppingCartSVC: View {
             .padding([.leading, .top, .trailing, .bottom], 27)
             .navigationTitle("")
             .navigationBarHidden(true)
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("Notification"), message: Text("Please log in to proceed to checkout"), dismissButton: .default(Text("Dismiss")))
+            }
         }
     }
 }

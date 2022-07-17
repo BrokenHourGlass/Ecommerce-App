@@ -16,6 +16,7 @@ struct CategorySVC: View {
     
     let columns: [GridItem] = [GridItem(.flexible())]
     var category: String
+    let loggedIn = userDefaults.bool(forKey: "isLoggedIn")
     
     var body: some View {
         VStack {
@@ -24,7 +25,9 @@ struct CategorySVC: View {
                 .environmentObject(ordersManager)
             NavigationBack()
             ScrollView {
-                SignupModal()
+                if (loggedIn) {
+                    SignupModal()
+                }
                 VStack(spacing: 20) {
                     CategoryHero()
                     CategoryFeatured(filteredProducts: CategoryViewModel.filterByCategory(targetCategory: category))

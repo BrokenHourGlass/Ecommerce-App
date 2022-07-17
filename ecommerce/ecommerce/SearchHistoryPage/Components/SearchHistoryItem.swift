@@ -36,8 +36,3 @@ struct SearchHistoryItem: View {
     }
 }
 
-struct SearchHistoryItem_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchHistoryItem(product: products[0])
-    }
-}

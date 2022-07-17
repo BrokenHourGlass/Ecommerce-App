@@ -11,6 +11,7 @@ struct SignupPage2SVC: View {
     
     var body: some View {
         VStack(alignment: .leading) {
+            NavigationBack()
             Spacer()
             ScrollView {
                 HStack {
@@ -29,11 +30,5 @@ struct SignupPage2SVC: View {
         }
         .padding()
         .background(Color.black)
-    }
-}
-
-struct SignupPage2SVC_Previews: PreviewProvider {
-    static var previews: some View {
-        SignupPage2SVC()
     }
 }

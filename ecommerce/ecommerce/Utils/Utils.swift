@@ -8,6 +8,7 @@
 import Foundation
 
 let dateFormatter = DateFormatter()
+let userDefaults = UserDefaults.standard
 
 func formateDate(date: Date) -> String {
     dateFormatter.dateStyle = .medium
@@ -26,3 +27,4 @@ func constructProductsData() -> [NewProduct] {
     
     return productsData
 }
+
