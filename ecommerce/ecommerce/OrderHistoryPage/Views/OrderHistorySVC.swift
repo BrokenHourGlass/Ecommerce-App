@@ -27,7 +27,7 @@ struct OrderHistorySVC: View {
                 OrderHistoryList()
                     .environmentObject(ordersManager)
             }
-            .padding(.horizontal, 17)
+            .padding()
             Spacer()
         }
     }
