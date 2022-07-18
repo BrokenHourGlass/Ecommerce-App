@@ -33,12 +33,14 @@ class Services: ObservableObject {
                 return
             }
             
-            for x in jsonData {
-                print(x.name)
-            }
             
             DispatchQueue.main.async {
                 self.productData = jsonData
+                
+                for x in self.productData {
+                    print(x.name)
+                }
+                
             }
         }
         
