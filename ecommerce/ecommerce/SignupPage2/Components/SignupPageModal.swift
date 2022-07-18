@@ -27,8 +27,8 @@ struct SignupPageModal: View {
             SignupField(placeholder: "First Name", value: $firstname )
             SignupField(placeholder: "Last Name", value: $lastname )
             SignupField(placeholder: "Email", value: $email)
-            SignupField(placeholder: "Password", value: $password)
-            SignupField(placeholder: "Confirm Password", value: $confirmPassword)
+            SignupPassword(placeholder: "Password", value: $password)
+            SignupPassword(placeholder: "Confirm Password", value: $confirmPassword)
             SignupField(placeholder: "Mobile Number", value: $mobileNumber)
             SignupAction(firstname: $firstname, lastname: $lastname, email: $email, password: $password, confirmPassword: $confirmPassword, mobileNumber: $mobileNumber)
         }
