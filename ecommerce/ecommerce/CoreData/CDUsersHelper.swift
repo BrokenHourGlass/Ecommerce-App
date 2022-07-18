@@ -88,11 +88,10 @@ class CDUsersHelper {
                 pnpuser = request.first as! PNPUser
             } else{
                 isUserCreated = false
-                print("erro: no user found")
+                print("Error: no user found")
             }
-            
         } catch{
-            print("ERror: no user found")
+            print("Error: no user found")
         }
         return isUserCreated
         
@@ -112,7 +111,6 @@ class CDUsersHelper {
                 print("error: no user found")
                 return pnpuser
             }
-            
         } catch{
             print("error")
         }
