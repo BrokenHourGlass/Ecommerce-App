@@ -17,6 +17,7 @@ struct SignupAction: View {
     @Binding var mobileNumber: String
     
     @State var message = ""
+    @State var showNotification = false
     @State var showAlert = false
     @State var showSuccess = false
     
@@ -42,9 +43,13 @@ struct SignupAction: View {
                         mobileNumber = ""
                         
                         showSuccess = true
+                        showAlert = false
+                        showNotification = true
                     } else {
                         message = result.1
+                        showSuccess = false
                         showAlert = true
+                        showNotification = true
                     }
                 }) {
                     Text("Agree and continue")
@@ -61,12 +66,14 @@ struct SignupAction: View {
             }
         }
         .padding([.top], 15)
-        .alert(isPresented: $showAlert) {
-            Alert(title: Text("Notification"), message: Text(message), dismissButton: .default(Text("OK")))
+        .alert(isPresented: $showNotification) {
+            if (showSuccess && !showAlert) {
+                return Alert(title: Text("Congratulations!"), message: Text("You're all set! You can now login."), dismissButton: .default(Text("OK")))
+            }
+            
+            return Alert(title: Text("Notification"), message: Text(message), dismissButton: .default(Text("OK")))
         }
-        .alert(isPresented: $showSuccess) {
-             Alert(title: Text("Congratulations!"), message: Text("You're all set! You can now login."), dismissButton: .default(Text("OK")))
-        }
+        
     }
 }
 
