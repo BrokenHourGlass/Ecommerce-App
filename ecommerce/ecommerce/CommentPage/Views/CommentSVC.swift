@@ -32,7 +32,7 @@ struct CommentSVC: View {
                 TextField("Enter body text here", text: $bodyText)
                 Spacer()
                 Button {
-                    let newComment = CommentModel(commentID: UUID().uuidString, productID: product!.id, username: "Rando", title: titleText, date: Date(), body: bodyText)
+                    let newComment = CommentModel(commentID: UUID().uuidString, productID: product!.id, username: userDefaults.string(forKey: "firstname")!, title: titleText, date: Date(), body: bodyText)
                     if (CommentViewModel.commentValidation(commentObj: newComment)) {
                         commentsManager.addComment(commentObj: newComment)
                         CDCommentHelper.cdCommentHelper.addComment(commentObj: newComment)
