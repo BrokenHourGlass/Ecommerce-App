@@ -13,9 +13,10 @@ struct CommentsPageSVC: View {
     @EnvironmentObject var ordersManager: OrdersManager
     
     @State var showNextView = false
+    @State var showAlert = false
     
-    //    var comments = CDCommentHelper.cdCommentHelper.getComments()
     var product: NewProduct?
+    var loggedIn = userDefaults.bool(forKey: "isLoggedIn")
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -34,7 +35,13 @@ struct CommentsPageSVC: View {
                         .bold()
                     Spacer()
                     Button {
-                        showNextView = true
+                        if (loggedIn) {
+                            showNextView = true
+                            showAlert = false
+                        } else {
+                            showNextView = false
+                            showAlert = true
+                        }
                     } label: {
                         Image(systemName: "plus")
                     }
@@ -56,6 +63,9 @@ struct CommentsPageSVC: View {
         .onAppear(perform: {
             commentsManager.loadComments(commentsData: CDCommentHelper.cdCommentHelper.getComments(productID: product!.id))
         })
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("Notification"), message: Text("Please log in first to add new comments"), dismissButton: .default(Text("OK")))
+        }
         .navigationTitle("")
         .navigationBarHidden(true)
     }
