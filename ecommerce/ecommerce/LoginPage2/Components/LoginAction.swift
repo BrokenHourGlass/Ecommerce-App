@@ -11,6 +11,7 @@ struct LoginAction: View {
     @Binding var email: String
     @Binding var password: String
     @State var showNextView = false
+    @State var showAlerts = false
     
     var body: some View {
         VStack {
@@ -37,6 +38,9 @@ struct LoginAction: View {
             }
         }
         .padding([.top], 15)
+        .alert(isPresented: $showAlerts){
+            Alert(title: Text("Error"), message: Text("try entering correct password or create a new account"), dismissButton: .default(Text("Dismiss")))
+        }
     }
     
     func validate() -> Bool {
@@ -47,6 +51,7 @@ struct LoginAction: View {
             //check if user is registered
             if !CDUsersHelper.cdUsersHelper.isUserRegistered(email: email){
                 print("please sign up first")
+                showAlerts = true
             }else{
                 //check if password is correct
                 let correctpassword = CDUsersHelper.cdUsersHelper.getOne(email: email).password
@@ -56,6 +61,7 @@ struct LoginAction: View {
                     result = true
                     LoginPageViewModel.setUserDefaults(user: uzer)
                 } else{
+                    showAlerts = true
                     print(" please try entering the correct password")
                 }
             }
