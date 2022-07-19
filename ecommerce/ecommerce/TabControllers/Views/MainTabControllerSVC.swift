@@ -14,6 +14,7 @@ struct MainTabControllerSVC: View {
     @StateObject var ordersManager = OrdersManager()
     @StateObject var commentsManager = CommentsManager()
     @StateObject var wishlistManager = WishlistManager()
+    @StateObject var services = Services()
     
     @State private var selection = 0
     
@@ -31,6 +32,7 @@ struct MainTabControllerSVC: View {
                     .environmentObject(ordersManager)
                     .environmentObject(commentsManager)
                     .environmentObject(wishlistManager)
+                    .environmentObject(services)
                     .tabItem {
                         Image(systemName: "house.fill")
                         Text("Home")

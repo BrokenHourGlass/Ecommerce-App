@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Services: ObservableObject {
+class Services: ObservableObject, Identifiable {
     @Published private(set) var productData = [NewProduct]()
     
     func getProductData() {
