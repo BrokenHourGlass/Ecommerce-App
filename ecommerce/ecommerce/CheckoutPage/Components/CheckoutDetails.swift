@@ -13,7 +13,7 @@ struct CheckoutDetails: View {
     var body: some View {
         VStack(spacing: 5) {
             CheckoutDetail(label: "TOTAL", cost: cartManager.getTotal())
-            CheckoutDetail(label: "SHIPPING", cost: AddedCosts.shipping.rawValue)
+            CheckoutDetail(label: "SHIPPING", cost: CheckoutViewModel.getShippingCost(total: cartManager.getTotal()))
             CheckoutDetail(label: "TAX", cost: AddedCosts.tax.rawValue)
             CheckoutDetail(label: "GRAND TOTAL", cost: cartManager.getTotal() + AddedCosts.shipping.rawValue + AddedCosts.tax.rawValue)
         }

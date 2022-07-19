@@ -11,6 +11,12 @@ struct SearchHistorySVC: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
+    @EnvironmentObject var commentsManager: CommentsManager
+    @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
+    
+    @State var showNextView = false
+    @State var current: NewProduct = HomePageViewModel.placeHolderProduct()
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -25,10 +31,18 @@ struct SearchHistorySVC: View {
                 .padding(.top)
             ScrollView {
                 ForEach(historyManager.history.reversed(), id: \.id) { x in
-                    SearchHistoryItem(product: x.product)
+                    Button(action: {
+                        current = x.product
+                        showNextView = true
+                    }) {
+                        SearchHistoryItem(product: x.product)
+                    }
                 }
             }
             .padding(.horizontal)
+            NavigationLink(destination: ProductSVC(product: current).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager).environmentObject(services), isActive: $showNextView) {
+                EmptyView()
+            }
             Spacer()
         }
         .navigationTitle("")
