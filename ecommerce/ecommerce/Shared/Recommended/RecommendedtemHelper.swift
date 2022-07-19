@@ -13,13 +13,14 @@ struct RecommendedItemHelper: View {
     @EnvironmentObject var ordersManager: OrdersManager
     @EnvironmentObject var commentsManager: CommentsManager
     @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
     
     @State var showNextView = false
     
     var recommended: NewRecommended
     
     var body: some View {
-        NavigationLink(destination: ProductSVC(product: RecommendedHelperFuncs.getProduct(productName: recommended.name)).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager), isActive: $showNextView) {
+        NavigationLink(destination: ProductSVC(product: RecommendedHelperFuncs.getProduct(productName: recommended.name)).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager).environmentObject(services), isActive: $showNextView) {
             EmptyView()
         }
         VStack {

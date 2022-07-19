@@ -52,6 +52,7 @@ struct ProductSVC: View {
                     .environmentObject(ordersManager)
                     .environmentObject(commentsManager)
                     .environmentObject(wishlistManager)
+                    .environmentObject(services)
                 ChooseCategory()
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
