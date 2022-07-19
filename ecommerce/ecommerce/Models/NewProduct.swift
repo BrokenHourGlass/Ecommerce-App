@@ -29,7 +29,7 @@ struct NewItem: Decodable {
     var item: String
 }
 
-struct NewPreview: Decodable {
+struct NewPreview: Decodable, Hashable {
     var img: String
 }
 

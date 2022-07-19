@@ -11,12 +11,27 @@ struct PreviewHelper: View {
     var img: String
     
     var body: some View {
-        Image(img)
-            .resizable()
-            .scaledToFill()
-            .clipped()
-            .listRowInsets(EdgeInsets())
+        if (!img.isEmpty) {
+            Image(img)
+                .resizable()
+                .scaledToFill()
+                .clipped()
+                .listRowInsets(EdgeInsets())
+                .cornerRadius(15)
+        } else {
+            Section {
+                HStack {
+                    Spacer()
+                    Text("No image available")
+                        .font(.title2)
+                        .foregroundColor(Color.white)
+                    Spacer()
+                }
+            }
+            .frame(height: 100)
+            .background(Color.gray)
             .cornerRadius(15)
+        }
     }
 }
 
