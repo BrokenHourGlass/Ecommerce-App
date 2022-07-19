@@ -35,7 +35,7 @@ class Services: ObservableObject, Identifiable {
             }
             
             DispatchQueue.main.async {
-                self.productData = jsonData
+                self.productData = ServicesHelper.filterOutNil(productData: jsonData)
             }
         }
         
