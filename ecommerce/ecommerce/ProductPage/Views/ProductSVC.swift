@@ -63,6 +63,13 @@ struct ProductSVC: View {
                 About()
                 FooterHelper()
             }
+            AltTabController()
+                .environmentObject(cartManager)
+                .environmentObject(historyManager)
+                .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
         }
         .navigationTitle("")
         .navigationBarHidden(true)
