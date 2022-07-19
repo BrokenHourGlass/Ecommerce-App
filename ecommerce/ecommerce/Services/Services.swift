@@ -16,7 +16,6 @@ class Services: ObservableObject, Identifiable {
         let decoder = JSONDecoder()
         self.productData = []
         guard let jsonURL = URL(string: url) else {
-            self.productData = load("new-data.json")
             return
         }
         let task = session.dataTask(with: jsonURL) { data, response, error in
@@ -26,11 +25,13 @@ class Services: ObservableObject, Identifiable {
             
             guard let responseData = try? Data(contentsOf: jsonURL) else {
                 print("Error caught: Could not retrieve json data with url provided")
+                self.productData = load("new-data.json")
                 return
             }
             
             guard let jsonData = try? decoder.decode([NewProduct].self, from: responseData) else {
                 print("Error caught: Could not decode json data")
+                self.productData = load("new-data.json")
                 return
             }
             
