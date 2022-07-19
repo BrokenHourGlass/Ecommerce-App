@@ -13,6 +13,7 @@ struct CatalogCategories: View {
     @EnvironmentObject var ordersManager: OrdersManager
     @EnvironmentObject var commentsManager: CommentsManager
     @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
     
     @State var showNextView = false
     @State var chosenCategory = ""
@@ -25,7 +26,7 @@ struct CatalogCategories: View {
             Text("Categories")
                 .font(.title2)
                 .bold()
-            NavigationLink(destination: CategorySVC(category: chosenCategory).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager), isActive: $showNextView) {
+            NavigationLink(destination: CategorySVC(category: chosenCategory).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager).environmentObject(services), isActive: $showNextView) {
                 EmptyView()
             }
             LazyVGrid(columns: columns) {

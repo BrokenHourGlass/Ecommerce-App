@@ -15,7 +15,7 @@ struct CategoryResults: View {
     @EnvironmentObject var wishlistManager: WishlistManager
     
     @State var showNextView = false
-    @State var current: NewProduct = CategoryViewModel.placeholderProduct()
+    @State var current: NewProduct = HomePageViewModel.placeHolderProduct()
     
     let columns: [GridItem] = [GridItem(.flexible())]
     var filteredProducts: [NewProduct]
