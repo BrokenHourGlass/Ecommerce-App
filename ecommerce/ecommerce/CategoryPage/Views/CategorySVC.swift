@@ -48,6 +48,12 @@ struct CategorySVC: View {
                 }
             }
             AltTabController()
+                .environmentObject(cartManager)
+                .environmentObject(historyManager)
+                .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
         }
         .navigationTitle("")
         .navigationBarHidden(true)
