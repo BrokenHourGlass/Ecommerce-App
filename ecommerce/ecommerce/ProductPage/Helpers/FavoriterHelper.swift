@@ -26,8 +26,10 @@ struct FavoriterHelper: View {
                 showAlert = true
             }
         }) {
-            Image(systemName: "star.fill")
-                .foregroundColor(Color.yellow)
+            Image(systemName: "heart.fill")
+                .resizable()
+                .foregroundColor(Color.orange)
+                .frame(width: 20, height: 20)
         }
         .frame(width: 40, height: 40)
         .alert(isPresented: $showAlert) {

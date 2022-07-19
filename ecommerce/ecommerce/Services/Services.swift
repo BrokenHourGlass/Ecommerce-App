@@ -33,7 +33,6 @@ class Services: ObservableObject, Identifiable {
                 return
             }
             
-            
             DispatchQueue.main.async {
                 self.productData = jsonData
             }
