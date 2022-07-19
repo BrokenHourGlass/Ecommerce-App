@@ -20,7 +20,7 @@ struct CheckoutForm: View {
     @State var country = ""
     
     @State var COD = false
-    @State var eMoney = false
+    @State var eMoney = true
     @State var creditFlag = false
     @State var eMoneyNum = ""
     @State var eMoneyPin = ""
@@ -67,8 +67,8 @@ struct CheckoutForm: View {
                             .padding([.bottom], 10)
                         VStack(spacing: 15) {
                             CheckoutRadioField(label: "e-Money", value: $eMoney, value2: $eMoneyNum, value3: $eMoneyPin, value4: $creditCardNum, alt1: $COD, alt2: $creditFlag)
-                            CheckoutRadioField(label: "Cash on Delivery", value: $COD, value2: $eMoneyNum, value3: $eMoneyPin, value4: $creditCardNum, alt1: $eMoney, alt2: $creditFlag)
                             CheckoutRadioField(label: "Credit Card", value: $creditFlag, value2: $eMoneyNum, value3: $eMoneyPin, value4: $creditCardNum, alt1: $eMoney, alt2: $COD)
+                            CheckoutRadioField(label: "Cash on Delivery", value: $COD, value2: $eMoneyNum, value3: $eMoneyPin, value4: $creditCardNum, alt1: $eMoney, alt2: $creditFlag)
                         }
                         .padding([.bottom], 8)
                         CheckoutPaymentDetails(title: "e-Money Number", placeholder: "238521993", value: $eMoneyNum, alt1: $COD, alt2: $creditFlag)
