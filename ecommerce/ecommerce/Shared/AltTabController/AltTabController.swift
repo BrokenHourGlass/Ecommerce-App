@@ -41,7 +41,7 @@ struct AltTabController: View {
                 .environmentObject(ordersManager)
                 .environmentObject(commentsManager)
                 .environmentObject(wishlistManager)
-                .environmentObject(services), isActive: $showHome) {
+                .environmentObject(services), isActive: $showCatalog) {
                     EmptyView()
                 }
             NavigationLink(destination:
@@ -51,7 +51,7 @@ struct AltTabController: View {
                 .environmentObject(ordersManager)
                 .environmentObject(commentsManager)
                 .environmentObject(wishlistManager)
-                .environmentObject(services), isActive: $showHome) {
+                .environmentObject(services), isActive: $showHistory) {
                     EmptyView()
                 }
             NavigationLink(destination:
@@ -61,7 +61,7 @@ struct AltTabController: View {
                 .environmentObject(ordersManager)
                 .environmentObject(commentsManager)
                 .environmentObject(wishlistManager)
-                .environmentObject(services), isActive: $showHome) {
+                .environmentObject(services), isActive: $showOrders) {
                     EmptyView()
                 }
             NavigationLink(destination:
@@ -71,20 +71,20 @@ struct AltTabController: View {
                 .environmentObject(ordersManager)
                 .environmentObject(commentsManager)
                 .environmentObject(wishlistManager)
-                .environmentObject(services), isActive: $showHome) {
+                .environmentObject(services), isActive: $showWishlist) {
                     EmptyView()
                 }
             
             HStack {
-                AltTabControllerTab(systemIMG: "house.fill", tabName: "Home")
+                AltTabControllerTab(showHome: $showHome, showCatalog: $showCatalog, showHistory: $showHistory, showOrders: $showOrders, showWishlist: $showWishlist, selector: $selector, systemIMG: "house.fill", tabName: "Home", tabNum: 0)
                 Spacer()
-                AltTabControllerTab(systemIMG: "magnifyingglass", tabName: "Catalog")
+                AltTabControllerTab(showHome: $showHome, showCatalog: $showCatalog, showHistory: $showHistory, showOrders: $showOrders, showWishlist: $showWishlist, selector: $selector, systemIMG: "magnifyingglass", tabName: "Catalog", tabNum: 1)
                 Spacer()
-                AltTabControllerTab(systemIMG: "person.fill", tabName: "History")
+                AltTabControllerTab(showHome: $showHome, showCatalog: $showCatalog, showHistory: $showHistory, showOrders: $showOrders, showWishlist: $showWishlist, selector: $selector, systemIMG: "person.fill", tabName: "History", tabNum: 2)
                 Spacer()
-                AltTabControllerTab(systemIMG: "list.bullet.rectangle.fill", tabName: "Orders")
+                AltTabControllerTab(showHome: $showHome, showCatalog: $showCatalog, showHistory: $showHistory, showOrders: $showOrders, showWishlist: $showWishlist, selector: $selector, systemIMG: "list.bullet.rectangle.fill", tabName: "Orders", tabNum: 3)
                 Spacer()
-                AltTabControllerTab(systemIMG: "star.fill", tabName: "Wish List")
+                AltTabControllerTab(showHome: $showHome, showCatalog: $showCatalog, showHistory: $showHistory, showOrders: $showOrders, showWishlist: $showWishlist, selector: $selector, systemIMG: "star.fill", tabName: "Wish List", tabNum: 4)
             }
             .padding(.horizontal, 22)
             .padding([.top], 8)
