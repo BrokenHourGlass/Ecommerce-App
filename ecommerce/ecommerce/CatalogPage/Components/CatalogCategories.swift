@@ -36,9 +36,6 @@ struct CatalogCategories: View {
                         showNextView = true
                     }) {
                         CatalogCategory(categoryData: categoryObj)
-                            .environmentObject(cartManager)
-                            .environmentObject(historyManager)
-                            .environmentObject(ordersManager)
                     }
                 }
             }

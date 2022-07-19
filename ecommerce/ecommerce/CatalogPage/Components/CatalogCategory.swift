@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct CatalogCategory: View {
-    @EnvironmentObject var cartManager: CartManager
-    @EnvironmentObject var historyManager: HistoryManager
-    @EnvironmentObject var ordersManager: OrdersManager
     
     var categoryData: CategoryData
     
@@ -31,8 +28,5 @@ struct CatalogCategory: View {
 struct CatalogCategory_Previews: PreviewProvider {
     static var previews: some View {
         CatalogCategory(categoryData: CategoryData(category: "category", img: "image"))
-            .environmentObject(CartManager())
-            .environmentObject(HistoryManager())
-            .environmentObject(OrdersManager())
     }
 }
