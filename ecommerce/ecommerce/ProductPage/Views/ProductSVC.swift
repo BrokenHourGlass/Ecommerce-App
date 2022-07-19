@@ -13,6 +13,7 @@ struct ProductSVC: View {
     @EnvironmentObject var ordersManager: OrdersManager
     @EnvironmentObject var commentsManager: CommentsManager
     @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
     
     var product: NewProduct
     let columns: [GridItem] = [GridItem(.flexible())]
