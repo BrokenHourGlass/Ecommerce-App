@@ -13,6 +13,7 @@ struct CategoryResults: View {
     @EnvironmentObject var ordersManager: OrdersManager
     @EnvironmentObject var commentsManager: CommentsManager
     @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
     
     @State var showNextView = false
     @State var current: NewProduct = HomePageViewModel.placeHolderProduct()
@@ -25,7 +26,7 @@ struct CategoryResults: View {
             Text("RESULTS")
                 .font(.title2)
                 .bold()
-            NavigationLink(destination: ProductSVC(product: current).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager), isActive: $showNextView) {
+            NavigationLink(destination: ProductSVC(product: current).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager).environmentObject(services), isActive: $showNextView) {
                 EmptyView()
             }
             ScrollView {

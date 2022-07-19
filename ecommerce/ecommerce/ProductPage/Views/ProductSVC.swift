@@ -58,6 +58,7 @@ struct ProductSVC: View {
                     .environmentObject(ordersManager)
                     .environmentObject(commentsManager)
                     .environmentObject(wishlistManager)
+                    .environmentObject(services)
                 About()
                 FooterHelper()
             }

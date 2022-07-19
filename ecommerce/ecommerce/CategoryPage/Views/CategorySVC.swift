@@ -37,12 +37,14 @@ struct CategorySVC: View {
                         .environmentObject(ordersManager)
                         .environmentObject(commentsManager)
                         .environmentObject(wishlistManager)
+                        .environmentObject(services)
                     CategoryResults(filteredProducts: CategoryViewModel.filterByCategory(targetCategory: category, productData: services.productData))
                         .environmentObject(cartManager)
                         .environmentObject(historyManager)
                         .environmentObject(ordersManager)
                         .environmentObject(commentsManager)
                         .environmentObject(wishlistManager)
+                        .environmentObject(services)
                 }
             }
         }
