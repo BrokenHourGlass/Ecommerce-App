@@ -25,15 +25,35 @@ struct RecommendedItemHelper: View {
         }
         VStack {
             VStack(spacing: 15) {
-                Image(recommended.img)
-                    .resizable()
+                if (!recommended.img.isEmpty) {
+                    Image(recommended.img)
+                        .resizable()
+                        .frame(width: 200, height: 200)
+                } else {
+                    Section {
+                        Text("No image available")
+                            .font(.title2)
+                            .foregroundColor(Color.white)
+                    }
                     .frame(width: 200, height: 200)
-                Text(recommended.name)
-                    .font(.title2)
-                    .bold()
+                    .background(Color.gray)
+                    .cornerRadius(15)
+                }
+                if (!recommended.name.isEmpty) {
+                    Text(recommended.name)
+                        .font(.title2)
+                        .bold()
+                    
+                } else {
+                    Text("Not available")
+                        .font(.title2)
+                        .bold()
+                }
             }
-            ButtonA(title: "SEE PRODUCT", showNextView: $showNextView)
-                .padding([.top], 15)
+            if (!recommended.img.isEmpty) {
+                ButtonA(title: "SEE PRODUCT", showNextView: $showNextView)
+                    .padding([.top], 15)
+            }
         }
         .frame(width: 250)
     }

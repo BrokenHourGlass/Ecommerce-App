@@ -33,7 +33,7 @@ struct NewPreview: Decodable, Hashable {
     var img: String
 }
 
-struct NewRecommended: Decodable {
+struct NewRecommended: Decodable, Hashable {
     var name: String
     var img: String
 }

@@ -23,24 +23,14 @@ struct RecommendedHelper: View {
                 .font(.title2)
                 .bold()
             VStack(spacing: 30) {
-                RecommendedItemHelper(recommended: product.recommended[0])
-                    .environmentObject(cartManager)
-                    .environmentObject(historyManager)
-                    .environmentObject(ordersManager)
-                    .environmentObject(wishlistManager)
-                    .environmentObject(services)
-                RecommendedItemHelper(recommended: product.recommended[1])
-                    .environmentObject(cartManager)
-                    .environmentObject(historyManager)
-                    .environmentObject(ordersManager)
-                    .environmentObject(wishlistManager)
-                    .environmentObject(services)
-                RecommendedItemHelper(recommended: product.recommended[2])
-                    .environmentObject(cartManager)
-                    .environmentObject(historyManager)
-                    .environmentObject(ordersManager)
-                    .environmentObject(wishlistManager)
-                    .environmentObject(services)
+                ForEach(product.recommended, id: \.self) { product in
+                    RecommendedItemHelper(recommended: product)
+                        .environmentObject(cartManager)
+                        .environmentObject(historyManager)
+                        .environmentObject(ordersManager)
+                        .environmentObject(wishlistManager)
+                        .environmentObject(services)
+                }
             }
         }
         .padding(.vertical, 40)
