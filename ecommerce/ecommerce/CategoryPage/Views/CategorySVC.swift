@@ -13,6 +13,7 @@ struct CategorySVC: View {
     @EnvironmentObject var ordersManager: OrdersManager
     @EnvironmentObject var commentsManager: CommentsManager
     @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
     
     let columns: [GridItem] = [GridItem(.flexible())]
     var category: String
@@ -25,23 +26,25 @@ struct CategorySVC: View {
                 .environmentObject(ordersManager)
             NavigationBack()
             ScrollView {
-                if (loggedIn) {
+                if (!loggedIn) {
                     SignupModal()
                 }
                 VStack(spacing: 20) {
                     CategoryHero()
-                    CategoryFeatured(filteredProducts: CategoryViewModel.filterByCategory(targetCategory: category))
+                    CategoryFeatured(filteredProducts: CategoryViewModel.filterByCategory(targetCategory: category, productData: services.productData))
                         .environmentObject(cartManager)
                         .environmentObject(historyManager)
                         .environmentObject(ordersManager)
                         .environmentObject(commentsManager)
                         .environmentObject(wishlistManager)
-                    CategoryResults(filteredProducts: CategoryViewModel.filterByCategory(targetCategory: category))
+                        .environmentObject(services)
+                    CategoryResults(filteredProducts: CategoryViewModel.filterByCategory(targetCategory: category, productData: services.productData))
                         .environmentObject(cartManager)
                         .environmentObject(historyManager)
                         .environmentObject(ordersManager)
                         .environmentObject(commentsManager)
                         .environmentObject(wishlistManager)
+                        .environmentObject(services)
                 }
             }
         }

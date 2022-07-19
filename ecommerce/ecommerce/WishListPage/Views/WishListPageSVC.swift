@@ -25,6 +25,7 @@ struct WishListPageSVC: View {
             NavigationBar()
                 .environmentObject(cartManager)
                 .environmentObject(ordersManager)
+            SignupModal()
             NavigationLink(destination: ProductSVC(product: current).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager), isActive: $showNextView) {
                 EmptyView()
             }

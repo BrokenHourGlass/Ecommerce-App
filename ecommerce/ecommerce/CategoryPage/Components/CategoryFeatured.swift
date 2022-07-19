@@ -13,9 +13,10 @@ struct CategoryFeatured: View {
     @EnvironmentObject var ordersManager: OrdersManager
     @EnvironmentObject var commentsManager: CommentsManager
     @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
     
     @State var showNextView = false
-    @State var current: NewProduct = CategoryViewModel.placeholderProduct()
+    @State var current: NewProduct = HomePageViewModel.placeHolderProduct()
     
     let rows: [GridItem] = [GridItem(.flexible())]
     var filteredProducts: [NewProduct]
@@ -25,7 +26,7 @@ struct CategoryFeatured: View {
             Text("FEATURED")
                 .font(.title2)
                 .bold()
-            NavigationLink(destination: ProductSVC(product: current).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager), isActive: $showNextView) {
+            NavigationLink(destination: ProductSVC(product: current).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager).environmentObject(services), isActive: $showNextView) {
                 EmptyView()
             }
             ScrollView(.horizontal) {
@@ -69,5 +70,6 @@ struct CategoryFeatured_Previews: PreviewProvider {
             .environmentObject(OrdersManager())
             .environmentObject(CommentsManager())
             .environmentObject(WishlistManager())
+            .environmentObject(Services())
     }
 }

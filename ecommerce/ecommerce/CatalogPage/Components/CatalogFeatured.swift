@@ -13,9 +13,10 @@ struct CatalogFeatured: View {
     @EnvironmentObject var ordersManager: OrdersManager
     @EnvironmentObject var commentsManager: CommentsManager
     @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
     
     @State var showNextView = false
-    @State var current = 0
+    @State var current: NewProduct = HomePageViewModel.placeHolderProduct()
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -24,20 +25,26 @@ struct CatalogFeatured: View {
                 .bold()
             Text("Check out all the new highly recommended swag")
                 .font(.title3)
-            NavigationLink(destination: ProductSVC(product: products[current]).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager), isActive: $showNextView) {
+            NavigationLink(destination: ProductSVC(product: current).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager), isActive: $showNextView) {
                 EmptyView()
             }
             ScrollView(.horizontal) {
                 LazyHStack {
-                    ForEach(0..<products.count) { index in
+                    ForEach(services.productData) { product in
                         Button(action: {
-                            current = index
+                            current = product
                             showNextView = true
                         }) {
-                            HomePageProduct(product: products[index])
+                            HomePageProduct(product: product)
                         }
                     }
                 }
+            }
+            .onAppear() {
+                services.getProductData()
+            }
+            .refreshable {
+                services.getProductData()
             }
             .padding([.top], 10)
         }

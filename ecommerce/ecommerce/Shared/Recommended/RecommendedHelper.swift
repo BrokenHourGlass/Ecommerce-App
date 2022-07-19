@@ -13,6 +13,7 @@ struct RecommendedHelper: View {
     @EnvironmentObject var ordersManager: OrdersManager
     @EnvironmentObject var commentsManager: CommentsManager
     @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
     
     var product: NewProduct
     
@@ -27,16 +28,19 @@ struct RecommendedHelper: View {
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
                     .environmentObject(wishlistManager)
+                    .environmentObject(services)
                 RecommendedItemHelper(recommended: product.recommended[1])
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
                     .environmentObject(wishlistManager)
+                    .environmentObject(services)
                 RecommendedItemHelper(recommended: product.recommended[2])
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
                     .environmentObject(wishlistManager)
+                    .environmentObject(services)
             }
         }
         .padding(.vertical, 40)

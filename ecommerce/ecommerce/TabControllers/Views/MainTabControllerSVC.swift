@@ -14,12 +14,15 @@ struct MainTabControllerSVC: View {
     @StateObject var ordersManager = OrdersManager()
     @StateObject var commentsManager = CommentsManager()
     @StateObject var wishlistManager = WishlistManager()
+    @StateObject var services = Services()
     
     @State private var selection = 0
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor.systemGray6
-        LoginPageViewModel.resetUserDefaults()
+        if (!userDefaults.bool(forKey: "isLoggedIn")) {
+            LoginPageViewModel.resetUserDefaults()
+        }
     }
     
     var body: some View {
@@ -31,6 +34,7 @@ struct MainTabControllerSVC: View {
                     .environmentObject(ordersManager)
                     .environmentObject(commentsManager)
                     .environmentObject(wishlistManager)
+                    .environmentObject(services)
                     .tabItem {
                         Image(systemName: "house.fill")
                         Text("Home")
@@ -43,6 +47,7 @@ struct MainTabControllerSVC: View {
                     .environmentObject(ordersManager)
                     .environmentObject(commentsManager)
                     .environmentObject(wishlistManager)
+                    .environmentObject(services)
                     .tabItem {
                         Image(systemName: "magnifyingglass")
                         Text("Catalog")
@@ -53,6 +58,7 @@ struct MainTabControllerSVC: View {
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
+                    .environmentObject(services)
                     .tabItem {
                         Image(systemName: "person")
                         Text("History")
@@ -63,6 +69,7 @@ struct MainTabControllerSVC: View {
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
+                    .environmentObject(services)
                     .tabItem {
                         Image(systemName: "list.bullet.rectangle.fill")
                         Text("Orders")
@@ -75,6 +82,7 @@ struct MainTabControllerSVC: View {
                     .environmentObject(ordersManager)
                     .environmentObject(commentsManager)
                     .environmentObject(wishlistManager)
+                    .environmentObject(services)
                     .tabItem {
                         Image(systemName: "star.fill")
                         Text("Wish List")

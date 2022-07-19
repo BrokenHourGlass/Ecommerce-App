@@ -8,8 +8,8 @@
 import Foundation
 
 class CategoryViewModel {
-    static func filterByCategory(targetCategory: String) -> [NewProduct] {
-        return products.filter{
+    static func filterByCategory(targetCategory: String, productData: [NewProduct]) -> [NewProduct] {
+        return productData.filter{
             $0.category == targetCategory
         }
     }

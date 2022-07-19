@@ -13,6 +13,7 @@ struct ProductSVC: View {
     @EnvironmentObject var ordersManager: OrdersManager
     @EnvironmentObject var commentsManager: CommentsManager
     @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
     
     var product: NewProduct
     let columns: [GridItem] = [GridItem(.flexible())]
@@ -51,12 +52,14 @@ struct ProductSVC: View {
                     .environmentObject(ordersManager)
                     .environmentObject(commentsManager)
                     .environmentObject(wishlistManager)
+                    .environmentObject(services)
                 ChooseCategory()
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
                     .environmentObject(commentsManager)
                     .environmentObject(wishlistManager)
+                    .environmentObject(services)
                 About()
                 FooterHelper()
             }

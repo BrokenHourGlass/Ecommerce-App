@@ -8,7 +8,7 @@
 import Foundation
 
 var productsJSON: [NewProduct] = load("new-data.json")
-var products = constructProductsData()
+var products: [NewProduct] = load("new-data.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
