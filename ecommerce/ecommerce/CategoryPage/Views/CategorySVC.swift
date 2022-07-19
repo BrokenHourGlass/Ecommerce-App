@@ -47,6 +47,7 @@ struct CategorySVC: View {
                         .environmentObject(services)
                 }
             }
+            AltTabController()
         }
         .navigationTitle("")
         .navigationBarHidden(true)
