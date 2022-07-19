@@ -13,9 +13,10 @@ struct HomePageCategories: View {
     @EnvironmentObject var ordersManager: OrdersManager
     @EnvironmentObject var commentsManager: CommentsManager
     @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
     
     @State var showNextView = false
-    @State var current = 0
+    @State var current: NewProduct = HomePageViewModel.placeHolderProduct()
     
     var title: String
     var description: String
@@ -31,36 +32,33 @@ struct HomePageCategories: View {
             Text(description)
                 .font(.title3)
                 .padding([.trailing], 15)
-            NavigationLink(destination: ProductSVC(product: products[current]).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager), isActive: $showNextView) {
+            NavigationLink(destination: ProductSVC(product: current).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager), isActive: $showNextView) {
                 EmptyView()
             }
             ScrollView(.horizontal) {
                 LazyHStack {
-                    ForEach(0..<products.count) { index in
+                    ForEach(services.productData) { product in
                         Button(action: {
-                            current = index
+                            current = product
                             showNextView = true
                         }) {
-                            HomePageProduct(product: products[index])
+                            HomePageProduct(product: product)
                         }
                     }
                 }
             }
+            .onAppear{
+                services.getProductData()
+            }
+            .refreshable {
+                services.getProductData()
+            }
             .padding([.top], 10)
         }
+        
         .padding([.leading, .top, .bottom], 15)
         .foregroundColor(fgColor)
         .background(bgColor)
     }
 }
 
-struct HomePageCategories_Previews: PreviewProvider {
-    static var previews: some View {
-        HomePageCategories(title: "title", description: "description", fgColor: Color.white, bgColor: Color.blue)
-            .environmentObject(CartManager())
-            .environmentObject(HistoryManager())
-            .environmentObject(OrdersManager())
-            .environmentObject(CommentsManager())
-            .environmentObject(WishlistManager())
-    }
-}
