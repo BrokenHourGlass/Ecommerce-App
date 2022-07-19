@@ -20,7 +20,9 @@ struct MainTabControllerSVC: View {
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor.systemGray6
-        LoginPageViewModel.resetUserDefaults()
+        if (!userDefaults.bool(forKey: "isLoggedIn")) {
+            LoginPageViewModel.resetUserDefaults()
+        }
     }
     
     var body: some View {

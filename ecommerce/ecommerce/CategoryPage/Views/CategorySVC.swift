@@ -26,7 +26,7 @@ struct CategorySVC: View {
                 .environmentObject(ordersManager)
             NavigationBack()
             ScrollView {
-                if (loggedIn) {
+                if (!loggedIn) {
                     SignupModal()
                 }
                 VStack(spacing: 20) {
