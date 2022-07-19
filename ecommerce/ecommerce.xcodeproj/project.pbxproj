@@ -88,6 +88,7 @@
 		61570ED128873BBA00A2F514 /* AltTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61570ED028873BBA00A2F514 /* AltTabController.swift */; };
 		61570ED328873BE300A2F514 /* AltTabControllerTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61570ED228873BE300A2F514 /* AltTabControllerTab.swift */; };
 		61570ED728873E7600A2F514 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61570ED628873E7600A2F514 /* Colors.swift */; };
+		61570ED92887449C00A2F514 /* AtlTabControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61570ED82887449C00A2F514 /* AtlTabControllerHelper.swift */; };
 		6163584528805C0F001D78BF /* WishListPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6163584428805C0F001D78BF /* WishListPageVC.swift */; };
 		6163584728805C1B001D78BF /* WishListPageSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6163584628805C1B001D78BF /* WishListPageSVC.swift */; };
 		6163584C2880662E001D78BF /* WishListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6163584B2880662E001D78BF /* WishListItem.swift */; };
@@ -296,6 +297,7 @@
 		61570ED028873BBA00A2F514 /* AltTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltTabController.swift; sourceTree = "<group>"; };
 		61570ED228873BE300A2F514 /* AltTabControllerTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltTabControllerTab.swift; sourceTree = "<group>"; };
 		61570ED628873E7600A2F514 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		61570ED82887449C00A2F514 /* AtlTabControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlTabControllerHelper.swift; sourceTree = "<group>"; };
 		6163584428805C0F001D78BF /* WishListPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListPageVC.swift; sourceTree = "<group>"; };
 		6163584628805C1B001D78BF /* WishListPageSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListPageSVC.swift; sourceTree = "<group>"; };
 		6163584B2880662E001D78BF /* WishListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListItem.swift; sourceTree = "<group>"; };
@@ -965,6 +967,7 @@
 			children = (
 				61570ED028873BBA00A2F514 /* AltTabController.swift */,
 				61570ED228873BE300A2F514 /* AltTabControllerTab.swift */,
+				61570ED82887449C00A2F514 /* AtlTabControllerHelper.swift */,
 			);
 			path = AltTabController;
 			sourceTree = "<group>";
@@ -1956,6 +1959,7 @@
 				61E2ACDC28729E3900CD4F8F /* ThankYouMessage.swift in Sources */,
 				61E2AD972879212C00CD4F8F /* CDOrderHelper.swift in Sources */,
 				613152CF28824C8F007F3C89 /* SignupPageModal.swift in Sources */,
+				61570ED92887449C00A2F514 /* AtlTabControllerHelper.swift in Sources */,
 				616358572880786D001D78BF /* WishlistManager.swift in Sources */,
 				610779B1286F39DC0094F95A /* RecommendedHelper.swift in Sources */,
 				61E2AD4F2877A72500CD4F8F /* Product+CoreDataClass.swift in Sources */,
