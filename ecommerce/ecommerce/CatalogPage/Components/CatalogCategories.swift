@@ -16,7 +16,7 @@ struct CatalogCategories: View {
     
     @State var showNextView = false
     @State var chosenCategory = ""
-    @State var current = 0
+    @State var current: NewProduct = HomePageViewModel.placeHolderProduct()
     
     let columns: [GridItem] = [GridItem(.flexible()), GridItem(.flexible())]
     
@@ -44,16 +44,5 @@ struct CatalogCategories: View {
             .padding([.top], 10)
         }
         .padding()
-    }
-}
-
-struct CatalogCategories_Previews: PreviewProvider {
-    static var previews: some View {
-        CatalogCategories()
-            .environmentObject(CartManager())
-            .environmentObject(HistoryManager())
-            .environmentObject(OrdersManager())
-            .environmentObject(CommentsManager())
-            .environmentObject(WishlistManager())
     }
 }

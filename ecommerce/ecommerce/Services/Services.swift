@@ -36,11 +36,6 @@ class Services: ObservableObject, Identifiable {
             
             DispatchQueue.main.async {
                 self.productData = jsonData
-                
-                for x in self.productData {
-                    print(x.name)
-                }
-                
             }
         }
         

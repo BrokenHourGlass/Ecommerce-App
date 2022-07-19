@@ -45,6 +45,7 @@ struct MainTabControllerSVC: View {
                     .environmentObject(ordersManager)
                     .environmentObject(commentsManager)
                     .environmentObject(wishlistManager)
+                    .environmentObject(services)
                     .tabItem {
                         Image(systemName: "magnifyingglass")
                         Text("Catalog")
@@ -55,6 +56,7 @@ struct MainTabControllerSVC: View {
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
+                    .environmentObject(services)
                     .tabItem {
                         Image(systemName: "person")
                         Text("History")
@@ -65,6 +67,7 @@ struct MainTabControllerSVC: View {
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
+                    .environmentObject(services)
                     .tabItem {
                         Image(systemName: "list.bullet.rectangle.fill")
                         Text("Orders")
@@ -77,6 +80,7 @@ struct MainTabControllerSVC: View {
                     .environmentObject(ordersManager)
                     .environmentObject(commentsManager)
                     .environmentObject(wishlistManager)
+                    .environmentObject(services)
                     .tabItem {
                         Image(systemName: "star.fill")
                         Text("Wish List")
