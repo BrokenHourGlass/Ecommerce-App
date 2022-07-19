@@ -22,6 +22,7 @@ struct SearchHistorySVC: View {
                 .font(.title2)
                 .bold()
                 .padding(.horizontal)
+                .padding(.top)
             ScrollView {
                 ForEach(historyManager.history.reversed(), id: \.id) { x in
                     SearchHistoryItem(product: x.product)

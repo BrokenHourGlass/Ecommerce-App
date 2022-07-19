@@ -13,6 +13,7 @@ struct WishListPageSVC: View {
     @EnvironmentObject var ordersManager: OrdersManager
     @EnvironmentObject var commentsManager: CommentsManager
     @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
     
     @State var showNextView = false
     @State var current: NewProduct = CategoryViewModel.placeholderProduct()
@@ -26,26 +27,26 @@ struct WishListPageSVC: View {
                 .environmentObject(cartManager)
                 .environmentObject(ordersManager)
             SignupModal()
-            NavigationLink(destination: ProductSVC(product: current).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager), isActive: $showNextView) {
-                EmptyView()
+            HStack {
+                Text("Wish List")
+                    .font(.title2)
+                    .bold()
+                    .padding(.horizontal)
+                    .padding(.top)
+                Spacer()
             }
-            VStack(alignment: .leading) {
-                HStack {
-                    Text("Wish List")
-                        .font(.title)
-                        .bold()
-                    Spacer()
-                }
-                ScrollView {
-                    if (loggedIn) {
-                        ForEach(wishlistManager.wishlist.reversed(), id: \.id) { item in
-                            WishListItem(showNextView: $showNextView, current: $current, product: WishlistViewModel.getProduct(productID: item.productId), id: item.id)
-                                .environmentObject(wishlistManager)
-                        }
+            ScrollView {
+                if (loggedIn) {
+                    ForEach(wishlistManager.wishlist.reversed(), id: \.id) { item in
+                        WishListItem(showNextView: $showNextView, current: $current, product: WishlistViewModel.getProduct(productID: item.productId), id: item.id)
+                            .environmentObject(wishlistManager)
                     }
                 }
             }
-            .padding()
+            NavigationLink(destination: ProductSVC(product: current).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager).environmentObject(services), isActive: $showNextView) {
+                EmptyView()
+            }
+            
         }
         .onAppear(perform: {
             wishlistManager.getWishlist(userId: userId!)
