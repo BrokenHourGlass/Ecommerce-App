@@ -23,17 +23,17 @@ class SignupPage2ViewModel {
         } catch SignupErrors.invalidEmail {
             msg = "Invalid email"
         } catch SignupErrors.invalidEmailFormat {
-           msg = "Invalid email format"
+            msg = "Invalid email format"
+        } catch SignupErrors.invalidPasswordFormat {
+            msg = "Passowrd must be: 6-12 characters, and have at least 1 uppercase, 1 lowercase, 1 number, and 1 special character"
         } catch SignupErrors.invalidPassword {
             msg = "Invalid password"
         } catch SignupErrors.invalidConfirmPassword {
             msg = "Invalid confirm password"
-        } catch SignupErrors.invalidPasswordFormat {
-            msg = "Invalid password format"
-        } catch SignupErrors.invalidMobileNumber {
-            msg = "Invalid mobile number"
         } catch SignupErrors.passwordsDoNotMatch {
             msg = "Passwords do not match"
+        } catch SignupErrors.invalidMobileNumber {
+            msg = "Invalid mobile number"
         } catch {
             msg = "Unknown error detected"
         }
