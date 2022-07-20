@@ -74,6 +74,7 @@ struct CheckoutSummary: View {
                 .foregroundColor(Color.white)
                 .background(Color.red)
             }
+            .padding([.top], 13)
         }
         .navigationTitle("")
         .navigationBarHidden(true)

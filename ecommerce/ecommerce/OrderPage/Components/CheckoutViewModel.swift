@@ -28,6 +28,17 @@ class CheckoutViewModel {
         
         return status
     }
+    
+    static func getShippingCost(total: Int) -> Int {
+        var shippingCost = 0
+        
+        if (total < 200) {
+            shippingCost = 10
+        }
+        
+        return shippingCost
+    }
+    
 }
 
 enum CheckoutErrors: Error {

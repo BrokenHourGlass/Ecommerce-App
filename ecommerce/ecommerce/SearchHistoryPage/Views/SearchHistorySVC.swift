@@ -32,10 +32,18 @@ struct SearchHistorySVC: View {
                 .padding(.top)
             ScrollView {
                 ForEach(historyManager.history.reversed(), id: \.id) { x in
-                    SearchHistoryItem(product: x.product)
+                    Button(action: {
+                        current = x.product
+                        showNextView = true
+                    }) {
+                        SearchHistoryItem(product: x.product)
+                    }
                 }
             }
             .padding(.horizontal)
+            NavigationLink(destination: ProductSVC(product: current).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager).environmentObject(services), isActive: $showNextView) {
+                EmptyView()
+            }
             Spacer()
         }
         .navigationTitle("")

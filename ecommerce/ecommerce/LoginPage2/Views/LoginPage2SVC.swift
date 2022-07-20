@@ -12,15 +12,21 @@ struct LoginPage2SVC: View {
         VStack(alignment: .leading) {
             NavigationBack()
             Spacer()
-            HStack {
-                Text("Log in")
-                    .font(.title)
-                    .fontWeight(.heavy)
-                    .foregroundColor(Color.white)
-                Spacer()
+            ZStack {
+                Logo()
+                    .offset(y: -275)
+                VStack {
+                    HStack {
+                        Text("Log in")
+                            .font(.title)
+                            .fontWeight(.heavy)
+                            .foregroundColor(Color.white)
+                        Spacer()
+                    }
+                    .padding(.horizontal, 15)
+                    LoginPageModal()
+                }
             }
-            .padding(.horizontal, 15)
-            LoginPageModal()
             Spacer()
         }
         .padding()
