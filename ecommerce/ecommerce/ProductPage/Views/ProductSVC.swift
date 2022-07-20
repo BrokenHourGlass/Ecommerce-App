@@ -48,9 +48,12 @@ struct ProductSVC: View {
                     ProductContents(product: product)
                     ProductPreview(product: product)
                     ProductComments(product: product)
-                        .environmentObject(commentsManager)
                         .environmentObject(cartManager)
+                        .environmentObject(historyManager)
                         .environmentObject(ordersManager)
+                        .environmentObject(commentsManager)
+                        .environmentObject(wishlistManager)
+                        .environmentObject(services)
                 }
                 .padding(.horizontal, 27)
                 RecommendedHelper(product: product)
