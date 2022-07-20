@@ -29,7 +29,15 @@ struct ShoppingCartSVC: View {
                 .environmentObject(services)
             NavigationBack()
             SignupModal()
-            NavigationLink(destination: CheckoutSVC().environmentObject(cartManager).environmentObject(ordersManager), isActive: $showNextView) {
+            NavigationLink(destination:
+                            CheckoutSVC()
+                .environmentObject(cartManager)
+                .environmentObject(historyManager)
+                .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
+                           , isActive: $showNextView) {
                 EmptyView()
             }
             HStack {
