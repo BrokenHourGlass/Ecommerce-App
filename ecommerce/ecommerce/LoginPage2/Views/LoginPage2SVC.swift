@@ -13,6 +13,8 @@ struct LoginPage2SVC: View {
             NavigationBack()
             Spacer()
             ZStack {
+                Logo()
+                    .offset(y: -275)
                 VStack {
                     HStack {
                         Text("Log in")
