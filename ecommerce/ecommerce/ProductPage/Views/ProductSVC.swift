@@ -22,7 +22,11 @@ struct ProductSVC: View {
         VStack {
             NavigationBar()
                 .environmentObject(cartManager)
+                .environmentObject(historyManager)
                 .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
             NavigationBack()
             ScrollView {
                 SignupModal()

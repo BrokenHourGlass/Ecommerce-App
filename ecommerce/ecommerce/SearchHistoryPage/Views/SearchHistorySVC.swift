@@ -11,12 +11,19 @@ struct SearchHistorySVC: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
-    
+    @EnvironmentObject var commentsManager: CommentsManager
+    @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
+
     var body: some View {
         VStack(alignment: .leading) {
             NavigationBar()
                 .environmentObject(cartManager)
-                .environmentObject(OrdersManager())
+                .environmentObject(historyManager)
+                .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
             SignupModal()
             Text("Recent Searches")
                 .font(.title2)

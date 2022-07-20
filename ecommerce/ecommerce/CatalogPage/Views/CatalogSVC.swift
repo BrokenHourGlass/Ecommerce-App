@@ -19,7 +19,11 @@ struct CatalogSVC: View {
         VStack {
             NavigationBar()
                 .environmentObject(cartManager)
+                .environmentObject(historyManager)
                 .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
             ScrollView {
                 SignupModal()
                 CatalogAd(img: "catalog/c6a13e043f5b874eaf0cfadcb2802bef")

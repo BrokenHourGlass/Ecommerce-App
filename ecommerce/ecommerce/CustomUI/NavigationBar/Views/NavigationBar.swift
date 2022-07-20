@@ -17,7 +17,15 @@ struct NavigationBar: View {
 
     var body: some View {
         HStack {
-            NavigationLink(destination: AccountPageSVC().navigationTitle("").navigationBarHidden(true).environmentObject(cartManager).environmentObject(ordersManager)) {
+            NavigationLink(destination:
+                            AccountPageSVC().navigationTitle("").navigationBarHidden(true)
+                .environmentObject(cartManager)
+                .environmentObject(historyManager)
+                .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
+            ) {
                 Image(systemName: "gear")
                     .foregroundColor(Color.white)
             }
