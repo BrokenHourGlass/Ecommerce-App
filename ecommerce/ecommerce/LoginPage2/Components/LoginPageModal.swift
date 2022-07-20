@@ -21,7 +21,8 @@ struct LoginPageModal: View {
                 Spacer()
             }
             SignupField(placeholder: "Email", value: $email )
-            SignupField(placeholder: "Password", value: $password)
+            LoginPassword(placeholderdos: "Password", valuedos: $password)
+            //SignupField(placeholder: "Password", value: $password)
             LoginAction(email: $email, password: $password)
         }
         .padding()
