@@ -25,53 +25,53 @@ struct AltTabController: View {
     var body: some View {
         Section {
             NavigationLink(destination:
-                            HomePage2SVC()
+                            MainTabControllerSVC(idx: 0)
                 .environmentObject(cartManager)
                 .environmentObject(historyManager)
                 .environmentObject(ordersManager)
                 .environmentObject(commentsManager)
                 .environmentObject(wishlistManager)
-                .environmentObject(services), isActive: $showHome) {
+                .environmentObject(services).navigationTitle("").navigationBarHidden(true), isActive: $showHome) {
                     EmptyView()
                 }
             NavigationLink(destination:
-                            CatalogSVC()
+                            MainTabControllerSVC(idx: 1)
                 .environmentObject(cartManager)
                 .environmentObject(historyManager)
                 .environmentObject(ordersManager)
                 .environmentObject(commentsManager)
                 .environmentObject(wishlistManager)
-                .environmentObject(services), isActive: $showCatalog) {
+                .environmentObject(services).navigationTitle("").navigationBarHidden(true), isActive: $showCatalog) {
                     EmptyView()
                 }
             NavigationLink(destination:
-                            SearchHistorySVC()
+                            MainTabControllerSVC(idx: 2)
                 .environmentObject(cartManager)
                 .environmentObject(historyManager)
                 .environmentObject(ordersManager)
                 .environmentObject(commentsManager)
                 .environmentObject(wishlistManager)
-                .environmentObject(services), isActive: $showHistory) {
+                .environmentObject(services).navigationTitle("").navigationBarHidden(true), isActive: $showHistory) {
                     EmptyView()
                 }
             NavigationLink(destination:
-                            OrderHistorySVC()
+                            MainTabControllerSVC(idx: 3)
                 .environmentObject(cartManager)
                 .environmentObject(historyManager)
                 .environmentObject(ordersManager)
                 .environmentObject(commentsManager)
                 .environmentObject(wishlistManager)
-                .environmentObject(services), isActive: $showOrders) {
+                .environmentObject(services).navigationTitle("").navigationBarHidden(true), isActive: $showOrders) {
                     EmptyView()
                 }
             NavigationLink(destination:
-                            WishListPageSVC()
+                            MainTabControllerSVC(idx: 4)
                 .environmentObject(cartManager)
                 .environmentObject(historyManager)
                 .environmentObject(ordersManager)
                 .environmentObject(commentsManager)
                 .environmentObject(wishlistManager)
-                .environmentObject(services), isActive: $showWishlist) {
+                .environmentObject(services).navigationTitle("").navigationBarHidden(true), isActive: $showWishlist) {
                     EmptyView()
                 }
             
