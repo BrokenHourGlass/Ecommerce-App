@@ -14,7 +14,10 @@ struct SearchHistorySVC: View {
     @EnvironmentObject var commentsManager: CommentsManager
     @EnvironmentObject var wishlistManager: WishlistManager
     @EnvironmentObject var services: Services
-
+    
+    @State var showNextView = false
+    @State var current = HomePageViewModel.placeHolderProduct()
+    
     var body: some View {
         VStack(alignment: .leading) {
             NavigationBar()

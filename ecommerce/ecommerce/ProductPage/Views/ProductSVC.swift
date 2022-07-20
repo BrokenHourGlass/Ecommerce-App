@@ -33,9 +33,12 @@ struct ProductSVC: View {
                     .padding(.horizontal, 12)
                 VStack(spacing: 30) {
                     ProductComments(product: product)
-                        .environmentObject(commentsManager)
                         .environmentObject(cartManager)
+                        .environmentObject(historyManager)
                         .environmentObject(ordersManager)
+                        .environmentObject(commentsManager)
+                        .environmentObject(wishlistManager)
+                        .environmentObject(services)
                     ProductImage(product: product)
                     ProductDetails(product: product)
                         .environmentObject(wishlistManager)
