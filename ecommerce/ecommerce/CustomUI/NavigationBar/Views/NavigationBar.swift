@@ -9,8 +9,12 @@ import SwiftUI
 
 struct NavigationBar: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
-    
+    @EnvironmentObject var commentsManager: CommentsManager
+    @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
+
     var body: some View {
         HStack {
             NavigationLink(destination: AccountPageSVC().navigationTitle("").navigationBarHidden(true).environmentObject(cartManager).environmentObject(ordersManager)) {
@@ -23,7 +27,15 @@ struct NavigationBar: View {
                 .font(.title)
                 .bold()
             Spacer()
-            NavigationLink(destination: ShoppingCartSVC().environmentObject(cartManager).environmentObject(ordersManager)) {
+            NavigationLink(destination:
+                            ShoppingCartSVC()
+                .environmentObject(cartManager)
+                .environmentObject(historyManager)
+                .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services))
+            {
                 Image(systemName: "cart")
                     .foregroundColor(Color.white)
             }
