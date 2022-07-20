@@ -85,6 +85,7 @@
 		6133A324287E018400CE728F /* CommentHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6133A323287E018400CE728F /* CommentHelpers.swift */; };
 		6133A328287E6B6300CE728F /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6133A327287E6B6300CE728F /* CategoryViewModel.swift */; };
 		61570ECE2887057400A2F514 /* ServicesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61570ECD2887057400A2F514 /* ServicesHelper.swift */; };
+		61570EDB2887896800A2F514 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61570EDA2887896800A2F514 /* Logo.swift */; };
 		6163584528805C0F001D78BF /* WishListPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6163584428805C0F001D78BF /* WishListPageVC.swift */; };
 		6163584728805C1B001D78BF /* WishListPageSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6163584628805C1B001D78BF /* WishListPageSVC.swift */; };
 		6163584C2880662E001D78BF /* WishListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6163584B2880662E001D78BF /* WishListItem.swift */; };
@@ -290,6 +291,7 @@
 		6133A323287E018400CE728F /* CommentHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentHelpers.swift; sourceTree = "<group>"; };
 		6133A327287E6B6300CE728F /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		61570ECD2887057400A2F514 /* ServicesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesHelper.swift; sourceTree = "<group>"; };
+		61570EDA2887896800A2F514 /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
 		6163584428805C0F001D78BF /* WishListPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListPageVC.swift; sourceTree = "<group>"; };
 		6163584628805C1B001D78BF /* WishListPageSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListPageSVC.swift; sourceTree = "<group>"; };
 		6163584B2880662E001D78BF /* WishListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListItem.swift; sourceTree = "<group>"; };
@@ -791,6 +793,7 @@
 				613152D528825269007F3C89 /* LoginPageModal.swift */,
 				613152D728825340007F3C89 /* LoginAction.swift */,
 				6131530328834C9E007F3C89 /* GoToSignup.swift */,
+				61570EDA2887896800A2F514 /* Logo.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1784,6 +1787,7 @@
 				6131530F28836D78007F3C89 /* AccountPageSVC.swift in Sources */,
 				61077949286D28080094F95A /* ShoppingCartVC.swift in Sources */,
 				F7B165692881FD46000F954A /* DBHelperUser.swift in Sources */,
+				61570EDB2887896800A2F514 /* Logo.swift in Sources */,
 				61E2AD0D287671D500CD4F8F /* CatalogCategories.swift in Sources */,
 				F7D42BA828752F7800C554CC /* GameViewController.swift in Sources */,
 				613152E72882619E007F3C89 /* PNPUser+CoreDataClass.swift in Sources */,
