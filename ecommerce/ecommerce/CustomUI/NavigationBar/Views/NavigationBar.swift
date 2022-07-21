@@ -48,6 +48,7 @@ struct NavigationBar: View {
                     Image(systemName: "cart")
                         .foregroundColor(Color.white)
                     Badge()
+                        .environmentObject(cartManager)
                         .offset(x: 10, y: -10)
                 }
             }

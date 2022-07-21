@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct Badge: View {
+    
+    @EnvironmentObject var cartManager: CartManager
+    
     var body: some View {
-        ZStack {
-            Circle()
-                .fill(.red)
-                .frame(width: 20, height: 20)
-            Text("13")
-                .font(.caption)
-                .foregroundColor(Color.white)
+        if (cartManager.items.count > 0) {
+            ZStack {
+                Circle()
+                    .fill(.red)
+                    .frame(width: 20, height: 20)
+                Text(String(cartManager.items.count))
+                    .font(.caption)
+                    .foregroundColor(Color.white)
+            }
+        } else {
+            EmptyView()
         }
     }
 }
