@@ -1051,6 +1051,18 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		61A6BB5E2889082B00D7CAC0 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				61CE688228710113008CD0C1 /* CartManager.swift */,
+				61E2AD1928772D6B00CD4F8F /* HistoryManager.swift */,
+				61E2AD662878809900CD4F8F /* OrdersManager.swift */,
+				6133A31B287DBA0200CE728F /* CommentsManager.swift */,
+				616358562880786D001D78BF /* WishlistManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		61B7C105287BC6490064B8DF /* CommentView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1076,14 +1088,9 @@
 			isa = PBXGroup;
 			children = (
 				6133A303287D08F900CE728F /* CommentModel.swift */,
-				61CE688228710113008CD0C1 /* CartManager.swift */,
 				610779D2286F9D760094F95A /* NewProduct.swift */,
 				61CE687D2870FF67008CD0C1 /* CartItem.swift */,
-				61E2AD1928772D6B00CD4F8F /* HistoryManager.swift */,
-				61E2AD662878809900CD4F8F /* OrdersManager.swift */,
-				6133A31B287DBA0200CE728F /* CommentsManager.swift */,
 				61635853288073A6001D78BF /* WishlistItemModel.swift */,
-				616358562880786D001D78BF /* WishlistManager.swift */,
 				613152E328825F68007F3C89 /* UserModel.swift */,
 			);
 			path = Models;
@@ -1649,6 +1656,7 @@
 				61E2ACCF2872968E00CD4F8F /* ThankYouPage */,
 				61E2ACB52872071C00CD4F8F /* CategoryPage */,
 				61E2ACA42871568700CD4F8F /* LoginPage */,
+				61A6BB5E2889082B00D7CAC0 /* Managers */,
 				61CE687C2870FDF7008CD0C1 /* Models */,
 				61E2AC9E28713E9C00CD4F8F /* TabControllers */,
 				61CE6884287110C1008CD0C1 /* Catalog */,
